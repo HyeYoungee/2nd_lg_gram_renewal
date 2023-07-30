@@ -3,12 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Notice</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/notice.css" />
   </head>
   <body>
     <h1>notice</h1>
+    <main>
+      <div class="container">
+        <div class="title d-flex flex-column align-items-center">
+          <h2 class="sub_tt">공지사항</h2>
+          <h3 class="body_lg">
+            LG gram의 신제품 안내, 신규 CF등 다양한 소식을 알려드립니다!
+          </h3>
+        </div>
+        <div class="search_bar d-flex justify-content-between align-items-end">
+          <p>검색결과 <span>52</span>건</p>
+          <form action="submit" class="d-flex">
+            <label for="search"></label>
+            <input type="text" id="search" class="search_input" />
+            <button class="search_btn">검색</button>
+          </form>
+        </div>
+        <div class="notice">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse1"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse1"
+                >
+                  <span>52</span>
+                  <span class="notice_tt"
+                    >[안내] LG전자, 휘센 제습기 물통 ‘무상 교체’ 실시</span
+                  >
+                  <span class="date">2023.07.28</span>
+                </button>
+              </h2>
+              <div
+                id="flush-collapse1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  LG전자 서비스 홈페이지를 이용해주시는 고객님께 감사 드리며,
+                  개인정보 처리 방침 개정 및 이용약관 변경과 관련하여 안내
+                  드립니다.<br />
+                  1. 시행 및 적용 일자 : 2017년 2월 3일 2. 변경사유 : 1)
+                  개인정보 처리방침 개정- 수집하는 개인정보의 항목 및 개인정보
+                  수집방법 추가- 위탁업무/위탁업체 추가- 수집한 개인정보의 보유
+                  및 이용 기간 내용 추가 2) 이용약관 변경 - 알림 문자 모바일
+                  메신저 서비스 (카카오 톡) 도입과 관련한 내용 추가 3. 주요
+                  변경사항 1) 개인정보 처리방침 ○ 수집하는 개인정보의 항목
+                  (추가) 개인정보 처리 방침 관련 항목 : 1. 수집하는 개인정보의
+                  항목 및 수집 방법 가. 수집하는 개인정보의 항목 중 ‘A/S 및
+                  상담’ 부분 선택항목
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse2"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse2"
+                >
+                  <span>51</span>
+                  <span class="notice_tt"
+                    >[안내] LG전자 대표번호 통합 서비스 OPEN</span
+                  >
+                  <span class="date">2023.07.19</span>
+                </button>
+              </h2>
+              <div
+                id="flush-collapse2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  하나의 번호, 하나의 LG LG전자 대표번호 통합 서비스 OPEN!
+                  서비스도 역시 LG. 2023년 6월 29일부터 하나의 번호로 편하게
+                  만나요! 1544-7777 1. 쉽게 기억하는 번호, LG 대표번호 통합 운영
+                  하나의 번호로 통합 2. 더욱 간편해진 ARS 이용으로 고객 선택단계
+                  최소화 운영 3. 한번의 연결로 해결, 다양한 문의에 대한 전문
+                  상담 바로 연결
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse3"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse3"
+                >
+                  <span>50</span>
+                  <span class="notice_tt"
+                    >[안내] 영상정보처리기기운영관리방침 개정안내</span
+                  >
+                  <span class="date">2023.06.02</span>
+                </button>
+              </h2>
+              <div
+                id="flush-collapse3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  LG전자 홈페이지를 이용해주신 고객님께 감사드리며,
+                  LG전자서비스센터 영상정보처리기기운영·관리방침의 개정과
+                  관련하여 변경 내용을 안내드립니다. **1. 시행일자 : 2023년 6월
+                  9일_변경고지일 후 7일** **2. 변경사유** - CCTV 카메라 수량
+                  변경(’23년 4월 대비_서비스센터 이전 및 통합 발생으로 인한
+                  카메라 수량 변경) **3. 주요 변경사항** 1)
+                  영상정보처리기기운영·관리방침 ○ 2. 설치 대수, 설치 위치 및
+                  촬영 범위
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse4"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse4"
+                >
+                  <span>49</span>
+                  <span class="notice_tt"
+                    >[안내] 영상정보처리기기운영관리방침 개정안내</span
+                  >
+                  <span class="date">2023.06.02</span>
+                </button>
+              </h2>
+              <div
+                id="flush-collapse4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  LG전자 홈페이지를 이용해주신 고객님께 감사드리며,
+                  LG전자서비스센터 영상정보처리기기운영·관리방침의 개정과
+                  관련하여 변경 내용을 안내드립니다. **1. 시행일자 : 2023년 6월
+                  9일_변경고지일 후 7일** **2. 변경사유** - CCTV 카메라 수량
+                  변경(’23년 4월 대비_서비스센터 이전 및 통합 발생으로 인한
+                  카메라 수량 변경) **3. 주요 변경사항** 1)
+                  영상정보처리기기운영·관리방침 ○ 2. 설치 대수, 설치 위치 및
+                  촬영 범위
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav aria-label="..." class="page_wrap d-flex justify-content-center">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <!-- 회색 배경 없애려면 disabled 삭제 -->
+              <span class="page-link"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <!-- <li class="page-item active">
+              <span class="page-link">
+                2
+                <span class="sr-only">(current)</span>
+              </span>
+            </li> -->
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="./js/notice.js"></script>
   </body>
 </html>
