@@ -290,10 +290,58 @@ a {
 .more_btn:hover {
   color: var(--dark, #1e2226);
 }
+/* logo btn */
+
+#lg_logo_btn svg{
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom:288px;
+  right: 125px;
+  line-height: 64px;
+  text-align: center;
+  background-color: var(--gray_04);
+  color:#fdfdfd;
+  transition:opacity 0.5s;
+  text-transform: uppercase;
+  border-radius: 50%;
+  letter-spacing: 0.05em;
+}
+
+#lg_logo_btn svg:hover{
+  background-color: var(--gray_03);
+ 
+}
+
+
+
+/* goto button */
 #gotop_btn {
   width: 64px;
   height: 64px;
   position: fixed;
+  bottom:210px;
+  right:125px;
+  line-height: 64px;
+  text-align: center;
+  background-color: var(--gray_02);
+  color:#fdfdfd;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  transition:opacity 0.5s;
+  text-transform: uppercase;
+  border-radius: 50%;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+#gotop_btn:hover{
+background-color: var(--gray_03);
+}
+
+#gotop_btn.active{
+  opacity: 1;
+  visibility: hidden;
 }
 
 .menu_li {
@@ -352,6 +400,22 @@ input {
     max-width: 1272px;
     padding: 0;
   }
+  /* 데스크탑 */
+.cs_title{
+  font-size: calc(var(--body_text_unit) * 3); /* 48px */
+  margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
+  font-family: "Gmarket Sans";
+  font-weight: 700;
+}
+.cs_sub_tt{
+  font-size: 40px; /* 40px */
+  margin-bottom: calc(var(--base_unit_d) * 2); /* 48px */
+  font-family: "Gmarket Sans";
+  font-weight: 700;
+}
+.cs_desc{
+  font-size: var(--base_unit_d); /* 24px */
+}
 }
 /* 태블릿 (해상도 480px ~ 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
@@ -363,6 +427,19 @@ input {
   .container-xxl {
     max-width: 720px;
   }
+  
+/* 태블릿 */
+.cs_title{
+  font-size: 40px; /* 40px */
+  margin-bottom: 20px; /* 20px */
+}
+.cs_sub_tt{
+  font-size: calc(var(--body_text_unit) * 2); /* 32px */
+  margin-bottom: 40px; /* 40px */
+}
+.cs_desc{
+  font-size: 18px; /* 18px */
+}
 }
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width: 479px) {
@@ -374,4 +451,19 @@ input {
   .container-xxl {
     max-width: 432px;
   }
+  /* 모바일 */
+.cs_title{
+  font-size: calc(var(--body_text_unit) * 2); /* 32px */
+  margin-bottom: 20px; /* 20px */
 }
+.cs_sub_tt{
+  font-size: 28px; /* 28px */
+  margin-bottom: calc(var(--body_text_unit) * 2); /* 32px */
+}
+.cs_desc{
+  font-size: var(--body_text_unit); /* 16px */
+}
+}
+
+
+
