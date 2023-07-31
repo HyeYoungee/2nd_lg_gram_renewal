@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lg gram renewal website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/default.css" />
   </head>
@@ -19,12 +21,15 @@
     <title>lg gram renewal website</title>
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
     />
     <link
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./css/nice-select.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/default.css" />
@@ -35,27 +40,51 @@
     <section class="main_sec01_video">
       <h2>메인 동영상</h2>
       <div class="main_video">
-        <div class="video_slide">
-          <!-- <video
-            src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
-            muted
-            loop
-            id="video1"
-          ></video>
-        </div>
-        <div class="video_slide">
-          <video
-            src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634515/gram_dance_ljnqcm.mp4"
-            muted
-            loop
-            id="video2"
-          ></video> -->
+        <div class="video_slider">
+          <div>
+            <video
+              src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+              autoplay
+              muted
+              loop
+              id="video1"
+            ></video>
+          </div>
+          <div>
+            <video
+              src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634515/gram_dance_ljnqcm.mp4"
+              muted
+              loop
+              autoplay
+              id="video2"
+            ></video>
+          </div>
         </div>
       </div>
       <div class="video_pager"></div>
+      <a href="" id="scroll_sm_btn"></a>
       <a href="" id="scroll_btn"></a>
     </section>
-    <section></section>
+    <section class="container big_pd">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2 class="select sub_tt">나는</h2>
+        <select name="gramtype" id="gramtype">
+          <option value="">그램style</option>
+          <option value="">그램360</option>
+          <option value="">그램</option>
+        </select>
+        <h2 class="sub_tt">을 갖고 싶어요</h2>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <select name="gramcolor" id="gramcolor">
+          <option value="">오로라 화이트</option>
+          <option value="">스노우 화이트</option>
+          <option value="">옵디시안 블랙</option>
+          <option value="">토파즈 그린</option>
+        </select>
+        <h2 class="sub_tt">색의 그램을 좋아합니다.</h2>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <div
@@ -117,6 +146,7 @@
     </footer>
     <!-- 이현정 main-sec-01 end -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.nice-select.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

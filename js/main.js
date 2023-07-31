@@ -1,11 +1,47 @@
-let videoSection = document.querySelector(".main_sec01_video"),
-  videoWrapper = videoSection.querySelector(".main_video"),
-  videoSlide = videoSection.querySelectorAll(".video_slide"),
-  videos = videoSection.querySelectorAll("video"),
-  videoPager = videoSection.querySelector(".video_pager"),
-  videoCount = videoSlide.length,
-  videoCurrentIdx = 0,
-  videoPagerHtml = "";
+$(function () {
+  $(".video_slider").bxSlider({
+    controls: false,
+    onSlideLoad: function () {
+      $(".video-slider").find("div:eq(0)").find("video").get(0).play();
+    },
+    onSlideAfter: function ($slideElement) {
+      $(".video-slider div").find("video").get(0).pause();
+      $(".video-slider div").find("video").get(0).currentTime = 0;
+      $slideElement.find("video").get(0).play();
+    },
+  });
+});
+
+$(window).resize(function () {
+  let windowWid = $(window).width();
+  let scrollLgBtn = $("#scroll_btn");
+  let scrollSmBtn = $("#scroll_sm_btn");
+  let videoChange = $(".video-slider div video");
+  if (windowWid < 768) {
+    videoChange.attr(
+      "src",
+      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+    );
+    scrollLgBtn.css("display", "none");
+    scrollSmBtn.css("display", "block");
+  } else {
+    scrollLgBtn.css("display", "block");
+    scrollSmBtn.css("display", "none");
+  }
+});
+
+$("#gramtype").niceSelect();
+$("#gramcolor").niceSelect();
+
+// }
+// let videoSection = document.querySelector(".main_sec01_video"),
+//   videoWrapper = videoSection.querySelector(".main_video"),
+//   videoSlide = videoSection.querySelectorAll(".video_slide"),
+//   videos = videoSection.querySelectorAll("video"),
+//   videoPager = videoSection.querySelector(".video_pager"),
+//   videoCount = videoSlide.length,
+//   videoCurrentIdx = 0,
+//   videoPagerHtml = "";
 
 // function setVideo() {
 //   if (window.innerWidth <= 768) {
@@ -39,57 +75,57 @@ let videoSection = document.querySelector(".main_sec01_video"),
 // setVideo();
 
 //스크롤다운 버튼 사이즈에 따라 바꿔주기
-let scrollButton = document.getElementById("scroll_btn");
-function updateScrollButton() {
-  if (window.innerWidth <= 768) {
-    scrollButton.style.display = "block";
-  } else {
-    scrollButton.style.display = "block";
-  }
-}
-window.addEventListener("resize", updateScrollButton);
-updateScrollButton();
+// let scrollButton = document.getElementById("scroll_btn");
+// function updateScrollButton() {
+//   if (window.innerWidth <= 768) {
+//     scrollButton.style.display = "block";
+//   } else {
+//     scrollButton.style.display = "block";
+//   }
+// }
+// window.addEventListener("resize", updateScrollButton);
+// updateScrollButton();
 
-if (videoCount > 0) {
-  videoSlide.forEach((item, idx) => {
-    item.style.left = `${idx * 100}%`;
-    let activeClass = idx === 0 ? " active" : "";
-    videoPagerHtml += `<a href="#" class="${activeClass}">${idx + 1}</a>`;
-  });
-}
+// if (videoCount > 0) {
+//   videoSlide.forEach((item, idx) => {
+//     item.style.left = `${idx * 100}%`;
+//     let activeClass = idx === 0 ? " active" : "";
+//     videoPagerHtml += `<a href="#" class="${activeClass}">${idx + 1}</a>`;
+//   });
+// }
 
-videoPager.insertAdjacentHTML("beforeend", videoPagerHtml);
-let videoPagerBtn = videoPager.querySelectorAll("a");
+// videoPager.insertAdjacentHTML("beforeend", videoPagerHtml);
+// let videoPagerBtn = videoPager.querySelectorAll("a");
 
-function video_moveSlide(num) {
-  videoWrapper.style.left = `${num * -100}%`;
-  videoCurrentIdx = num;
-  for (let pg of videoPagerBtn) {
-    pg.classList.remove("active");
-  }
-  videoPagerBtn[videoCurrentIdx].classList.add("active");
+// function video_moveSlide(num) {
+//   videoWrapper.style.left = `${num * -100}%`;
+//   videoCurrentIdx = num;
+//   for (let pg of videoPagerBtn) {
+//     pg.classList.remove("active");
+//   }
+//   videoPagerBtn[videoCurrentIdx].classList.add("active");
 
-  for (let i = 0; i < videos.length; i++) {
-    if (i !== videoCurrentIdx) {
-      videos[i].pause();
-      videos[i].currentTime = 0;
-    }
-  }
+//   for (let i = 0; i < videos.length; i++) {
+//     if (i !== videoCurrentIdx) {
+//       videos[i].pause();
+//       videos[i].currentTime = 0;
+//     }
+//   }
 
-  videos[videoCurrentIdx].play();
-}
+//   videos[videoCurrentIdx].play();
+// }
 
-videoPagerBtn.forEach((btn, idx) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    video_moveSlide(idx);
-  });
-});
+// videoPagerBtn.forEach((btn, idx) => {
+//   btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     video_moveSlide(idx);
+//   });
+// });
 
-function video_autoSlide() {
-  let videoTimer = setInterval(() => {
-    let videoSlideNext = (videoCurrentIdx + 1) % videoCount;
-    video_moveSlide(videoSlideNext);
-  }, 20000);
-}
-video_autoSlide();
+// function video_autoSlide() {
+//   let videoTimer = setInterval(() => {
+//     let videoSlideNext = (videoCurrentIdx + 1) % videoCount;
+//     video_moveSlide(videoSlideNext);
+//   }, 20000);
+// }
+// video_autoSlide();
