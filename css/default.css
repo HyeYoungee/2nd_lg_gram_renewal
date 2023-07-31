@@ -130,38 +130,38 @@ html {
   }
   
   .footer_sns_wrap ul li:first-child {
-    background: url("./imgs/footer/sns_icon_youtube.svg");
+    background: url("../imgs/footer/sns_icon_youtube.svg");
   }
   
   .footer_sns_wrap ul li:nth-child(2) {
-    background: url("./imgs/footer/sns_icon_facebook.svg");
+    background: url("../imgs/footer/sns_icon_facebook.svg");
   }
   
   .footer_sns_wrap ul li:nth-child(3) {
-    background: url("./imgs/footer/sns_icon_insta.svg");
+    background: url(" ../imgs/footer/sns_icon_insta.svg");
   }
   
   .footer_sns_wrap ul li:nth-child(4) {
-    background: url("./imgs/footer/sns_icon_naver.svg");
+    background: url("../imgs/footer/sns_icon_naver.svg");
   }
   
   .footer_sns_wrap ul li:last-child {
-    background: url("./imgs/footer/sns_icon_company.svg");
+    background: url("../imgs/footer/sns_icon_company.svg");
   }
   
   .footer_sns_wrap ul li:hover:first-child {
-    background: url("./imgs/footer/sns_icon_youtube_b.svg");
+    background: url("../imgs/footer/sns_icon_youtube_b.svg");
   }
   
   .footer_sns_wrap ul li:hover:nth-child(2) {
-    background: url("./imgs/footer/sns_icon_facebook_b.svg");
+    background: url("../imgs/footer/sns_icon_facebook_b.svg");
   }
   
   .footer_sns_wrap ul li:hover:nth-child(3) {
-    background: url("./imgs/footer/sns_icon_insta_b.svg");
+    background: url("../imgs/footer/sns_icon_insta_b.svg");
   }
   .footer_sns_wrap ul li:hover:nth-child(4) {
-    background: url("./imgs/footer/sns_icon_naver_b.svg");
+    background: url("../imgs/footer/sns_icon_naver_b.svg");
   }
   
   .footer_sns_wrap ul li:hover:last-child {
