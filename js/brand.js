@@ -94,7 +94,11 @@ let minusAfter =$('.minus_after'),
 //   setInterval(function() { 
 
 //     $('.minus_after ul li').each(function(){
-//       $('this').animate({transform: 'scaleY(0%) translateY(-100%)'})
+//        $('this').animate({transform: 'scaleY(0%) translateY(-100%)'})
+//       // $(this).animate({opacity: 1, transform: ' translateY(-100%)'}).css({
+//       //   "transform": "scaleY(0)",
+//       // })
+      
 //       console.log('작동')
 //       $('.minus_after ul').animate({transform: 'translateY(-33%)'})
 //     })
@@ -102,7 +106,6 @@ let minusAfter =$('.minus_after'),
 //   }, 1000);
 // }
 // weightAu();
-
 
 // function weightAu(){
 //   $('.minus_after ul').stop().animate({top:'-92px'},900,function(){console.log("슬라이드 이동 완료"); });   
@@ -116,18 +119,23 @@ let minusAfter =$('.minus_after'),
 
 
 // },1000)
-
+     $('.minus_after ul li').hide()
 function slideListUp() {
   // $('.minus_after ul li').hide();
   const firstItem = $(".minus_after ul li:first-child");
   const itemHeight = firstItem.outerHeight();
   
   firstItem.animate({transform:'translateY(-100%)'}, 1000, function() {
-   // $('.minus_after ul li').css({opacity:0})
-    $('.minus_after ul li').hide()
+   $('.minus_after ul li').css({opacity:0})
+    // $('.minus_after ul li').hide()
     // $(this).scale(0);
-    $(this).animate({opacity:'1', transform: 'scaleY(0%) translateY(-100%)'})
-    $(this).animate({opacity: 1}, 1000)
+    // $(this).animate({opacity: 1, transform: 'scaleY(0%) translateY(-100%)'})
+    $(this).show();
+    $(this).animate({opacity: 1, transform: ' translateY(-100%)'}).css({
+      "transform": "scaleY(0)",
+  })
+    // $(this).scale()
+    //$(this).animate({opacity: 1}, 1000)
       $(this).appendTo(".minus_after ul").css("marginTop", 0);
   });
 }
