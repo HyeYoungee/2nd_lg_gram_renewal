@@ -57,9 +57,23 @@ html {
   cursor: pointer;
 }
 
-ul li img {
+.select_slider li img {
   width: 300px;
   height: 300px;
+}
+
+@media (max-width: 767px) {
+  .select_slider li img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 479px) {
+  .select_slider li img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 a#scroll_btn {
@@ -250,19 +264,20 @@ footer {
   padding: 0 33px;
 }
 
-.footer_info_text_wrap p:first-child {
-  margin-bottom: 0;
+.footer_info_text_wrap p {
+  padding-bottom: 24px;
 }
-/* @media (max-width: 1200px) {
-  .footer_info_link_wrap ul {
-    flex-wrap: wrap;
-  }
-  .footer_info_link_wrap ul li {
-    flex: 1 0 25%;
-  }
-} */
 
-@media (max-width: 1200px) {
+.footer_info_text_wrap p:first-child {
+  padding-bottom: 6px;
+}
+@media (max-width: 1272px) {
+  .select-wrap h2 {
+    font-size: var(--sub_cont);
+  }
+  .select-wrap select option {
+    font-size: var(--body_lg);
+  }
   .footer_info_link_wrap ul {
     flex-wrap: wrap;
     font-size: 14px;
@@ -271,4 +286,25 @@ footer {
     flex: 1 0 50%;
   }
 }
+
+@media (max-width: 767px) {
+  .select-wrap h2 {
+    font-size: var(--body_lg);
+  }
+
+  .select-wrap select {
+    font-size: var(--body_text_unit);
+  }
+}
+
+@media (max-width: 479px) {
+  .select-wrap h2 {
+    font-size: var(--body_md);
+  }
+
+  .select-wrap select {
+    font-size: var(--body_sm);
+  }
+}
+
 /* 현정 - main-sec01 video end*/
