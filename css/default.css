@@ -20,28 +20,26 @@ body *{
 
 
 .brand_wrapper div{
-  background-color: rgb(191, 191, 245);
+  background-color: var(--gray_bg);
   border-radius: var(--border_lg);
   height: 360px;
   color: #FFF;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: "Gmarket Sans";
   font-size: var(--cont_tt);
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: end;
   box-shadow: var(--image_shadow);
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  padding-bottom:36px ;
 }
-.brand_wrapper div h3{
-  margin-bottom: calc(var(--base_unit_d)*1.5) 0;   /* 36px */ 
-}
-.brand_wrapper{
+
+/* .brand_wrapper{
   gap:24px;
-}
+} */
 .main_sec3_brand .cs_desc{
   padding: calc(var(--base_unit_d)*1.5) 0;   /* 36px */ 
 }
@@ -231,10 +229,33 @@ body *{
   }
   .main_sec6_service .title { 
     text-align: center; 
-
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+  .main_sec6_service .cs_title,
+  .main_sec6_service .cs_desc{
+    text-align-last: center;
+  }
+
+
+  .service_wrapper .slide div{
+    border-radius: var(--border_lg);
+    background: var(--gray_bg, #F2F2F2);
+    box-shadow: var(--image_shadow);
+    width: 183px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-02, #3182F6);
+    gap:20px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
   }
   /* 태블릿 */
 .cs_title{
