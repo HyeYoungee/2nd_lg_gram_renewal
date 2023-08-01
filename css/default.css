@@ -57,6 +57,11 @@ html {
   cursor: pointer;
 }
 
+ul li img {
+  width: 300px;
+  height: 300px;
+}
+
 a#scroll_btn {
   position: absolute;
   height: 5em;
@@ -119,10 +124,22 @@ a#scroll_btn:after {
 }
 
 /* main-sec4-select */
-#gramtype {
-  font-size: ;
+.select-container {
+  font-family: "Gmarket Sans TTF";
 }
-
+.select-container h2 {
+  margin: 0 10px;
+}
+.select-option {
+  padding-bottom: 62px;
+}
+.product_btn {
+  width: 216px;
+  line-height: 62px;
+  font-size: var(--body_lg);
+  font-weight: 700;
+  margin-bottom: 96px;
+}
 /* footer */
 footer {
   background: var(--gray-04, #333d4b);
