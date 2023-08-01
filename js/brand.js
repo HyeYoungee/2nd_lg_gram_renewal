@@ -108,7 +108,7 @@ let weightUp = setInterval(()=>{
 
 
 
-
+$('.plus_tt').hide();
 $(window).scroll(function(){
   let scrollAmt = $(window).scrollTop();
   //console.log('scroll_ATM :', scroll_AMT);
@@ -119,7 +119,7 @@ $(window).scroll(function(){
  console.log('그램헤이트', gram_height);
  console.log(`스크롤${scrollAmt}`);
     if(scrollAmt+300 > 24*count) { $('.plus_effect img').attr({"src":`imgs/brand/brand_plus/plus_${count+1}.png`})
-      if(count == 45){
+      if(count == 35){
         $('.plus_tt').fadeIn();
       }
   

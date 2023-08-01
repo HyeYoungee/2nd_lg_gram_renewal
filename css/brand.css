@@ -206,7 +206,7 @@ section {
 } */
 
 
-.plus_bg {
+.plus_bg ,.division_bg{
   width: 100%;
   height: 100%;
   background: #000;
@@ -215,10 +215,10 @@ section {
   justify-content: center;
 }
 
-.plus_open {
+/* .plus_open {
   position: sticky;
   top: 0;
-}
+} */
 
 .plus_effect {
   background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
@@ -230,7 +230,7 @@ section {
 .plus_effect img {
   width: 50%;
   margin-top: 100px;
-  position: absolute;
+  
 }
 
 
@@ -261,6 +261,23 @@ section {
   transform: scale(2.0);
   /* transform-origin: 50% 60%; */
   opacity: 0;
+}
+
+
+.sec_5, .sec_6{
+  height: 100vh;
+}
+.sec_5 .division_bg,
+.sec_6 .muliple_bg{
+  height: 100%;
+}
+
+.division_effect{
+  height: 100%;
+  background: #0C1B32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
