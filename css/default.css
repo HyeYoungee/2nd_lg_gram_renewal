@@ -1,11 +1,13 @@
 /* .main_header_nav 시작 */
 nav{
-  background-color: #ffdeff;
+  background-color: #fff;
 }
 .main_header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Gmarket Sans TTF";
+  color: var(--gray_03);
   background-color: #fff;
   margin: 0 auto;
   max-width: 1272px;
@@ -18,13 +20,24 @@ nav{
 }
 
 .main_header_menu li{
-  padding: 24px 32px ;
+  padding: 12px 20px ;
+  margin: 12px 10px;
+}
+
+.main_header_menu li:hover{
+  background-color: #3182f610;
+  color: var(--blue_02);
+  cursor: pointer;
+  border-radius: var(  --border_lg);
 }
 
 .main_header_icons{
   display: flex;
   list-style: none;
   padding-left: 0;
+}
+.main_header_icons:hover{
+  color: var(--blue_02);
 }
 .main_header_icons li{
   padding: 20px 10px;
