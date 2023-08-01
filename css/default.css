@@ -1,4 +1,4 @@
-/* .main_header_nav 시작 */
+/* main_header시작 */
 nav{
   background-color: #fff;
 }
@@ -13,28 +13,52 @@ nav{
   max-width: 1272px;
 }
 
+/* main_header_gnb시작 */
 .main_header_menu{
   display: flex;
   list-style: none;
   padding-left: 0;
 }
 
-.main_header_menu li{
+.main_header_menu>li{
   padding: 12px 20px ;
-  margin: 12px 10px;
+  margin: 12px 16px;
+  transition: 0.5s;
 }
 
-.main_header_menu li:hover{
+.main_header_menu>li:hover{
   background-color: #3182f610;
   color: var(--blue_02);
   cursor: pointer;
-  border-radius: var(  --border_lg);
+  border-radius: var(--border_lg);
 }
 
+/* main_header_lnb시작 */
+.main_header_menu > li ul{ 
+  width:100%; 
+  display: none; 
+  position: absolute;}
+.main_header_menu > li ul li{
+  white-space:nowrap;
+  float: left; 
+  margin: 23px 0;
+  padding: 10px 0; 
+  gap: 80px;
+}
+.main_header_menu > li ul li a{
+  color:var(--gray_03);
+  font-weight: 300;
+  transition: 0.5s;}
+.main_header_menu > li ul li a:hover{font-weight: 500; transition: 0.5s;}
+
+/* main_header_icon시작 */
 .main_header_icons{
   display: flex;
   list-style: none;
   padding-left: 0;
+}
+.main_header_icons a img{
+  width: 30px;height: 30px;
 }
 .main_header_icons:hover{
   color: var(--blue_02);
@@ -53,14 +77,26 @@ nav{
   .main_header{
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px;
   }
-
+  .main_header_logo{
+    padding: 24px;  }
   .main_header_menu{
     flex-direction: column;
     align-items: left;
     width: 100%;
   }
+  .main_header_menu>li:hover{
+    cursor: pointer;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .main_header_menu>li{
+    padding: 25px 32px ;
+    margin: 0;
+    transition: 0.5s;
+  }
+  
   .main_header_toggleBtn{
     display: block;
     top:24px
@@ -71,11 +107,18 @@ nav{
   }
   .main_header_icons li{
     padding: 0 30px;
+    margin-top: 30px;
   }
 
   .main_header_search{
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
+  .main_header_menu > li ul li{
+  float: none; 
+  margin: 15px 0;
+  padding: 10px 0; 
+  gap: 0
 }
-/* .main_header_nav 종료 */
+}
+/* main_header 종료 */
