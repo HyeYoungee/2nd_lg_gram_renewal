@@ -1,0 +1,68 @@
+/* .main_header_nav 시작 */
+nav{
+  background-color: #ffdeff;
+}
+.main_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1272px;
+}
+
+.main_header_menu{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.main_header_menu li{
+  padding: 24px 32px ;
+}
+
+.main_header_icons{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.main_header_icons li{
+  padding: 20px 10px;
+}
+
+.main_header_toggleBtn{
+  position: absolute;
+  right: 24px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main_header{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .main_header_menu{
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+  }
+  .main_header_toggleBtn{
+    display: block;
+    top:24px
+  }
+  .main_header_icons.active,
+  .main_header_menu.active{
+    display: flex;
+  }
+  .main_header_icons li{
+    padding: 0 30px;
+  }
+
+  .main_header_search{
+    border-right: solid 1px #58606a30;
+    border-left: solid 1px #58606a30;
+  }
+}
+/* .main_header_nav 종료 */
