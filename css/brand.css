@@ -1,4 +1,4 @@
-body{
+body {
   background-color: var(--black_00, #000);
   padding: 0;
   margin: 0;
@@ -6,27 +6,33 @@ body{
   text-align: center;
 
 }
-body *{
+
+body * {
   padding: 0;
   margin: 0;
 }
-header{
+
+header {
   background: #fff;
   height: 72px;
 
 }
+
 /* main{
   height: 400vh;
 } */
-section{
+section {
   width: 100vw;
   height: 100vh;
 }
 
-.sec_1{
+.sec_1 {
   overflow: hidden;
+  width: 100vw;
+  height: 100vh
 }
-.mask{
+
+.mask {
   /* background-color: #b0fffa; */
   /* background:url(images/bg_img/marek-piwnicki-l50UvtsNBMU-unsplash.jpg) center/cover; */
   text-align: center;
@@ -34,167 +40,234 @@ section{
   /* height: 1080px; */
   height: 100%;
 }
-.mask h2{
-  padding: 100px 0 400px;
+
+.mask h2 {
+  padding: 200px 0 400px;
   font-size: 200px;
   font-weight: bold;
   mix-blend-mode: lighten;
   color: black;
-	background-color: white;
+  background-color: white;
   transition: 1s;
-  transform-origin: 50% 30%;
+  transform-origin: 50% 25%;
   font-family: "GmarketSansMedium";
+  height: 100%;
 
 }
+
 .mask h2.active {
-  transform: scale(4.5);
+  transform: scale(5.5);
   opacity: 0;
 }
 
 
 
-
-
-.sec_1_after{
-    margin-top: -400px;
+.sec_1_after {
+  margin-top: -650px;
+  visibility: hidden;
+  font-weight: bold;
+  line-height: 128px;
 }
-.sec_1_after h2{
+
+.sec_1_after.animate__fadeInUp {
+  visibility: visible;
+}
+
+.sec_1_after h2 {
   font-size: 100px;
-  font-weight: 700;
-  /* line-height: 128px; */
   background: var(--gradient-symbol, linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 42.73%, #00F1FC 55.42%, #63CEFF 63.89%, #B6B6FF 70.81%, #F498FF 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.sec_1_after h3{
+.sec_1_after h3 {
   color: #EFEFEF;
   font-size: 82px;
-  font-weight: 700;
-  line-height: 128px; 
 }
 
 
-.sec_2 h2{
+.sec_2 h2 {
   color: #FFF;
   font-size: 40px;
   font-weight: 500;
-  line-height: 72px; /* 100% */
+  line-height: 72px;
+  /* 100% */
 }
-.sec_2 h3.active{
+
+.sec_2 h3.active {
   transform: scale(1.2);
   /* transform-origin: 50% 60%; */
   /* opacity: 1; */
 
 }
-.sec_2 h3{
+
+.sec_2 h3 {
   color: #FFF;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
-  line-height: 48px; /* 100% */
+  line-height: 48px;
+  /* 100% */
   margin-top: 100px;
-  transition: 0.9s;
+  /* transition: 0.9s; */
 }
 
 
-.minus_bg{
+.minus_bg,
+.plus_bg {
   width: 100vw;
   height: 100vh;
   background: #000;
 }
+
 .minus {
   /* transform: scale(2.5); */
   transition: 1s;
   transform-origin: 50% 30%;
 }
-.minus.acitve{
+
+.minus.acitve {
   transform: scale(2.0);
   /* transform-origin: 50% 60%; */
   opacity: 0;
 }
-.minus_effect{
+
+.minus_effect {
   background: #fff;
   width: 100vw;
   height: 1080px;
   position: relative;
 }
 
-.minus_effect img{
+.minus_effect img {
   position: relative;
   left: 200px;
-  top:200px;
-  width: 70%;
-
+  top: 200px;
+  width: 60%;
 }
+
 .minus_after ul {
   position: relative;
 }
-.minus_after ul li{
+
+.minus_after ul li {
   color: #000;
   text-align: center;
   font-family: "Gmarket Sans TTF";
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 140% ;/* 100% */
+  line-height: 140%;
+  /* 100% */
   transition: 0.7s;
   transform-origin: 50% 0;
   /* opacity: 1; */
   /* position: absolute; */
-  top:0;
-  
+  top: 0;
+
 }
-/* .minus_after li:hover{
-  transform: scaleY(0%) translateY(-100%); 
+
+.minus_after {
+  overflow: hidden;
+  position: relative;
 }
-.minus_after:hover ul{
-  transform: translateY(-33%); 
-} */
-.minus_after{
+
+.minus_after {
   width: 358px;
   height: 77px;
   background: var(--point-color, linear-gradient(46deg, #FFE0F2 0%, #F9E0F7 6.77%, #F1E0FA 20.31%, #E9E1FD 30.21%, #E0E2FF 45.31%, #D7E5FF 56.25%, #CFE8FF 73.11%, #C8EAFF 83.69%, #C0F0FF 88.90%, #B8F5FF 95.39%, #B2FAFF 100%));
   /* overflow: hidden; */
 }
-.weight{
+
+.weight {
   color: #000;
   text-align: center;
   font-family: "Gmarket Sans TTF";
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 140% ;/* 100% */
+  line-height: 140%;
+  /* 100% */
   transition: 0.7s;
-  transform-origin: 50% 0;
+  position: relative;
+  /* transform-origin: 50% 0; */
   /* opacity: 1; */
 }
-/* .minus_effect .weight:before{
-  content: 'Weight';
-  display: block;
+
+.weight li {
+  position: absolute;
+  /* transform: scaleY(0); */
 }
-.minus_effect .weight:after{
-  content: '980g';
-  display: block;
-} */
-/* .minus_after .weight:hover{
-  transform: scaleY(0%) translateY(-100%); 
-} */
-/* .minus_after .weight:hover{
-  transform: translateY(-33%); 
+
+/* .weight li:first-child{
+  transform: none;
+  opacity: 1;
 } */
 
 
-.plus_effect{
-  background:url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
+.plus_bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus_open {
+  position: sticky;
+  top: 0;
+}
+
+.plus_effect {
+  background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
-.plus_effect img{
-  /* width: 70%;
-  height: 70%; */
-  margin-top: 400px;
-  
+.plus_effect img {
+  width: 50%;
+  margin-top: 100px;
+  position: absolute;
 }
+
+
+
+.plus_tt {
+  color: #fff;
+  text-align: center;
+  font-family: "Gmarket Sans TTF";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.plus_tt{
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.plus_tt h2{
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
+}
+
+
+
+.plus.acitve {
+  transform: scale(2.0);
+  /* transform-origin: 50% 60%; */
+  opacity: 0;
+}
+
+
+
+.lorem {
+  height: 600vh;
+}
+
+
+

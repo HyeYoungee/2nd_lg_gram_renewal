@@ -8,31 +8,33 @@ let maskTT = $('.sec_1 .mask h2'),
 
 
 //hide()
-$('.sec_2 h2, .sec_2 h3').hide();
+$('.sec_2 h2, .sec_2 h3').fadeOut();
 
 let f = true;
-$(window).scroll(function(){
+$(window).on('scroll',function(){
   let sct  = $(window).scrollTop();
   console.log(sct)
   if(sct > 10){
     maskTT.addClass('active');
     //스크롤 발생시, 텍스트 마스크 실행
-
-    if(f == true){
-      gramInnov.addClass('animate__fadeInUp');
-    } else{
-      gramInnov.removeClass('animate__fadeInUp');
-    }
-    f = false;
+    gramInnov.addClass('animate__fadeInUp');
+    // if(f == true){
+     
+    // } else{
+    //   gramInnov.removeClass('animate__fadeInUp');
+    // }
+    // f = false;
     //한번 실행 후, f 값 변경 
 
   if(sct > sec2OST - 400){
     sec2.find('h2, h3').fadeIn(1000, function() {
-      sec2.find('h3').addClass('active');
+      // sec2.find('h3').addClass('active');
+      sec2.find('h3').css({transition:'0.5s',transform:'scale(1.5)'});
     })
     //한번 실행 후, f 값 변경 
   }
-
+  
+  
   // if(sct > minusOST - 300){
   //   minus.addClass('acitve');
   //   $('.sec2_bg').fadeOut(1000); 
@@ -50,7 +52,7 @@ $(window).scroll(function(){
   let minusOST = $('.sec_3').offset().top;
   let plusOSP = $('.sec_4').offset().top;
   //console.log('scroll_ATM :', scroll_AMT);
-  if(sct > minusOST - 300){
+  if(sct > minusOST - 400){
     minus.addClass('acitve');
     $('.minus_bg').fadeOut(1000); 
   }
@@ -72,75 +74,37 @@ $(window).scroll(function(){
 
 let minusAfter =$('.minus_after'),
     minusMoveOST = minusAfter.offset().top;
-
-// function weightAuto(){
-//   setInterval(function(){
-//     minusAfter.find('h3').animate({transform: 'scaleY(0%) translateY(-100%)' })
-//   }, 1000)
-// }
+//추후 스크롤양 계산해서 실행되도록 작성 예정 
 
 
+let weightTT = $('.weight li'),
+weightUpCount = weightTT.length,
+currentIdx = 0;
 
-// let weightAuto = setInterval(function() { 
-
-//   $('.minus_after ul li').each(function(){
-//     $('this').animate({transform: 'scaleY(0%) translateY(-100%)'})
-//     console.log('작동')
-//     $('.minus_after ul').animate({transform: 'translateY(-30%)'})
-//   })
-
-// }, 1000);
-// function weightAu(){
-//   setInterval(function() { 
-
-//     $('.minus_after ul li').each(function(){
-//        $('this').animate({transform: 'scaleY(0%) translateY(-100%)'})
-//       // $(this).animate({opacity: 1, transform: ' translateY(-100%)'}).css({
-//       //   "transform": "scaleY(0)",
-//       // })
-      
-//       console.log('작동')
-//       $('.minus_after ul').animate({transform: 'translateY(-33%)'})
-//     })
+$(window).on('scroll',function(){
+  if($(window).scrollTop() > $('.minus_effect').offset().top){
+    console.log($('.minus_effect').offset())
+    //weightTT.css({opacity:0})
+let weightUp = setInterval(()=>{
+  let nextIdx = (currentIdx + 1)%weightUpCount;
+  weightTT.eq(currentIdx).show().css({transformOrigin:'50% 0'}).animate({transform:'scaleY(0)',opacity:1},1000);
   
-//   }, 1000);
-// }
-// weightAu();
+  weightTT.eq(nextIdx).css({transformOrigin:'50% 100%'}).animate({transform:'scaleY(1)'},1000);
+  currentIdx = nextIdx;
+ 
+  //console.log(currentIdx)
+  if(currentIdx == 2){
+    clearInterval(weightUp);
+  }
+  }, 1500);
 
-// function weightAu(){
-//   $('.minus_after ul').stop().animate({top:'-92px'},900,function(){console.log("슬라이드 이동 완료"); });   
-//   //활성화표시 on 
-//   $('.minus_after ul li').animate({transform: 'scaleY(0%) translateY(-100%)'})
-//   //$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
-
-
-// }
+  }
 
 
 
-// },1000)
-     $('.minus_after ul li').hide()
-function slideListUp() {
-  // $('.minus_after ul li').hide();
-  const firstItem = $(".minus_after ul li:first-child");
-  const itemHeight = firstItem.outerHeight();
-  
-  firstItem.animate({transform:'translateY(-100%)'}, 1000, function() {
-   $('.minus_after ul li').css({opacity:0})
-    // $('.minus_after ul li').hide()
-    // $(this).scale(0);
-    // $(this).animate({opacity: 1, transform: 'scaleY(0%) translateY(-100%)'})
-    $(this).show();
-    $(this).animate({opacity: 1, transform: ' translateY(-100%)'}).css({
-      "transform": "scaleY(0)",
-  })
-    // $(this).scale()
-    //$(this).animate({opacity: 1}, 1000)
-      $(this).appendTo(".minus_after ul").css("marginTop", 0);
-  });
-}
 
-setInterval(slideListUp, 2000);
+})
+
 
 
 
@@ -150,7 +114,30 @@ $(window).scroll(function(){
   //console.log('scroll_ATM :', scroll_AMT);
 
  let gram_height = $('.plus_effect').innerHeight();
- let count = Math.floor(((scrollAmt) / gram_height) * 40)
- 
-    if(scrollAmt > 12*count) {  $('.plus_effect img').attr({"src":`imgs/brand/brand_plus/plus_${count+1}.png`})}
+ let count = Math.floor(((scrollAmt) / gram_height)*8)
+ console.log('카운트',count);
+ console.log('그램헤이트', gram_height);
+ console.log(`스크롤${scrollAmt}`);
+    if(scrollAmt+300 > 24*count) { $('.plus_effect img').attr({"src":`imgs/brand/brand_plus/plus_${count+1}.png`})
+      if(count == 45){
+        $('.plus_tt').fadeIn();
+      }
+  
+  }
+    
 })
+
+
+let plusImg = $('.plus_open img');
+
+
+$(window).scroll(function(){
+  let sct  = $(window).scrollTop();
+  let plusOSP = $('.sec_4').offset().top;
+  //console.log('scroll_ATM :', scroll_AMT);
+  if(sct > plusOSP - 300){
+    //minus.addClass('acitve');
+    $('.plus_bg').fadeOut(1000); 
+  }
+})
+
