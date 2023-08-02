@@ -149,7 +149,8 @@ a#scroll_btn:after {
 }
 .product_btn {
   width: 216px;
-  line-height: 62px;
+  /* line-height: 62px; */
+  padding: 20px 0px;
   font-size: var(--body_lg);
   font-weight: 700;
   margin-bottom: 96px;

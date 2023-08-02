@@ -10,6 +10,7 @@ $(function () {
       $slideElement.find("video").get(0).play();
     },
   });
+
   $(".select_slider").bxSlider({
     minSlides: 3,
     maxSlides: 8,
