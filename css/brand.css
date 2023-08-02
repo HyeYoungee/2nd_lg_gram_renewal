@@ -215,10 +215,19 @@ section {
   justify-content: center;
 }
 
-/* .plus_open {
+.plus_open {
+  position: relative;
+  /* top: 0; */
+}
+/* .plus_open{
   position: sticky;
   top: 0;
 } */
+
+.plus_open.sticky {
+  position: sticky;
+  top: 0;
+}
 
 .plus_effect {
   background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;

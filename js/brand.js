@@ -108,11 +108,20 @@ let weightUp = setInterval(()=>{
 
 
 
+
+
 $('.plus_tt').hide();
 $(window).scroll(function(){
+  
   let scrollAmt = $(window).scrollTop();
+  let plusOpenOST = $('.plus_open').offset().top;
   //console.log('scroll_ATM :', scroll_AMT);
-
+  console.log('plusOpenOST',plusOpenOST);
+  if(scrollAmt > plusOpenOST){
+    $('.plus_open').addClass('sticky');
+  }else{
+    $('.plus_open').remove('sticky');
+  }
  let gram_height = $('.plus_effect').innerHeight();
  let count = Math.floor(((scrollAmt) / gram_height)*8)
  console.log('카운트',count);

@@ -1,0 +1,16 @@
+.title{
+  text-align: center;
+}
+
+
+#map{
+  background-color: antiquewhite;
+}
+
+aside{
+  text-align: center;
+}
+.search_tt{
+  font-size: var(--cont_tt);
+
+}
