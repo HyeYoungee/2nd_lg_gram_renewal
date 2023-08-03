@@ -123,7 +123,7 @@ body *{
   
   } */
 
-/* 테블릿 (해상도 480px ~ 767px) */
+/* 태블릿 (해상도 480px ~ 767px) */
 @media (min-width:480px) and (max-width:767px) { 
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 720px;
@@ -163,7 +163,7 @@ body *{
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width:479px) { 
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 432px;
+    max-width: 432px; 
   }
   .title{
     padding: calc(var(--base_unit_tm) * 3) 0 calc(var(--base_unit_tm) * 2);

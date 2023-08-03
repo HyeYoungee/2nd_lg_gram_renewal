@@ -1,10 +1,11 @@
-/* $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-); */
+@media (min-width: 1272px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1272px;
+    padding: 0;
+  }
+}
+
+
 
 body *{
   margin: 0;
@@ -22,17 +23,17 @@ body *{
   color: var(--dark, #1E2226);
   padding: calc(var(--base_unit_d) * 3) 0;
 }
-.sub_tt{
+/* .sub_tt{
   font-family: "Gmarket Sans TTF";
   line-height: 48px; 
-}
-.cont_tt{
+} */
+/* .cont_tt{
   font-family: "Gmarket Sans TTF";
   line-height: 36px; 
   font-weight: bold;
   text-align: center;
   margin-bottom: 48px;
-}
+} */
 
 .faq{
   background: url(../imgs/service/service_banner.png) no-repeat center/cover;
@@ -78,9 +79,9 @@ body *{
 .service{
   margin-top: 76px;
 }
-/* .service_list{
+.service_list{
   gap:24px;
-} */
+}
 .service_list .list{
   background: rgba(69, 147, 252, .1);
   box-shadow: var(--image_shadow);
@@ -119,7 +120,7 @@ body *{
 .support_link li a{
   color: var(--dark, #1E2226);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
   display: inline-block;
   padding: 5px 10px;
@@ -131,6 +132,12 @@ body *{
 .support_link{
  margin-bottom: calc(var(--base_unit_d)*4);
 }
+.support_link .cont_tt{
+  text-align: left;
+ }
+/* .support_link li{
+  transition: 0.5s;
+ } */
 
 .support_link li:hover a{
   color: var(--blue_01);
@@ -148,10 +155,12 @@ body *{
 
 
 
-@media (max-width:768px){
-  .container{
-    width: 720px;
+/* 태블릿 (해상도 480px ~ 767px) */
+@media (max-width:768px) { 
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 720px; 
   }
+
   .sub_tt, .faq h3 em{
     font-size: 40px;  /*40px*/
   }
@@ -167,7 +176,9 @@ body *{
     text-align: left;
   }
  
-  
+  .cs_link{
+    margin-bottom: 20px;
+  }
   .service_list h3{
     font-size: 22px;
     margin-bottom: 14px;
@@ -191,10 +202,16 @@ body *{
     height: 32px;
     margin-right: 18px;
   }
-
 }
 
-@media (max-width:480px){
+
+
+
+/* 모바일 (해상도 ~ 479px) */
+@media (max-width:479px) { 
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 432px; 
+  }
   .sub_tt, .faq h3 em{
     font-size: var(--sub_cont);  /*32px*/
   }
@@ -210,6 +227,10 @@ body *{
   }
  
   
+
+
+
+
   .service_list h3{
     font-size: 22px;
     margin-bottom: 16px;
@@ -232,9 +253,10 @@ body *{
     width: 28px;
     height: 28px;
   }
-  .support{
+  /* .support{
     display: flex;
-  }
+    flex-direction: row;
+  } */
   .support_link ul{
     flex-direction: column;
   }
