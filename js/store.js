@@ -3,9 +3,11 @@ $(function () {
         console.log(data);
         console.log(data[0].city[0].country[0].store);
         //console.log(data[0].city[0]);
+        
 
 
         let seoul = data[0].city[0];
+        console.log(seoul);
 
         let country = data[0].city[0].country;
         console.log(country);
