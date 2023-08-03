@@ -4,6 +4,43 @@ $(function () {
       let filterdArr = [];
       let target = $('.store_list');
 
+
+
+      function initList(data, status, xhr){
+        addItems();
+        console.log(allData);           
+      }
+      
+
+      function addItems(branch, value){
+        let listHTML = '';
+        if(value =='' || value == 'all'){
+          filterdArr = allData;
+        } else{
+          filterdArr = allData.filter(pl => pl[branch] == value);
+        }
+      
+        console.log(filterdArr);
+        
+         $.each(filterdArr, (i, item) => {
+          listHTML += 
+            `<li>
+              <h2>${item.title}</h2>
+              <img src="${item.thumbnail}" alt="${item.title}">
+             </li>`;  
+         });
+        console.log(listHTML);
+        target.html(listHTML);
+        target.find('li').hide();
+      
+        target.imagesLoaded( function() {
+          target.find('li').show();
+          // images have loaded
+        });
+        
+      
+      
+      }
         //console.log(data);
         console.log(data[0].city[0].country[0].store);
         //console.log(data[0].city[0]);
