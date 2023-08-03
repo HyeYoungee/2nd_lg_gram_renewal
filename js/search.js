@@ -6,12 +6,55 @@ $(function () {
   let allData = [];
 
   $.getJSON("/data/card.json", initCarList);
+
   function initCarList(data) {
     allData = data;
     console.log(allData);
+    // console.log(allData);
     addItems(); //데이터 추출, 리스트태그 생성, ui의 내용에 추가
-
     loadMoreBtn.on("click", addItems); //클릭하면 addItems 할일을 해
+  }
+
+  $(".search_btn").on("click", function () {
+    findSet();
+  });
+
+  function findSet(data) {
+    allData = data;
+    let filteredType = [];
+    let filteredColor = [];
+
+    $("input[name='gram_type']:checked").each(function () {
+      filteredType.push($(this).val());
+    });
+
+    function findFilter(type, color) {
+      let filteredType = allData.filter((item) => item.type == "360");
+      console.log(filteredType);
+      let filteredColor = filteredType.filter((item) => item.color == "white");
+      console.log(filteredColor);
+
+      $.each(b, function (idx, i) {
+        let listHTML = `<li class='card'>
+          <div>
+            <div class='card_img_wrap d-flex justify-content-center '>
+           <img src="${i.image}"/>
+            </div>
+            <div class='card_text'>
+              <p class='product_num'>${i.product_num}</p>
+              <h3 class='product_title'>${i.product_title}</h3>
+              <p class='product_desc1'>${i.product_desc1}</p>
+              <p class='product_weight'>무게(g) 약 ${i.product_weight.toLocaleString()}</p>
+              <p class='review'>${starSVG}<span>${i.rating}</span></p>
+              <h3 class='product_cost'>₩ ${i.price.toLocaleString()}</h3>
+            </div>
+            <button class="add_btn">구매하기</button>
+          </div>
+        </li>`;
+
+        elements.push(listHTML);
+      });
+    }
   }
 
   function addItems() {

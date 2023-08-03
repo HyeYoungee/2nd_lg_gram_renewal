@@ -6,7 +6,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 999,
     "rating": "4.80 (8)",
-    "price": 2048990
+    "price": 2048990,
+    "type": "style",
+    "color": "black",
+    "price1": 250
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -15,7 +18,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "4.80 (5)",
-    "price": 1890000
+    "price": 1890000,
+    "type": "style",
+    "color": "green",
+    "price1": 200
   },
   {
     "image": "../imgs/select/green_left.png",
@@ -24,7 +30,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1450,
     "rating": "5.00 (2)",
-    "price": 3207000
+    "price": 3207000,
+    "type": "360",
+    "color": "green",
+    "price1": 350
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -33,7 +42,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 1519000
+    "price": 1519000,
+    "type": "360",
+    "color": "green",
+    "price1": 200
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -42,7 +54,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i7-1360P 프로세서",
     "product_weight": 1230,
     "rating": "5.00 (5)",
-    "price": 3540000
+    "price": 3440000,
+    "type": "gram",
+    "color": "green",
+    "price1": 350
   },
   {
     "image": "../imgs/select/black_left.png",
@@ -51,7 +66,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000
+    "price": 2349000,
+    "type": "gram",
+    "color": "green",
+    "price1": 250
   },
   {
     "image": "../imgs/select/green_open.png",
@@ -60,7 +78,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "5.00 (10)",
-    "price": 2200000
+    "price": 2200000,
+    "type": "gram",
+    "color": "green",
+    "price1": 250
   },
   {
     "image": "../imgs/select/aurora_left.png",
@@ -69,7 +90,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 999,
     "rating": "4.80 (8)",
-    "price": 2048990
+    "price": 2048990,
+    "type": "gram",
+    "color": "white",
+    "price1": 250
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -78,7 +102,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "4.80 (5)",
-    "price": 1890000
+    "price": 1890000,
+    "type": "360",
+    "color": "white",
+    "price1": 200
   },
   {
     "image": "../imgs/select/green_left.png",
@@ -87,7 +114,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1450,
     "rating": "5.00 (2)",
-    "price": 3207000
+    "price": 3207000,
+    "type": "360",
+    "color": "white",
+    "price1": 350
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -96,7 +126,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 1519000
+    "price": 1519000,
+    "type": "style",
+    "color": "white",
+    "price1": 200
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -105,7 +138,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i7-1360P 프로세서",
     "product_weight": 1230,
     "rating": "5.00 (5)",
-    "price": 3540000
+    "price": 3330000,
+    "type": "gram",
+    "color": "aurora",
+    "price1": 350
   },
   {
     "image": "../imgs/select/black_left.png",
@@ -114,7 +150,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000
+    "price": 2349000,
+    "type": "gram",
+    "color": "aurora",
+    "price1": 250
   },
   {
     "image": "../imgs/select/green_open.png",
@@ -123,6 +162,9 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "5.00 (10)",
-    "price": 2200000
+    "price": 2200000,
+    "type": "gram",
+    "color": "aurora",
+    "price1": 250
   }
 ]
