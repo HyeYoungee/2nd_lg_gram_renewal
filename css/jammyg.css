@@ -1,0 +1,42 @@
+header{
+  width: 100%;
+  height: 72px;
+  text-align: center;
+  font-size: 28px;
+}
+/* Layout, Default */
+.container{
+  width: 1272px;
+  margin: 0 auto;
+}
+main > section{
+  padding-top: calc(var(--base_unit_d) * 5);
+}
+main h3, main h4{
+  font-family: 'Gmarket Sans TTF';
+  font-weight: bold;
+  padding-left: var(--base_unit_d);
+}
+main h3{
+  font-size: var(--sub_cont);
+}
+main h4{
+  font-size: var(--body_lg);
+}
+
+/* Banner */
+.banner{
+  padding: calc(var(--base_unit_d)*3) 0;
+}
+.banner .title_box{
+  text-align: center;
+  position: relative;
+}
+.banner .logo {
+  /* text-indent: -9999em; */
+  /* background-image: url(); */
+}
+
+.custom{
+  padding-bottom: calc(var(--base_unit_d) * 7);
+}
