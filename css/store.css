@@ -12,22 +12,31 @@ body *{
 .title{
   text-align: center;
 }
-
+.map_wrapper{
+  position: relative;
+}
 
 #map{
   background-color: antiquewhite;
 }
 
 aside{
+  background: #fff;;
   width: 410px;
   text-align: center;
   /* background-color: aqua; */
   border-radius: 20px;
   box-shadow: 9px 16px 18px 0px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top:40px;
+  left:320px;
 
 }
 .search_tt{
   font-size: var(--cont_tt);
+  font-weight: bold;
+  font-family: "Gmarket Sans";
+  margin-top: 32px;
 
 }
 
