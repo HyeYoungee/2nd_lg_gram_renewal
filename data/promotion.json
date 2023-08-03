@@ -1,0 +1,57 @@
+[
+  {
+    "image": "imgs/service/store/event_1.jpeg",
+    "promotion_title": "더 큰 그램, PC SUMMER FESTIVAL",
+    "duration": "2023.07.01 ~ 2023.07.31",
+    "store": "롯데 강남점"
+  },
+  {
+    "image": "imgs/service/store/event_2.jpeg",
+    "promotion_title": "LG UP DAY",
+    "duration": "2023.07.14 ~ 2023.07.28",
+    "store": "반포점"
+  },
+  {
+    "image": "imgs/service/store/event_3.jpeg",
+    "promotion_title": "노트북 진열제품 할인행사",
+    "duration": "2023.07.01 ~ 2023.07.31",
+    "store": "현대본점 "
+  },
+  {
+    "image": "imgs/service/store/event_4.jpeg",
+    "promotion_title": "LG전자 아카데미 스토어",
+    "duration": "2023.07.01 ~ 2023.07.31",
+    "store": "이수역점"
+  },
+  {
+    "image": "imgs/service/store/event_5.jpeg",
+    "promotion_title": "LG 올레드 10주년 기념 고객 감사 혜택전",
+    "duration": "2023.08.01 ~ 2023.08.31",
+    "store": "잠실점"
+  },
+  {
+    "image": "imgs/service/store/event_6.jpeg",
+    "promotion_title": "LGE.COM이 선물하는 8월 특별혜택",
+    "duration": "2023.07.25 ~ 2023.08.24",
+    "store": "롯데 부산점"
+  },
+  {
+    "image": "imgs/service/store/event_7.jpeg",
+    "promotion_title": "스탠바이미 & 스탠바이미 Go 포토 리뷰 이벤트",
+    "duration": "2023.08.01 ~ 2023.08.31",
+    "store": "남동구청점"
+  },
+  {
+    "image": "imgs/service/store/event_8.jpeg",
+    "promotion_title": "2023 LG PC 핫썸머를 날려버릴 COOL한 혜택 이벤트",
+    "duration": "2023.08.05 ~ 2023.08.19",
+    "store": "성서점"
+  },
+  {
+    "image": "imgs/service/store/event_9.jpeg",
+    "promotion_title": "LGE.COM X SSG.COM 특별 기획전",
+    "duration": "2023.08.14 ~ 2023.08.21",
+    "store": "현대 천호점"
+  }
+]
+

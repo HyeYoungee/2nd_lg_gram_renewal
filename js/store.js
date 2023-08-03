@@ -91,9 +91,23 @@ $(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+	$.getJSON('data/promotion.json', function (eventData) {
+	console.log(eventData);
+
 });//on loaded
 
-
+})
 
 
 

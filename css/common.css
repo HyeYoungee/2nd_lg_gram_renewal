@@ -391,24 +391,6 @@ input {
 .search_input:focus {
   border: 3px solid rgba(69, 147, 252, 0.4);
 }
-  /* 데스크탑 */
-  .cs_title{
-    font-size: calc(var(--body_text_unit) * 3); /* 48px */
-    margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
-    font-family: "Gmarket Sans";
-    font-weight: 700;
-  }
-  .cs_sub_tt{
-    font-size: 40px; /* 40px */
-    margin-bottom: calc(var(--base_unit_d) * 2); /* 48px */
-    font-family: "Gmarket Sans";
-    font-weight: 700;
-  }
-  .cs_desc{
-    font-size: var(--base_unit_d); /* 24px */
-  }
-
-  
 
 @media (min-width: 1272px) {
   .container,
@@ -419,6 +401,23 @@ input {
   .container-xxl {
     max-width: 1272px;
     padding: 0;
+  }
+  /* 데스크탑 */
+  .cs_title {
+    font-size: calc(var(--body_text_unit) * 3); /* 48px */
+    margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+  }
+  .cs_sub_tt {
+    font-size: 40px; /* 40px */
+    margin-bottom: calc(var(--base_unit_d) * 2); /* 48px */
+    font-family: "Gmarket Sans";
+    font-weight: 700;
+  }
+  .cs_desc {
+    font-size: var(--base_unit_d); /* 24px */
+    margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
   }
 }
 /* 태블릿 (해상도 480px ~ 767px) */

@@ -164,7 +164,7 @@ $(function () {
    
      //$('select').niceSelect();
    
-})//on loaded
+//on loaded
 
 
 
