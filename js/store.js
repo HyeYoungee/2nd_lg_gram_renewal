@@ -71,11 +71,11 @@ $(function () {
                 */
                 $('#filter2').change(function () {
                             let target = $(this).val();
-                           // let address = countryName;
-                            // if(target = address){
-                            //     console.log(target)
-                            // }
-                    console.log(target[0])
+                           //let address = countryName;
+                            //if(target = address){
+                                console.log(target)
+                           // }
+                    console.log(target)
                             mixer.filter(target);
                         
 
@@ -121,7 +121,7 @@ $(function () {
 
 
    
-     $('select').niceSelect();
+     //$('select').niceSelect();
    
 })//on loaded
 
