@@ -86,11 +86,11 @@ $(function () {
 
 
 
-        //   $('.filter').isotope({
-        //     // options
-        //     itemSelector: '.grid-item',
-        //     layoutMode: 'fitRows'
-        //   });
+          $('.filter').isotope({
+            // options
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+          });
 
 
         // var mixer = mixitup('.store_list', {
