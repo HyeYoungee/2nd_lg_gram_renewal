@@ -14,7 +14,7 @@
 }
 
 #colorText.tourmaline-green {
-  color: green;
+  color: #9ef8ee;
 }
 
 #colorText.snow-white {
@@ -205,4 +205,11 @@
 }
 
 .color_gram {
+}
+
+.btn_set li a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
 }

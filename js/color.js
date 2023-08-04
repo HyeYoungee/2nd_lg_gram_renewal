@@ -34,3 +34,15 @@ $(function () {
 AOS.init({
   duration: 1200,
 });
+
+//컬러그램 섹션
+$(".color_item_wrap").isotope({
+  itemSelector: "color_item",
+});
+
+$(".btn_set").on("click", "li", function () {
+  let filterValue = $(this).children().attr("data-filter");
+  $(".color_item_wrap").isotope({ filter: filterValue });
+  $(".btn_set li").removeClass("active");
+  $(this).addClass("active");
+});
