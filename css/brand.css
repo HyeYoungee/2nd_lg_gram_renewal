@@ -50,7 +50,7 @@ section {
   background-color: white;
   transition: 1s;
   transform-origin: 50% 25%;
-  font-family: "GmarketSansMedium";
+  font-family: "Gmarket Sans medium";
   height: 100%;
 
 }
@@ -63,19 +63,24 @@ section {
 
 
 .sec_1_after {
+  font-family: "Gmarket Sans";
   margin-top: -650px;
   visibility: hidden;
   font-weight: bold;
   line-height: 128px;
 }
-
-.sec_1_after.animate__fadeInUp {
+/* .sec_1_after.animate__fadeInUp {
+  visibility: visible;
+} */
+.sec_1_after.active{
   visibility: visible;
 }
 
 .sec_1_after h2 {
+  font-weight: 700;
   font-size: 100px;
-  background: var(--gradient-symbol, linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 42.73%, #00F1FC 55.42%, #63CEFF 63.89%, #B6B6FF 70.81%, #F498FF 100%));
+  /* background: var(--gradient-symbol, linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 42.73%, #00F1FC 55.42%, #63CEFF 68.89%, #B6B6FF 70.81%, #F498FF 100%)); */
+  background:  linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 32.73%, #00F1FC 40.42%, #63CEFF 45.89%, #B6B6FF 65.81%, #F498FF 80%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -85,69 +90,80 @@ section {
   color: #EFEFEF;
   font-size: 82px;
 }
-
-
 .sec_2 h2 {
   color: #FFF;
   font-size: 40px;
   font-weight: 500;
   line-height: 72px;
-  /* 100% */
 }
-
 .sec_2 h3.active {
   transform: scale(1.2);
   /* transform-origin: 50% 60%; */
-  /* opacity: 1; */
-
 }
-
 .sec_2 h3 {
   color: #FFF;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   line-height: 48px;
-  /* 100% */
   margin-top: 100px;
-  /* transition: 0.9s; */
 }
 
 
+
+/* 마이너스 */
+
 .minus_bg,
-.plus_bg {
+.plus_bg,
+.division_bg,
+.multiple_bg{
   width: 100vw;
   height: 100vh;
   background: #000;
 }
 
-.minus {
+.minus,
+.plus,
+.division,
+.multiple{
   /* transform: scale(2.5); */
   transition: 1s;
   transform-origin: 50% 30%;
 }
 
-.minus.acitve {
+.minus.acitve,
+.plus.active,
+.division.active,
+.multiple.active{
   transform: scale(2.0);
   /* transform-origin: 50% 60%; */
   opacity: 0;
 }
 
+.sec_3.sticky{
+  position: sticky;
+  top: 0;
+} 
+
+
 .minus_effect {
   background: #fff;
   width: 100vw;
-  height: 1080px;
+  height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .minus_effect img {
-  position: relative;
-  left: 200px;
-  top: 200px;
+  position: absolute;
+  left: 40%;
+  top: 10%;
   width: 60%;
 }
 
-.minus_after ul {
+.minus_after ul{
   position: relative;
 }
 
@@ -228,6 +244,7 @@ section {
   position: sticky;
   top: 0;
 }
+/* 부모가 크고 자식이 ㅈ짧고 자식에 스티키 */
 
 .plus_effect {
   background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
@@ -297,3 +314,39 @@ section {
 
 
 
+
+
+
+
+
+/* 브랜드스토리 라인업 임시 */
+
+.sec_9 .row div {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border_lg);
+  margin-bottom: 12px;
+
+}
+
+.sec_9 .row div .logo {
+  height: 32px;
+  margin-bottom: 100px;
+}
+
+.sec_9 .row div .lineup {
+  height: 40%;
+}
+
+.img_wrap {
+  padding: 48px;
+  display: flex;
+  /* align-content: space-between; */
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--card_shadow);
+  background: #EBEBEB;
+}

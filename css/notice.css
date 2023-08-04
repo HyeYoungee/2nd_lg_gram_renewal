@@ -51,7 +51,7 @@ body *{
   color:#595959;
 }
 .accordion-button{
-  padding: 12px 48px;
+  padding: 24px 48px;
   position: relative;
  } 
 .accordion-button .notice_tt{ 
@@ -61,7 +61,7 @@ body *{
 }
 .accordion-button span{
   margin-right: 40px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   color:#595959;
 }
@@ -85,17 +85,13 @@ body *{
   color: var(--blue_02);
   background-color: #fff;
 }
-
-/* .accordion-item:focus{
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--blue_01);
-} */ 
 .accordion-body{
   font-size: var(--body_sm); 
   padding: 50px 80px;
   border-top: 1px solid rgba(49, 147, 249, 0.50);
   border-bottom: 1.5px solid rgba(49, 147, 249, 0.50);
+  line-height: 1.7;
+
 }
 .active>.page-link, .page-link.active {
   color: var(--blue_01);
@@ -114,8 +110,15 @@ body *{
   color: var(--blue_01);
   background-color: rgba(69,147,252,.1);
 }
-
-
+.page_wrap{
+  margin-top: calc(var(--base_unit_d) * 2);
+}
+.more_link{
+  display: inline-block;
+  margin-top: calc(var(--base_unit_d) * 1.5);
+  color: #8b99b8;
+  text-decoration-line: underline;
+}
 
 
 /* PC (해상도 768px ~ 1272px) */
