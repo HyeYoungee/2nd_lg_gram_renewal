@@ -406,13 +406,13 @@ input {
   .cs_title {
     font-size: calc(var(--body_text_unit) * 3); /* 48px */
     margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
-    font-family: "Gmarket Sans";
+    font-family: "Gmarket Sans TTF";
     font-weight: 700;
   }
   .cs_sub_tt {
     font-size: 40px; /* 40px */
     margin-bottom: calc(var(--base_unit_d) * 2); /* 48px */
-    font-family: "Gmarket Sans";
+    font-family: "Gmarket Sans TTF";
     font-weight: 700;
   }
   .cs_desc {
