@@ -7,8 +7,10 @@ const FNQSwiper = new Swiper('.mySwiper', {
   autoplay: {
       delay: 2500,
       reverseDirection: true,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
+
   },
+  changeDirection:true,
 });
 
 

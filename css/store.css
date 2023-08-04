@@ -32,6 +32,7 @@ aside{
   left:10%;
   height: 90%;
   overflow-y: scroll;
+  z-index: 10;
 }
 .search_tt{
   font-size: var(--cont_tt);

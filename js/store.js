@@ -18,7 +18,7 @@ $(function () {
 
 			$.each(filteredStore, (i, item) => {
 				listHTML +=
-					`<li class="mix">
+					`<li class="mix" data-lat="${item.lat}" data-lng="${item.lng}">
 							<h2 class="store_name">
 								${item.storeName}
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -28,7 +28,7 @@ $(function () {
 							</h2>
 							<h3 class="store_address">${item.address}</h3>
 							<p class="store_phone">${item.phone}</p>
-						</li>`  ;
+						</li>` ;
 			});
 
 			target.html(listHTML);
@@ -36,59 +36,94 @@ $(function () {
 			console.log(length2);
 		}
 
-		$('#filter2').on('change', function () {
+		//킵
+		// $('#filter2').on('change', function () {
+		// 	let target = $('#filter2').val();
+		// 	findCity('서울특별시', target);
+		// 	$('.result_num').text(length2)
+		// 	console.log(length2);
+		// })
+
+
+			//강남본점...
+		makeMap(37.5234076, 127.0394159);
+
+		$(".search_btn").on('click', function (e) {
+			e.preventDefault();
 			let target = $('#filter2').val();
 			findCity('서울특별시', target);
-			$('.result_num').text(length2)
-			console.log(length2);
+			$('.result_num').text(length2);
+
+			$('.store_list li').on('click', function () {
+				console.log('작동')
+				let lat = $(this).attr('data-lat');
+				let Lng = $(this).attr('data-lng');
+				console.log(lat);
+				console.log(Lng);
+				makeMap(lat,Lng);
+
+
+				$('.store_name').on('click', $('.store_name svg'), function () {
+					$(this).find('path').css({ fill: '#FFCD6C' })
+				})
+			})
 		})
 
-
-   //let storePick = $('.store_list li');
-	 let latLng = '';
-	 $('.store_list li').on('click',function(){
-		latLng = $(this).find('h2').text();
-		console.log(latLng);
-
-	 })
-
-
-
-
-
-
-	//즐겨찾기 버튼 
-	$('.store_name svg').on('click', function () {
-		$('.store_name svg').addClass('active');
-		//$('.store_name svg path').css({fill:'#FFCD6C'})
-		console.log($(this))
-	})
-	$('.store_name').on('click', 	$('.store_name svg'), function () {
-		$(this).find('path').css({ fill: '#FFCD6C' })
-	})
 
 
 	});//json end
 
 
 
-
-
-
-// $('#filter').niceSelect();
-
-
-// $('#filter2').niceSelect();
-
-
-
+function makeMap(lat,lng){
 	var mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 	var mapOption = { //지도를 생성할 때 필요한 기본 옵션
-		center: new kakao.maps.LatLng(37.5234076, 127.0394159), //지도의 중심좌표.
+		center: new kakao.maps.LatLng(lat, lng), //지도의 중심좌표.
 		level: 3 //지도의 레벨(확대, 축소 정도)
 	};
 	var map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
 
+	// 마커를 표시할 위치와 title 객체 배열입니다
+var positions = [
+	{
+			title: '카카오',
+			latlng: new kakao.maps.LatLng(lat, lng)
+	},
+	{
+			title: '생태연못',
+			latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+	},
+	{
+			title: '텃밭',
+			latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+	},
+	{
+			title: '근린공원',
+			latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+	}
+];
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+
+for (var i = 0; i < positions.length; i ++) {
+
+	// 마커 이미지의 이미지 크기 입니다
+	var imageSize = new kakao.maps.Size(24, 35);
+
+	// 마커 이미지를 생성합니다
+	var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+	// 마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+			map: map, // 마커를 표시할 지도
+			position: positions[i].latlng, // 마커를 표시할 위치
+			title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+			image : markerImage // 마커 이미지
+	});
+}
+
+}
 
 
 
@@ -102,66 +137,17 @@ $(function () {
 
 
 
-	$.getJSON('data/promotion.json', function (eventData) {
-	console.log(eventData);
 
-});//on loaded
+
+
+
+
+
+	// $.getJSON('data/promotion.json', function (eventData) {
+	// 	console.log(eventData);
+
+	// });//on loaded
 
 })
-
-
-
-
-// // var mapContainer = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-// // var mapOption = { //지도를 생성할 때 필요한 기본 옵션
-// //   center: new kakao.maps.LatLng(37.5234076, 127.0394159), //지도의 중심좌표.
-// //   level: 3 //지도의 레벨(확대, 축소 정도)
-// // };
-// // var map = new kakao.maps.Map(mapContainer, mapOption); //지도 생성 및 객체 리턴
-
-
-
-// // // 마커를 표시할 위치와 title 객체 배열입니다
-// // var positions = [
-// //     {
-// //         title: '카카오',
-// //         latlng: new kakao.maps.LatLng(33.450705, 126.570677)
-// //     },
-// //     {
-// //         title: '생태연못',
-// //         latlng: new kakao.maps.LatLng(33.450936, 126.569477)
-// //     },
-// //     {
-// //         title: '텃밭',
-// //         latlng: new kakao.maps.LatLng(33.450879, 126.569940)
-// //     },
-// //     {
-// //         title: '근린공원',
-// //         latlng: new kakao.maps.LatLng(33.451393, 126.570738)
-// //     }
-// // ];
-
-// // // 마커 이미지의 이미지 주소입니다
-// // var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-
-// // for (var i = 0; i < positions.length; i ++) {
-
-// //     // 마커 이미지의 이미지 크기 입니다
-// //     var imageSize = new kakao.maps.Size(24, 35);
-
-// //     // 마커 이미지를 생성합니다
-// //     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
-// //     // 마커를 생성합니다
-// //     var marker = new kakao.maps.Marker({
-// //         map: map, // 마커를 표시할 지도
-// //         position: positions[i].latlng, // 마커를 표시할 위치
-// //         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-// //         image : markerImage // 마커 이미지
-// //     });
-// // }
-
-
-
 
 
