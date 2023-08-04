@@ -71,6 +71,10 @@ label {
   border: 2px solid var(--dark, #58606a);
 }
 
+.form_wrap span input {
+  display: none;
+}
+
 .search_btn_wrap {
   width: 100%;
   height: 158px;
@@ -110,6 +114,7 @@ label {
 }
 
 .card_list {
+  justify-content: center;
 }
 
 .card_img_wrap {
