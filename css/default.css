@@ -1,6 +1,13 @@
 /* main_header시작 */
+body{
+  padding-top: 72px;
+}
 nav{
-  background-color: #fff;
+  background-color: #dedede;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .main_header{
   display: flex;
@@ -8,9 +15,10 @@ nav{
   align-items: center;
   font-family: "Gmarket Sans TTF";
   color: var(--gray_03);
-  background-color: #fff;
+  background-color: pink;
   margin: 0 auto;
   max-width: 1272px;
+  height: 72px;
 }
 
 /* main_header_gnb시작 */
@@ -19,15 +27,13 @@ nav{
   list-style: none;
   padding-left: 0;
 }
-
 .main_header_menu>li{
   padding: 12px 20px ;
   margin: 12px 16px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-
 .main_header_menu>li:hover{
-  background-color: #3182f610;
+  background-color: #EAF2FE;
   color: var(--blue_02);
   cursor: pointer;
   border-radius: var(--border_lg);
@@ -35,21 +41,26 @@ nav{
 
 /* main_header_lnb시작 */
 .main_header_menu > li ul{ 
-  width:100%; 
   display: none; 
-  position: absolute;}
+  position: absolute;
+  background-color: aqua;
+  margin-top: 28px;
+}
 .main_header_menu > li ul li{
-  white-space:nowrap;
+  /* white-space:nowrap; */
   float: left; 
-  margin: 23px 0;
-  padding: 10px 0; 
-  gap: 80px;
+  margin-top: 27px;
+  padding: 10px 40px 10px 0; 
 }
 .main_header_menu > li ul li a{
   color:var(--gray_03);
   font-weight: 300;
-  transition: 0.5s;}
-.main_header_menu > li ul li a:hover{font-weight: 500; transition: 0.5s;}
+  transition: 0.3s;
+}
+.main_header_menu > li ul li a:hover{
+  font-weight: 500; 
+  transition: 0.3s;
+}
 
 /* main_header_icon시작 */
 .main_header_icons{
@@ -60,9 +71,7 @@ nav{
 .main_header_icons a img{
   width: 30px;height: 30px;
 }
-.main_header_icons:hover{
-  color: var(--blue_02);
-}
+
 .main_header_icons li{
   padding: 20px 10px;
 }
@@ -74,9 +83,13 @@ nav{
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    padding-top: 80px;
+  }
   .main_header{
     flex-direction: column;
     align-items: flex-start;
+    height: 80px;
   }
   .main_header_logo{
     padding: 24px;  }
@@ -84,6 +97,19 @@ nav{
     flex-direction: column;
     align-items: left;
     width: 100%;
+  }
+
+  .main_header_menu > li ul{ 
+    display: none; 
+    position: static;
+    background-color: transparent;
+    /* margin-top: 28px; */
+  }
+  .main_header_menu > li ul li{
+    float: none; 
+    margin: 15px 0;
+    padding: 10px 0; 
+    gap: 0
   }
   .main_header_menu>li:hover{
     cursor: pointer;
@@ -94,7 +120,7 @@ nav{
   .main_header_menu>li{
     padding: 25px 32px ;
     margin: 0;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   
   .main_header_toggleBtn{
@@ -114,11 +140,6 @@ nav{
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
-  .main_header_menu > li ul li{
-  float: none; 
-  margin: 15px 0;
-  padding: 10px 0; 
-  gap: 0
-}
+
 }
 /* main_header 종료 */
