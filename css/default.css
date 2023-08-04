@@ -139,7 +139,7 @@ a#scroll_btn:after {
 
 /* main-sec4-select */
 .select-container {
-  font-family: "Gmarket Sans TTF";
+  /* font-family: "Gmarket Sans TTF"; */
 }
 .select-container h2 {
   margin: 0 10px;
@@ -273,9 +273,9 @@ footer {
   padding-bottom: 6px;
 }
 @media (max-width: 1272px) {
-  .select-wrap h2 {
+  /* .select-wrap h2 {
     font-size: var(--sub_cont);
-  }
+  } */
   .select-wrap select option {
     font-size: var(--body_lg);
   }
@@ -289,9 +289,9 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .select-wrap h2 {
+  /* .select-wrap h2 {
     font-size: var(--body_lg);
-  }
+  } */
 
   .select-wrap select {
     font-size: var(--body_text_unit);
@@ -299,9 +299,9 @@ footer {
 }
 
 @media (max-width: 479px) {
-  .select-wrap h2 {
+  /* .select-wrap h2 {
     font-size: var(--body_md);
-  }
+  } */
 
   .select-wrap select {
     font-size: var(--body_sm);
@@ -446,7 +446,7 @@ h2 {
     grid-template-rows: auto auto auto;
   }
   .main_sec5 div[class^="card"] {
-    height: 240px;
+    /* height: 240px; */
   }
   .main_sec5 .card_01 {
     grid-column: 1;
@@ -696,7 +696,7 @@ h2 {
 .main_sec6_service .csslider {
   position: relative;
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
 }
 
 .main_sec6_service .control_prev img,
@@ -722,9 +722,9 @@ h2 {
 }
 
 @media (max-width: 1000px) {
-  .main_sec6_service .title h2 {
+  /* .main_sec6_service .title h2 {
     font-size: calc(var(--body_text_unit) * 2.5);
-  }
+  } */
 }
 
 /* 태블릿 (해상도 480px ~ 767px) */
