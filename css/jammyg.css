@@ -4,7 +4,7 @@ header{
   text-align: center;
   font-size: 28px;
 }
-/* Layout, Default */
+/* Layout, All */
 .container{
   width: 1272px;
   margin: 0 auto;
@@ -32,9 +32,17 @@ main h4{
   text-align: center;
   position: relative;
 }
-.banner .logo {
-  /* text-indent: -9999em; */
-  /* background-image: url(); */
+.banner .logo{
+  margin: 0 auto;
+  width: 454px;
+  height: 120px;
+  background: url('../imgs/jammyG/jammyG_logo.svg') no-repeat;
+  text-indent: -9999em;
+}
+.banner .title_box p{
+  font-family: 'Gmarket Sans TTF';
+  font-weight: bold;
+  font-size: var(--cont_tt);
 }
 
 .custom{
