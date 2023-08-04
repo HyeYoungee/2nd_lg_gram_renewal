@@ -17,7 +17,7 @@ var swiper = new Swiper(".slider", {
       slidesPerView: 1.3
     },
     768: {   //768px 이상부터
-      slidesPerView: 1.7
+      slidesPerView: 1.5
     },
     1500: {   //1500px 이상부터
       slidesPerView: 2

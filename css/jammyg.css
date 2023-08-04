@@ -29,8 +29,8 @@ main h4{
   padding: calc(var(--base_unit_d)*3) 0;
 }
 .banner .title_box{
-  text-align: center;
   position: relative;
+  /* margin: 0 auto; */
 }
 .banner .logo{
   margin: 0 auto;
@@ -38,8 +38,11 @@ main h4{
   height: 120px;
   background: url('../imgs/jammyG/jammyG_logo.svg') no-repeat;
   text-indent: -9999em;
+  padding-bottom: var(--base_unit_d);
 }
 .banner .title_box p{
+  position: absolute;
+  top: 110px; left: calc(50% - 90px);
   font-family: 'Gmarket Sans TTF';
   font-weight: bold;
   font-size: var(--cont_tt);
