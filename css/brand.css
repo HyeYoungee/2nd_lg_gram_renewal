@@ -2,29 +2,23 @@ body {
   background-color: var(--black_00, #000);
   padding: 0;
   margin: 0;
-  font-family: "GmarketSansMedium";
+  font-family: "Gmarket Sans TTF";
   text-align: center;
-
-}
-
-body * {
-  padding: 0;
-  margin: 0;
+  /* overflow: hidden; */
 }
 
 header {
   background: #fff;
   height: 72px;
-
 }
 
 /* main{
   height: 400vh;
 } */
-section {
+/* section {
   width: 100vw;
   height: 100vh;
-}
+} */
 
 .sec_1 {
   overflow: hidden;
@@ -43,14 +37,14 @@ section {
 
 .mask h2 {
   padding: 200px 0 400px;
-  font-size: 200px;
+  font-size: max(7.5rem, min(5vw, 12.5rem)); /* */
   font-weight: bold;
   mix-blend-mode: lighten;
   color: black;
   background-color: white;
   transition: 1s;
   transform-origin: 50% 25%;
-  font-family: "Gmarket Sans medium";
+  font-family: "Gmarket Sans TTF";
   height: 100%;
 
 }
@@ -64,10 +58,11 @@ section {
 
 .sec_1_after {
   font-family: "Gmarket Sans";
-  margin-top: -650px;
+  margin-top: -450px;
   visibility: hidden;
   font-weight: bold;
   line-height: 128px;
+  height: 100vh;
 }
 /* .sec_1_after.animate__fadeInUp {
   visibility: visible;
@@ -89,6 +84,9 @@ section {
 .sec_1_after h3 {
   color: #EFEFEF;
   font-size: 82px;
+}
+.sec_2{
+  height: 100vh;
 }
 .sec_2 h2 {
   color: #FFF;
@@ -117,21 +115,23 @@ section {
 .plus_bg,
 .division_bg,
 .multiple_bg{
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .minus,
 .plus,
 .division,
 .multiple{
-  /* transform: scale(2.5); */
   transition: 1s;
   transform-origin: 50% 30%;
 }
 
-.minus.acitve,
+.minus.active,
 .plus.active,
 .division.active,
 .multiple.active{
@@ -140,33 +140,37 @@ section {
   opacity: 0;
 }
 
-.sec_3.sticky{
-  position: sticky;
-  top: 0;
-} 
-
-
 .minus_effect {
   background: #fff;
   width: 100vw;
-  height: 100vh;
+  height: 250vh;
   position: relative;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* overflow: hidden; */
+}
+.effect_wrapper{
+  position: sticky;
+  top: 0;
+  left:0;
+  width: 100%;
+  height : 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-
-.minus_effect img {
+.effect_wrapper img{
   position: absolute;
+  height: 70%;
+  width: 70%;
   left: 40%;
-  top: 10%;
-  width: 60%;
+  /* object-fit: cover;  원래 비율 유지하며 반응형, 태블릿시에 추가로 바꾸기 나중에  */
 }
-
 .minus_after ul{
   position: relative;
 }
-
 .minus_after ul li {
   color: #000;
   text-align: center;
@@ -181,15 +185,11 @@ section {
   /* opacity: 1; */
   /* position: absolute; */
   top: 0;
-
 }
 
 .minus_after {
   overflow: hidden;
   position: relative;
-}
-
-.minus_after {
   width: 358px;
   height: 77px;
   background: var(--point-color, linear-gradient(46deg, #FFE0F2 0%, #F9E0F7 6.77%, #F1E0FA 20.31%, #E9E1FD 30.21%, #E0E2FF 45.31%, #D7E5FF 56.25%, #CFE8FF 73.11%, #C8EAFF 83.69%, #C0F0FF 88.90%, #B8F5FF 95.39%, #B2FAFF 100%));
@@ -210,53 +210,46 @@ section {
   /* transform-origin: 50% 0; */
   /* opacity: 1; */
 }
-
 .weight li {
   position: absolute;
   /* transform: scaleY(0); */
 }
-
 /* .weight li:first-child{
   transform: none;
   opacity: 1;
 } */
 
 
-.plus_bg ,.division_bg{
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.plus_open {
+
+.sec_4{
   position: relative;
-  /* top: 0; */
+  /* margin-top: 50vh; */
 }
-/* .plus_open{
-  position: sticky;
-  top: 0;
-} */
-
-.plus_open.sticky {
-  position: sticky;
-  top: 0;
+.sec_4 .plus_bg{
+ height: 100vh;
 }
-/* 부모가 크고 자식이 ㅈ짧고 자식에 스티키 */
 
+.plus_open{
+  position: relative;
+  width: 100vw;
+  height: 300vh;
+  /* margin-top: 150vh; */
+}
 .plus_effect {
   background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left:0;
+  width: 100%;
+  height : 100vh;
+
 }
 .plus_effect img {
   width: 50%;
   margin-top: 100px;
-  
+
 }
 
 
@@ -265,7 +258,7 @@ section {
   color: #fff;
   text-align: center;
   font-family: "Gmarket Sans TTF";
-  font-size: 64px;
+  font-size: max(2.5rem, min(5vw, 4rem)); /* 64 */
   font-style: normal;
   font-weight: 700;
   line-height: 1.5;
@@ -281,46 +274,127 @@ section {
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
 }
 
+.sec_5, .sec_6{
+  /* margin-top: 100vh; */
+  z-index: 100;
+}
 
-
+.minus.acitve {
+  transform: scale(2.0);
+  opacity: 0;
+} 
 .plus.acitve {
   transform: scale(2.0);
-  /* transform-origin: 50% 60%; */
   opacity: 0;
-}
+} 
+.division.acitve {
+  transform: scale(2.0);
+  opacity: 0;
+} 
+.multiple.acitve {
+  transform: scale(2.0);
+  opacity: 0;
+} 
 
 
-.sec_5, .sec_6{
-  height: 100vh;
-}
-.sec_5 .division_bg,
-.sec_6 .muliple_bg{
-  height: 100%;
-}
 
 .division_effect{
-  height: 100%;
+  height: 100vh;
   background: #0C1B32;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.division_tt{
+  color: #FFF;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 100% */
+  margin-top: -300px;
+  line-height: 1.5;
+}
+
+
+/* .battery_fill{
+  width: 20px;
+  height:354px;
+} */
+
+/* .multiple_bg{
+  height: 100vh;
+} */
+
+
+
+.multiple_effect{
+  height: 100vh;
+  background: url(../imgs/brand/bg/multiple_bg.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.multiple_effect > h2:first-child{
+  color: #FFF;
+
+  font-size: max(2rem, min(5vw, 3rem)); /* */
+  font-weight: 700;
+  line-height: 150%; /* 72px */
+}
+.multiple_tt{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.multiple_tt h2{
+  font-size: max(6rem, min(5vw, 8rem)); /* */
+  font-weight: 700;
+  margin: 20px;
 }
 
 
 
-.lorem {
-  height: 600vh;
+/* .twenty{
+  margin-top: 50vh;
+} */
+.twenty img{
+  width: 100%;
+
 }
 
-
-
-
+.sec_7{
+  width: 100vw;
+  height: 350vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dolby_wrap{
+  position: sticky;
+  top: 0;
+  left:0;
+  width: 100%;
+  height : 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dolby_wrap img{
+  width: 100%;
+}
 
 
 
 
 /* 브랜드스토리 라인업 임시 */
-
+.sec_9 {
+  margin-top: 300vh;
+}
 .sec_9 .row div {
   box-sizing: border-box;
   display: flex;

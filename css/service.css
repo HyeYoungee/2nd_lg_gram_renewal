@@ -8,43 +8,48 @@
   }
 }
 
-
-
-body *{
-  margin: 0;
-  padding: 0;
-}
 .container{
   width: 1272px;
   margin:0 auto;
 }
+
 .title{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
   color: var(--dark, #1E2226);
-  padding: calc(var(--base_unit_d) * 3) 0;
+  gap: max(1.25rem, min(5vw, 2.25rem)); /* 28 > 40 */
+  /* padding: calc(var(--base_unit_d) * 3) 0; */
+  padding: max(3.75rem, min(5vw, 4.5rem)); /* 60 > 72 */
+  line-height: 0;  
+  /* 라인하이트 있으면 텍스트 하단에 빈공간 생김 (임시) */
 }
-/* .sub_tt{
+.cs_title{
   font-family: "Gmarket Sans TTF";
-  line-height: 48px; 
-} */
-/* .cont_tt{
-  font-family: "Gmarket Sans TTF";
-  line-height: 36px; 
+  font-size: max(2rem, min(5vw, 3rem)); /* 32 > 48 */
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 48px;
-} */
+  color: var(--dark, #1E2226);
+  /* line-height: max(2rem, min(5vw, 3rem));  */
+}
+.cs_sub_tt{  
+  font-family: "Gmarket Sans TTF";
+  font-size: max(1.75rem, min(5vw, 2.5rem)); /* 28 > 40 */
+  font-weight: bold;
+  color: var(--dark, #1E2226);
+  margin-bottom: max(2rem, min(5vw, 3rem)); /* 32 > 48 */
+  /* line-height: max(1.75rem, min(5vw, 2.5rem));  */
+}
+.cs_desc{
+  font-size: max(1rem, min(5vw, 1.5rem)); /* 16 > 24 */
+}
 
+
+/* section1  자주찾는 질문 */
 .faq{
   background: url(../imgs/service/lg_service_banner.png) no-repeat center/cover;
   width: 100vw;
   height: 480px;
   position: relative;
-  /* height: 480px; */
-
 }
 .faq:after{
   content: '';
@@ -58,21 +63,21 @@ body *{
   z-index: 1;
 }
 .faq .container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   position: relative;
   z-index: 5;
 }
 .faq h3{
   color: #FFF;
-  font-size: var(--sub_cont);
+  font-size: max(1.25rem, min(5vw, 2rem));    /* 20 > 32 */
+  /* font-size: var(--sub_cont); */
   font-weight: 500;
   line-height: normal;
 }
 .faq h3 em{
-  color: #FFF;
-  font-size: calc(var(--sub_cont)* 2);
+  /* font-size: calc(var(--sub_cont)* 2); */
+  font-size: max(2.25rem, min(5vw, 4rem));    /* 20 > 32 */
   font-weight: 700;
   line-height: normal;
 }
@@ -80,14 +85,16 @@ body *{
   width: 50%;
   height: 480px;
   background: #F9F9F9;
-  border-radius: calc(var(--border_sm) * 5);
+  /* border-radius: calc(var(--border_sm) * 5); */
+  border-radius: max(0.25rem, min(5vw, 1.25rem));    /* 4 > 20 */
   margin-top: 50px;
   text-align: center;
   box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
 }
 .faq form{
   width: 82%;
-  margin: 36px auto;
+  /* margin: 36px auto; */
+  margin: max(1.5rem, min(5vw, 2.25rem)) auto;
 }
 .faq label{
   display: none;
@@ -108,19 +115,16 @@ body *{
 .faq .more_btn{
   font-size: 18px;
 }
-
 .faq_btn{
   border-radius: 8px;
-  border: 1px solid var(--gray-01, #B0B8C1);
-  background: var(--gray-bg, #F2F2F2);
+  border: 1px solid var(--gray_01, #B0B8C1);
+  background: var(--gray_bg, #F2F2F2);
 }
-
 .swiper {
   width: 90%;
   height: 55%;
   position: relative;
   margin-bottom: 24px;
-  
 }
 .swiper:after{
   content:'';
@@ -136,32 +140,23 @@ body *{
   z-index: 10;
 }
 .swiper-slide {
-  color: var(--gray-03, #58606A);
+  color: var(--gray_03, #58606A);
   font-family: Noto Sans;
-  font-size: 20px;
+  font-size: max(1rem, min(5vw, 1.25rem));    /* 18 > 20 */
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-align: center;
 }
 .swiper-slide.swiper-slide-active{
-  color: var(--blue-01, #4593FC);
-  font-family: Noto Sans;
-  font-size: 24px;
+  color: var(--blue_01, #4593FC);
+  font-size: max(1.15rem, min(5vw, 1.5rem));    /* 20 > 24 */
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 
-
-
-
+/* section2  빠른 해결 */
 .service{
   margin-top: 76px;
 }
@@ -202,6 +197,10 @@ body *{
   line-height: normal;
   padding: 0 12px;
 }
+
+/* .support{
+  display: flex;
+} */
 .support_link li a{
   color: var(--dark, #1E2226);
   font-size: 24px;
@@ -210,6 +209,9 @@ body *{
   display: inline-block;
   padding: 5px 10px;
   border-radius: var(--border_lg);
+  display: flex;
+  align-items: center;
+  
 }
 .support_link li a svg{
   margin-right: 36px;
@@ -245,20 +247,24 @@ body *{
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 720px; 
   }
-
-  .sub_tt, .faq h3 em{
-    font-size: 40px;  /*40px*/
-  }
   .body_lg, .faq h3{
     font-size: calc(var(--body_text_unit) * 1.125);  /*18px*/
   }
-  .cont_tt{
-    font-size: var(--sub_cont);   /*32px*/
+  .faq_box{
+    width: 80%;
+  }
+  .faq h3{
+    text-align: center;
+    margin-bottom: (var(--body_text_unit) * 2);  /*32px*/
+  }
+  .service_list {
+    margin: 0 auto;
   }
   .service_list div{
     display: flex;
     flex-direction: column;
     text-align: left;
+    width: 80%;
   }
  
   .cs_link{
@@ -297,15 +303,10 @@ body *{
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 432px; 
   }
-  .sub_tt, .faq h3 em{
-    font-size: var(--sub_cont);  /*32px*/
-  }
   .body_lg, .faq h3{
     font-size: var(--body_text_unit);  /*16px*/
   }
-  .cont_tt{
-    font-size: 28px;   /*28px*/
-  }
+
   .service_list div{
     flex-direction: row;
     text-align: left;
@@ -349,10 +350,14 @@ body *{
    display: flex;
    flex-direction: column;
   }
+  .support_link ul .col-3{
+    width: 100%;
+  }
   .support_link li a{
     width: 100%;
     /* flex-wrap: wrap; */
     flex:1;
   }
+  
 
 }
