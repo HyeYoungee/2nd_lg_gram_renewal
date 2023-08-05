@@ -8,6 +8,8 @@ nav{
   top: 0;
   left: 0;
   right: 0;
+  z-index: 99999;
+  font-size: var(--bd_size_05);
 }
 .main_header{
   display: flex;
@@ -15,7 +17,7 @@ nav{
   align-items: center;
   font-family: "Gmarket Sans TTF";
   color: var(--gray_03);
-  background-color: pink;
+  background-color: #fff;
   margin: 0 auto;
   max-width: 1272px;
   height: 72px;
@@ -26,10 +28,11 @@ nav{
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin-top: -5px;
 }
 .main_header_menu>li{
   padding: 12px 20px ;
-  margin: 12px 16px;
+  margin: 12px 13px;
   transition: 0.3s;
 }
 .main_header_menu>li:hover{
@@ -43,11 +46,20 @@ nav{
 .main_header_menu > li ul{ 
   display: none; 
   position: absolute;
-  background-color: aqua;
-  margin-top: 28px;
+  background-color: pink;
+  margin-top: 27px;
+
 }
+.main_header_menu > li ul:after{
+  content: "";
+  background-color: #fffffff0;
+  top:0;right: 0;left: -1000%;bottom: 0;
+  width: 9999px;height: 50px;
+  position: absolute;
+  transition: 0.3s;
+} 
 .main_header_menu > li ul li{
-  /* white-space:nowrap; */
+  white-space:nowrap;
   float: left; 
   margin-top: 27px;
   padding: 10px 40px 10px 0; 
@@ -55,7 +67,6 @@ nav{
 .main_header_menu > li ul li a{
   color:var(--gray_03);
   font-weight: 300;
-  transition: 0.3s;
 }
 .main_header_menu > li ul li a:hover{
   font-weight: 500; 
@@ -86,24 +97,33 @@ nav{
   body{
     padding-top: 80px;
   }
+  nav{
+    font-size: var(--bd_size_04);
+  }
   .main_header{
     flex-direction: column;
     align-items: flex-start;
     height: 80px;
   }
   .main_header_logo{
-    padding: 24px;  }
+    padding: 24px;  
+  }
   .main_header_menu{
     flex-direction: column;
     align-items: left;
     width: 100%;
+    background-color: #fff;
   }
-
+  .main_header_menu>li{
+    margin: 1px 13px;
+    padding: 25px 32px ;
+    transition: 0.3s;
+  }
   .main_header_menu > li ul{ 
     display: none; 
     position: static;
     background-color: transparent;
-    /* margin-top: 28px; */
+    margin-top: 28px;
   }
   .main_header_menu > li ul li{
     float: none; 
@@ -111,18 +131,14 @@ nav{
     padding: 10px 0; 
     gap: 0
   }
+  .main_header_menu > li ul:after{
+    display: none;
+  }
   .main_header_menu>li:hover{
     cursor: pointer;
     border-radius: 0;
     width: 100%;
   }
-
-  .main_header_menu>li{
-    padding: 25px 32px ;
-    margin: 0;
-    transition: 0.3s;
-  }
-  
   .main_header_toggleBtn{
     display: block;
     top:24px
@@ -131,9 +147,18 @@ nav{
   .main_header_menu.active{
     display: flex;
   }
+  .main_header_icons{
+    background-color: #fff;
+  }
+  .main_header_icons::after{
+    content: "";
+    background-color: #fff;
+    top: 0;right: 0;bottom: 0;left: 0;
+    width: 500px;height: 100px;
+  }
   .main_header_icons li{
     padding: 0 30px;
-    margin-top: 30px;
+    margin: 30px auto;
   }
 
   .main_header_search{
