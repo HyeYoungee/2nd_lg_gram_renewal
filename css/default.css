@@ -309,11 +309,11 @@ footer {
 }
 
 /* 현정 - main-sec01 video end*/
+
 /* 혜영 start */
 .main_sec2 p,
 .main_sec5 .container > p {
-  font-size: calc(var(--body_text_unit) * 1.25);
-
+  font-size: var(--bd_size_03);
   padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
 }
 .main_sec2 {
@@ -322,12 +322,11 @@ footer {
 h2 {
   font-family: "Gmarket Sans TTF";
   font-weight: bold;
-  font-size: max(2rem, min(5vw, 3rem));
+  font-size: max(3.2rem, min(5vw, 4.8rem));
 }
 .main_sec2 .swiper-slide img {
-  max-width: 840px;
+  max-width: 900px;
   width: 100%;
-
   border-radius: var(--border_lg);
   transform-origin: 50% 50%;
   transform: scale(0.88);
@@ -340,10 +339,8 @@ h2 {
 .main_sec2 .content {
   max-width: 840px;
   margin: 0 auto;
-
   width: 100%;
   opacity: 0;
-
   transform: translateY(30%);
   transition: opacity 0.3s, transform 0.5s;
 }
@@ -433,12 +430,9 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  /* .main_sec2 h2, .main_sec5 h2 { 
-    font-size:var(--cont_tt); 
-  } */
   .main_sec2 p,
   .main_sec5 .container > p {
-    font-size: calc(var(--body_text_unit) * 1.125);
+    /* font-size: calc(var(--body_text_unit) * 1.125); */
     padding: var(--base_unit_tm) 0 calc(var(--base_unit_tm) * 1.5) 0;
   }
   .main_sec5 .card_box {
@@ -483,7 +477,7 @@ h2 {
   } */
   .main_sec2 p,
   .main_sec5 .container > p {
-    font-size: var(--body_text_unit);
+    /* font-size: var(--body_text_unit); */
   }
   .main_sec2 {
     margin: 0 24px;
@@ -493,6 +487,7 @@ h2 {
   }
 }
 /* 혜영 end */
+
 @media (min-width: 1272px) {
   .container,
   .container-lg,

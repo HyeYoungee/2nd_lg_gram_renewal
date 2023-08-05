@@ -69,10 +69,6 @@
   --card_shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.5);
 }
 
-body {
-  font-family: "Noto Sans", sans-serif;
-}
-
 /* Layout */
 .big_pd {
   padding: calc(var(--base_unit_d) * 5) 0; /* 120px mainpage section 간격 */
@@ -80,9 +76,6 @@ body {
 .md_pd {
   padding: calc(var(--base_unit_tm) * 5) 0;
 }
-/* .sm_pd{
- 
-} */
 
 /* Typography */
 .main_tt {
