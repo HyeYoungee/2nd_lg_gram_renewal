@@ -399,11 +399,11 @@ h2 {
 .main_sec5 .text_box span {
   font-size: var(--body_text_unit);
   margin: 10px;
+  font-size: max(1.4rem, min(1.5vw, 1.6rem));
 }
 .main_sec5 .text_box p {
   font-family: "Gmarket Sans TTF";
-  /* font-size: 1.6vw; */
-  font-size: calc(var(--body_text_unit) * 1.75);
+  font-size: var(--bd_size_01);
   align-items: center;
   display: flex;
   margin: 5px 0 0 30px;
@@ -432,10 +432,10 @@ h2 {
 @media (max-width: 768px) {
   .main_sec2 p,
   .main_sec5 .container > p {
-    /* font-size: calc(var(--body_text_unit) * 1.125); */
     padding: var(--base_unit_tm) 0 calc(var(--base_unit_tm) * 1.5) 0;
   }
   .main_sec5 .card_box {
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
   }
@@ -467,18 +467,8 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-  .main_sec5 .text_box p {
-    font-size: calc(var(--body_text_unit) * 1.25);
-  }
 }
 @media (max-width: 480px) {
-  /* .main_sec2 h2,.main_sec5 h2 { 
-    font-size:var(--sub_cont);
-  } */
-  .main_sec2 p,
-  .main_sec5 .container > p {
-    /* font-size: var(--body_text_unit); */
-  }
   .main_sec2 {
     margin: 0 24px;
   }
