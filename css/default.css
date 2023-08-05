@@ -151,7 +151,7 @@ a#scroll_btn:after {
   width: 216px;
   /* line-height: 62px; */
   padding: 20px 0px;
-  font-size: var(--body_lg);
+  font-size: var( --bd_size_05);
   font-weight: 700;
   margin-bottom: 96px;
 }
@@ -229,6 +229,7 @@ footer {
   line-height: 38px;
   margin-right: 10px;
   cursor: pointer;
+  font-size:max(1.4rem, min(2.5vw, 1.6rem)); ;
 }
 
 .footer_sns_wrap .footer_langs span:hover:first-child,
@@ -251,7 +252,7 @@ footer {
 
 .footer_info_link_wrap ul li a {
   color: var(--white-bg, #fdfdfd);
-  font-size: var(--body_text_unit);
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
   font-weight: 600;
   line-height: 1.4;
 }
@@ -267,21 +268,19 @@ footer {
 
 .footer_info_text_wrap p {
   padding-bottom: 24px;
+  font-size:  max(1.2rem, min(2.5vw, 1.6rem));;
+  line-height: 1.4;
 }
 
 .footer_info_text_wrap p:first-child {
   padding-bottom: 6px;
 }
 @media (max-width: 1272px) {
-  /* .select-wrap h2 {
-    font-size: var(--sub_cont);
-  } */
   .select-wrap select option {
-    font-size: var(--body_lg);
+    font-size: var(--bd_size_05);
   }
   .footer_info_link_wrap ul {
     flex-wrap: wrap;
-    font-size: 14px;
   }
   .footer_info_link_wrap ul li {
     flex: 1 0 50%;
@@ -289,26 +288,19 @@ footer {
 }
 
 @media (max-width: 767px) {
-  /* .select-wrap h2 {
-    font-size: var(--body_lg);
-  } */
-
   .select-wrap select {
-    font-size: var(--body_text_unit);
+    font-size: var(--bd_size_03);
   }
 }
 
 @media (max-width: 479px) {
-  /* .select-wrap h2 {
-    font-size: var(--body_md);
-  } */
-
   .select-wrap select {
-    font-size: var(--body_sm);
+    font-size: var(--bd_size_05);
   }
 }
 
 /* 현정 - main-sec01 video end*/
+
 /* 혜영 start */
 .main_sec2 p,
 .main_sec5 .container > p {
