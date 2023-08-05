@@ -4,11 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/color.css" />
   </head>
   <body>
-    <h1>color gram page</h1>
+    <section
+      class="color_intro d-flex flex-column justify-content-center align-items-center"
+    >
+      <h2>stylish한 그램으로</h2>
+      <div>
+        <span>당신을 표현하는</span>
+        <span id="colorText">컬러</span>
+      </div>
+    </section>
+    <section
+      class="color_desc container d-flex justify-content-center align-content-center"
+    >
+      <div data-aos="fade-right">
+        <img src="imgs/select/aurora_left.png" alt="오로라 화이트 제품이미지" />
+      </div>
+
+      <div class="text_desc" data-aos="zoom-in-left">
+        <h2>스타일도 그램답게</h2>
+        <div>
+          <span>빛나는 </span>
+          <span>오로라 화이트</span>
+        </div>
+      </div>
+    </section>
+    <section class="color_fixed">
+      <div class="color_fixed_img"></div>
+      <div
+        class="color_fixed_text d-flex flex-column align-items-center justify-content-center"
+      >
+        <h2>simple is the Best</h2>
+        <h2>그램 오리지널 스킨</h2>
+        <div>
+          <span>나만의 컬러로 </span>
+          <span>D.I.Y</span>
+        </div>
+        <button>구매하기</button>
+      </div>
+    </section>
+    <section
+      class="color_pick_bar d-flex justify-content-center align-items-center"
+    >
+      <h2 class="sub_tt">
+        나만의 그램컬러<br />
+        색상버튼을 눌러보세요
+      </h2>
+    </section>
+    <section class="color_gram container">
+      <div>
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/color.js"></script>
   </body>
 </html>

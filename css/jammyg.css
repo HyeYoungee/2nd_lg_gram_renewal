@@ -1,0 +1,53 @@
+header{
+  width: 100%;
+  height: 72px;
+  text-align: center;
+  font-size: 28px;
+}
+/* Layout, All */
+.container{
+  width: 1272px;
+  margin: 0 auto;
+}
+main > section{
+  padding-top: calc(var(--base_unit_d) * 5);
+}
+main h3, main h4{
+  font-family: 'Gmarket Sans TTF';
+  font-weight: bold;
+  padding-left: var(--base_unit_d);
+}
+main h3{
+  font-size: var(--sub_cont);
+}
+main h4{
+  font-size: var(--body_lg);
+}
+
+/* Banner */
+.banner{
+  padding: calc(var(--base_unit_d)*3) 0;
+}
+.banner .title_box{
+  position: relative;
+  /* margin: 0 auto; */
+}
+.banner .logo{
+  margin: 0 auto;
+  width: 454px;
+  height: 120px;
+  background: url('../imgs/jammyG/jammyG_logo.svg') no-repeat;
+  text-indent: -9999em;
+  padding-bottom: var(--base_unit_d);
+}
+.banner .title_box p{
+  position: absolute;
+  top: 110px; left: calc(50% - 90px);
+  font-family: 'Gmarket Sans TTF';
+  font-weight: bold;
+  font-size: var(--cont_tt);
+}
+
+.custom{
+  padding-bottom: calc(var(--base_unit_d) * 7);
+}
