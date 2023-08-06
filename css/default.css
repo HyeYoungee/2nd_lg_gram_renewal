@@ -25,13 +25,12 @@ nav{
 /* main_header_gnb시작 */
 .main_header_menu{
   display: flex;
-  list-style: none;
   padding-left: 0;
   margin-top: -5px;
 }
 .main_header_menu>li{
   padding: 12px 20px ;
-  margin: 12px 13px;
+  margin: 12px 11px;
 }
 .main_header_menu>li:hover{
   background-color: #EAF2FE;
@@ -42,26 +41,19 @@ nav{
 
 /* main_header_lnb시작 */
 .main_header_menu > li ul{ 
-  display: none; 
+  display: flex; 
   position: absolute;
-  background-color: rgba(255, 255, 255, .8);
-  margin-top: 29px;
+  background-color: rgba(255, 255, 255, .9);
   width: 100%;
+  top: 100%; /* 하위 메뉴를 상위 메뉴 아래에 표시 */
+  left: 0; /* 왼쪽 정렬 */
+  border-top: solid 1px #58606a30;
+  justify-content: center;
 }
-
-.main_header_menu > li ul:after{
-  content: "";
-  background-color: rgba(255, 255, 255, .8);
-  top:0;right:0;left:-9999px;bottom:0;
-  width: 9999px;
-  position: absolute;
-} 
-
 .main_header_menu > li ul li{
   white-space:nowrap;
-  float: left; 
-  margin-top: 27px;
-  padding: 0 40px 27px 0; 
+  float: none; 
+  padding: 27px 50px; 
 }
 .main_header_menu > li ul li a{
   color:var(--gray_03);
@@ -77,7 +69,7 @@ nav{
   list-style: none;
   padding-left: 0;
 }
-.main_header_icons a img{
+.main_header_icons a svg{
   width: 30px;height: 30px;
 }
 .main_header_icons li{
@@ -142,15 +134,23 @@ nav{
 
   /* main_header_icons 시작 */
   .main_header_icons{
-    display: none; 
     background-color: #fff;
+    width: 100%;
   }
-  .main_header_icons:after{
-    content: "";
-    background-color: #fff;
-    top: 0;right: 0;bottom: 0;left: 0;
-    width: 500px;height: 100px;
+  .main_header_icons li{
+    padding: 0 30px;
+    margin: 30px 0;
   }
+  .main_header_toggleBtn{
+    position: absolute;
+    right: 24px;
+    display: block;
+  }
+  .main_header_search{
+    border-right: solid 1px #58606a30;
+    border-left: solid 1px #58606a30;
+  }
+  /*
   .main_header_icons li{
     padding: 0 30px;
     margin: 30px auto;
@@ -159,6 +159,7 @@ nav{
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
+  */
   /* main_header_icons 종료 */
 }
 /* 성희 main_header 종료 */
