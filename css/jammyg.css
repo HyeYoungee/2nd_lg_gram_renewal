@@ -17,11 +17,23 @@ main h3{
 main h4{
   font-size: var(--bd_size_01);
 }
+main div{
+  overflow: hidden;
+}
+main .img_box{
+  border-radius: var(--border_lg);
+}
 main img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--border_lg);
+  transition: 0.3s;
+}
+main img:hover{
+  transform: scale(1.05);
+}
+main a{
+  color: var(--dark);
 }
 
 /* Banner */
@@ -42,7 +54,8 @@ main img{
 }
 .banner .title_box p{
   position: absolute;
-  top: 110px; right: calc(50% - 130px);
+  top: 110px; 
+  right: calc(50% - 130px);
   font-family: 'Gmarket Sans TTF';
   font-weight: bold;
   font-size: var(--tt_size_03);
@@ -77,18 +90,66 @@ main img{
 /* jammyG_sec02 */
 .jammyG_sec02 .talk_box{
   display: grid;
-  grid-template-columns: 1.8fr 1.1fr 1.1fr 1.1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+.jammyG_sec02 .talk_01{
+  grid-row: 1 / span 2;
+}
+/* .jammyG_sec02 div[class^="talk"] > div */
+.jammyG_sec02 .talk_01 .img_box{
+  border: 5px solid transparent;
+  background-image: var(--point_gr_02);
+  background-origin: border-box;
+  height: 360px;
+}
+.jammyG_sec02 .talk_02 .img_box,
+.jammyG_sec02 .talk_03 .img_box,
+.jammyG_sec02 .talk_04 .img_box{
+  border: 5px solid transparent;
+  border-radius: var(--border_lg);
+  background-image: var(--point_gr_01);
+  background-origin: border-box;
+  height: 216px;
+}
+.jammyG_sec02 .talk_tt{
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--gray_04);
+  line-height: 1.4;
+  padding: 24px 5px 10px;
+}
+.jammyG_sec02 .talk_pd{
+  color: var(--gray_03);
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* jammyG_sec03 */
+.jammyG_sec03 .collabo_goods_list{
+  display: flex;
+  gap: 1.5%;
+  flex-flow: row wrap;
+}
+.jammyG_sec03 .collabo_goods_list li{
+  width: 22%;
+  padding: 10px;
+}
+
+
+
+
+/* jammyG_sec04 */
+.jammyG_sec04{
+  padding-bottom: calc(var(--base_unit_d) * 7);
+}
+.jammyG_sec04 .custom_box{
+  display: flex;
   gap: 24px;
 }
 
-
-
-
-.custom{
-  padding-bottom: calc(var(--base_unit_d) * 7);
-}
-
+/* 반응형 */
 @media (max-width: 1320px){
   main{padding: 0 24px;}
 }
