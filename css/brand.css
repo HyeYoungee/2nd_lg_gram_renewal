@@ -1,5 +1,5 @@
 body {
-  background-color: var(--black_00, #000);
+  /* background-color: var(--black_00, #000); */
   padding: 0;
   margin: 0;
   font-family: "Gmarket Sans TTF";
@@ -12,18 +12,10 @@ header {
   height: 72px;
 }
 
-/* main{
-  height: 400vh;
-} */
-/* section {
-  width: 100vw;
-  height: 100vh;
-} */
-
 .sec_1 {
   overflow: hidden;
-  width: 100vw;
-  height: 100vh
+  height: 100vh;
+  background: #000;
 }
 
 .mask {
@@ -32,21 +24,19 @@ header {
   text-align: center;
   overflow: hidden;
   /* height: 1080px; */
-  height: 100%;
+  height: 100vh;
 }
 
 .mask h2 {
   padding: 200px 0 400px;
-  font-size: max(7.5rem, min(5vw, 12.5rem)); /* */
+  font-size: max(7.5rem, min(5vw, 12.5rem));
   font-weight: bold;
   mix-blend-mode: lighten;
   color: black;
   background-color: white;
   transition: 1s;
   transform-origin: 50% 25%;
-  font-family: "Gmarket Sans TTF";
   height: 100%;
-
 }
 
 .mask h2.active {
@@ -54,19 +44,13 @@ header {
   opacity: 0;
 }
 
-
-
 .sec_1_after {
-  font-family: "Gmarket Sans";
-  margin-top: -450px;
+  margin-top: -500px;
   visibility: hidden;
   font-weight: bold;
   line-height: 128px;
   height: 100vh;
 }
-/* .sec_1_after.animate__fadeInUp {
-  visibility: visible;
-} */
 .sec_1_after.active{
   visibility: visible;
 }
@@ -87,35 +71,28 @@ header {
 }
 .sec_2{
   height: 100vh;
+  background: #000;
+  color: #FFF;
 }
 .sec_2 h2 {
-  color: #FFF;
   font-size: 40px;
   font-weight: 500;
-  line-height: 72px;
 }
 .sec_2 h3.active {
   transform: scale(1.2);
   /* transform-origin: 50% 60%; */
 }
 .sec_2 h3 {
-  color: #FFF;
-  text-align: center;
   font-size: 32px;
   font-weight: 700;
-  line-height: 48px;
   margin-top: 100px;
 }
 
-
-
-/* 마이너스 */
 
 .minus_bg,
 .plus_bg,
 .division_bg,
 .multiple_bg{
-  /* width: 100vw; */
   height: 100vh;
   background: #000;
   display: flex;
@@ -128,7 +105,7 @@ header {
 .division,
 .multiple{
   transition: 1s;
-  transform-origin: 50% 30%;
+  transform-origin: 50% 50%;
 }
 
 .minus.active,
@@ -139,16 +116,18 @@ header {
   /* transform-origin: 50% 60%; */
   opacity: 0;
 }
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .minus_effect {
   background: #fff;
   width: 100vw;
   height: 250vh;
   position: relative;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* overflow: hidden; */
 }
 .effect_wrapper{
   position: sticky;
@@ -156,9 +135,6 @@ header {
   left:0;
   width: 100%;
   height : 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 .effect_wrapper img{
@@ -179,7 +155,6 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
-  /* 100% */
   transition: 0.7s;
   transform-origin: 50% 0;
   /* opacity: 1; */
@@ -193,7 +168,6 @@ header {
   width: 358px;
   height: 77px;
   background: var(--point-color, linear-gradient(46deg, #FFE0F2 0%, #F9E0F7 6.77%, #F1E0FA 20.31%, #E9E1FD 30.21%, #E0E2FF 45.31%, #D7E5FF 56.25%, #CFE8FF 73.11%, #C8EAFF 83.69%, #C0F0FF 88.90%, #B8F5FF 95.39%, #B2FAFF 100%));
-  /* overflow: hidden; */
 }
 
 .weight {
@@ -204,7 +178,6 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
-  /* 100% */
   transition: 0.7s;
   position: relative;
   /* transform-origin: 50% 0; */
@@ -218,8 +191,14 @@ header {
   transform: none;
   opacity: 1;
 } */
+.effect_wrapper h2{
+  position: relative;
+  top:100px;
+  color: var(--dark);
+  font-size: 64px;
+  font-weight: 700;
 
-
+}
 
 
 .sec_4{
@@ -233,7 +212,7 @@ header {
 .plus_open{
   position: relative;
   width: 100vw;
-  height: 300vh;
+  height: 400vh;
   /* margin-top: 150vh; */
 }
 .plus_effect {
@@ -244,13 +223,15 @@ header {
   left:0;
   width: 100%;
   height : 100vh;
-
 }
 .plus_effect img {
-  width: 50%;
-  margin-top: 100px;
+  width: 70%;
+  /* margin-top: 100px; */
+  object-fit: cover;
+  position: absolute;
 
 }
+
 
 
 
@@ -366,12 +347,10 @@ header {
 }
 
 .sec_7{
+  background: #000;
   width: 100vw;
   height: 350vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .dolby_wrap{
   position: sticky;
@@ -379,22 +358,30 @@ header {
   left:0;
   width: 100%;
   height : 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 .dolby_wrap img{
   width: 100%;
 }
 
+.sec_8{
+  height: 100vh;
+  color: #000;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.sec_8 div{
+  display: none;
+}
+.sec_8 div.active{
+  visibility: visible;
+}
+
 
 
 
 /* 브랜드스토리 라인업 임시 */
-.sec_9 {
-  margin-top: 300vh;
-}
 .sec_9 .row div {
   box-sizing: border-box;
   display: flex;

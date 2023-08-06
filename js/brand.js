@@ -91,7 +91,7 @@ $(window).on('scroll', function ()  {
 
   if (sct > minuseffectOST) {
     //console.log($('.minus_effect').offset())
-    console.log(sct)
+    //console.log(sct)
     //  weightTT.css({opacity:0})
      setInterval(() => {
       weightUp();
@@ -114,7 +114,7 @@ $(window).on('scroll', function ()  {
 
     let plusIcon = $('.plus');
     let plusOSP = $('.sec_4').offset().top;
-    console.log(plusOSP);
+    //console.log(plusOSP);
 
     if (sct > plusOSP) {
       plusIcon.addClass('acitve');
@@ -182,32 +182,25 @@ $(window).on('scroll', function () {
 
 
 
-/* 킵
 $('.plus_tt').hide();
-$(window).scroll(function () {
-
-  let scrollAmt = $(window).scrollTop();
-  let plusOpenOST = $('.plus_open').offset().top;
-  //console.log('scroll_ATM :', scroll_AMT);
-  console.log('plusOpenOST', plusOpenOST);
-  // if (scrollAmt > plusOpenOST) {
-  //   $('.plus_open').addClass('sticky');
-  // } else {
-  //   $('.plus_open').remove('sticky');
-  // }
-  let gram_height = $('.plus_effect').innerHeight();
-  let count = Math.floor(((scrollAmt) / gram_height) * 8)
-  // console.log('카운트', count);
-  // console.log('그램헤이트', gram_height);
-  // console.log(`스크롤${scrollAmt}`);
-  if (scrollAmt + 300 > 24 * count) {
-    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count + 1}.png` })
-    if (count == 35) {
+$(window).on('scroll',function () {
+  let sct = $(window).scrollTop(),
+      plusOpenOST = $('.plus_open').offset().top,
+      count = Math.floor(((sct) / plusOpenOST) * 20);
+  console.log('sct :', sct);
+  if (count >1 && count < 64) {
+    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` })
+    if (count == 25) {
       $('.plus_tt').fadeIn();
     }
   }
 })
 
+// if (sct > 24 * count) {
+//   $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count + 1}.png` })
+//   if (count == 35) {
+//     $('.plus_tt').fadeIn();
+//   }
 
 
 let plusImg = $('.plus_open img');
@@ -223,7 +216,7 @@ $(window).scroll(function () {
   }
 })
 
-*/
+
 
 // $ ( '.20twenty-container'). twentytwenty ({ default_offset_pct : 0.3 });
 
@@ -258,13 +251,45 @@ $(window).on('scroll', function ()  {
    
 
   let dolbyAniOST = $('.dolby_wrap img').offset().top;
-  console.log('돌비OST', dolbyAniOST);
+  //console.log('돌비OST', dolbyAniOST);
   count = Math.floor(((sct) / dolbyAniOST) * 50)
   if (count > 1) { 
-      console.log('돌비카운트', count);
+      //console.log('돌비카운트', count);
 
     $('.dolby_wrap img').attr({ "src": `imgs/brand/dolby/dolby_${count}.png`}) 
   }
   
 });
 
+
+
+
+
+// sec_8
+let sec8 = $('.sec_8');
+let switch1 = false;
+
+$(window).on('scroll',function(){
+
+  let sec8OST = sec8.offset().top;
+  let sct = $(window).scrollTop();
+
+  console.log(sec8OST)
+  if(!switch1){
+    if(sct > sec8OST){
+      sec8.find('.sec_8_tt1').fadeIn();
+      
+      if (sct > sec8OST + 30) {
+        sec8.find('.sec_8_tt1').fadeOut();
+        sec8.find('.sec_8_tt2').fadeIn();
+  
+        // if (sct > sec8OST + 0) {
+        //   sec8.find('.sec_8_tt1').fadeout();
+        // }
+      }
+      //sec8.find('.sec_8_tt1').addClass('active');
+    }
+  
+  }
+  switch1 = false;
+})

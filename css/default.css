@@ -1,3 +1,4 @@
+
 /* 현정 - main-sec01 video */
 @import "nice-select";
 
@@ -511,10 +512,24 @@ h2 {
   text-align: center;
   background: var(--gray_bg, #f2f2f2);
 }
+.cs_title {
+  margin-bottom: max(2rem, min(3vw, 3.6rem));
+}
+
+.cs_sub_tt {
+  font-size: calc(var(--body_text_unit) * 2);
+  /* 32px */
+  margin-bottom: 40px;
+}
+
+.cs_desc {
+  font-size: var(--bd_size_02);
+  margin-bottom: max(2rem, min(3vw, 4.8rem));
+}
 
 .brand_wrapper div {
   font-family: "Gmarket Sans";
-  font-size: var(--cont_tt);
+  font-size: max(2rem, min(3vw, 4rem));
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 700;
@@ -800,27 +815,6 @@ h2 {
     /* 100% */
   }
 
-  /* 태블릿 */
-  .cs_title {
-    font-size: 40px;
-    /* 40px */
-    margin-bottom: 20px;
-    /* 20px */
-  }
-
-  .cs_sub_tt {
-    font-size: calc(var(--body_text_unit) * 2);
-    /* 32px */
-    margin-bottom: 40px;
-    /* 40px */
-  }
-
-  .cs_desc {
-    font-size: 18px;
-    /* 18px */
-    margin-bottom: 30px;
-    /* 30px */
-  }
 
   .brand_wrapper {
     padding: 0 20px;
