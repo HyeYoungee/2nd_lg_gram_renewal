@@ -147,13 +147,13 @@
   position: relative;
 }
 .color_fixed_img {
-  background: url("../imgs/color/color_fixed_img.png");
+  background: url("https://velog.velcdn.com/images/hyunny123/post/105b5f66-40e1-4c03-8008-0d3560b429d3/image.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center left;
   width: 100%;
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .color_fixed_text {
@@ -229,7 +229,7 @@
   position: relative;
 }
 .color_fixed_img {
-  background: url("../imgs/color/color_fixed_img.png");
+  background: url("https://velog.velcdn.com/images/hyunny123/post/105b5f66-40e1-4c03-8008-0d3560b429d3/image.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -388,12 +388,6 @@ background: var(--blue_02);
   margin-right: 0;
 }
 
-.item {
-  width: 200px;
-  height: 80px;
-  font-size: 20px;
-  border: 1px solid #000;
-}
 
 .card > div {
   display: flex;
@@ -414,7 +408,7 @@ background: var(--blue_02);
   height: 290px;
   /* height: 312px; */
   border-radius: 12px 12px 0px 0px;
-  margin: 10px 0 10px 0;
+  margin: 12px 0 12px 0;
 }
 
 .card_text {

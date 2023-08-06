@@ -35,7 +35,19 @@ AOS.init({
   duration: 1200,
 });
 
+//세번째 섹션
+
+$(window).on("scroll",function(){
+  let sct= $(window).scrollTop();
+  let sectionTop = $(".color_fixed_img").offset().top;
+  let opacity = 1 - (sct - sectionTop)/200;
+  $(".color_fixed_text").css("opacity", opacity)
+
+});
+
+
 //컬러그램 섹션
+
 const initColor = "green";
 $(".btn_set li[data-color='" + initColor + "']").addClass("active");
 showImage(initColor);
