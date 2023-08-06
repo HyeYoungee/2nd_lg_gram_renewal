@@ -80,7 +80,13 @@ nav{
   right: 24px;
   display: none;
 }
-
+/* 초기에 border 없고 스크롤 내릴 때 border 추가 */
+nav.main_header_scroll_border {
+  border-bottom: none; 
+}
+nav.main_header_scroll_border.with_border {
+  border-bottom: solid 1px #58606a30;
+}
 @media screen and (max-width: 768px) {
   body{
     padding-top: 80px;
@@ -146,20 +152,14 @@ nav{
     right: 24px;
     display: block;
   }
-  .main_header_search{
-    border-right: solid 1px #58606a30;
-    border-left: solid 1px #58606a30;
-  }
-  /*
-  .main_header_icons li{
-    padding: 0 30px;
-    margin: 30px auto;
+  .main_header_toggleBtn a img{
+    transition-duration: .3s;
   }
   .main_header_search{
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
-  */
+  
   /* main_header_icons 종료 */
 }
 /* 성희 main_header 종료 */

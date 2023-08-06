@@ -25,38 +25,42 @@ $('.main_header_icons li a').hover(
     $(this).find('svg>path').css('fill', ''); //원래 색상으로 되돌리기
   }
 );
+  // 초기에 border 없고 스크롤 내릴 때 border 추가
+let $scrollBorder = $('nav.main_header_scroll_border');
+$(window).on('scroll', function() {
+  if ($(window).scrollTop() > 0) {
+    $scrollBorder.addClass('with_border');
+  } else {
+    $scrollBorder.removeClass('with_border');
+  }
+});
 
 /*768이하 화면에서 일어날 일*/
   //햄버거 버튼을 클릭하면 gnb 보이거나 숨김
-
-
-$('.main_header_toggleBtn').click(function(e) {
+$('.main_header_toggleBtn').click(function(e){
   e.preventDefault();
-  if ($(window).width() < 768) {
+  if($(window).width() < 768){
     $('.main_header_menu, .main_header_icons').toggle();
     let $toggleBtn = $(this).find('img');
-    if ($toggleBtn.attr('src') === './imgs/index/main_header_menu.svg') {
+    if($toggleBtn.attr('src') === './imgs/index/main_header_menu.svg') {
       $toggleBtn.attr('src', './imgs/index/main_header_close.svg');
-    } else {
+    }else{
       $toggleBtn.attr('src', './imgs/index/main_header_menu.svg');
     }
   }
 });
-
-
   //아이콘들이 화면이 작을때는 안보이고 클때는 보임
 $(window).resize(function(){
   if($(window).width() < 768) {
     $('.main_header_icons').hide();
-  }else {
+  }else{
     $('.main_header_icons').show();
   }
 });
-if ($(window).width() < 768) {
+if($(window).width() < 768) {
   $('.main_header_icons').hide();
 };//기본도 숨기기
 $('.main_header_icons').click(function(e){e.preventDefault();})
-
 /*성희 main_header 종료*/
 
 $(function () {
