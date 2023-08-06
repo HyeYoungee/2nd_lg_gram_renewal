@@ -24,7 +24,10 @@
     />
     <link
       rel="stylesheet"
-      href="node_modules/font-awesome/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -38,7 +41,7 @@
     <h1>service page</h1>
     <main>
       <div class="title container">
-        <h2 class="cs_title">고객지원</h2>
+        <h2 class="tt_01 dark_t">고객지원</h2>
         <h3 class="cs_desc">지금 로그인하고 맞춤 서비스 받아보세요!</h3>
       </div>
       <section class="faq">
@@ -97,8 +100,8 @@
       <section class="service container">
         <div class="big_pd">
           <h2 class="cs_sub_tt">빠른 해결을 원하시나요?</h2>
-          <div class="service_list d-flex flex-md-row flex-sm-column">
-            <div class="list col-md-4 col-xs-12">
+          <div class="service_list">
+            <div class="list">
               <h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,14 +117,16 @@
                 </svg>
                 온라인 상담
               </h3>
-              <a href=""
-                >온라인 상담 <i class="fa-solid fa-chevron-right"></i
-              ></a>
-              <a href=""
-                >예약 조회/변경 <i class="fa-solid fa-chevron-right"></i
-              ></a>
+              <div class="link_wrap">
+                <a href=""
+                  >온라인 상담 <i class="fa-solid fa-chevron-right"></i
+                ></a>
+                <a href=""
+                  >예약 조회/변경 <i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
             </div>
-            <div class="list col-md-4 col-xs-12">
+            <div class="list">
               <h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,14 +166,17 @@
                 </svg>
                 스스로 해결
               </h3>
-              <a href=""
+              <div class="link_wrap">
+                <a href=""
                 >문제해결 Q&A <i class="fa-solid fa-chevron-right"></i
               ></a>
               <a href=""
                 >다운로드 센터 <i class="fa-solid fa-chevron-right"></i
               ></a>
+
+              </div>
             </div>
-            <div class="list col-md-4 col-xs-12">
+            <div class="list">
               <h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -192,23 +200,23 @@
                 </svg>
                 서비스 예약
               </h3>
-              <a href=""
-                >센터 방문예약 <i class="fa-solid fa-chevron-right"></i
-              ></a>
-              <a href=""
-                >출장 서비스 예약 <i class="fa-solid fa-chevron-right"></i
-              ></a>
+              <div class="link_wrap">
+                <a href=""
+                  >센터 방문예약 <i class="fa-solid fa-chevron-right"></i
+                ></a>
+                <a href=""
+                  >출장 서비스 예약 <i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="support container d-flex flex-sm-column flex-row">
-        <div class="support_link col-sm-12 col-xs-6">
+      <section class="support container">
+        <div class="support_link">
           <h2 class="cs_sub_tt">제품 사용 지원</h2>
-          <ul
-            class=" d-flex justify-content-between flex-sm-row flex-column"
-          >
-          <li class="col-3 col-sm-4">
+          <ul>
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +233,7 @@
                 A/S 신청
               </a>
             </li>
-            <li class="col-3 col-sm-4">
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +254,7 @@
                 그램 관리팁
               </a>
             </li>
-            <li class="col-3 col-sm-4">
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -273,12 +281,10 @@
             </li>
           </ul>
         </div>
-        <div class="support_link col-sm-12 col-xs-6">
+        <div class="support_link">
           <h2 class="cs_sub_tt">고객 게시판</h2>
-          <ul
-            class="row d-flex justify-content-between flex-sm-row flex-column"
-          >
-            <li class="col-3 col-sm-4">
+          <ul>
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +325,7 @@
                 서비스 소식
               </a>
             </li>
-            <li class="col-3 col-sm-4">
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -348,7 +354,7 @@
                 고객의 소리
               </a>
             </li>
-            <li class="col-3 col-sm-4">
+            <li>
               <a href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

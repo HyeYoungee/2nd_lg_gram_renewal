@@ -23,7 +23,9 @@ body *{
 #map{
   background-color: antiquewhite;
 }
-
+.big_pd{
+  padding: max(6rem, min(3vw, 7.2rem)) 0;
+}
 aside{
   background: #fff;;
   width: 410px;
@@ -52,6 +54,12 @@ aside{
   flex-wrap: wrap;
   justify-content: center;
 }
+.select_wrap select,
+.select_wrap input{
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+}
 .select_wrap form{
   display: flex;
   flex-direction: column;
@@ -60,6 +68,7 @@ aside{
 }
 .select_wrap .search_btn{
   width: 50%;
+  border-radius: 8px;
 }
 .form-select {
   width: 40%;
@@ -124,16 +133,16 @@ aside{
 }
 
 .store_promotion .container{
-  display: flex;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px 24px;
 }
 .store_promotion .tt_01{
   text-align: center;
   margin-bottom: max(3.2rem, min(4.5vw, 4.8rem));;
 }
 .store_promotion .container .card{
-  width: 32%;
-  margin: 0 1.5%;
+  width: 100%;
 }
 .store_name svg.active .store_name svg path{
   fill:pink;
@@ -174,14 +183,21 @@ aside{
   border-radius: var(--bs-card-border-radius);
   box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
 }
+.card-body{
+  padding: 24px 24px 60px;
+}
+.card-title{
+  margin-bottom: 10px;
+}
 .card-title a{
-  font-size: 20px;
+  font-size:  max(1.4rem, min(3vw, 2rem));
   font-weight: 700;
   color: var(--dark, #1e2226);
+
 }
 .card-text{
   color: var(--gray-02, #8B95A1);
-  font-size: 16px;
+  font-size: max(1.3rem, min(3vw, 1.6rem));
   font-weight: 500;
   margin-bottom: 60px;
 }
@@ -211,9 +227,9 @@ aside{
     height: 90%;
     overflow-y: scroll;
   }
-  .store_promotion .container .card{
-    width: 50%;
-    margin: 0 1.5%;
+  .store_promotion .container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px 24px;
   }
 }
 /* 모바일 (해상도 ~ 479px) */

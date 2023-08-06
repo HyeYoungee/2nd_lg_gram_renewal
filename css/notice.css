@@ -25,8 +25,6 @@ body * {
 }
 .search_bar {
   padding: 0 10px max(1.6rem, min(3vw, 2.4rem));
-  border-bottom: 2px solid var(--blue_02);
-
 }
 .search_bar p {
   font-size: max(1.3rem, min(3vw, 1.6rem)); 
@@ -46,6 +44,7 @@ body * {
   width: 20%;
   height: 40px;
   font-size: 16px;
+  border-radius: 8px;
 }
 .search_bar input {
   width: 80%;
@@ -53,8 +52,13 @@ body * {
 }
 
 /* main */
+main{
+  margin-bottom: max(10rem, min(3vw, 16rem));
+}
 .notice{
   width: 100%;
+  border-top: 2px solid var(--blue_02);
+  border-bottom: 2px solid var(--blue_02);
 }
 .accordion-item {
   color: #595959;
@@ -64,10 +68,10 @@ body * {
   position: relative;
 }
 .accordion-button .notice_tt {
-  font-size: var(--body_sm);
   font-size: max(1.6rem, min(3vw, 1.7rem));
   vertical-align: baseline;
   font-weight: 400;
+  width: 65%;
 }
 .accordion-button span {
   margin-right: max(2rem, min(3vw, 4rem));
@@ -127,7 +131,7 @@ body * {
   background-color: rgba(69, 147, 252, 0.1);
 }
 .page_wrap {
-  margin-top: calc(var(--base_unit_d) * 2);
+  margin-top: calc(var(--base_unit_d) * 3);
 }
 .more_link {
   display: inline-block;
@@ -174,8 +178,8 @@ body * {
     font-size: 14px;
     border-radius: 8px;
   }
-}
 
+}
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width: 479px) {
   .container,
@@ -196,16 +200,19 @@ body * {
   .search_bar form {
     width: 60%;
   }
+  .search_input{
+    border-radius: 4px;
+  }
   .search_bar .search_btn {
     width: 52px;
     height: 40px;
     font-size: 14px;
     border-radius: 4px;
   }
-  /* .search_bar input {
-    min-width: 200px;
-  } */
-
+  .notice_tt{
+    width: 50%;
+    line-height: 1.4;
+  }
   .accordion-button {
     padding: 12px 8px;
   }

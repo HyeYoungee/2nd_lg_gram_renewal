@@ -19,16 +19,16 @@
   align-items: center;
   color: var(--dark, #1E2226);
   gap: max(2.8rem, min(5vw, 4rem)); /* 28 > 40 */
-  /* padding: calc(var(--base_unit_d) * 3) 0; */
-  padding: max(6rem, min(5vw, 7.2rem)); /* 60 > 72 */
+  padding: max(6rem, min(5vw, 7.2rem)) 0; /* 60 > 72 */
   line-height: 0;  
   /* 라인하이트 있으면 텍스트 하단에 빈공간 생김 (임시) */
 }
-.cs_title{
+.tt_01{
   font-family: "Gmarket Sans TTF";
   font-size: max(3.2rem, min(5vw, 4.8rem)); /* 32 > 48 */
   font-weight: bold;
   color: var(--dark, #1E2226);
+  margin-bottom: max(3.2rem, min(5vw, 4.8rem)); /* 32 > 48 */;
   /* line-height: max(2rem, min(5vw, 3rem));  */
 }
 .cs_sub_tt{  
@@ -71,7 +71,7 @@
 .faq h3{
   color: #FFF;
   font-size: max(2rem, min(5vw, 3.2rem));    /* 20 > 32 */
-  /* font-size: var(--sub_cont); */
+  margin-top: 32px;
   font-weight: 500;
   line-height: normal;
 }
@@ -156,8 +156,11 @@
   margin-top: 76px;
 }
 .service_list{
-  gap:24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 24px; 
 }
+
 .service_list .list{
   background: rgba(69, 147, 252, .1);
   box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
@@ -176,10 +179,13 @@
 
 .service_list h3{
   color: var(--dark, #1E2226);
-  font-size: 32px;
+  font-size: max(2.2rem, min(2vw, 3.2rem));
   font-weight: 700;
   text-align: center;
   margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .service_list h3 svg{
   margin-right: 24px;
@@ -191,10 +197,13 @@
   line-height: normal;
   padding: 0 12px;
 }
-
+.support_link ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
 .support_link li a{
   color: var(--dark, #1E2226);
-  font-size: 24px;
+  font-size: max(1.6rem, min(3vw, 2.4rem));
   font-weight: 700;
   display: inline-block;
   padding: 5px 10px;
@@ -208,12 +217,10 @@
 .support_link{
  margin-bottom: calc(var(--base_unit_d)*4);
 }
-.support_link .cont_tt{
-  text-align: left;
- }
-/* .support_link li{
-  transition: 0.5s;
- } */
+.support_link li a{
+  height: max(4.8rem, min(3vw, 6.8rem));
+  padding: 10px;
+} 
 
 .support_link li:hover a{
   color: var(--blue_01);
@@ -222,10 +229,6 @@
 .support_link li:hover a svg path{
   fill: var(--blue_01);
 }
-/* .support_link li:hover {
-  background: rgba(69, 147, 252, .1);
-} */
-
 
 
 
@@ -244,6 +247,8 @@
   }
   .faq h3{
     text-align: center;
+    font-size: 24px ;
+
     /* margin-bottom: (var(--body_text_unit) * 2);   */
   }
   .service_list {
@@ -253,9 +258,10 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 80%;
   }
- 
+ .service{
+  margin-top: 160px;
+ }
   .cs_link{
     margin-bottom: 20px;
   }
@@ -271,10 +277,10 @@
   .service_list a{
     font-size: 16px;  /*16px*/
     padding: 0 12px;
+    text-align: left;
+    margin-left: 30px;
   }
   .support_link li a{
-    font-size: 18px;  
-    /* padding: 5px 10px; */
     border-radius: var(--border_md);
   }
   .support_link li a svg{
@@ -303,10 +309,17 @@
  
   
 
-
+  .service_list{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 120px);
+    grid-gap: 8px 24px; 
+  }
+  
 
 
   .service_list h3{
+    display: flex;
+    flex: 1;
     font-size: 22px;
     margin-bottom: 16px;
   }
@@ -315,25 +328,36 @@
     width: 60px;
     height: 60px;
   }
+  .service_list li{
+    flex-wrap: wrap;
+  }
+  .link_wrap{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
   .service_list a{
+    flex: 1;
     font-size: 18px;
     padding: 0 12px;
+    margin-left: 0;
   }
   .support_link li a{
-    font-size: 16px;
-    /* padding: 5px 10px; */
     border-radius: var(--border_md);
   }
   .support_link li a svg{
     width: 28px;
     height: 28px;
   }
-  /* .support{
-    display: flex;
-    flex-direction: row;
-  } */
+
   .support_link ul{
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+  .support{
+    display: flex;
+    justify-content: space-between;
   }
   .support_link ul li{
    display: flex;
