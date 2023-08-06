@@ -48,54 +48,140 @@
           <span>나만의 컬러로 </span>
           <span>D.I.Y</span>
         </div>
-        <button>구매하기</button>
+        <button class="add_btn">구매하기</button>
       </div>
     </section>
     <section
-      class="color_pick_bar d-flex justify-content-center align-items-center"
+      class="color_pick_bar d-flex justify-content-center align-items-center white_bg"
     >
       <h2 class="tt_02">
         나만의 그램컬러<br />
         색상버튼을 눌러보세요
       </h2>
     </section>
-    <section class="color_item_wrap container">
-      <div class="color_item aurora_color">
-        <img src="imgs/select/aurora_right.png" alt="오로라 제품 이미지1" />
-        <img src="imgs/select/aurora_left.png" alt="오로라 제품 이미지2" />
-        <img src="imgs/select/aurora_top.png" alt="오로라 제품 이미지3" />
-      </div>
-      <div class="color_item white_color">
-        <img src="imgs/select/aurora_right.png" alt="오로라 제품 이미지1" />
-        <img src="imgs/select/aurora_left.png" alt="오로라 제품 이미지2" />
-        <img src="imgs/select/aurora_top.png" alt="오로라 제품 이미지3" />
-      </div>
-      <div class="color_item black_color">
-        <img src="imgs/select/aurora_right.png" alt="오로라 제품 이미지1" />
-        <img src="imgs/select/aurora_left.png" alt="오로라 제품 이미지2" />
-        <img src="imgs/select/aurora_top.png" alt="오로라 제품 이미지3" />
-      </div>
-      <div class="color_item green_color">
-        <img src="imgs/select/aurora_right.png" alt="오로라 제품 이미지1" />
-        <img src="imgs/select/aurora_left.png" alt="오로라 제품 이미지2" />
-        <img src="imgs/select/aurora_top.png" alt="오로라 제품 이미지3" />
-      </div>
+    <section class="big_pd white_bg">
 
-      <ul class="btn_set">
-        <li class="active">
-          <a href="#" data-filter="aurora_color"></a>
-        </li>
-        <li>
-          <a href="#" data-filter="white_color"></a>
-        </li>
-        <li>
-          <a href="#" data-filter="black_color"></a>
-        </li>
-        <li>
-          <a href="#" data-filter="green_color"></a>
-        </li>
-      </ul>
+      <div class="container color_items_wrap">
+        <div class="color_items">
+          <div class="color_item d-flex align-items-center">
+            <div class="big_img" data-color="green">
+              <img
+                src="imgs/color/green/color_pick_img1.png"
+                alt="오로라 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img" data-color="green">
+              <img
+                src="imgs/color/green/color_pick_img2.png"
+                alt="오로라 제품 이미지2"
+              />
+              <img
+                src="imgs/color/green/color_pick_img3.png"
+                alt="오로라 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center">
+            <div class="big_img" data-color="white">
+              <img
+                src="imgs/color/white/color_pick_img1.png"
+                alt="오로라 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img" data-color="white">
+              <img
+                src="imgs/color/white/color_pick_img2.png"
+                alt="오로라 제품 이미지2"
+              />
+              <img
+                src="imgs/color/white/color_pick_img3.png"
+                alt="오로라 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center">
+            <div class="big_img" data-color="black">
+              <img
+                src="imgs/color/black/color_pick_img1.png"
+                alt="오로라 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img" data-color="black">
+              <img
+                src="imgs/color/black/color_pick_img2.png"
+                alt="오로라 제품 이미지2"
+              />
+              <img
+                src="imgs/color/black/color_pick_img3.png"
+                alt="오로라 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center">
+            <div class="big_img" data-color="aurora">
+              <img
+                src="imgs/color/aurora/color_pick_img1.png"
+                alt="오로라 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img" data-color="aurora">
+              <img
+                src="imgs/color/aurora/color_pick_img2.png"
+                alt="오로라 제품 이미지2"
+              />
+              <img
+                src="imgs/color/aurora/color_pick_img3.png"
+                alt="오로라 제품 이미지3"
+              />
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="btn_set_wrap d-flex flex-column align-items-center">
+        <ul class="btn_set d-flex">
+          <li class="active" data-color="green">
+            <a href="#"></a>
+          </li>
+          <li data-color="white">
+            <a href="#"></a>
+          </li>
+          <li data-color="black">
+            <a href="#"></a>
+          </li>
+          <li data-color="aurora">
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
     </section>
+ <section class="white_bg md_pd">
+   <div class="container color_rec d-flex flex-column align-items-center">
+     <h2 class="tt_01">컬러 추천 제품</h2>
+      <ul class="card_list row row-cols-3 row-col-md-2 row-cols-sm-1">
+        <!-- <li class="card">
+        <div>
+          <div class="card_img_wrap">
+         
+          </div>
+          <div class="card_text">
+            <p class="product_num"></p>
+            <h3 class="product_title"></h3>
+            <p class="product_desc1"></p>
+            <p class="product_weight"></p>
+            <p class="review">별<span></span></p>
+            <h3 class="product_cost"></h3>
+          </div>
+          <button>구매하기</button>
+        </div>
+      </li> -->
+        <!-- <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li> -->
+      </ul>
+   </div>
+ </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

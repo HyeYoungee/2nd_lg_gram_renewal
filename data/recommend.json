@@ -1,0 +1,50 @@
+[
+  {
+    "image": "../imgs/select/aurora_left.png",
+    "product_num": "14Z90RS-GA56K",
+    "product_title": "LG 그램 Style 35.5cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 999,
+    "rating": "4.80 (8)",
+    "cost": 1408990,
+    "type": "type_style",
+    "color": "color_black",
+    "price": "price_150"
+  },
+  {
+    "image": "../imgs/select/green_pen.png",
+    "product_num": "14T90R-GA50K",
+    "product_title": "LG 그램360 35.5cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1250,
+    "rating": "4.80 (5)",
+    "cost": 1890000,
+    "type": "type_style",
+    "color": "color_green",
+    "price": "price_200"
+  },
+  {
+    "image": "../imgs/select/black_left.png",
+    "product_num": "17Z90R-EA5CK",
+    "product_title": "LG 그램 40.6cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1199,
+    "rating": "5.00 (5)",
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_black",
+    "price": "price_250"
+  },
+  {
+    "image": "../imgs/select/white_left.png",
+    "product_num": "17ZD90RU-GX56K",
+    "product_title": "LG 그램 43.1cm",
+    "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
+    "product_weight": 1350,
+    "rating": "5.00 (2)",
+    "cost": 2519000,
+    "type": "type_360",
+    "color": "color_white",
+    "price": "price_300"
+  }
+]
