@@ -1,12 +1,6 @@
-header{
-  width: 100%;
-  height: 72px;
-  text-align: center;
-  font-size: 28px;
-}
 /* Layout, All */
 .container{
-  width: 1272px;
+  max-width: 1272px;
   margin: 0 auto;
 }
 main > section{
@@ -56,15 +50,45 @@ main img{
 
 /* jammyG_sec01 */
 .jammyG_sec01{
-  /* flex-shrink: 0; */
-  gap: 24PX;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 24px;
 }
-.jammyG_sec01 > div{
+.jammyG_sec01 img{
   height: 360px;
 }
+.jammyG_sec01 .sec01_box{
+  position: relative;
+}
+.jammyG_sec01 .sec01_box p{
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  text-align: right;
+  margin: 0 20px 20px 0;
+  line-height: 1.4;
+  font-family: 'Gmarket Sans TTF';
+  font-size: var(--bd_size_04);
+  color: var(--white_00);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.30);
+}
+
+/* jammyG_sec02 */
+.jammyG_sec02 .talk_box{
+  display: grid;
+  grid-template-columns: 1.8fr 1.1fr 1.1fr 1.1fr;
+  grid-template-rows: auto;
+  gap: 24px;
+}
+
 
 
 
 .custom{
   padding-bottom: calc(var(--base_unit_d) * 7);
+}
+
+@media (max-width: 1320px){
+  main{padding: 0 24px;}
 }
