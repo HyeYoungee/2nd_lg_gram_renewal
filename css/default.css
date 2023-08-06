@@ -397,7 +397,6 @@ h2 {
   opacity: 1;
 }
 .main_sec5 .text_box span {
-  font-size: var(--body_text_unit);
   margin: 10px;
   font-size: max(1.4rem, min(1.5vw, 1.6rem));
 }
