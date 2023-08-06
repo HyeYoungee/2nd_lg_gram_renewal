@@ -105,7 +105,6 @@ nav.main_header_scroll_border.with_border {
   .main_header_menu{
     display: none; 
     flex-direction: column;
-    align-items: left;
     width: 100%;
     background-color: #fff;
   }
@@ -159,7 +158,6 @@ nav.main_header_scroll_border.with_border {
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
-  
   /* main_header_icons 종료 */
 }
 /* 성희 main_header 종료 */
