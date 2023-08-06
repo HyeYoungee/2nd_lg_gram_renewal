@@ -129,8 +129,9 @@ main a{
 /* jammyG_sec03 */
 .jammyG_sec03 .collabo_goods_list{
   display: flex;
-  gap: 1.5%;
-  flex-flow: row wrap;
+  overflow: hidden;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .jammyG_sec03 .collabo_goods_list li{
   width: 22%;
