@@ -1,126 +1,298 @@
 $(function () {
+  let lengthContainer = $(".result_length");
   let container = $(".card_list");
   let loadMoreBtn = $(".loadmorBtn");
   let addItemCount = 6;
   let added = 0;
   let allData = [];
 
-  let typeArr = [];
-  let colorArr = [];
-  let priceArr = [];
-  let typeArrResultHTML = "";
-  let colorArrResultHTML = "";
-  let priceArrResultHTML = "";
+ 
 
   $.getJSON("/data/card.json", makeList);
-
   function makeList(data) {
     allData = data;
     console.log(allData);
-
-    //유형태그
-    typeArr = [];
-    $.each(allData, function (i, item) {
-      typeArr.push(item.type);
-      // let typeArrResult = [...new Set(typeArr)];
-      // console.log(typeArrResult);
+    let selectedType;
+    let result = [];
+    console.log(document.querySelector(".type_gram"));
+    document
+      .querySelector(".type_gram")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log(11);
+        selectedType = "type_gram";
+        result = [...allData].filter((item) => {
+          return item.type === selectedType;
+        });
+        console.log("result:::", result);
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
+    document.querySelector(".type_360").addEventListener("click", function (e) {
+      selectedType = "type_360";
+      result = allData.filter((item) => {
+        return item.type === selectedType;
+      });
+      if (selectedColor) {
+        result = result.filter((item) => {
+          return item.color === selectedColor;
+        });
+      }
+      if (selectedPrice) {
+        result = result.filter((item) => {
+          return item.price === selectedPrice;
+        });
+      }
+      findSet(result);
     });
-    let typeArrResult = [...new Set(typeArr)];
-    console.log(typeArrResult);
-    typeArrResultHTML = "";
-    console.log(typeArrResult);
-    $.each(typeArrResult, function (i, type) {
-      typeArrResultHTML += `<span>
-      <input type="radio" value="${type}" name="type" />
-      <label for="gram_cost">${type}</label>
-    </span>`;
-    });
+    document
+      .querySelector(".type_style")
+      .addEventListener("click", function (e) {
+        console.log("doit1");
+        selectedType = "type_style";
+        result = allData.filter((item) => {
+          return item.type === selectedType;
+        });
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
 
-    $("#type_wrap").html(typeArrResultHTML);
-    //컬러태그
-    colorArr = [];
-    $.each(allData, function (i, item) {
-      colorArr.push(item.color);
-    });
+    let selectedColor;
+    document
+      .querySelector(".color_white")
+      .addEventListener("click", function (e) {
+        selectedColor = "color_white";
+        result = allData.filter((item) => {
+          return item.color === "color_white";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".color_snow")
+      .addEventListener("click", function (e) {
+        selectedColor = "color_snow";
+        result = allData.filter((item) => {
+          return item.color === "color_snow";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
+    console.log(document.querySelector(".color_black"));
+    document
+      .querySelector(".color_black")
+      .addEventListener("click", function (e) {
+        console.log("doit2");
+        console.log(result);
+        selectedColor = "color_black";
+        result = allData.filter((item) => {
+          return item.color === "color_black";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".color_green")
+      .addEventListener("click", function (e) {
+        console.log("doit3");
+        console.log("typeresult:::", result);
+        selectedColor = "color_green";
+        result = allData.filter((item) => {
+          return item.color === "color_green";
+        });
+        console.log("colorresult::::", result);
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedPrice) {
+          result = result.filter((item) => {
+            return item.price === selectedPrice;
+          });
+        }
+        findSet(result);
+      });
 
-    let colorArrResult = [...new Set(colorArr)];
-    colorArrResultHTML = "";
-    console.log(colorArrResultHTML);
-    $.each(colorArrResult, function (i, color) {
-      colorArrResultHTML += `<span>
-      <input type="radio" value="${color}" name="color" />
-      <label for="gram_cost">${color}</label>
-    </span>`;
-    });
-    $("#color_wrap").html(colorArrResultHTML);
+    let selectedPrice;
+    document
+      .querySelector(".price_150")
+      .addEventListener("click", function (e) {
+        selectedPrice = "price_150";
+        result = allData.filter((item) => {
+          return item.price === "price_150";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".price_200")
+      .addEventListener("click", function (e) {
+        selectedPrice = "price_200";
+        result = allData.filter((item) => {
+          return item.price1 === "price_200";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".price_250")
+      .addEventListener("click", function (e) {
+        selectedPrice = "price_250";
+        result = allData.filter((item) => {
+          return item.price === "price_250";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".price_300")
+      .addEventListener("click", function (e) {
+        selectedPrice = "price_300";
+        result = allData.filter((item) => {
+          return item.price === "price_300";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        findSet(result);
+      });
+    document
+      .querySelector(".price_350")
+      .addEventListener("click", function (e) {
+        selectedPrice = "price_350";
+        result = allData.filter((item) => {
+          return item.price === "price_350";
+        });
+        if (selectedType) {
+          result = result.filter((item) => {
+            return item.type === selectedType;
+          });
+        }
+        if (selectedColor) {
+          result = result.filter((item) => {
+            return item.color === selectedColor;
+          });
+        }
+        findSet(result);
+      });
+    if (selectedColor === "" && selectedPrice === "" && selectedType === "") {
+      findSet(result);
+    }
 
-    //가격태그
-    priceArr = [];
-    $.each(allData, function (i, item) {
-      priceArr.push(item.price1);
-    });
-
-    let priceArrResult = [...new Set(priceArr)];
-    console.log(priceArrResult);
-    priceArrResultHTML = "";
-
-    $.each(priceArrResult, function (i, price) {
-      priceArrResultHTML += `<span>
-      <input type="radio" value="${price}" name="price" />
-      <label for="gram_cost">${price}</label>
-    </span>`;
-    });
-    $("#price_wrap").html(priceArrResultHTML);
-    console.log(priceArrResultHTML);
-    // findSet("", "", "", 10);
+   
   }
 
-  // function initCarList(data) {
-  //   allData = data;
-  //   console.log(allData);
-  //   // console.log(allData);
-  //   addItems(); //데이터 추출, 리스트태그 생성, ui의 내용에 추가
-  //   loadMoreBtn.on("click", addItems); //클릭하면 addItems 할일을 해
-  // }
+  $("#searchForm").on("click", function (e) {
+    e.preventDefault();
+   
 
-  let checkHTML = "";
+  });
 
-  // checkHTML = ` <span>
-  //                 <input type="radio" value="${allData.type}" name="${type}" />
-  //                 <label for="gram_cost">${}</label>
-  //               </span>`;
-
-  function findSet(typea, colora, pricea, limit) {
-    let filteredArr = [];
-    let listHTML = "";
-    if (typea == "" && colora == "" && pricea == "") {
-      filteredArr = allData.slice(0, 10);
+  function filterItems() {
+    let result = allData;
+    if (selectedType) {
+      result = result.filter((item) => item.type === selectedType);
     }
-    filteredArr = allData.filter((item) => {
-      return (
-        (typea === "" || item.type === typea) &&
-        (colora === "" || item.color === colora) &&
-        (pricea === "" || item.price1 === pricea)
-      );
-    });
+    if (selectedColor) {
+      result = result.filter((item) => item.color === selectedColor);
+    }
+    if (selectedPrice) {
+      result = result.filter((item) => item.price === selectedPrice);
+    }
+    findSet(result);
+  }
 
-    // let filteredType = allData.filter((item) => item.type == typea);
-    // console.log(filteredType);
-    // if (filteredType.length > 0) {
-    //   let filteredColor = filteredType.filter((item) => item.color == colora);
-    //   console.log(filteredColor);
-    //   filteredArr = filteredColor;
-    //   if (filteredColor.length > 0) {
-    //     let filteredPrice = filteredColor.filter(
-    //       (item) => item.price == pricea
-    //     );
-    //     console.log(filteredPrice);
-    //     filteredArr = filteredPrice;
-    //   }
-    // }
-    console.log(filteredArr);
-    if (filteredArr.length > 0) {
-      $.each(filteredArr, function (i, item) {
+
+
+  function findSet(result) {
+ 
+    let listHTML = "";
+    let listLength = "";
+        
+    console.log(result);
+    if (result.length > 0) {
+      $.each(result, function (i, item) {
+        listLength = `${result.length}개`;
         listHTML += `<li class='card'>
           <div>
             <div class='card_img_wrap d-flex justify-content-center '>
@@ -132,7 +304,7 @@ $(function () {
               <p class='product_desc1'>${item.product_desc1}</p>
               <p class='product_weight'>무게(g) 약 ${item.product_weight.toLocaleString()}</p>
               <p class='review'>${starSVG}<span>${item.rating}</span></p>
-              <h3 class='product_cost'>₩ ${item.price.toLocaleString()}</h3>
+              <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
             </div>
             <button class="add_btn">구매하기</button>
           </div>
@@ -141,6 +313,7 @@ $(function () {
     } else {
       listHTML = `<p>검색결과가 없습니다.</p>`;
     }
+    lengthContainer.html(listLength);
     container.html(listHTML);
     // function findFilter(type, color) {
 

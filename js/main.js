@@ -17,7 +17,7 @@ $(function () {
     slideWidth: 345,
     slideMargin: 10,
     ticker: true,
-    speed: 9000,
+    speed: 20000,
   });
 });
 

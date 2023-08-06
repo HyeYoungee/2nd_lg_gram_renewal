@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>search page!</title>
+    <title>search page</title>
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -34,7 +34,7 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <h2 class="tt_03">
+        <h2 class="filter_text">
           필터를 선택하여 조건에 맞는 제품을 찾아보세요.
         </h2>
         <form class="filter_container" id="searchForm">
@@ -45,28 +45,11 @@
                 class="form_wrap d-flex justify-content-start"
                 id="type_wrap"
               >
-                <!-- <span>
-                  <input
-                    type="radio"
-                    id="gram_style"
-                    value="style"
-                    name="type"
-                  />
-                  <label for="gram_style">그램 Style</label>
-                </span>
-                <span>
-                  <input type="radio" id="gram_style" value="360" name="type" />
-                  <label for="gram_style">그램 360</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    id="gram_style"
-                    value="gram"
-                    name="type"
-                  />
-                  <label for="gram_style">그램</label>
-                </span> -->
+                <button id="gram_style" class="item type_style filter_btn">
+                  그램 Style
+                </button>
+                <button id="gram_style" class="item type_360 filter_btn">그램 360</button>
+                <button id="gram_style" class="item type_gram filter_btn">그램</button>
               </div>
             </div>
           </div>
@@ -77,42 +60,19 @@
                 class="form_wrap d-flex justify-content-start"
                 id="color_wrap"
               >
-                <!-- <span>
-                  <input
-                    type="radio"
-                    id="gram_style"
-                    value="aurora"
-                    name="color"
-                  />
-                  <label for="gram_color">오로라 화이트</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    id="gram_color"
-                    value="white"
-                    name="color"
-                  />
-                  <label for="gram_color">스노우 화이트</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    id="gram_color"
-                    value="black"
-                    name="color"
-                  />
-                  <label for="gram_color">옵시디안 블랙</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    id="gram_color"
-                    value="green"
-                    name="color"
-                  />
-                  <label for="gram_color">토파즈 그린</label>
-                </span> -->
+                <button id="gram_style" class="item color_white filter_btn">
+                  오로라 화이트
+                </button>
+                <button id="gram_style" class="item color_snow filter_btn">
+                  스노우 화이트
+                </button>
+                <button id="gram_style" class="item color_black filter_btn">
+                  옵시디안 블랙
+                </button>
+                <!-- <label for="gram_color">옵시디안 블랙</label> -->
+                <button id="gram_color" class="item color_green filter_btn">
+                  토파즈 그린
+                </button>
               </div>
             </div>
           </div>
@@ -123,26 +83,21 @@
                 class="form_wrap d-flex justify-content-start"
                 id="price_wrap"
               >
-                <!-- <span>
-                  <input type="radio" id="gram_cost" value="150" name="price" />
-                  <label for="gram_cost">최대 150만원</label>
-                </span>
-                <span>
-                  <input type="radio" id="gram_cost" value="200" name="price" />
-                  <label for="gram_cost">최대 200만원</label>
-                </span>
-                <span>
-                  <input type="radio" id="gram_cost" value="250" name="price" />
-                  <label for="gram_cost">최대 250만원</label>
-                </span>
-                <span>
-                  <input type="radio" id="gram_cost" value="300" name="price" />
-                  <label for="gram_cost">최대 300만원</label>
-                </span>
-                <span>
-                  <input type="radio" id="gram_cost" value="350" name="price" />
-                  <label for="gram_cost">최대 350만원</label> -->
-                </span>
+                <button id="gram_cost" class="item price_150 filter_btn">
+                  최대 150만원
+                </button>
+                <button id="gram_cost" class="item price_200 filter_btn">
+                  최대 200만원
+                </button>
+                <button id="gram_cost" class="item price_250 filter_btn">
+                  최대 250만원
+                </button>
+                <button id="gram_cost" class="item price_300 filter_btn">
+                  최대 300만원
+                </button>
+                <button id="gram_cost" class="item price_350 filter_btn">
+                  최대 350만원
+                </button>
               </div>
             </div>
           </div>
@@ -154,7 +109,8 @@
     </section>
     <section class="cards-container">
       <div class="container">
-        <ul class="card_list row row-cols-3 row-col-md-2">
+        <h2 class="result_length"></h2>
+        <ul class="card_list row row-cols-3 ">
           <!-- <li class="card">
           <div>
             <div class="card_img_wrap">
@@ -177,9 +133,12 @@
           <li></li>
           <li></li> -->
         </ul>
-        <button class="loadmorBtn">더보기</button>
+        <button class="more_btn loadmoreBtn">
+          더보기<i class="fa-solid fa-chevron-down"></i>
+        </button>
       </div>
     </section>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
