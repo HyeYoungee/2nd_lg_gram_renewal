@@ -336,8 +336,14 @@ h2 {
   transform: scale(1);
   transition: transform 0.5s linear;
 }
+.main_sec2 .swiper-slide{
+  position: relative;
+  padding-top: calc(var(--base_unit_d) * 10);
+}
 .main_sec2 .content {
-  max-width: 840px;
+  position: absolute;
+  top: 0px;
+  max-width: 900px;
   margin: 0 auto;
   width: 100%;
   opacity: 0;
@@ -348,6 +354,20 @@ h2 {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+}
+.main_sec2 .swiper-horizontal .pager_box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.main_sec2 .swiper-horizontal .swiper-pagination{
+  top:var(--base_unit_d);
+}
+.main_sec2 .swiper-horizontal .swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+  color: #505050;
+  /* background: var(--blue_02); */
 }
 
 /* main_sec5 */
