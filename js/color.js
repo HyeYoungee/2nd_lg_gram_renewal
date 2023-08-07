@@ -37,14 +37,12 @@ AOS.init({
 
 //세번째 섹션
 
-$(window).on("scroll",function(){
-  let sct= $(window).scrollTop();
+$(window).on("scroll", function () {
+  let sct = $(window).scrollTop();
   let sectionTop = $(".color_fixed_img").offset().top;
-  let opacity = 1 - (sct - sectionTop)/200;
-  $(".color_fixed_text").css("opacity", opacity)
-
+  let opacity = 1 - (sct - sectionTop) / 200;
+  $(".color_fixed_text").css("opacity", opacity);
 });
-
 
 //컬러그램 섹션
 
@@ -64,17 +62,13 @@ $(".btn_set li").on("click", function (e) {
 });
 
 function showImage(color) {
-  $(".color_item div").hide();
+  $(".color_item").attr("style", "display: none !important");
 
-  $(".color_item > div").each(function () {
-    if ($(this).data("color") === color) {
-      $(this).fadeIn();
-    } else {
-      $(this).fadeOut();
-    }
-  });
+  $(`.color_item[data-color='${color}']`).attr(
+    "style",
+    "display: flex !important"
+  );
 }
-
 
 //추천제품 섹션
 
@@ -106,5 +100,3 @@ $.getJSON("/data/recommend.json", function (data) {
   });
   $(".card_list").append(elements);
 });
-
-

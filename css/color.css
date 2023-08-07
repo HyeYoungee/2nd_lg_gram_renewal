@@ -61,6 +61,8 @@
 
 .color_desc {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .color_desc img {
@@ -74,11 +76,11 @@
   right: -15%;
 }
 
-@media (max-width:1800px) {
+@media (max-width: 1800px) {
   .text_desc {
     position: absolute;
     top: 40%;
-    right:0;
+    right: 0;
   }
 }
 .text_desc h2 {
@@ -143,7 +145,7 @@
 }
 
 /* 세번째 섹션 */
-.color_fixed {
+/* .color_fixed {
   position: relative;
 }
 .color_fixed_img {
@@ -210,7 +212,7 @@
 .color_pick_bar h2 {
   color: var(--white_00);
   text-align: center;
-}
+} */
 
 /* 4번째 섹션 */
 .color_pick_bar {
@@ -244,8 +246,8 @@
   right: 150px;
 }
 
-@media (max-width:1800px) {
-  .color_fixed_text  {
+@media (max-width: 1800px) {
+  .color_fixed_text {
     position: absolute;
     top: 30%;
     right: 10%;
@@ -275,14 +277,14 @@
   line-height: 150%;
 }
 
-.color_fixed_text .add_btn{
+.color_fixed_text .add_btn {
   background: var(--blue_01);
   width: 226px;
   height: 62px;
 }
 
-.color_fixed_text .add_btn:hover{
-background: var(--blue_02);
+.color_fixed_text .add_btn:hover {
+  background: var(--blue_02);
 }
 
 .color_pick_bar {
@@ -298,7 +300,7 @@ background: var(--blue_02);
 
 /* 4번째 섹션 */
 
-.color_items_wrap{
+.color_items_wrap {
   height: 100vh;
 }
 
@@ -322,11 +324,9 @@ background: var(--blue_02);
 }
 
 .btn_set_wrap {
- 
 }
 
 .btn_set {
-
 }
 
 .btn_set li {
@@ -364,10 +364,10 @@ background: var(--blue_02);
 
 /* 추천제품 섹션 */
 
-.color_rec h2{
- text-align: center;
- margin-bottom: 100px;
- line-height: 150%;
+.color_rec h2 {
+  text-align: center;
+  margin-bottom: 100px;
+  line-height: 150%;
 }
 
 .card {
@@ -380,22 +380,19 @@ background: var(--blue_02);
   margin: 0 12px 38px 12px;
 }
 
-.card:first-child{
+.card:first-child {
   margin-left: 0;
 }
 
-.card:last-child{
+.card:last-child {
   margin-right: 0;
 }
-
 
 .card > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .card_img_wrap {
   /* width: 408px; */
@@ -439,7 +436,7 @@ background: var(--blue_02);
   color: var(--gray-03, #58606a);
   font-size: max(1.4rem, min(2.5vw, 1.6rem));
   line-height: 1.4;
-  padding:0 0 0 0;
+  padding: 0 0 0 0;
 }
 
 .review {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search page</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+    />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/search.css" />
+  </head>
+  <body>
+    <section class="filter_section">
+      <div class="filter_options">
+        <div class="filter_type">
+          <h4>유형태그</h4>
+          <div class="type_wrap d-flex">
+            <!-- Add your type filter options here -->
+            <span>
+              <input type="radio" value="" name="type" />
+              <label for="type_all">전체</label>
+            </span>
+            <span>
+              <input type="radio" value="type_gram" name="type" />
+              <label for="type_gram">그램</label>
+            </span>
+            <span>
+              <input type="radio" value="type_360" name="type" />
+              <label for="type_360">360도</label>
+            </span>
+            <span>
+              <input type="radio" value="type_style" name="type" />
+              <label for="type_style">스타일</label>
+            </span>
+          </div>
+        </div>
+        <div class="filter_color">
+          <h4>컬러태그</h4>
+          <div class="color_wrap d-flex">
+            <!-- Add your color filter options here -->
+            <span>
+              <input type="radio" value="" name="color" />
+              <label for="color_all">전체</label>
+            </span>
+            <span>
+              <input type="radio" value="color_white" name="color" />
+              <label for="color_white">화이트</label>
+            </span>
+            <span>
+              <input type="radio" value="color_snow" name="color" />
+              <label for="color_snow">스노우</label>
+            </span>
+            <span>
+              <input type="radio" value="color_black" name="color" />
+              <label for="color_black">블랙</label>
+            </span>
+            <span>
+              <input type="radio" value="color_green" name="color" />
+              <label for="color_green">그린</label>
+            </span>
+          </div>
+        </div>
+        <div class="filter_price">
+          <h4>가격태그</h4>
+          <div class="price_wrap d-flex">
+            <!-- Add your price filter options here -->
+            <span>
+              <input type="radio" value="" name="price" />
+              <label for="price_all">전체</label>
+            </span>
+            <span>
+              <input type="radio" value="price_150" name="price" />
+              <label for="price_150">150만원 미만</label>
+            </span>
+            <span>
+              <input type="radio" value="price_200" name="price" />
+              <label for="price_200">200만원 미만</label>
+            </span>
+            <span>
+              <input type="radio" value="price_250" name="price" />
+              <label for="price_250">250만원 미만</label>
+            </span>
+            <span>
+              <input type="radio" value="price_300" name="price" />
+              <label for="price_300">300만원 미만</label>
+            </span>
+            <span>
+              <input type="radio" value="price_350" name="price" />
+              <label for="price_350">350만원 미만</label>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="result_length">
+        총 <span>0</span>개의 상품이 검색되었습니다.
+      </div>
+      <ul class="card_list row row-cols-3 row-col-md-2">
+        <!-- Data will be appended here -->
+      </ul>
+      <button class="loadmorBtn">더보기</button>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/search_.js"></script>
+  </body>
+</html>
