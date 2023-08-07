@@ -14,39 +14,25 @@ section{
   font-weight: bold;
 }
 .story_section01 span, .story_section02 span, .story_section05 span{
-  background: var(
-    --point_gr_01,
-    linear-gradient(
-      to right top,
-      #ffe0f2,
-      #f9e0f7,
-      #f1e0fa,
-      #e9e1fd,
-      #e0e2ff,
-      #d7e5ff,
-      #cfe8ff,
-      #c8eaff,
-      #c0f0ff,
-      #b8f5ff,
-      #b2faff,
-      #b0fffa
-    )
-  );
+  background: var(--point_gr_01,linear-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.story_section03 h2,.story_section04 h2{
+.story_section03 h2,.story_section04 h2,.story_section06_influencer h2, .story_section07_creator h2, .story_section08_student h2, .story_section09_office h2{
   font-size: var(--tt_size_01);
   font-family: "Gmarket Sans";
   font-weight: bold;
   text-align: center;
 }
+.story_section06_influencer>p, .story_section07_creator>p, .story_section08_student>p, .story_section09_office >p{
+  font-size: var(--bd_size_01);
+  font-family: "Gmarket Sans";
+}
 .story_section03 h2 span,.story_section04 h2 span{
   display: block;
   margin-top: var(--base_unit_d)*2/3;
 }
-
 /* story_section01 */
 .story_section01 div>*{
   margin-bottom: var(--base_unit_d);
@@ -92,7 +78,7 @@ section{
 }
 /* story_section04 */
 .story_section04{
-  background:linear-gradient(#353535,#353535,#1F1F1F,#212121,#262626);
+  background:linear-gradient(#353535 25%,#222 46%,#212121 70%,#272727 100%);
 }
 .story_section04{
   height : 100vh; 
@@ -112,11 +98,15 @@ section{
   height: 100%;
   object-fit: cover;
 }
-/* story_section05 */
-
 /* story_section06_influencer */
 .story_section06_influencer{
   background-color: var(--gray_00);
+}
+.story_section06_influencer h2{
+  background: linear-gradient(90deg, #FFABBB 0%, #9DC9FF 50%, #C498FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .story_section06_influencer img{
   width: 10%;
@@ -124,6 +114,12 @@ section{
 /* story_section07_creator */
 .story_section07_creator{
   background-color: var(--white_00);
+}
+.story_section07_creator h2{
+  background: linear-gradient(90deg, #B6DB87 0%, #76C3F4 50%, #E38BDD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .story_section07_creator img{
   width: 10%;
@@ -134,10 +130,22 @@ section{
 .story_section08_student{
   background-color: var(--gray_00);
 }
+.story_section08_student h2{
+  background: linear-gradient(90deg, #FFAEE4 0%, #D7A3F6 50%, #B6DB87 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .story_section08_student img{
   width: 10%;
 }
 /* story_section09_office */
+.story_section09_office h2{
+  background: linear-gradient(90deg, #E3DE51 0%, #5FC95F 50%, #2B673D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .story_section09_office{
   background-color: var(--white_00);
 }
