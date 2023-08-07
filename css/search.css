@@ -16,7 +16,7 @@ section {
 }
 
 .search_bar input {
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   background: var(--gray_00);
   border: none;
   width: 80%;
@@ -24,13 +24,17 @@ section {
 
 .search_bar input::placeholder {
   color: var(--gray-01, #b0b8c1);
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   font-weight: 700;
 }
 
 .search_bar i {
-  font-size: 30px;
+  font-size: max(2rem, min(3vw, 3rem));
   color: var(--gray_03);
+}
+
+.filter_text{
+  font-size: max(2rem, min(3vw, 3.2rem));
 }
 
 .filter_container {
@@ -42,8 +46,14 @@ section {
   position: relative;
 }
 
+.item{
+  width: 189px;
+  height: 48px;
+  margin:0 2px 0 2px;
+}
+
 .filter_item h2 {
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   font-weight: 700;
   margin: 33px 0 18px 22px;
 }
@@ -54,14 +64,14 @@ section {
 label {
   width: 190px;
   height: 48px;
-  border: 1px solid var(--gray-03, #58606a);
+  border: 2px solid var(--gray-03, #58606a);
   border-radius: var(--border_lg);
   background-color: var(--white_00);
   display: block;
   position: relative;
   text-align: center;
   line-height: 48px;
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   margin-right: 5px;
   cursor: pointer;
 }
@@ -87,21 +97,30 @@ label {
   cursor: pointer;
 }
 
-#gram_style,
+/* #gram_style,
 #gram_color,
 #gram_cost {
   display: none;
+} */
+
+/* card count */
+.result_length{
+  font-size: var(--bd_size_04);
+  font-weight: 600;
+  line-height: 150%;
 }
 
 /* card ui css */
+
+
 .cards-container {
   background: var(--white_00);
 }
 .card {
   width: 408px;
   height: 774px;
-  /* box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4); */
-  border: 1px solid #000;
+  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4);
+  /* border: 1px solid #000; */
   border-radius: var(--border_lg);
   background: #fff;
   margin: 0 12px 38px 12px;
@@ -114,7 +133,7 @@ label {
 }
 
 .card_list {
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .card_img_wrap {
@@ -136,7 +155,7 @@ label {
 
 .card_text p {
   font-weight: 400;
-  font-size: var(--body_text_unit);
+  font-size: 16px;
 }
 
 .product_num {
@@ -146,7 +165,7 @@ label {
 
 .product_title {
   color: var(--dark, #1e2226);
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   font-weight: 700;
   padding: 26px 0 37px 0;
 }
@@ -171,7 +190,7 @@ label {
 
 .product_cost {
   color: var(--blue-02, #3182f6);
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_02);
   font-weight: 700;
   margin-bottom: 25px;
 }

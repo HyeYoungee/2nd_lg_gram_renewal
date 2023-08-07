@@ -6,10 +6,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 999,
     "rating": "4.80 (8)",
-    "price": 1408990,
-    "type": "그램style",
-    "color": "옵시디안 블랙",
-    "price1": "최대 150만원"
+    "cost": 1408990,
+    "type": "type_style",
+    "color": "color_black",
+    "price": "price_150"
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -18,22 +18,22 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "4.80 (5)",
-    "price": 1890000,
-    "type": "그램style",
-    "color": "토파즈 그린",
-    "price1": "최대 200만원"
+    "cost": 1890000,
+    "type": "type_style",
+    "color": "color_green",
+    "price": "price_200"
   },
   {
-    "image": "../imgs/select/옵시디안 블랙_left.png",
+    "image": "../imgs/select/color_black_left.png",
     "product_num": "17Z90R-EA5CK",
     "product_title": "LG 그램 40.6cm",
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000,
-    "type": "그램",
-    "color": "토파즈 그린",
-    "price1": "최대 250만원"
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_green",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -42,10 +42,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 2519000,
-    "type": "그램360",
-    "color": "토파즈 그린",
-    "price1": "최대 300만원"
+    "cost": 2519000,
+    "type": "type_360",
+    "color": "color_green",
+    "price": "price_300"
   },
   {
     "image": "../imgs/select/green_left.png",
@@ -54,10 +54,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1450,
     "rating": "5.00 (2)",
-    "price": 3207000,
-    "type": "그램360",
-    "color": "토파즈 그린",
-    "price1": "최대 350만원"
+    "cost": 3207000,
+    "type": "type_360",
+    "color": "color_green",
+    "price": "price_350"
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -66,10 +66,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 1519000,
-    "type": "그램360",
-    "color": "토파즈 그린",
-    "price1": "최대 200만원"
+    "cost": 1519000,
+    "type": "type_360",
+    "color": "color_green",
+    "price": "price_200"
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -78,22 +78,22 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i7-1360P 프로세서",
     "product_weight": 1230,
     "rating": "5.00 (5)",
-    "price": 3440000,
-    "type": "그램",
-    "color": "토파즈 그린",
-    "price1": "최대 350만원"
+    "cost": 3440000,
+    "type": "type_gram",
+    "color": "color_green",
+    "price": "price_350"
   },
   {
-    "image": "../imgs/select/옵시디안 블랙_left.png",
+    "image": "../imgs/select/color_black_left.png",
     "product_num": "17Z90R-EA5CK",
     "product_title": "LG 그램 40.6cm",
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000,
-    "type": "그램",
-    "color": "토파즈 그린",
-    "price1": "최대 250만원"
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_green",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/green_open.png",
@@ -102,10 +102,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "5.00 (10)",
-    "price": 2200000,
-    "type": "그램",
-    "color": "토파즈 그린",
-    "price1": "최대 250만원"
+    "cost": 2200000,
+    "type": "type_gram",
+    "color": "color_green",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/aurora_left.png",
@@ -114,10 +114,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 999,
     "rating": "4.80 (8)",
-    "price": 2048990,
-    "type": "그램",
-    "color": "스노우 화이트",
-    "price1": "최대 250만원"
+    "cost": 2048990,
+    "type": "type_gram",
+    "color": "color_snow",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -126,10 +126,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "4.80 (5)",
-    "price": 1890000,
-    "type": "그램360",
-    "color": "스노우 화이트",
-    "price1": "최대 200만원"
+    "cost": 1890000,
+    "type": "type_360",
+    "color": "color_snow",
+    "price": "price_200"
   },
   {
     "image": "../imgs/select/토파즈 그린_left.png",
@@ -138,10 +138,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1450,
     "rating": "5.00 (2)",
-    "price": 3207000,
-    "type": "그램360",
-    "color": "스노우 화이트",
-    "price1": "최대 350만원"
+    "cost": 3207000,
+    "type": "type_360",
+    "color": "color_snow",
+    "price": "price_350"
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -150,10 +150,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 1519000,
-    "type": "그램style",
-    "color": "스노우 화이트",
-    "price1": "최대 200만원"
+    "cost": 1519000,
+    "type": "type_style",
+    "color": "color_snow",
+    "price": "price_200"
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -162,10 +162,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i7-1그램360P 프로세서",
     "product_weight": 1230,
     "rating": "5.00 (5)",
-    "price": 3330000,
-    "type": "그램",
-    "color": "옵시디안 블랙",
-    "price1": "최대 350만원"
+    "cost": 3330000,
+    "type": "type_gram",
+    "color": "color_black",
+    "price": "price_350"
   },
   {
     "image": "../imgs/select/black_left.png",
@@ -174,10 +174,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000,
-    "type": "그램",
-    "color": "옵시디안 블랙",
-    "price1": "최대 250만원"
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_black",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/green_open.png",
@@ -186,10 +186,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "5.00 (10)",
-    "price": 2200000,
-    "type": "그램",
-    "color": "옵시디안 블랙",
-    "price1": "최대 250만원"
+    "cost": 2200000,
+    "type": "type_gram",
+    "color": "color_black",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/토파즈 그린_left.png",
@@ -198,10 +198,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1450,
     "rating": "5.00 (2)",
-    "price": 3207000,
-    "type": "그램360",
-    "color": "오로라 화이트",
-    "price1": "최대 350만원"
+    "cost": 3207000,
+    "type": "type_360",
+    "color": "color_white",
+    "price": "price_350"
   },
   {
     "image": "../imgs/select/white_left.png",
@@ -210,10 +210,10 @@
     "product_desc1": "CPU 13세대 인텔® 코어™ i5-1335U 프로세서",
     "product_weight": 1350,
     "rating": "5.00 (2)",
-    "price": 1519000,
-    "type": "그램style",
-    "color": "오로라 화이트",
-    "price1": "최대 200만원"
+    "cost": 1519000,
+    "type": "type_style",
+    "color": "color_white",
+    "price": "price_200"
   },
   {
     "image": "../imgs/select/aurora_top.png",
@@ -222,10 +222,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i7-1그램360P 프로세서",
     "product_weight": 1230,
     "rating": "5.00 (5)",
-    "price": 3330000,
-    "type": "그램",
-    "color": "오로라 화이트",
-    "price1": "최대 350만원"
+    "cost": 3330000,
+    "type": "type_gram",
+    "color": "color_white",
+    "price": "price_350"
   },
   {
     "image": "../imgs/select/black_left.png",
@@ -234,10 +234,10 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1199,
     "rating": "5.00 (5)",
-    "price": 2349000,
-    "type": "그램",
-    "color": "오로라 화이트",
-    "price1": "최대 250만원"
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_white",
+    "price": "price_250"
   },
   {
     "image": "../imgs/select/green_open.png",
@@ -246,9 +246,9 @@
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
     "product_weight": 1250,
     "rating": "5.00 (10)",
-    "price": 2200000,
-    "type": "그램",
-    "color": "옵시디안 블랙",
-    "price1": "최대 250만원"
+    "cost": 2200000,
+    "type": "type_gram",
+    "color": "color_black",
+    "price": "price_250"
   }
 ]
