@@ -4,21 +4,21 @@ body{
   color: var(--white_00);
 }
 
-/* jammyIs_sec01 */
-.jammyIs_sec01{
+/* jammy_is_sec01 */
+.jammy_is_sec01{
   width: 100%;
   height: 100vh;
   text-align: center;
 }
-.jammyIs_sec01 .top_BG img{
+.jammy_is_sec01 .top_BG img{
   object-fit: cover;
   width: 100%;
 }
-.jammyIs_sec01 .content{
+.jammy_is_sec01 .content{
   height: 80%;
   /* height: 100vh; */
 }
-.jammyIs_sec01 .arrow_btn{
+.jammy_is_sec01 .arrow_btn{
   display: inline-block;
   width: 46.86px;
   height: 38.28px;
@@ -31,8 +31,8 @@ body{
 
 
 
-/* jammyIs_sec02 */
+/* jammy_is_sec02 */
 
-/* jammyIs_sec03 */
+/* jammy_is_sec03 */
 
-/* jammyIs_sec04 */
+/* jammy_is_sec04 */
