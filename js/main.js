@@ -40,7 +40,7 @@ $(window).on("scroll", function () {
 //햄버거 버튼을 클릭하면 gnb 보이거나 숨김
 $(".main_header_toggleBtn").click(function (e) {
   e.preventDefault();
-  if ($(window).width() < 768) {
+  if ($(window).width() <= 768) {
     $(".main_header_icons").toggle();
     $(".main_header_menu, .main_header_menu>li>ul").toggleClass("active");
     let $toggleBtn = $(this).find("img");
@@ -53,13 +53,13 @@ $(".main_header_toggleBtn").click(function (e) {
 });
 //아이콘들이 화면이 작을때는 안보이고 클때는 보임
 $(window).resize(function () {
-  if ($(window).width() < 768) {
+  if ($(window).width() <= 768) {
     $(".main_header_icons").hide();
   } else {
     $(".main_header_icons").show();
   }
 });
-if ($(window).width() < 768) {
+if ($(window).width() <= 768) {
   $(".main_header_icons").hide();
 } //기본도 숨기기
 $(".main_header_icons").click(function (e) {
