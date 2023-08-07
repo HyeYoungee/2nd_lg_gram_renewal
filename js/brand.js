@@ -35,12 +35,6 @@ $(window).on('scroll', function () {
         sec2.find('h3').css({ transition: '0.5s', transform: 'scale(1.5)' });
       })
       //sec2 페이드인
-
-
-      // if(sct > minusOST - 300){
-      //   minus.addClass('acitve');
-      //   $('.sec2_bg').fadeOut(1000); 
-      // }
     }
   };
 });
@@ -51,25 +45,20 @@ let minusIcon = $('.minus'),
     minusImg = $('.minus_effect img');
 
 $(window).on('scroll', function ()  {
-  let sct = $(window).scrollTop(); //스크롤 양 확인
-  let count = 0;                   //이미지 index count 
-  let minusOST = $('.sec_3').offset().top;
-  let kgGram = $('.kg_gram');
- // let kgGramOST = kgGram.offset().top;
+  let sct = $(window).scrollTop(), //스크롤 양 확인
+      count = 0,                  //이미지 index count 
+      minusOST = $('.sec_3').offset().top,
+      kgGram = $('.kg_gram');
 
-//  kgGram.fadeOut(1000);
-  if (sct > minusOST - 400) {
+  if (sct > minusOST) {
     minusIcon.addClass('acitve');
     $('.minus_bg').fadeOut(1000);
-  }
-  if (sct > minusOST +300 ) {
-    // kgGram.fadeIn(1000);
-    // kgGram.addClass('active');
+  };
+  if (sct > minusOST +100 ) {
     setTimeout(() => {
-      kgGram.addClass('active');
-      kgGram.addClass('animate__fadeIn');
+      kgGram.addClass('active animate__fadeIn');
     }, 1000, 'easeInOutBack')
-  }
+  };
   
   //console.log($('.sec_4').innerHeight());
  /* 그램 notebook 애니메이션 */
@@ -82,11 +71,10 @@ $(window).on('scroll', function ()  {
 
  /* 그램 weight 애니메이션 */
   let minusAfter = $('.minus_after'),
-   // minusMoveOST = minusAfter.offset().top,
-    minuseffectOST = $('.minus_effect').offset().top,
-    weightTT = $('.weight li'),
-    weightUpCount = weightTT.length,
-    currentIdx = 0;
+      minuseffectOST = $('.minus_effect').offset().top,
+      weightTT = $('.weight li'),
+      weightUpCount = weightTT.length,
+      currentIdx = 0;
   
     let weightStop;
     let isActive = false;
@@ -141,72 +129,63 @@ $(window).on('scroll', function ()  {
     //    }
     //  }, 3000);
 
-    let plusIcon = $('.plus');
-    let plusOSP = $('.sec_4').offset().top;
-    //console.log(plusOSP);
+    let plusIcon = $('.plus'),
+        plusOSP = $('.sec_4').offset().top,
+        divisionIcon = $('.division'),
+        divisionOSP = $('.sec_5').offset().top,
+        multipleIcon = $('.multiple'),
+        multipleOSP = $('.sec_6').offset().top,
+        twentyOST = $('.twenty').offset().top;
+        count = 1; 
+        
 
+
+    //console.log(plusOSP);
     if (sct > plusOSP) {
       plusIcon.addClass('acitve');
       $('.plus_bg').fadeOut(1000);
     }
-
-
-
-
-
-
- 
+    if (sct > divisionOSP) {
+      divisionIcon.addClass('acitve');
+      $('.division_bg').fadeOut(1000);
+      batteryAnimation();
+      // count = Math.floor(((sct) / divisionOSP) * 3)
+      // if (count > 1) { 
+      //     console.log('디비젼카운트', count);
+      //   $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${count}.png`}) 
+      // }
+    }
+    if (sct > divisionOSP+10) {
+      batteryAnimation();
+    }
+      
+    
+    if (sct > multipleOSP) {
+      multipleIcon.addClass('acitve');
+      $('.multiple_bg').fadeOut(1000);
    };
-
-  // console.log('카운트', count);
-  // console.log('스크롤', sct);
-
-  // if (sct > plusOSP + $('.sec_4').innerHeight()) {
-
-    /* 킵
-      if (sct > plusOSP + 2000) {
-    //minus.addClass('acitve');
-    $('.plus_bg').fadeOut(1000);
-
+   if(sct > multipleOSP + 30){
+    // $('.vivid').addClass('active');
+    $('.vivid').addClass('active animate__fadeInUp');
   }
-  console.log('plusOSP',plusOSP)
-     */
-
-  //console.log('sct',sct)
-})
-
-
-/* minus effect, text */
-// let minusAfter = $('.minus_after'),
-//    // minusMoveOST = minusAfter.offset().top,
-//     minusMoveOST = $('.minus_effect').offset().top,
-//     weightTT = $('.weight li'),
-//     weightUpCount = weightTT.length,
-//     currentIdx = 0;
-/* 킵
-$(window).on('scroll', function () {
-  let sct = $(window).scrollTop(); //스크롤 양 확인
-  if (sct > $('.minus_effect').offset().top) {
-   //console.log($('.minus_effect').offset())
-   console.log(sct)
-    //weightTT.css({opacity:0})
-    let weightUp = setInterval(() => {
-      let nextIdx = (currentIdx + 1) % weightUpCount;
-      weightTT.eq(currentIdx).show().css({ transformOrigin: '50% 0' }).animate({ transform: 'scaleY(0)', opacity: 1 }, 1000);
-
-      weightTT.eq(nextIdx).css({ transformOrigin: '50% 100%' }).animate({ transform: 'scaleY(1)' }, 1000);
-      currentIdx = nextIdx;
-
-      //console.log(currentIdx)
-      if (currentIdx == 2) {
-        clearInterval(weightUp);
-      }
-    }, 1500);
-
+  if(sct > multipleOSP + 80){
+    $('.multiple_tt').find('h2').eq(0).addClass('animate');
+    setTimeout(()=>{
+      $('.multiple_tt').find('h2').eq(1).addClass('animate');
+    },1000)
+  }
+  if(sct > twentyOST ){
+    $('.twenty h2').addClass('active animate__fadeIn');
   }
 
-})
-*/
+}});
+
+function batteryAnimation() {
+  const battery = $('.division_tt img')
+  count++;
+  battery.attr({ "src": `imgs/brand/brand_division/battery/battery_${count}.png`})
+}
+
 
 
 
@@ -220,11 +199,6 @@ $(window).on('scroll',function () {
   if (count >1 && count < 64) {
     $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
     if (count == 20) {
-      // setTimeout(() => {
-      //   kgGram.addClass('active');
-      //   kgGram.addClass('animate__fadeIn');
-      // }, 1000, 'easeInOutBack')
-      // $('.plus_tt').fadeIn();
       $('.plus_tt h2').addClass('active');
       $('.plus_tt h2').addClass('animate__fadeIn');
     }
@@ -270,25 +244,25 @@ $(window).on('scroll', function ()  {
   let multiplenOST = $('.sec_6').offset().top;
   
   if (sct > divisionOST - 400) {
-    divisionIcon.addClass('acitve');
-    $('.division_bg').fadeOut(1000);
+    // divisionIcon.addClass('acitve');
+    // $('.division_bg').fadeOut(1000);
     if (sct > divisionOST) {
       setTimeout(() => {
         $('.division_tt').addClass('active');
         $('.division_tt').addClass('animate__fadeIn');
       }, 800, 'easeInOutBack');
       let count = 0; 
-      setInterval((i)=>{
-        $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${count+1}.png`});
-      },100)
-   
+
+      plusOpenOST = $('.plus_open').offset().top,
+      count = Math.floor(((sct) / plusOpenOST) * 20);
+  console.log('sct :', sct);
+  if (count >1 && count < 64) {
+    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
+
     }
   }
-  if (sct > multiplenOST - 400) {
-    multipleIcon.addClass('acitve');
-    $('.multiple_bg').fadeOut(1000);
-  }
-   
+
+
 
   let dolbyAniOST = $('.dolby_wrap img').offset().top;
   //console.log('돌비OST', dolbyAniOST);
@@ -298,8 +272,9 @@ $(window).on('scroll', function ()  {
 
     $('.dolby_wrap img').attr({ "src": `imgs/brand/dolby/dolby_${count}.png`}) 
   }
-  
+}
 });
+
 
 
 

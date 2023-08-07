@@ -3,29 +3,20 @@ body {
   margin: 0;
   font-family: "Gmarket Sans TTF";
   text-align: center;
-  /* overflow: hidden; */
 }
 
-header {
-  background: #fff;
-  height: 72px;
-}
-
+/* section 1 */
 .sec_1 {
   overflow: hidden;
   height: 100vh;
   background: #000;
 }
-
 .mask {
-  /* background-color: #b0fffa; */
-  /* background:url(images/bg_img/marek-piwnicki-l50UvtsNBMU-unsplash.jpg) center/cover; */
   text-align: center;
   /* overflow: hidden; */
   width:100vw;
   height: 100vh;
 }
-
 .mask h2 {
   padding: 300px 0 400px;
   /* font-size: max(7.5rem, min(5vw, 12.5rem)); */
@@ -38,12 +29,10 @@ header {
   transform-origin: 50% 35%;
   height: 102vh;
 }
-
 .mask h2.active {
   transform: scale(5.5);
   opacity: 0;
 }
-
 .sec_1_after {
   margin-top: -500px;
   visibility: hidden;
@@ -54,21 +43,19 @@ header {
 .sec_1_after.active{
   visibility: visible;
 }
-
 .sec_1_after h2 {
   font-weight: 700;
   font-size: max(7rem, min(5vw, 10rem));
-  /* background: var(--gradient-symbol, linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 42.73%, #00F1FC 55.42%, #63CEFF 68.89%, #B6B6FF 70.81%, #F498FF 100%)); */
   background:  linear-gradient(46deg, #00FFB3 0%, #00FFB3 11.98%, #00FDE6 27.59%, #00F7F8 32.73%, #00F1FC 40.42%, #63CEFF 45.89%, #B6B6FF 65.81%, #F498FF 80%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .sec_1_after h3 {
   color: #EFEFEF;
   font-size: max(6.5rem, min(5vw, 8.2rem));
 }
+/* section 2 */
 .sec_2{
   height: 100vh;
   background: #000;
@@ -88,7 +75,29 @@ header {
   margin-top: 100px;
 }
 
+/* section 3 */
+.sec_3,
+.sec_4,
+.sec_5,
+.sec_6,
+.sec_7,
+.sec_8{
+  position: relative;
+}
 
+.minus_bg, 
+.minus_effect,
+.plus_bg,
+.plus_open,
+.division_bg,
+.division_effect,
+.multiple_bg,
+.multiple_effect{
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .minus_bg,
 .plus_bg,
 .division_bg,
@@ -98,6 +107,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .minus,
@@ -108,14 +118,13 @@ header {
   transform-origin: 50% 50%;
 }
 
-.minus.active,
-.plus.active,
-.division.active,
-.multiple.active{
+.minus.acitve,
+.plus.acitve,
+.division.acitve,
+.multiple.acitve{
   transform: scale(2.0);
-  /* transform-origin: 50% 60%; */
   opacity: 0;
-}
+} 
 .center{
   display: flex;
   flex-direction: column;
@@ -150,13 +159,10 @@ header {
 .minus_after ul li {
   color: #000;
   text-align: center;
-  font-family: "Gmarket Sans TTF";
   font-size: 64px;
-  font-style: normal;
   font-weight: 700;
   line-height: 140%;
   transition: transform 0.5s;
-
   transform-origin: 50% 0;
   /* opacity: 1; */
   /* position: absolute; */
@@ -170,7 +176,6 @@ header {
 }
 
 .minus_after {
-  overflow: hidden;
   position: relative;
   width: 358px;
   height: 77px;
@@ -186,8 +191,6 @@ header {
   line-height: 140%;
   position: relative;
   height:100px;
-  /* transform-origin: 50% 0; */
-  /* opacity: 1; */
 }
 .weight li {
   position: absolute;
@@ -214,9 +217,9 @@ header {
   visibility: visible;
 }
 
+/* section 4 */
 .sec_4{
   position: relative;
-  /* margin-top: 50vh; */
 }
 .sec_4 .plus_bg{
  height: 100vh;
@@ -226,7 +229,6 @@ header {
   position: relative;
   width: 100vw;
   height: 400vh;
-  /* margin-top: 150vh; */
 }
 .plus_effect {
   background: url(../imgs/brand/bg/plus_bg.jpg) no-repeat center/cover;
@@ -239,21 +241,14 @@ header {
 }
 .plus_effect img {
   width: 70%;
-  /* margin-top: 100px; */
   object-fit: cover;
   position: absolute;
 
 }
-
-
-
-
 .plus_tt {
   color: #fff;
   text-align: center;
-  font-family: "Gmarket Sans TTF";
-  font-size: max(2.5rem, min(5vw, 4rem)); /* 64 */
-  font-style: normal;
+  font-size: max(2.5rem, min(5vw, 4rem)); 
   font-weight: 700;
   line-height: 1.5;
 }
@@ -272,42 +267,38 @@ header {
   visibility: visible;
 }
 .sec_5, .sec_6{
-  /* margin-top: 100vh; */
   z-index: 100;
 }
 
-.minus.acitve {
-  transform: scale(2.0);
-  opacity: 0;
-} 
-.plus.acitve {
-  transform: scale(2.0);
-  opacity: 0;
-} 
-.division.acitve {
-  transform: scale(2.0);
-  opacity: 0;
-} 
-.multiple.acitve {
-  transform: scale(2.0);
-  opacity: 0;
-} 
 
 
+
+/* section 5 */
 
 .division_effect{
-  height: 100vh;
+  height: 200vh;
   background: #0C1B32;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; */
+  position: relative;
 }
+.division_wrap{
+  height: 100vh;
+  position: sticky;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .division_tt{
   color: #FFF;
   text-align: center;
   font-size: 48px;
-  font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 100% */
   margin-top: -300px;
@@ -324,17 +315,12 @@ header {
   transform:translateX(-50%);
   bottom: -250px;
 }
-/* .battery_fill{
-  width: 20px;
-  height:354px;
+
+
+/* section 6 */
+/* .sec_6{
+  margin-top: 150vh;
 } */
-
-/* .multiple_bg{
-  height: 100vh;
-} */
-
-
-
 .multiple_effect{
   height: 100vh;
   background: url(../imgs/brand/bg/multiple_bg.jpg) no-repeat center/cover;
@@ -345,10 +331,9 @@ header {
 }
 .multiple_effect > h2:first-child{
   color: #FFF;
-
   font-size: max(2rem, min(5vw, 3rem)); /* */
   font-weight: 700;
-  line-height: 150%; /* 72px */
+  line-height: 150%;
 }
 .multiple_tt{
   display: flex; 
@@ -356,21 +341,76 @@ header {
   justify-content: center;
 }
 .multiple_tt h2{
-  font-size: max(6rem, min(5vw, 8rem)); /* */
+  font-size: max(6rem, min(5vw, 9rem)); /* */
   font-weight: 700;
   margin: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.multiple_tt h2:before {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  /* z-index: -1; */
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  /* color: #3498db; */
+  background: var(--point_gr_02);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  -webkit-transition: all 0.15s cubic-bezier(0.29, 0.73, 0.74, 1.02); 
+  transition: all 1.5s cubic-bezier(0.29, 0.73, 0.74, 1.02);
+}
+.multiple_tt h2:first-child {
+  -webkit-transition: all 2s cubic-bezier(0.29, 0.73, 0.74, 1.02);
+  transition: all 2s cubic-bezier(0.29, 0.73, 0.74, 1.02);
 }
 
 
-
-/* .twenty{
-  margin-top: 50vh;
-} */
-.twenty img{
+.multiple_tt h2.animate:before {
   width: 100%;
-
 }
 
+.vivid{
+  visibility: hidden;
+}
+.vivid.active{
+  visibility: visible;
+}
+
+
+/* section 7 */
+.twenty{
+  margin-top: 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+.twenty img{
+  width: 80%;
+  min-height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.twentytwenty-handle:hover .twentytwenty-right-arrow{
+  border-left: 6px solid var(--blue_01);
+}
+.twentytwenty-handle:hover .twentytwenty-left-arrow{
+  border-right: 6px solid var(--blue_01);
+}
+.twenty h2{
+  color: #C0F0FF;
+  font-size: 64px;
+  margin-top: 48px;
+  visibility: hidden;
+}
+.twenty h2:active{
+  visibility: visible
+}
 .sec_7{
   background: #000;
   width: 100vw;
@@ -389,6 +429,7 @@ header {
   width: 100%;
 }
 
+/* section 8 */
 .sec_8{
   height: 100vh;
   color: #000;
@@ -405,8 +446,8 @@ header {
 
 
 
+/* section 9 */
 
-/* 브랜드스토리 라인업 임시 */
 .sec_9 .row div {
   box-sizing: border-box;
   display: flex;
