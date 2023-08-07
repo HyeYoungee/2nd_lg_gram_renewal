@@ -1,0 +1,77 @@
+section{
+  width: 100%;
+  height: 100vh;
+}
+.story_section01 h3,.story_section02 h3,.story_section05 h3{
+  display: none;
+}
+/* story_section01 */
+
+.story_section01{
+  background-color: var(--dark);
+  color: var(--white_00);
+  font-size: var(--tt_size_01);
+  font-family: "GmarketSansMedium";
+  font-weight: bold;
+}
+
+/* story_section02 */
+.story_section02{
+  background-color: var(--dark);
+  color: var(--white_00);
+}
+/* story_section03 */
+.story_section03{
+  background-color: #fff;
+}
+.story_section03 iframe{
+  width: 100vw;
+  height: 100vh;
+}
+/* story_section04 */
+.story_section04{
+  background-color: #222;
+  color: var(--white_00);
+}
+.story_section04 iframe{
+  width: 100vw;
+  height: 100vh;
+}
+/* story_section05 */
+.story_section05{
+  background-color: var(--dark);
+  color: var(--white_00);
+  font-size: var(--tt_size_01);
+  font-family: "GmarketSansMedium";
+  font-weight: bold;
+}
+/* story_section06_influencer */
+.story_section06_influencer{
+  background-color: var(--gray_00);
+}
+.story_section06_influencer img{
+  width: 10%;
+}
+/* story_section07_creator */
+.story_section07_creator{
+  background-color: var(--white_00);
+}
+.story_section07_creator img{
+  width: 10%;
+  display: flex;
+  float: left;
+}
+/* story_section08_student */
+.story_section08_student{
+  background-color: var(--gray_00);
+}
+.story_section08_student img{
+  width: 10%;
+}
+/* story_section09_office */
+.story_section09_office{
+  background-color: var(--white_00);
+}
+.story_section09_office img{
+  width: 10%;
+}

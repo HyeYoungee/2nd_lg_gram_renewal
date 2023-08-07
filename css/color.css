@@ -8,13 +8,13 @@
 .color_intro span {
   color: var(--white-bg, #fdfdfd);
   font-family: Gmarket Sans TTF;
-  font-size: 68px;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
   font-weight: 700;
   line-height: 150%;
 }
 
 #colorText.tourmaline-green {
-  color: green;
+  color: #9ef8ee;
 }
 
 #colorText.snow-white {
@@ -61,6 +61,8 @@
 
 .color_desc {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .color_desc img {
@@ -71,13 +73,21 @@
 .text_desc {
   position: absolute;
   top: 40%;
-  right: -150px;
+  right: -15%;
+}
+
+@media (max-width: 1800px) {
+  .text_desc {
+    position: absolute;
+    top: 40%;
+    right: 0;
+  }
 }
 .text_desc h2 {
   color: var(--dark-bg, #000);
   text-align: center;
   font-family: Gmarket Sans TTF;
-  font-size: 68px;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
   font-weight: 700;
   line-height: 150%;
 }
@@ -85,7 +95,7 @@
 .text_desc div {
   text-align: center;
   font-family: Gmarket Sans TTF;
-  font-size: 68px;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
@@ -135,17 +145,17 @@
 }
 
 /* 세번째 섹션 */
-.color_fixed {
+/* .color_fixed {
   position: relative;
 }
 .color_fixed_img {
-  background: url("../imgs/color/color_fixed_img.png");
+  background: url("https://velog.velcdn.com/images/hyunny123/post/105b5f66-40e1-4c03-8008-0d3560b429d3/image.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: left;
+  background-position: center left;
   width: 100%;
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .color_fixed_text {
@@ -154,12 +164,12 @@
   right: 150px;
 }
 
-.color_fixed .color_fixed_text h2,
+.color_fixed_text h2,
 .color_fixed_text > div > span:first-child {
   color: var(--dark-bg, #000);
   text-align: center;
   font-family: Gmarket Sans TTF;
-  font-size: 68px;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
@@ -187,7 +197,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Gmarket Sans TTF;
-  font-size: 68px;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
@@ -202,7 +212,253 @@
 .color_pick_bar h2 {
   color: var(--white_00);
   text-align: center;
+} */
+
+/* 4번째 섹션 */
+.color_pick_bar {
+  width: 100vw;
+  height: 288px;
+  background: var(--dark);
 }
 
-.color_gram {
+.color_pick_bar h2 {
+  color: var(--white_00);
+  text-align: center;
+}
+
+/* 세번째 섹션 */
+.color_fixed {
+  position: relative;
+}
+.color_fixed_img {
+  background: url("https://velog.velcdn.com/images/hyunny123/post/105b5f66-40e1-4c03-8008-0d3560b429d3/image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.color_fixed_text {
+  position: absolute;
+  top: 30%;
+  right: 150px;
+}
+
+@media (max-width: 1800px) {
+  .color_fixed_text {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+  }
+}
+
+.color_fixed .color_fixed_text h2,
+.color_fixed_text > div > span:first-child {
+  color: var(--dark-bg, #000);
+  text-align: center;
+  font-family: Gmarket Sans TTF;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.color_fixed_text > div > span:last-child {
+  background: var(--point_gr_02);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Gmarket Sans TTF;
+  font-size: max(4.6rem, min(5vw, 6.8rem));
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.color_fixed_text .add_btn {
+  background: var(--blue_01);
+  width: 226px;
+  height: 62px;
+}
+
+.color_fixed_text .add_btn:hover {
+  background: var(--blue_02);
+}
+
+.color_pick_bar {
+  width: 100vw;
+  height: 288px;
+  background: var(--dark);
+}
+
+.color_pick_bar h2 {
+  color: var(--white_00);
+  text-align: center;
+}
+
+/* 4번째 섹션 */
+
+.color_items_wrap {
+  height: 100vh;
+}
+
+.color_items {
+  width: 100%;
+  position: relative;
+}
+
+.color_item {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.color_item .big_img img,
+.color_item .sm_img img {
+  width: 100%;
+  height: auto;
+}
+
+.btn_set_wrap {
+}
+
+.btn_set {
+}
+
+.btn_set li {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+  top: 50%;
+  border: 5px solid transparent;
+  transition: border-color 0.3s ease;
+  box-sizing: content-box;
+}
+
+.btn_set li:first-child {
+  background-color: #4c5652;
+}
+
+.btn_set li:nth-child(2) {
+  background-color: #fff;
+}
+
+.btn_set li:nth-child(3) {
+  background-color: #000;
+}
+
+.btn_set li:nth-child(4) {
+  background-color: pink;
+}
+
+.btn_set li.active {
+  border-color: var(--blue_01);
+  box-sizing: content-box;
+}
+
+/* 추천제품 섹션 */
+
+.color_rec h2 {
+  text-align: center;
+  margin-bottom: 100px;
+  line-height: 150%;
+}
+
+.card {
+  width: 300px;
+  height: 768px;
+  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4);
+  /* border: 1px solid #000; */
+  border-radius: var(--border_lg);
+  background: #fff;
+  margin: 0 12px 38px 12px;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_img_wrap {
+  /* width: 408px; */
+  height: 312px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.card_img_wrap img {
+  width: 290px;
+  height: 290px;
+  /* height: 312px; */
+  border-radius: 12px 12px 0px 0px;
+  margin: 12px 0 12px 0;
+}
+
+.card_text {
+  text-align: center;
+  /* padding: 36px 31px 25px 31px; */
+}
+
+.card_text p {
+  font-weight: 400;
+  font-size: var(--body_text_unit);
+}
+
+.product_num {
+  color: var(--dark, #1e2226);
+  line-height: 1.4;
+  margin-top: 38px;
+}
+
+.product_title {
+  color: var(--dark, #1e2226);
+  font-size: var(--bd_size_04);
+  font-weight: 700;
+  padding: 24px 0 36px 0;
+}
+
+.product_desc1,
+.product_weight {
+  color: var(--gray-03, #58606a);
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  line-height: 1.4;
+  padding: 0 0 0 0;
+}
+
+.review {
+  padding: 24px 0 36px 0;
+  color: var(--gray-03, #58606a);
+  line-height: 1.4;
+}
+
+.review span {
+  display: inline-block;
+  transform: translateY(-1.5px);
+  margin-left: 5px;
+}
+
+.product_cost {
+  color: var(--blue-02, #3182f6);
+  font-size: var(--bd_size_04);
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+.card .add_btn {
+  width: 192px;
+  height: 60px;
 }

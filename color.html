@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>컬러 그램 페이지</title>
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
@@ -18,7 +18,7 @@
     >
       <h2>stylish한 그램으로</h2>
       <div>
-        <span>당신을 표현하는</span>
+        <span>당신을 표현하는 </span>
         <span id="colorText">컬러</span>
       </div>
     </section>
@@ -26,7 +26,10 @@
       class="color_desc container d-flex justify-content-center align-content-center"
     >
       <div data-aos="fade-right">
-        <img src="imgs/select/aurora_left.png" alt="오로라 화이트 제품이미지" />
+        <img
+          src="https://velog.velcdn.com/images/hyunny123/post/4277b7b8-35aa-47c1-abcd-8972489127a9/image.png"
+          alt="오로라 화이트 제품이미지"
+        />
       </div>
 
       <div class="text_desc" data-aos="zoom-in-left">
@@ -41,6 +44,7 @@
       <div class="color_fixed_img"></div>
       <div
         class="color_fixed_text d-flex flex-column align-items-center justify-content-center"
+        data-aos="fade-up"
       >
         <h2>simple is the Best</h2>
         <h2>그램 오리지널 스킨</h2>
@@ -48,27 +52,143 @@
           <span>나만의 컬러로 </span>
           <span>D.I.Y</span>
         </div>
-        <button>구매하기</button>
+        <button class="add_btn">구매하기</button>
       </div>
     </section>
     <section
-      class="color_pick_bar d-flex justify-content-center align-items-center"
+      class="color_pick_bar d-flex justify-content-center align-items-center white_bg"
     >
-      <h2 class="sub_tt">
+      <h2 class="tt_02">
         나만의 그램컬러<br />
         색상버튼을 눌러보세요
       </h2>
     </section>
-    <section class="color_gram container">
-      <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+    <section class="big_pd white_bg">
+      <div class="container color_items_wrap">
+        <div class="color_items">
+          <div class="color_item d-flex align-items-center" data-color="green">
+            <div class="big_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/901f4d3a-bb43-4f98-9cab-c142be1e94eb/image.png"
+                alt="토파즈그린 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/dbb349df-508d-446b-a349-06f8eadf9da8/image.png"
+                alt="토파즈그린 제품 이미지2"
+              />
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/eb629e59-d539-45a1-b331-031f06497e4b/image.png"
+                alt="토파즈그린 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center" data-color="white">
+            <div class="big_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/97182197-a035-4ea0-8e90-437bba4e2f07/image.png"
+                alt="스노우화이트 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/6ff3b66f-3aeb-44e1-977b-cbab3aa4a40f/image.png"
+                alt="스노우화이트 제품 이미지2"
+              />
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/61aed467-f460-4849-9290-45ad38a81dfe/image.png"
+                alt="스노우화이트 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center" data-color="black">
+            <div class="big_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/490f985d-e32f-4380-afb5-5d6b59720a72/image.png"
+                alt="옵시디안블랙 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/2feff35c-341e-478d-b1b2-4e040d0e1a16/image.png"
+                alt="옵시디안블랙 제품 이미지2"
+              />
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/c29f6253-fc96-418d-a611-f642339771fd/image.png"
+                alt="옵시디안블랙 제품 이미지3"
+              />
+            </div>
+          </div>
+          <div class="color_item d-flex align-items-center" data-color="aurora">
+            <div class="big_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/06dfc891-023a-4c0f-aed0-318fa4581ff6/image.png"
+                alt="오로라 제품 이미지1"
+              />
+            </div>
+            <div class="d-flex flex-column sm_img">
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/fde64f15-2586-4f7d-aa8c-ed70149068a9/image.png"
+                alt="오로라 제품 이미지2"
+              />
+              <img
+                src="https://velog.velcdn.com/images/hyunny123/post/62c9621e-0e73-402a-abcb-84c2b8b515fb/image.png"
+                alt="오로라 제품 이미지3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_set_wrap d-flex flex-column align-items-center">
+        <ul class="btn_set d-flex">
+          <li class="active" data-color="green">
+            <a href="#"></a>
+          </li>
+          <li data-color="white">
+            <a href="#"></a>
+          </li>
+          <li data-color="black">
+            <a href="#"></a>
+          </li>
+          <li data-color="aurora">
+            <a href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="white_bg md_pd">
+      <div class="container color_rec d-flex flex-column align-items-center">
+        <h2 class="tt_01">컬러 추천 제품</h2>
+        <ul class="card_list row row-cols-3 row-col-md-2 row-cols-sm-1">
+          <!-- <li class="card">
+        <div>
+          <div class="card_img_wrap">
+         
+          </div>
+          <div class="card_text">
+            <p class="product_num"></p>
+            <h3 class="product_title"></h3>
+            <p class="product_desc1"></p>
+            <p class="product_weight"></p>
+            <p class="review">별<span></span></p>
+            <h3 class="product_cost"></h3>
+          </div>
+          <button>구매하기</button>
+        </div>
+      </li> -->
+          <!-- <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li> -->
+        </ul>
       </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="./js/color.js"></script>
   </body>
 </html>
