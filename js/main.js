@@ -142,8 +142,8 @@ $("#gramcolor").niceSelect();
 var swiper = new Swiper(".slider", {
   slidesPerView: 1,
   centeredSlides: true,
-  // slidesOffsetAfter:24,
-  // slidesOffsetBefore:24,
+  // allowSlideNext: false,
+  // allowSlidePrev: false,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
