@@ -60,7 +60,6 @@ $(window).resize(function(){
 });
 if($(window).width() < 768) {
   $('.main_header_icons').hide();
-  $('.main_header_menu>li').hide();
 };//기본도 숨기기
 $('.main_header_icons').click(function(e){e.preventDefault();})
 /*성희 main_header 종료*/
