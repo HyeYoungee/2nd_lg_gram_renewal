@@ -136,6 +136,9 @@ nav.main_header_scroll_border.with_border {
     display: block;
     top:24px
   }
+  .main_header_menu.active{
+    display: flex;
+  }
 
   /* main_header_icons 시작 */
   .main_header_icons{

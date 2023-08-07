@@ -40,7 +40,8 @@ $(window).on('scroll', function() {
 $('.main_header_toggleBtn').click(function(e){
   e.preventDefault();
   if($(window).width() < 768){
-    $('.main_header_menu, .main_header_icons').toggle();
+    $('.main_header_icons').toggle();
+    $('.main_header_menu').toggleClass('active');
     let $toggleBtn = $(this).find('img');
     if($toggleBtn.attr('src') === './imgs/index/main_header_menu.svg') {
       $toggleBtn.attr('src', './imgs/index/main_header_close.svg');
