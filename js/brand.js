@@ -54,10 +54,16 @@ $(window).on('scroll', function ()  {
   let sct = $(window).scrollTop(); //스크롤 양 확인
   let count = 0;                   //이미지 index count 
   let minusOST = $('.sec_3').offset().top;
+  let kgGram = $('.kg_gram');
+ // let kgGramOST = kgGram.offset().top;
 
+ kgGram.fadeOut(1000);
   if (sct > minusOST - 400) {
     minusIcon.addClass('acitve');
     $('.minus_bg').fadeOut(1000);
+  }
+  if (sct > minusOST ) {
+    kgGram.fadeIn(1000);
   }
   
   //console.log($('.sec_4').innerHeight());
