@@ -87,23 +87,45 @@ $(window).on('scroll', function ()  {
     weightTT = $('.weight li'),
     weightUpCount = weightTT.length,
     currentIdx = 0;
- 
-    function weightUp(){
-      let nextIdx = (currentIdx + 1) % weightUpCount;
-      weightTT.css({display:'none'});
-      weightTT.eq(currentIdx).show().css({ transformOrigin: '50% 0'}).animate({ transform: 'scaleY(0)', opacity: 1 }, 1000);
+  
+    let weightStop;
+    let isActive = false;
 
-      weightTT.eq(nextIdx).css({ transformOrigin: '50% 100%' }).animate({ transform: 'scaleY(1)',opacity: 0 }, 1000);
+    function weightUp(){
+      
+      let nextIdx = (currentIdx + 1) % weightUpCount;
+  
+      weightTT.eq(currentIdx).css({ transformOrigin: '50% 0'});
+      weightTT.eq(currentIdx).addClass('fold');
+
+      // weightTT.eq(currentIdx).stop().animate({ transform: 'scaleY(0)' }, 1000, "linear");
+
+      weightTT.eq(nextIdx).css({ transformOrigin: '50% 100%' });
+      weightTT.eq(nextIdx).addClass('spread');
+
+      setTimeout(()=>{
+        weightTT.eq(currentIdx).removeClass('fold');
+        weightTT.eq(nextIdx).removeClass('spread');
+      })
+    
+      // weightTT.eq(nextIdx).stop().animate({ transform: 'scaleY(1)' }, 1000,"linear");
       currentIdx = nextIdx;
       if (currentIdx == 2) {
-        clearInterval(weightUp);
-      }
-    }
-  if (sct > minuseffectOST) {
-     setInterval(() => {
-      weightUp();
+        clearInterval(weightStop);
      
-     }, 2000);
+      }console.log(currentIdx)
+    }   
+    
+  if (sct > minuseffectOST) {
+    if(!isActive){
+      weightStop = setInterval(() => {
+        weightUp();
+       
+       }, 3000);
+       isActive = true;
+       console.log(isActive)
+    }
+   
 
 
     //  let weightUp = setInterval(() => {
