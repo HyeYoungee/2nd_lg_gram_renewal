@@ -27,6 +27,7 @@ main img{
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  vertical-align: top;
 }
 main img:hover{
   transform: scale(1.05);
@@ -168,8 +169,10 @@ main a{
   background-size: cover;
   background: url(../imgs/jammyG/Vector.svg) no-repeat;
 }
-
-
+.jammyG_sec03 .more_btn{
+  display: block;
+  margin: 0 auto;
+}
 
 /* jammyG_sec04 */
 .jammyG_sec04{
