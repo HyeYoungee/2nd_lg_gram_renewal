@@ -50,6 +50,7 @@ nav{
   border-top: solid 1px #58606a30;
   justify-content: center;
 }
+.main_header_menu.active li ul{display: flex;}
 .main_header_menu > li ul li{
   white-space:nowrap;
   float: none; 
@@ -139,6 +140,7 @@ nav.main_header_scroll_border.with_border {
   .main_header_menu.active{
     display: flex;
   }
+  .main_header_menu.active li ul{display: block;}
 
   /* main_header_icons 시작 */
   .main_header_icons{

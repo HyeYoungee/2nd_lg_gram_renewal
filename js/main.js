@@ -41,7 +41,7 @@ $('.main_header_toggleBtn').click(function(e){
   e.preventDefault();
   if($(window).width() < 768){
     $('.main_header_icons').toggle();
-    $('.main_header_menu').toggleClass('active');
+    $('.main_header_menu, .main_header_menu>li>ul').toggleClass('active');
     let $toggleBtn = $(this).find('img');
     if($toggleBtn.attr('src') === './imgs/index/main_header_menu.svg') {
       $toggleBtn.attr('src', './imgs/index/main_header_close.svg');
@@ -60,6 +60,7 @@ $(window).resize(function(){
 });
 if($(window).width() < 768) {
   $('.main_header_icons').hide();
+  $('.main_header_menu>li').hide();
 };//기본도 숨기기
 $('.main_header_icons').click(function(e){e.preventDefault();})
 /*성희 main_header 종료*/
