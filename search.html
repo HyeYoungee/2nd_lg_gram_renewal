@@ -3,12 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/search.css" />
+    <title>search page</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+    />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/search.css" />
   </head>
   <body>
-    <h1>search page</h1>
-    <script src="./js/search.js"></script>
+    <section>
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="main_tt">그램 찾기</h1>
+        <div
+          class="search_bar d-flex justify-content-between align-items-center"
+        >
+          <input
+            type="text"
+            placeholder="제품 모델명 또는 코드를 입력해주세요."
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <h2 class="sub_cont_tt">
+          필터를 선택하여 조건에 맞는 제품을 찾아보세요.
+        </h2>
+        <form class="filter_container" id="searchForm">
+          <div class="filter_item">
+            <div class="filter_title"><h2>유형</h2></div>
+            <div class="filter_cont">
+              <div
+                class="form_wrap d-flex justify-content-start"
+                id="type_wrap"
+              >
+                <!-- <span>
+                  <input
+                    type="radio"
+                    id="gram_style"
+                    value="style"
+                    name="type"
+                  />
+                  <label for="gram_style">그램 Style</label>
+                </span>
+                <span>
+                  <input type="radio" id="gram_style" value="360" name="type" />
+                  <label for="gram_style">그램 360</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="gram_style"
+                    value="gram"
+                    name="type"
+                  />
+                  <label for="gram_style">그램</label>
+                </span> -->
+              </div>
+            </div>
+          </div>
+          <div class="filter_item">
+            <div class="filter_title"><h2>컬러</h2></div>
+            <div class="filter_cont">
+              <div
+                class="form_wrap d-flex justify-content-start"
+                id="color_wrap"
+              >
+                <!-- <span>
+                  <input
+                    type="radio"
+                    id="gram_style"
+                    value="aurora"
+                    name="color"
+                  />
+                  <label for="gram_color">오로라 화이트</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="gram_color"
+                    value="white"
+                    name="color"
+                  />
+                  <label for="gram_color">스노우 화이트</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="gram_color"
+                    value="black"
+                    name="color"
+                  />
+                  <label for="gram_color">옵시디안 블랙</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="gram_color"
+                    value="green"
+                    name="color"
+                  />
+                  <label for="gram_color">토파즈 그린</label>
+                </span> -->
+              </div>
+            </div>
+          </div>
+          <div class="filter_item">
+            <div class="filter_title"><h2>가격</h2></div>
+            <div class="filter_cont">
+              <div
+                class="form_wrap d-flex justify-content-start"
+                id="price_wrap"
+              >
+                <!-- <span>
+                  <input type="radio" id="gram_cost" value="150" name="price" />
+                  <label for="gram_cost">최대 150만원</label>
+                </span>
+                <span>
+                  <input type="radio" id="gram_cost" value="200" name="price" />
+                  <label for="gram_cost">최대 200만원</label>
+                </span>
+                <span>
+                  <input type="radio" id="gram_cost" value="250" name="price" />
+                  <label for="gram_cost">최대 250만원</label>
+                </span>
+                <span>
+                  <input type="radio" id="gram_cost" value="300" name="price" />
+                  <label for="gram_cost">최대 300만원</label>
+                </span>
+                <span>
+                  <input type="radio" id="gram_cost" value="350" name="price" />
+                  <label for="gram_cost">최대 350만원</label> -->
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="search_btn_wrap d-flex justify-content-center">
+            <button class="search_btn">검색</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="cards-container">
+      <div class="container">
+        <ul class="card_list row row-cols-3 row-col-md-2">
+          <!-- <li class="card">
+          <div>
+            <div class="card_img_wrap">
+           
+            </div>
+            <div class="card_text">
+              <p class="product_num"></p>
+              <h3 class="product_title"></h3>
+              <p class="product_desc1"></p>
+              <p class="product_weight"></p>
+              <p class="review">별<span></span></p>
+              <h3 class="product_cost"></h3>
+            </div>
+            <button>구매하기</button>
+          </div>
+        </li> -->
+          <!-- <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li> -->
+        </ul>
+        <button class="loadmorBtn">더보기</button>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
