@@ -197,9 +197,11 @@ header {
   color: var(--dark);
   font-size: 64px;
   font-weight: 700;
-  
+  visibility: hidden;
 }
-
+.effect_wrapper h2.active{
+  visibility: visible;
+}
 
 .sec_4{
   position: relative;
@@ -252,9 +254,12 @@ header {
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .plus_tt h2{
+  visibility: hidden;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
 }
-
+.plus_tt h2.active{
+  visibility: visible;
+}
 .sec_5, .sec_6{
   /* margin-top: 100vh; */
   z-index: 100;
@@ -296,9 +301,18 @@ header {
   line-height: 48px; /* 100% */
   margin-top: -300px;
   line-height: 1.5;
+  position: relative;
+  visibility: hidden;
 }
-
-
+.division_tt.active{
+  visibility: visible;
+}
+.division_tt img{
+  position: absolute;
+  left:52%;
+  transform:translateX(-50%);
+  bottom: -250px;
+}
 /* .battery_fill{
   width: 20px;
   height:354px;

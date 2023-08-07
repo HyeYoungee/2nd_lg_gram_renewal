@@ -57,13 +57,18 @@ $(window).on('scroll', function ()  {
   let kgGram = $('.kg_gram');
  // let kgGramOST = kgGram.offset().top;
 
- kgGram.fadeOut(1000);
+//  kgGram.fadeOut(1000);
   if (sct > minusOST - 400) {
     minusIcon.addClass('acitve');
     $('.minus_bg').fadeOut(1000);
   }
-  if (sct > minusOST ) {
-    kgGram.fadeIn(1000);
+  if (sct > minusOST +300 ) {
+    // kgGram.fadeIn(1000);
+    // kgGram.addClass('active');
+    setTimeout(() => {
+      kgGram.addClass('active');
+      kgGram.addClass('animate__fadeIn');
+    }, 1000, 'easeInOutBack')
   }
   
   //console.log($('.sec_4').innerHeight());
@@ -94,11 +99,7 @@ $(window).on('scroll', function ()  {
         clearInterval(weightUp);
       }
     }
-
   if (sct > minuseffectOST) {
-    //console.log($('.minus_effect').offset())
-    //console.log(sct)
-    //  weightTT.css({opacity:0})
      setInterval(() => {
       weightUp();
      
@@ -195,18 +196,19 @@ $(window).on('scroll',function () {
       count = Math.floor(((sct) / plusOpenOST) * 20);
   console.log('sct :', sct);
   if (count >1 && count < 64) {
-    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` })
-    if (count == 25) {
-      $('.plus_tt').fadeIn();
+    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
+    if (count == 20) {
+      // setTimeout(() => {
+      //   kgGram.addClass('active');
+      //   kgGram.addClass('animate__fadeIn');
+      // }, 1000, 'easeInOutBack')
+      // $('.plus_tt').fadeIn();
+      $('.plus_tt h2').addClass('active');
+      $('.plus_tt h2').addClass('animate__fadeIn');
     }
+    
   }
 })
-
-// if (sct > 24 * count) {
-//   $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count + 1}.png` })
-//   if (count == 35) {
-//     $('.plus_tt').fadeIn();
-//   }
 
 
 let plusImg = $('.plus_open img');
@@ -215,10 +217,9 @@ let plusImg = $('.plus_open img');
 $(window).scroll(function () {
   let sct = $(window).scrollTop();
   let plusOSP = $('.sec_4').offset().top;
-  //console.log('scroll_ATM :', scroll_AMT);
   if (sct > plusOSP - 300) {
-    //minus.addClass('acitve');
     $('.plus_bg').fadeOut(1000);
+    
   }
 })
 
@@ -249,6 +250,17 @@ $(window).on('scroll', function ()  {
   if (sct > divisionOST - 400) {
     divisionIcon.addClass('acitve');
     $('.division_bg').fadeOut(1000);
+    if (sct > divisionOST) {
+      setTimeout(() => {
+        $('.division_tt').addClass('active');
+        $('.division_tt').addClass('animate__fadeIn');
+      }, 800, 'easeInOutBack');
+      let count = 0; 
+      setInterval((i)=>{
+        $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${count+1}.png`});
+      },100)
+   
+    }
   }
   if (sct > multiplenOST - 400) {
     multipleIcon.addClass('acitve');
