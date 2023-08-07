@@ -51,18 +51,16 @@
   --base_unit_tm: 20px; /* 태블릿, 모바일 row */
 
   /* Typography */
- 
+
   --tt_size_01: max(3.2rem, min(4.5vw, 4.8rem));
   --tt_size_02: max(2.4rem, min(4vw, 4.8rem));
   --tt_size_03: max(2.4rem, min(3.5vw, 3.6rem));
-  
+
   --bd_size_01: max(2rem, min(3vw, 2.4rem));
   --bd_size_02: max(1.8rem, min(3vw, 2.4rem));
   --bd_size_03: max(1.6rem, min(3vw, 2.4rem));
   --bd_size_04: max(1.6rem, min(2.5vw, 2rem));
   --bd_size_05: max(1.4rem, min(2.5vw, 1.8rem));
-  
- 
 
   /* Border Radius */
   --border_sm: 4px;
@@ -76,7 +74,6 @@
 html {
   font-size: 62.5%; /* html 기본 font-size: 10px */
 }
-
 
 body {
   font-family: "Noto Sans", sans-serif;
@@ -425,18 +422,16 @@ input {
     margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
   }
 }
-/* @media (min-width: 768px){
+@media (min-width: 768px) {
   .container,
   .container-lg,
   .container-md,
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 99%;
+    max-width: 100%;
   }
-} */
-/* padding: 0 24px; */
-/* margin: 0 auto; */
+}
 
 /* 태블릿 (해상도 480px ~ 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
