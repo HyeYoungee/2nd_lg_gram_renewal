@@ -1,69 +1,73 @@
-/*성희 main_header 시작*/
+/* 최성희 main_header 시작 */
 /*전체화면에 공통으로 일어날 일*/
-  //gnb 를 클릭하면 lnb 토글
-$('.main_header_menu > li').click(function() {
-  $('.main_header_menu > li').not(this).find('ul').slideUp();
-  $(this).find('ul').stop().slideToggle();
+//gnb 를 클릭하면 lnb 토글
+$(".main_header_menu > li").click(function () {
+  $(".main_header_menu > li").not(this).find("ul").slideUp();
+  $(this).find("ul").stop().slideToggle();
 });
-$('.main_header_menu li ul').hide();//기본으로도 안보이게
-  //윈도우 클릭시 lnb 숨김
-$(document).click(function(event) {
+$(".main_header_menu li ul").hide(); //기본으로도 안보이게
+//윈도우 클릭시 lnb 숨김
+$(document).click(function (event) {
   // 클릭된 요소가 gnb면 클릭 이벤트 무시
-  if(!$(event.target).closest('.main_header_menu').length) {
-    $('.main_header_menu li ul').hide(); //lnb 숨김
+  if (!$(event.target).closest(".main_header_menu").length) {
+    $(".main_header_menu li ul").hide(); //lnb 숨김
   }
 });
-  //윈도우 리사이즈시 열려있던 lnb숨김
-$(window).resize(function() {
-    $('.main_header_menu li ul').hide(); 
+//윈도우 리사이즈시 열려있던 lnb숨김
+$(window).resize(function () {
+  $(".main_header_menu li ul").hide();
 });
-  //아이콘에 호버하면 색상변화
-$('.main_header_icons li a').hover(
-  function(){
-    $(this).find('svg>path').css('fill', 'var(--blue_02)');
-  },function(){
-    $(this).find('svg>path').css('fill', ''); //원래 색상으로 되돌리기
+//아이콘에 호버하면 색상변화
+$(".main_header_icons li a").hover(
+  function () {
+    $(this).find("svg>path").css("fill", "var(--blue_02)");
+  },
+  function () {
+    $(this).find("svg>path").css("fill", ""); //원래 색상으로 되돌리기
   }
 );
-  // 초기에 border 없고 스크롤 내릴 때 border 추가
-let $scrollBorder = $('nav.main_header_scroll_border');
-$(window).on('scroll', function() {
+// 초기에 border 없고 스크롤 내릴 때 border 추가
+let $scrollBorder = $("nav.main_header_scroll_border");
+$(window).on("scroll", function () {
   if ($(window).scrollTop() > 0) {
-    $scrollBorder.addClass('with_border');
+    $scrollBorder.addClass("with_border");
   } else {
-    $scrollBorder.removeClass('with_border');
+    $scrollBorder.removeClass("with_border");
   }
 });
 
 /*768이하 화면에서 일어날 일*/
-  //햄버거 버튼을 클릭하면 gnb 보이거나 숨김
-$('.main_header_toggleBtn').click(function(e){
+//햄버거 버튼을 클릭하면 gnb 보이거나 숨김
+$(".main_header_toggleBtn").click(function (e) {
   e.preventDefault();
-  if($(window).width() < 768){
-    $('.main_header_icons').toggle();
-    $('.main_header_menu, .main_header_menu>li>ul').toggleClass('active');
-    let $toggleBtn = $(this).find('img');
-    if($toggleBtn.attr('src') === './imgs/index/main_header_menu.svg') {
-      $toggleBtn.attr('src', './imgs/index/main_header_close.svg');
-    }else{
-      $toggleBtn.attr('src', './imgs/index/main_header_menu.svg');
+  if ($(window).width() < 768) {
+    $(".main_header_icons").toggle();
+    $(".main_header_menu, .main_header_menu>li>ul").toggleClass("active");
+    let $toggleBtn = $(this).find("img");
+    if ($toggleBtn.attr("src") === "./imgs/index/main_header_menu.svg") {
+      $toggleBtn.attr("src", "./imgs/index/main_header_close.svg");
+    } else {
+      $toggleBtn.attr("src", "./imgs/index/main_header_menu.svg");
     }
   }
 });
-  //아이콘들이 화면이 작을때는 안보이고 클때는 보임
-$(window).resize(function(){
-  if($(window).width() < 768) {
-    $('.main_header_icons').hide();
-  }else{
-    $('.main_header_icons').show();
+//아이콘들이 화면이 작을때는 안보이고 클때는 보임
+$(window).resize(function () {
+  if ($(window).width() < 768) {
+    $(".main_header_icons").hide();
+  } else {
+    $(".main_header_icons").show();
   }
 });
-if($(window).width() < 768) {
-  $('.main_header_icons').hide();
-};//기본도 숨기기
-$('.main_header_icons').click(function(e){e.preventDefault();})
-/*성희 main_header 종료*/
+if ($(window).width() < 768) {
+  $(".main_header_icons").hide();
+} //기본도 숨기기
+$(".main_header_icons").click(function (e) {
+  e.preventDefault();
+});
+/* 최성희 main_header 끝 */
 
+/* 이현정 main_sec1_video 시작 */
 $(function () {
   $(".video_slider").bxSlider({
     controls: false,
@@ -104,6 +108,7 @@ $(window).resize(function () {
     scrollSmBtn.css("display", "none");
   }
 });
+/* 이현정 main_sec1_video 끝 */
 
 $("#gramtype").niceSelect();
 $("#gramcolor").niceSelect();
@@ -204,7 +209,8 @@ $("#gramcolor").niceSelect();
 //   }, 20000);
 // }
 // video_autoSlide();
-/* main_sec2 */
+
+/* 천혜영 main_sec_02_slide 시작 */
 var swiper = new Swiper(".slider", {
   slidesPerView: 1,
   centeredSlides: true,
@@ -265,8 +271,9 @@ slide.mouseleave(function (e) {
 // slide.sliderMove(function(){
 //   swiper.autoplay.play();
 // });
+/* 천혜영 main_sec_02_slide 끝 */
 
-/* main_sec5 */
+/* 천혜영 main_sec_05_all 시작 */
 let sec5_cardBox = $(".main_sec5 .card_box > div");
 console.log(sec5_cardBox);
 
@@ -276,3 +283,4 @@ sec5_cardBox.mouseover(function () {
 sec5_cardBox.mouseout(function () {
   $(this).removeClass("active");
 });
+/* 천혜영 main_sec_05_all 끝 */

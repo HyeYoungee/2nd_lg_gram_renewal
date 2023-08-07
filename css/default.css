@@ -1,4 +1,4 @@
-/* 성희 main_header시작 */
+/* 최성희 main_header시작 */
 body {
   padding-top: 72px;
 }
@@ -170,9 +170,9 @@ nav.main_header_scroll_border.with_border {
   }
   /* main_header_icons 종료 */
 }
-/* 성희 main_header 종료 */
+/* 최성희 main_header 끝 */
 
-/* 현정 - main-sec01 video */
+/* 이현정 main_sec1_video 시작 */
 @import "nice-select";
 
 html {
@@ -310,173 +310,9 @@ a#scroll_btn:after {
   letter-spacing: 3px;
   font-weight: 600;
 }
+/* 이현정 main_sec1_video 끝 */
 
-/* main-sec4-select */
-.select-container {
-  /* font-family: "Gmarket Sans TTF"; */
-}
-.select-container h2 {
-  margin: 0 10px;
-}
-.select-option {
-  padding-bottom: 62px;
-}
-.product_btn {
-  width: 216px;
-  /* line-height: 62px; */
-  padding: 20px 0px;
-  font-size: var(--body_lg);
-  font-weight: 700;
-  margin-bottom: 96px;
-}
-/* footer */
-footer {
-  background: var(--gray-04, #333d4b);
-  padding-bottom: 50px;
-}
-
-.footer_sns_wrap {
-  padding: 21px 0;
-  border-bottom: 1.5px solid var(--white_00);
-}
-
-.footer_sns_wrap ul {
-  margin-bottom: 0;
-}
-
-.footer_sns_wrap ul li {
-  list-style: none;
-  width: 40.27px;
-  height: 40.27px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.footer_sns_wrap ul li:first-child {
-  background: url("../imgs/footer/sns_icon_youtube.svg");
-}
-
-.footer_sns_wrap ul li:nth-child(2) {
-  background: url("../imgs/footer/sns_icon_facebook.svg");
-}
-
-.footer_sns_wrap ul li:nth-child(3) {
-  background: url(" ../imgs/footer/sns_icon_insta.svg");
-}
-
-.footer_sns_wrap ul li:nth-child(4) {
-  background: url("../imgs/footer/sns_icon_naver.svg");
-}
-
-.footer_sns_wrap ul li:last-child {
-  background: url("../imgs/footer/sns_icon_company.svg");
-}
-
-.footer_sns_wrap ul li:hover:first-child {
-  background: url("../imgs/footer/sns_icon_youtube_b.svg");
-}
-
-.footer_sns_wrap ul li:hover:nth-child(2) {
-  background: url("../imgs/footer/sns_icon_facebook_b.svg");
-}
-
-.footer_sns_wrap ul li:hover:nth-child(3) {
-  background: url("../imgs/footer/sns_icon_insta_b.svg");
-}
-.footer_sns_wrap ul li:hover:nth-child(4) {
-  background: url("../imgs/footer/sns_icon_naver_b.svg");
-}
-
-.footer_sns_wrap ul li:hover:last-child {
-  background: url("./imgs/footer/sns_icon_company_b.svg");
-}
-
-.footer_sns_wrap .footer_langs {
-  color: var(--white_00, #fdfdfd);
-  width: 138px;
-  border: 1px solid var(--white_00);
-  text-transform: uppercase;
-  margin-right: 33px;
-}
-
-.footer_sns_wrap .footer_langs span {
-  line-height: 38px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.footer_sns_wrap .footer_langs span:hover:first-child,
-.footer_sns_wrap .footer_langs span:hover:last-child {
-  color: var(--blue_01);
-}
-
-.footer_sns_wrap .footer_langs span:last-child {
-  margin-right: 0;
-}
-.footer_info_link_wrap ul {
-  list-style: none;
-  padding: 33px;
-}
-.footer_info_link_wrap ul li {
-  cursor: pointer;
-  padding-top: 10px;
-  flex: 1/1;
-}
-
-.footer_info_link_wrap ul li a {
-  color: var(--white-bg, #fdfdfd);
-  font-size: var(--body_text_unit);
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.footer_info_link_wrap ul li:hover a {
-  text-decoration: underline;
-}
-
-.footer_info_text_wrap {
-  color: var(--white-bg, #fdfdfd);
-  padding: 0 33px;
-}
-
-.footer_info_text_wrap p {
-  padding-bottom: 24px;
-}
-
-.footer_info_text_wrap p:first-child {
-  padding-bottom: 6px;
-}
-@media (max-width: 1272px) {
-  /* .select-wrap h2 {
-    font-size: var(--sub_cont);
-  } */
-  .select-wrap select option {
-    font-size: var(--body_lg);
-  }
-  .footer_info_link_wrap ul {
-    flex-wrap: wrap;
-    font-size: 14px;
-  }
-  .footer_info_link_wrap ul li {
-    flex: 1 0 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .select-wrap select {
-    font-size: var(--body_text_unit);
-  }
-}
-
-@media (max-width: 479px) {
-  .select-wrap select {
-    font-size: var(--body_sm);
-  }
-}
-
-/* 현정 - main-sec01 video end*/
-
-/* 혜영 start */
+/* 천혜영 main_sec_02_slide 시작 */
 .main_sec2 p,
 .main_sec5 .container > p {
   font-size: var(--bd_size_03);
@@ -535,8 +371,136 @@ h2 {
   color: #505050;
   /* background: var(--blue_02); */
 }
+/* 천혜영 main_sec_02_slide 끝 */
 
-/* main_sec5 */
+/* 김유림 main_sec_03_brand 시작 */
+@media (min-width: 1272px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1272px;
+    padding: 0;
+  }
+}
+.main_sec3_brand {
+  text-align: center;
+  background: var(--gray_bg, #f2f2f2);
+}
+.cs_title {
+  margin-bottom: max(2rem, min(3vw, 3.6rem));
+}
+
+.cs_sub_tt {
+  font-size: calc(var(--body_text_unit) * 2);
+  /* 32px */
+  margin-bottom: 40px;
+}
+
+.cs_desc {
+  font-size: calc(var(--body_text_unit) * 1.25);
+  padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
+  margin-bottom: 0;
+}
+
+.brand_wrapper div {
+  font-family: "Gmarket Sans";
+  font-size: max(2rem, min(3vw, 4rem));
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--border_lg, 12px);
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  padding-bottom: var(--base_unit_d, 24px);
+  z-index: 1;
+}
+
+.brand_wrapper div:nth-child(1) div {
+  background: url(../imgs/main/brand/main_brand_01.png) no-repeat center/cover;
+}
+
+.brand_wrapper div:nth-child(2) div {
+  /* background:url(../imgs/main/brand/main_brand_02.png) no-repeat center/cover ;  */
+  background: url(../imgs/main/brand/imgs.png) no-repeat center/cover;
+}
+
+.brand_wrapper div:nth-child(3) div {
+  background: url(../imgs/main/brand/main_brand_03.png) no-repeat center/cover;
+}
+
+.brand_wrapper div:nth-child(4) div {
+  background: url(../imgs/main/brand/main_brand_04.png) no-repeat center/cover;
+}
+
+.brand_wrapper .brand_cont {
+  box-shadow: var(--image_shadow);
+  width: 100%;
+  height: 100%;
+  padding-bottom: calc(var(--base_unit_d) * 1.5);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.brand_cont img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.brand_wrapper .brand_cont:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.brand_wrapper .brand_cont:hover:before {
+  opacity: 1;
+}
+
+.brand_wrapper .brand_cont:hover img {
+  transform: translateY(-50%) scale(1.2);
+  opacity: 1;
+}
+/* 김유림 main_sec_03_brand 끝 */
+
+/* 이현정 main_sec_04_select 시작 */
+.select-container {
+  /* font-family: "Gmarket Sans TTF"; */
+}
+.select-container h2 {
+  margin: 0 10px;
+}
+.select-option {
+  padding-bottom: 62px;
+}
+.product_btn {
+  width: 216px;
+  /* line-height: 62px; */
+  padding: 20px 0px;
+  font-size: var(--body_lg);
+  font-weight: 700;
+  margin-bottom: 96px;
+}
+/* 이현정 main_sec_04_select 끝 */
+
+/* 천혜영 main_sec_05_all 시작 */
 .main_sec5 {
   text-align: center;
 }
@@ -661,117 +625,9 @@ h2 {
     display: block;
   }
 }
-/* 혜영 end */
+/* 천혜영 main_sec_05_all 끝 */
 
-@media (min-width: 1272px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1272px;
-    padding: 0;
-  }
-}
-
-/* main_sec3_brand */
-
-.main_sec3_brand {
-  text-align: center;
-  background: var(--gray_bg, #f2f2f2);
-}
-.cs_title {
-  margin-bottom: max(2rem, min(3vw, 3.6rem));
-}
-
-.cs_sub_tt {
-  font-size: calc(var(--body_text_unit) * 2);
-  /* 32px */
-  margin-bottom: 40px;
-}
-
-.cs_desc {
-  font-size: calc(var(--body_text_unit) * 1.25);
-  padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
-  margin-bottom: 0;
-}
-
-.brand_wrapper div {
-  font-family: "Gmarket Sans";
-  font-size: max(2rem, min(3vw, 4rem));
-  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-weight: 700;
-  border-radius: var(--border_lg, 12px);
-  height: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  position: relative;
-  padding-bottom: var(--base_unit_d, 24px);
-  z-index: 1;
-}
-
-.brand_wrapper div:nth-child(1) div {
-  background: url(../imgs/main/brand/main_brand_01.png) no-repeat center/cover;
-}
-
-.brand_wrapper div:nth-child(2) div {
-  /* background:url(../imgs/main/brand/main_brand_02.png) no-repeat center/cover ;  */
-  background: url(../imgs/main/brand/imgs.png) no-repeat center/cover;
-}
-
-.brand_wrapper div:nth-child(3) div {
-  background: url(../imgs/main/brand/main_brand_03.png) no-repeat center/cover;
-}
-
-.brand_wrapper div:nth-child(4) div {
-  background: url(../imgs/main/brand/main_brand_04.png) no-repeat center/cover;
-}
-
-.brand_wrapper .brand_cont {
-  box-shadow: var(--image_shadow);
-  width: 100%;
-  height: 100%;
-  padding-bottom: calc(var(--base_unit_d) * 1.5);
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.brand_cont img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.brand_wrapper .brand_cont:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 5;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.brand_wrapper .brand_cont:hover:before {
-  opacity: 1;
-}
-
-.brand_wrapper .brand_cont:hover img {
-  transform: translateY(-50%) scale(1.2);
-  opacity: 1;
-}
-
-/* main_sec6_service */
+/* 김유림 main_sec6_service 시작 */
 .main_sec6_service {
   width: 100%;
 }
@@ -1034,3 +890,150 @@ h2 {
     padding: 0 24px;
   }
 }
+/* 김유림 main_sec6_service 끝 */
+
+/* 이현정 footer 시작 */
+footer {
+  background: var(--gray-04, #333d4b);
+  padding-bottom: 50px;
+}
+
+.footer_sns_wrap {
+  padding: 21px 0;
+  border-bottom: 1.5px solid var(--white_00);
+}
+
+.footer_sns_wrap ul {
+  margin-bottom: 0;
+}
+
+.footer_sns_wrap ul li {
+  list-style: none;
+  width: 40.27px;
+  height: 40.27px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer_sns_wrap ul li:first-child {
+  background: url("../imgs/footer/sns_icon_youtube.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(3) {
+  background: url(" ../imgs/footer/sns_icon_insta.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver.svg");
+}
+
+.footer_sns_wrap ul li:last-child {
+  background: url("../imgs/footer/sns_icon_company.svg");
+}
+
+.footer_sns_wrap ul li:hover:first-child {
+  background: url("../imgs/footer/sns_icon_youtube_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(3) {
+  background: url("../imgs/footer/sns_icon_insta_b.svg");
+}
+.footer_sns_wrap ul li:hover:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:last-child {
+  background: url("./imgs/footer/sns_icon_company_b.svg");
+}
+
+.footer_sns_wrap .footer_langs {
+  color: var(--white_00, #fdfdfd);
+  width: 138px;
+  border: 1px solid var(--white_00);
+  text-transform: uppercase;
+  margin-right: 33px;
+}
+
+.footer_sns_wrap .footer_langs span {
+  line-height: 38px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer_sns_wrap .footer_langs span:hover:first-child,
+.footer_sns_wrap .footer_langs span:hover:last-child {
+  color: var(--blue_01);
+}
+
+.footer_sns_wrap .footer_langs span:last-child {
+  margin-right: 0;
+}
+.footer_info_link_wrap ul {
+  list-style: none;
+  padding: 33px;
+}
+.footer_info_link_wrap ul li {
+  cursor: pointer;
+  padding-top: 10px;
+  flex: 1/1;
+}
+
+.footer_info_link_wrap ul li a {
+  color: var(--white-bg, #fdfdfd);
+  font-size: var(--body_text_unit);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer_info_link_wrap ul li:hover a {
+  text-decoration: underline;
+}
+
+.footer_info_text_wrap {
+  color: var(--white-bg, #fdfdfd);
+  padding: 0 33px;
+}
+
+.footer_info_text_wrap p {
+  padding-bottom: 24px;
+}
+
+.footer_info_text_wrap p:first-child {
+  padding-bottom: 6px;
+}
+@media (max-width: 1272px) {
+  /* .select-wrap h2 {
+    font-size: var(--sub_cont);
+  } */
+  .select-wrap select option {
+    font-size: var(--body_lg);
+  }
+  .footer_info_link_wrap ul {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  .footer_info_link_wrap ul li {
+    flex: 1 0 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .select-wrap select {
+    font-size: var(--body_text_unit);
+  }
+}
+
+@media (max-width: 479px) {
+  .select-wrap select {
+    font-size: var(--body_sm);
+  }
+}
+/* 이현정 footer 끝 */
