@@ -51,7 +51,7 @@
   --base_unit_tm: 20px; /* 태블릿, 모바일 row */
 
   /* Typography */
-
+  --body_text_unit: 16px;
   --tt_size_01: max(3.2rem, min(4.5vw, 4.8rem));
   --tt_size_02: max(2.4rem, min(4vw, 4.8rem));
   --tt_size_03: max(2.4rem, min(3.5vw, 3.6rem));
