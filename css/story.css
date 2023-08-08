@@ -8,6 +8,15 @@ section{
   height: 100vh ;
   font-family: "Gmarket Sans";
 }
+/* 이미지 흔들기 시작*/
+section img{transition: transform 0.3s ease-in}
+section img:hover{animation: shake 0.5s ease-in-out;}
+@keyframes shake {
+  25% {transform: translateX(-2px);}
+  50% {transform: translateX(2px);}
+  75% {transform: translateX(-1px);}}
+/* 이미지 흔들기 종료*/
+
 .story_section01 h2,.story_section02 h2,.story_section05 h2{
   display: none;
 }
@@ -165,7 +174,6 @@ padding: 0 var(--tt_size_01);
   align-items: center;
   margin: 10px;
   position: relative;
-  /* background-color: #2B673D; */
 }
 .story_section07_creator div>div:nth-child(2){
   top:calc(var(--tt_size_01)*-1.5);
@@ -206,6 +214,7 @@ padding: 0 var(--tt_size_01);
   position: absolute;
   bottom: calc(var(--base_unit_d)*2);}
 .story_section08_student>div>div>div>img:first-child{height:calc(var(--tt_size_01)*2);}
+.story_section08_student>div>div>div>img:last-child{z-index:1;}
 
 /* story_section09_office */
 .story_section09_office h2{
