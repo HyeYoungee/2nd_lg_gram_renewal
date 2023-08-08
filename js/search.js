@@ -107,7 +107,7 @@ $(function () {
         </li>`;
       });
     } else {
-      listHTML = `<p>검색결과가 없습니다.</p>`;
+      listHTML = `<p class="no_item">검색결과가 없습니다.</p>`;
     }
 
     lengthContainer.find("span").text(data.length);

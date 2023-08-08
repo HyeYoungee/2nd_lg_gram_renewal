@@ -313,6 +313,7 @@ a {
   text-transform: uppercase;
   border-radius: 50%;
   letter-spacing: 0.05em;
+  z-index: 1000;
 }
 
 #lg_logo_btn svg:hover {
@@ -337,13 +338,15 @@ a {
   border-radius: 50%;
   letter-spacing: 0.05em;
   font-weight: 700;
+  z-index: 1000;
 }
 
 #gotop_btn:hover {
   background-color: var(--gray_03);
 }
 
-#gotop_btn.active {
+#gotop_btn.active,
+#lg_logo_btn.active {
   opacity: 1;
   visibility: hidden;
 }
@@ -393,6 +396,175 @@ input {
 .search_input:focus {
   border: 3px solid rgba(69, 147, 252, 0.4);
 }
+
+/* 이현정 footer 시작 */
+footer {
+  background: var(--gray-04, #333d4b);
+  padding-bottom: 50px;
+}
+
+.footer_sns_wrap {
+  padding: 21px 0;
+  border-bottom: 1.5px solid var(--white_00);
+  margin: 0 30px;
+}
+
+.footer_sns_wrap ul {
+  margin-bottom: 0;
+}
+
+.footer_sns_wrap ul li {
+  list-style: none;
+  width: 40.27px;
+  height: 40.27px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer_sns_wrap ul li:first-child {
+  background: url("../imgs/footer/sns_icon_youtube.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(3) {
+  background: url(" ../imgs/footer/sns_icon_insta.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver.svg");
+}
+
+.footer_sns_wrap ul li:last-child {
+  background: url("../imgs/footer/sns_icon_company.svg");
+}
+
+.footer_sns_wrap ul li:hover:first-child {
+  background: url("../imgs/footer/sns_icon_youtube_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(3) {
+  background: url("../imgs/footer/sns_icon_insta_b.svg");
+}
+.footer_sns_wrap ul li:hover:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver_b.svg");
+}
+.footer_sns_wrap ul li:hover:nth-child(5) {
+  background: url("../imgs/footer/sns_icon_company_b.svg");
+}
+
+.footer_sns_wrap .footer_langs {
+  color: var(--white_00, #fdfdfd);
+  width: 138px;
+  border: 1px solid var(--white_00);
+  text-transform: uppercase;
+}
+
+.footer_sns_wrap .footer_langs span {
+  line-height: 38px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+}
+
+.footer_sns_wrap .footer_langs span:hover:first-child,
+.footer_sns_wrap .footer_langs span:hover:last-child {
+  color: var(--blue_01);
+}
+
+.footer_sns_wrap .footer_langs span:last-child {
+  margin-right: 0;
+}
+.footer_info_link_wrap ul {
+  list-style: none;
+  padding: 33px;
+}
+.footer_info_link_wrap ul li {
+  cursor: pointer;
+  padding-top: 10px;
+  flex: 1/1;
+}
+
+.footer_info_link_wrap ul li a {
+  color: var(--white-bg, #fdfdfd);
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer_info_link_wrap ul li:hover a {
+  text-decoration: underline;
+}
+
+.footer_info_text_wrap {
+  color: var(--white-bg, #fdfdfd);
+  padding: 0 33px;
+}
+
+.footer_info_text_wrap p {
+  padding-bottom: 24px;
+  font-size: max(1.2rem, min(2.5vw, 1.6rem));
+  line-height: 1.4;
+}
+
+.footer_info_text_wrap p:first-child {
+  padding-bottom: 6px;
+}
+@media (max-width: 1272px) {
+  .select-wrap select option {
+    font-size: var(--bd_size_05);
+  }
+  .footer_info_link_wrap ul {
+    flex-wrap: wrap;
+  }
+  .footer_info_link_wrap ul li {
+    flex: 1 0 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .select-wrap select {
+    font-size: var(--bd_size_03);
+  }
+  .footer_sns_wrap ul li:first-child,
+  .footer_sns_wrap ul li:hover:first-child,
+  .footer_sns_wrap ul li:nth-child(2),
+  .footer_sns_wrap ul li:hover:nth-child(2),
+  .footer_sns_wrap ul li:nth-child(3),
+  .footer_sns_wrap ul li:hover:nth-child(3),
+  .footer_sns_wrap ul li:nth-child(4),
+  .footer_sns_wrap ul li:hover:nth-child(4),
+  .footer_sns_wrap ul li:last-child,
+  .footer_sns_wrap ul li:hover:last-child {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 30px;
+  }
+  .footer_sns_wrap {
+    padding: 18px 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .select-wrap select {
+    font-size: var(--bd_size_05);
+  }
+  .footer_info_link_wrap ul li a {
+    font-size: 1.3rem;
+  }
+  .footer_sns_wrap ul li {
+    margin-right: 15px;
+  }
+}
+/* 이현정 footer 끝 */
 
 @media (min-width: 1272px) {
   .container,

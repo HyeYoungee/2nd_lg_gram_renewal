@@ -142,8 +142,9 @@ label {
 
 /* card ui css */
 
-.cards-container {
+.card-container {
   background-color: var(--white_bg);
+  margin-bottom: 100px;
 }
 .card {
   width: 400px;
@@ -163,6 +164,15 @@ label {
   justify-content: center;
 }
 
+.card_list .no_item {
+  border: 1px solid #000;
+  border-radius: var(--border_md);
+  text-align: center;
+  margin: 250px 0 300px 0;
+  padding: 20px 30px;
+  color: var(--dark);
+  font-weight: 700;
+}
 .card_img_wrap {
   border-radius: 12px 12px 0px 0px;
 }
@@ -232,7 +242,7 @@ label {
     width: 90%;
   }
   .card {
-    width: 348px;
+    width: 340px;
     height: 740px;
   }
   .card_img_wrap img {
@@ -241,7 +251,7 @@ label {
   }
   .card_text {
     text-align: center;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 6px 0px d;
   }
 }
 

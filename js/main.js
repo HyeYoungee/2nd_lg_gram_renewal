@@ -117,7 +117,7 @@ $(".goPage").on("click", function () {
   const typeSelect = $("#gramtype").val();
   const colorSelect = $("#gramcolor").val();
   console.log(typeSelect, colorSelect);
-  window.location.href = `http://127.0.0.1:5506/search.html?type=${typeSelect}&color=${colorSelect}`;
+  window.location.href = `http://127.0.0.1:5505/search.html?type=${typeSelect}&color=${colorSelect}`;
 });
 
 // }

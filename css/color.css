@@ -296,8 +296,8 @@
   border: 5px solid transparent;
   transition: border-color 0.3s ease;
   box-sizing: content-box;
+  cursor: pointer;
 }
-
 .btn_set li:first-child {
   background-color: #4c5652;
 }
@@ -417,6 +417,9 @@
   height: 60px;
 }
 
+.add_btn {
+  cursor: pointer;
+}
 @media (max-width: 1270px) {
   .color_fixed_img {
     height: 100vh;
