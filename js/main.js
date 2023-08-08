@@ -1,5 +1,6 @@
 
 
+
 /* 이현정 main_sec1_video 시작 */
 $(function () {
   $(".video_slider").bxSlider({
@@ -32,7 +33,7 @@ $(window).resize(function () {
   if (windowWid < 768) {
     videoChange.attr(
       "src",
-      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634463/newjeans_gram_mb_fea6sh.mp4"
     );
     scrollLgBtn.css("display", "none");
     scrollSmBtn.css("display", "block");
@@ -41,6 +42,7 @@ $(window).resize(function () {
     scrollSmBtn.css("display", "none");
   }
 });
+
 /* 이현정 main_sec1_video 끝 */
 
 $("#gramtype").niceSelect();

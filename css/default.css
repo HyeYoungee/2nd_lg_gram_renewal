@@ -59,24 +59,7 @@ html {
   cursor: pointer;
 }
 
-.select_slider li img {
-  width: 300px;
-  height: 300px;
-}
 
-@media (max-width: 767px) {
-  .select_slider li img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 479px) {
-  .select_slider li img {
-    width: 150px;
-    height: 150px;
-  }
-}
 
 a#scroll_btn {
   position: absolute;
@@ -309,22 +292,56 @@ h2 {
 /* 김유림 main_sec_03_brand 끝 */
 
 /* 이현정 main_sec_04_select 시작 */
-.select-container {
-  /* font-family: "Gmarket Sans TTF"; */
-}
+
 .select-container h2 {
   margin: 0 10px;
+}
+
+h2.select_t {
+  font-family: "Gmarket Sans TTF";
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 150%;
 }
 .select-option {
   padding-bottom: 62px;
 }
+
+
 .product_btn {
   width: 216px;
-  /* line-height: 62px; */
   padding: 20px 0px;
   font-size: var(--bd_size_05);
   font-weight: 700;
   margin-bottom: 96px;
+  cursor: pointer;
+}
+
+.select_slider li img {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 767px) {
+  .select_slider li img {
+    width: 190px;
+    height: 190px;
+  }
+  h2.select_t{
+    font-size: 2.4rem;
+  }
+
+  .product_btn{
+    width: 180px;
+    padding: 15px 0px;
+  }
+}
+
+@media (max-width: 479px) {
+  .select_slider li img {
+    width: 150px;
+    height: 150px;
+  }
 }
 /* 이현정 main_sec_04_select 끝 */
 

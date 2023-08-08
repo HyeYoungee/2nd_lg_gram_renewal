@@ -67,6 +67,8 @@ $(".main_header_icons").click(function (e) {
   e.preventDefault();
 });
 /* 최성희 main_header 끝 */
+
+
 /* 이현정 topbtn 시작 */
 
 let goTop = $("#gotop_btn");
