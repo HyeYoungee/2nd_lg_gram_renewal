@@ -47,7 +47,7 @@ $(window).on('scroll', function () {
     $('.minus_bg').fadeOut(1000);
   }; 
   // minus_bg 페이드 아웃
-  if (sct > minusOST + 100) {
+  if (sct > minusOST+100) {
     setTimeout(() => {
       kgGram.addClass('active animate__fadeIn');
     }, 1000, 'easeInOutBack');
@@ -103,7 +103,6 @@ $(window).on('scroll', function () {
 
       }, 3000);
       isActive = true;
-      //console.log(isActive)
     }
 
 
@@ -176,7 +175,6 @@ $(window).on('scroll', function () {
       $('.multiple_bg').fadeOut(1000);
     };
     if (sct > multipleOSP + 30) {
-      // $('.vivid').addClass('active');
       $('.vivid').addClass('active animate__fadeInUp');
     }
     if (sct > multipleOSP + 80) {
@@ -203,7 +201,7 @@ $(window).on('scroll', function () {
   console.log('sct :', sct);
   if (count > 1 && count < 64) {
     $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
-    if (count == 20) {
+    if (count > 20) {
       // $('.plus_tt h2').addClass('active');
       $('.plus_tt h2').addClass('active animate__fadeIn');
     }

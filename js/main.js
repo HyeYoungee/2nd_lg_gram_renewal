@@ -284,3 +284,57 @@ sec5_cardBox.mouseout(function () {
   $(this).removeClass("active");
 });
 /* 천혜영 main_sec_05_all 끝 */
+
+
+
+/* 김유림 main_sec_06_service 시작 */
+const csSwiper = new Swiper('.mySwiper', {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    720: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    800: {
+      slidesPerView: 4,
+      spaceBetween: 24
+    }
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter: true,
+  },
+  // navigation: {
+  //   // enabled:true,
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  //   // nextEl: '.control_prev',
+  //   // prevEl: '.control_next',
+  // },
+});
+
+$('.control_prev').on('click', function () {
+  csSwiper.slidePrev();
+});
+$('.control_next').on('click',function () {
+  csSwiper.slideNext();
+});
+/* 김유림 main_sec_06_service 끝 */

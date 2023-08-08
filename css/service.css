@@ -422,15 +422,17 @@
 
   .faq_box {
     width: 90%;
-    height:400px;
+    height: 400px;
   }
+
   .swiper-slide {
     font-size: 16px;
   }
-  
+
   .swiper-slide.swiper-slide-active {
     font-size: 18px;
   }
+
   .big_pd {
     padding: 32px 0;
   }
@@ -445,6 +447,19 @@
     grid-template-rows: repeat(3, 120px);
     grid-gap: 8px 24px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service_list .list {
+    background: rgba(69, 147, 252, .1);
+    box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+    border-radius: var(--border_lg);
+    padding: 31px 0 42px;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   .service_list h3 {
@@ -452,6 +467,10 @@
     flex: 1;
     font-size: 22px;
     margin-bottom: 16px;
+  }
+
+  .link_wrap a {
+    text-align: center;
   }
 
   .service_list h3 svg {
@@ -470,12 +489,15 @@
     flex-direction: column;
     flex: 1;
   }
+
   .service {
     margin-top: 160px;
-}
-.service_list{
-  width:100%;
-}
+  }
+
+  .service_list {
+    width: 100%;
+  }
+
   .service_list a {
     flex: 1;
     font-size: 18px;
