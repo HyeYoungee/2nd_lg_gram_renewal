@@ -13,7 +13,7 @@ body * {
   scrollbar-width: none;
 }
 
-/* title */
+/* title 시작 */
 .title {
   color: var(--dark, #1e2226);
 }
@@ -55,8 +55,8 @@ body * {
   width: 80%;
   box-sizing: border-box;
 }
-
-/* main */
+/* title 끝 */
+/* main 시작 */
 main{
   margin-bottom: max(10rem, min(3vw, 16rem));
 }
@@ -172,7 +172,7 @@ main{
   }
   .cs_desc{
     font-size: 18px;
-    width:57%;
+    width:70%;
     text-align: center;
   }
   .big_pd{
@@ -212,6 +212,8 @@ main{
   }
   .cs_desc{
     font-size: 16px;
+    width:55%;
+    line-height: 1.4;
   }
   .big_pd{
     padding: 32px 0;
@@ -233,11 +235,10 @@ main{
     border-radius: 4px;
   }
   .notice_tt{
-    width: 50%;
+    width: 45%;
     line-height: 1.4;
   }
   .accordion-button {
     padding: 12px 8px;
   }
-
 }

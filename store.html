@@ -1,152 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/store.css" />
+  </head>
 
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/store.css" />
-</head>
+  <body>
+    <!-- 최성희 header 시작 -->
+    <nav class="main_header_scroll_border">
+      <div class="main_header">
+        <!-- main_header_로고시작 -->
+        <h1 class="main_header_logo">
+          <a href="index.html"
+            ><img src="/imgs/index/header_logo_letsgram.svg" alt="그램로고"
+          /></a>
+        </h1>
+        <!-- main_header_로고종료 -->
+        <!-- main_header_메뉴시작 -->
+        <ul class="main_header_menu">
+          <li>
+            그램
+            <ul>
+              <li><a href="brand.html">브랜드 소개</a></li>
+              <li><a href="story.html">그램 스토리</a></li>
+            </ul>
+          </li>
+          <li>
+            제품
+            <ul>
+              <li><a href="search.html">그램 찾기</a></li>
+              <li><a href="color.html">컬러그램</a></li>
+              <li><a href="product.html">연관제품</a></li>
+            </ul>
+          </li>
+          <li>
+            고객서비스
+            <ul>
+              <li><a href="notice.html">공지사항</a></li>
+              <li><a href="service.html">고객지원</a></li>
+              <li><a href="store.html">매장 찾기</a></li>
+            </ul>
+          </li>
+          <li>
+            Jammy
+            <ul>
+              <li><a href="jammyis.html">Jammy is</a></li>
+              <li><a href="jammyg.html">재밌그램</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- main_header_메뉴종료 -->
+        <!-- main_header_아이콘시작 -->
+        <ul class="main_header_icons">
+          <li>
+            <a href=""
+              ><div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0013 14.6667C17.0561 14.6667 18.0873 14.3539 18.9643 13.7678C19.8414 13.1818 20.525 12.3489 20.9287 11.3743C21.3323 10.3998 21.4379 9.32742 21.2322 8.29285C21.0264 7.25829 20.5184 6.30798 19.7725 5.5621C19.0267 4.81622 18.0763 4.30827 17.0418 4.10248C16.0072 3.89669 14.9349 4.00231 13.9603 4.40598C12.9858 4.80965 12.1528 5.49323 11.5668 6.37029C10.9808 7.24736 10.668 8.2785 10.668 9.33334C10.668 10.7478 11.2299 12.1044 12.2301 13.1046C13.2303 14.1048 14.5868 14.6667 16.0013 14.6667Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M24.0013 28.0007C24.3549 28.0007 24.6941 27.8602 24.9441 27.6101C25.1942 27.3601 25.3346 27.0209 25.3346 26.6673C25.3346 24.192 24.3513 21.818 22.601 20.0677C20.8506 18.3173 18.4767 17.334 16.0013 17.334C13.5259 17.334 11.152 18.3173 9.40164 20.0677C7.6513 21.818 6.66797 24.192 6.66797 26.6673C6.66797 27.0209 6.80844 27.3601 7.05849 27.6101C7.30854 27.8602 7.64768 28.0007 8.0013 28.0007H24.0013Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+          <li class="main_header_search">
+            <a href=""
+              ><div>
+                <svg
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.4141 25.72L23.8808 21.2C25.3434 19.3366 26.1371 17.0355 26.1341 14.6667C26.1341 12.557 25.5085 10.4947 24.3365 8.74059C23.1644 6.98646 21.4985 5.61929 19.5494 4.81196C17.6003 4.00462 15.4556 3.79339 13.3865 4.20496C11.3174 4.61654 9.41674 5.63244 7.92498 7.1242C6.43322 8.61596 5.41732 10.5166 5.00574 12.5857C4.59417 14.6548 4.8054 16.7995 5.61274 18.7486C6.42007 20.6977 7.78725 22.3636 9.54137 23.5357C11.2955 24.7077 13.3578 25.3333 15.4675 25.3333C17.8363 25.3363 20.1374 24.5426 22.0008 23.08L26.5208 27.6133C26.6447 27.7383 26.7922 27.8375 26.9547 27.9052C27.1172 27.9729 27.2914 28.0077 27.4675 28.0077C27.6435 28.0077 27.8177 27.9729 27.9802 27.9052C28.1427 27.8375 28.2902 27.7383 28.4141 27.6133C28.5391 27.4894 28.6383 27.3419 28.706 27.1794C28.7737 27.017 28.8085 26.8427 28.8085 26.6667C28.8085 26.4907 28.7737 26.3164 28.706 26.1539C28.6383 25.9914 28.5391 25.844 28.4141 25.72ZM7.46745 14.6667C7.46745 13.0844 7.93664 11.5377 8.8157 10.2221C9.69475 8.90652 10.9442 7.88114 12.406 7.27563C13.8678 6.67013 15.4763 6.51171 17.0282 6.82039C18.58 7.12907 20.0055 7.891 21.1243 9.00982C22.2431 10.1286 23.0051 11.5541 23.3137 13.1059C23.6224 14.6578 23.464 16.2663 22.8585 17.7281C22.253 19.1899 21.2276 20.4394 19.912 21.3184C18.5964 22.1975 17.0497 22.6667 15.4675 22.6667C13.3457 22.6667 11.3109 21.8238 9.8106 20.3235C8.31031 18.8232 7.46745 16.7884 7.46745 14.6667Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><div>
+                <svg
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.7056 9.33412C28.4752 8.93494 28.1453 8.60229 27.7481 8.36861C27.3508 8.13493 26.8998 8.0082 26.439 8.00078H9.37229L8.59896 4.98745C8.52082 4.69657 8.34651 4.44071 8.10439 4.26154C7.86228 4.08238 7.56664 3.99047 7.26563 4.00078H4.59896C4.24534 4.00078 3.9062 4.14126 3.65615 4.39131C3.4061 4.64135 3.26563 4.98049 3.26562 5.33412C3.26563 5.68774 3.4061 6.02688 3.65615 6.27692C3.9062 6.52697 4.24534 6.66745 4.59896 6.66745H6.25229L9.93229 20.3474C10.0104 20.6383 10.1847 20.8942 10.4269 21.0734C10.669 21.2525 10.9646 21.3444 11.2656 21.3341H23.2656C23.5118 21.3334 23.7531 21.2645 23.9625 21.135C24.172 21.0056 24.3415 20.8207 24.4523 20.6008L28.8256 11.8541C29.0152 11.4568 29.1034 11.0187 29.0825 10.579C29.0615 10.1393 28.9321 9.71162 28.7056 9.33412Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M10.5996 28C11.7042 28 12.5996 27.1046 12.5996 26C12.5996 24.8954 11.7042 24 10.5996 24C9.49504 24 8.59961 24.8954 8.59961 26C8.59961 27.1046 9.49504 28 10.5996 28Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M23.9316 28C25.0362 28 25.9316 27.1046 25.9316 26C25.9316 24.8954 25.0362 24 23.9316 24C22.8271 24 21.9316 24.8954 21.9316 26C21.9316 27.1046 22.8271 28 23.9316 28Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+        </ul>
+        <!-- main_header_아이콘종료 -->
+      </div>
+      <a href="" class="main_header_toggleBtn">
+        <img src="./imgs/index/main_header_menu.svg" alt="" />
+      </a>
+    </nav>
+    <!-- 최성희 header 끝 -->
+    <!-- 김유림 main 시작 -->
+    <main>
+      <div class="title container big_pd">
+        <h2 class="tt_01 dark_t">베스트샵 매장찾기</h2>
+        <h3 class="cs_desc">
+          지역을 선택하시고 근처 LG전자 매장을 찾아보세요.<br />
+          단골매장은 매장 상세화면에서 등록하실 수 있습니다!
+        </h3>
+      </div>
+      <section class="map_wrapper">
+        <!-- <div id="map" style="width:100vW;height:720px;"></div> -->
+        <aside class="store_search">
+          <h2 class="search_tt">내주변 매장찾기</h2>
+          <div class="select_wrap">
+            <label for="filter">시/도</label>
+            <select
+              name=""
+              id="filter"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="all" data-display="Select" selected>
+                시/도 선택
+              </option>
+              <option
+                value="서울특별시"
+                data-text="서울특별시"
+                title="광역시/도 선택"
+              >
+                서울특별시
+              </option>
+              <option value="경기도" data-text="경기도" title="광역시/도 선택">
+                경기도
+              </option>
+              <option
+                value="부산광역시"
+                data-text="부산광역시"
+                title="광역시/도 선택"
+              >
+                부산광역시
+              </option>
+              <option
+                value="인천광역시"
+                data-text="인천광역시"
+                title="광역시/도 선택"
+              >
+                인천광역시
+              </option>
+              <option
+                value="대구광역시"
+                data-text="대구광역시"
+                title="광역시/도 선택"
+              >
+                대구광역시
+              </option>
+              <option
+                value="대전광역시"
+                data-text="대전광역시"
+                title="광역시/도 선택"
+              >
+                대전광역시
+              </option>
+              <option
+                value="광주광역시"
+                data-text="광주광역시"
+                title="광역시/도 선택"
+              >
+                광주광역시
+              </option>
+              <option
+                value="울산광역시"
+                data-text="울산광역시"
+                title="광역시/도 선택"
+              >
+                울산광역시
+              </option>
+              <option
+                value="제주특별자치도"
+                data-text="제주특별자치도"
+                title="광역시/도 선택"
+              >
+                제주특별자치도
+              </option>
+            </select>
 
-<body>
-  <header>
-    <h1>store</h1>
-  </header>
-  <main>
-    <div class="title container big_pd">
-      <h2 class="tt_01 dark_t">베스트샵 매장찾기</h2>
-      <h3 class="cs_desc">
-        지역을 선택하시고 근처 LG전자 매장을 찾아보세요.<br>
-        단골매장은 매장 상세화면에서 등록하실 수 있습니다!
-      </h3>
-    </div>
-    <section class="map_wrapper">
-      <!-- <div id="map" style="width:100vW;height:720px;"></div> -->
-      <aside class="store_search">
-        <h2 class="search_tt">내주변 매장찾기</h2>
-        <div class="select_wrap">
-          <label for="filter">시/도</label>
-          <select name="" id="filter" class="form-select" aria-label="Default select example">
-            <option value="all" data-display="Select" selected>시/도 선택</option>
-            <option value="서울특별시" data-text="서울특별시" title="광역시/도 선택">서울특별시</option>
-            <option value="경기도" data-text="경기도" title="광역시/도 선택">경기도</option>
-            <option value="부산광역시" data-text="부산광역시" title="광역시/도 선택">부산광역시</option>
-            <option value="인천광역시" data-text="인천광역시" title="광역시/도 선택">인천광역시</option>
-            <option value="대구광역시" data-text="대구광역시" title="광역시/도 선택">대구광역시</option>
-            <option value="대전광역시" data-text="대전광역시" title="광역시/도 선택">대전광역시</option>
-            <option value="광주광역시" data-text="광주광역시" title="광역시/도 선택">광주광역시</option>
-            <option value="울산광역시" data-text="울산광역시" title="광역시/도 선택">울산광역시</option>
-            <option value="제주특별자치도" data-text="제주특별자치도" title="광역시/도 선택">제주특별자치도</option>
-          </select>
-
-          <label for="filter2">구/군</label>
-          <select name="" id="filter2" class="form-select" aria-label="Default select example">
-            <option value="all" data-display="Select">구/군 선택</option>
-            <option value="강남구" data-text="강남구" title="시/군/구 선택">강남구</option>
-            <option value="강서구" data-text="강서구" title="시/군/구 선택">강서구</option>
-            <option value="마포구" data-text="마포구" title="시/군/구 선택">마포구</option>
-            <option value="서대문구" data-text="서대문구" title="시/군/구 선택">서대문구</option>
-            <option value="영등포구" data-text="영등포구" title="시/군/구 선택">영등포구</option>
-            <option value="중구" data-text="중구" title="시/군/구 선택">중구</option>
-          </select>
-          <form action="">
-            <label for="name_search">검색</label>
-            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-            <button class="search_btn">검색</button>
-          </form>
-          <div class="fav_wrap">
-            <p class="favorite">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="11.5" fill="white" stroke="#DEDEDE" />
-                <path
-                  d="M8.15926 18.1499C7.82152 18.3267 7.43828 18.0168 7.50652 17.621L8.23276 13.3957L5.15019 10.3978C4.86232 10.1173 5.01195 9.60452 5.39781 9.54914L9.68348 8.9274L11.5944 5.06207C11.7668 4.71368 12.2332 4.71368 12.4056 5.06207L14.3165 8.9274L18.6022 9.54914C18.9881 9.60452 19.1377 10.1173 18.8498 10.3978L15.7672 13.3957L16.4935 17.621C16.5617 18.0168 16.1785 18.3267 15.8407 18.1499L11.9987 16.1346L8.15839 18.1499H8.15926Z"
-                  fill="#D6D9DC" />
-              </svg>
-              <span>클릭하여 자주 가는 매장을 등록하세요.</span>
-            </p>
-            <p class="result">총 <span class="result_num">0</span> 건 검색되었습니다.</p>
+            <label for="filter2">구/군</label>
+            <select
+              name=""
+              id="filter2"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="all" data-display="Select">구/군 선택</option>
+              <option value="강남구" data-text="강남구" title="시/군/구 선택">
+                강남구
+              </option>
+              <option value="강서구" data-text="강서구" title="시/군/구 선택">
+                강서구
+              </option>
+              <option value="마포구" data-text="마포구" title="시/군/구 선택">
+                마포구
+              </option>
+              <option
+                value="서대문구"
+                data-text="서대문구"
+                title="시/군/구 선택"
+              >
+                서대문구
+              </option>
+              <option
+                value="영등포구"
+                data-text="영등포구"
+                title="시/군/구 선택"
+              >
+                영등포구
+              </option>
+              <option value="중구" data-text="중구" title="시/군/구 선택">
+                중구
+              </option>
+            </select>
+            <form action="">
+              <label for="name_search">검색</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Text input with segmented dropdown button"
+              />
+              <button class="search_btn">검색</button>
+            </form>
+            <div class="fav_wrap">
+              <p class="favorite">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="11.5"
+                    fill="white"
+                    stroke="#DEDEDE"
+                  />
+                  <path
+                    d="M8.15926 18.1499C7.82152 18.3267 7.43828 18.0168 7.50652 17.621L8.23276 13.3957L5.15019 10.3978C4.86232 10.1173 5.01195 9.60452 5.39781 9.54914L9.68348 8.9274L11.5944 5.06207C11.7668 4.71368 12.2332 4.71368 12.4056 5.06207L14.3165 8.9274L18.6022 9.54914C18.9881 9.60452 19.1377 10.1173 18.8498 10.3978L15.7672 13.3957L16.4935 17.621C16.5617 18.0168 16.1785 18.3267 15.8407 18.1499L11.9987 16.1346L8.15839 18.1499H8.15926Z"
+                    fill="#D6D9DC"
+                  />
+                </svg>
+                <span>클릭하여 자주 가는 매장을 등록하세요.</span>
+              </p>
+              <p class="result">
+                총 <span class="result_num">0</span> 건 검색되었습니다.
+              </p>
+            </div>
           </div>
-
-        </div>
-        <div>
-          <ul class="store_list">
-            <!-- json으로 data 출력 -->
-            <!-- <li>
+          <div>
+            <ul class="store_list">
+              <!-- json으로 data 출력 -->
+              <!-- <li>
               <h2 class="store_name"></h2>
               <h3 class="store_address"></h3>
               <p class="store_phone"></p>
             </li> -->
-          </ul>
+            </ul>
+          </div>
+        </aside>
+        <div id="map"></div>
+      </section>
 
-
-        </div>
-
-      </aside>
-      <div id="map"></div>
-    </section>
-
-    <section class="store_promotion">
-      <h2 class="tt_01 dark_t big_pd">매장 프로모션</h2>
+      <section class="store_promotion">
+        <h2 class="tt_01 dark_t big_pd">매장 프로모션</h2>
+        <div class="container"></div>
+      </section>
+    </main>
+    <!-- 김유림 main 끝 -->
+    <!-- 이현정 footer 시작 -->
+    <footer>
       <div class="container">
-        <!-- json으로 data 출력 -->
-        <!-- <div class="card">
-          <img src="imgs/service/store/event_3.jpeg" class="card-img-top" alt="매장프로모션이미지">
-          <div class="card-body">
-            <h5 class="card-title"><a href="">노트북 진열제품 할인행사</a></h5>
-            <p class="card-text">2023.07.01 ~ 2023.07.31</p>
-            <span class="card-branch">강남본점<span>
+        <div
+          class="footer_sns_wrap d-flex align-items-center justify-content-lg-end justify-content-md-between justify-content-sm-between"
+        >
+          <ul class="d-flex align-items-center">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+          <div class="footer_langs border_lg d-flex justify-content-center">
+            <span class="body_md">kor</span><span>/</span><span>Eng</span>
           </div>
         </div>
-        <div class="card">
-          <img src="imgs/service/store/event_1.jpeg" class="card-img-top" alt="매장프로모션이미지">
-          <div class="card-body">
-            <h5 class="card-title"><a href="">더 큰 그램, PC SUMMER FESTIVAL</a></h5>
-            <p class="card-text">2023.07.01 ~ 2023.07.31</p>
+        <div class="footer_info_wrap">
+          <div class="footer_info_link_wrap">
+            <ul class="d-flex justify-content-between">
+              <li class=""><a href="">사이트맵</a></li>
+              <li class="">
+                <a href="">개인정보처리방침</a>
+              </li>
+              <li class="">
+                <a href="">이벤트 개인정보처리방침</a>
+              </li>
+              <li class="">
+                <a href="">영상정보처리기기운영관리방침</a>
+              </li>
+              <li class=""><a href="">이용약관</a></li>
+              <li class=""><a href="">임직원 등록</a></li>
+              <li class="">
+                <a href="">이메일 무단 수집 거부</a>
+              </li>
+              <li class="">
+                <a href="">정도 경영 사이버 신문고</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_info_text_wrap">
+            <p>
+              대표번호 : 02-3777-1114 LGE.COM 구매/서비스 문의
+              (가전/소모품/렌탈) : 1544-7777
+            </p>
+            <p>
+              전화상담 시간은 평일 09:00 ~ 18:00 (주말, 공휴일 휴무) 입니다.
+              (통화요금 : 발신자부담)제품 및 서비스 문의는 긴급 문의 건에 한해
+              24시간 운영합니다.
+            </p>
+            <p>
+              대표이사 : 조주완, 배두용사업자등록번호 : 107-86-14075 사업자
+              정보확인 통신판매업신고번호 : 제1997-00084호주소 : 서울시 영등포구
+              여의대로 128 LG트윈타워
+            </p>
+            <p>Copyright &copy; 2022 LG Electronics. All Rights Reserved.</p>
           </div>
         </div>
-        <div class="card">
-          <img src="imgs/service/store/event_2.jpeg" class="card-img-top" alt="매장프로모션이미지">
-          <div class="card-body">
-            <h5 class="card-title"><a href="">LG UP DAY</a></h5>
-            <p class="card-text">2023.07.01 ~ 2023.07.31</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="imgs/service/store/event_4.jpeg" class="card-img-top" alt="매장프로모션이미지">
-          <div class="card-body">
-            <h5 class="card-title"><a href="">LG전자 아카데미 스토어</a></h5>
-            <p class="card-text">2023.08.01 ~ 2023.08.31</p>
-          </div>
-        </div> -->
-
       </div>
-    </section>
+    </footer>
+    <!-- 이현정 footer 끝 -->
 
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-
-  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=620791c9435222418517f64a95f6a559"></script>
-  <!-- 부트 스트랩 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
-    integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- isotope -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-packery/2.0.1/packery-mode.pkgd.min.js"
-    integrity="sha512-76zYP8p3l0eyuqOmksU8GGbeVhNhvw1FTIT90+qZpdynbBJrqOU1Y9tM721oGcM3KLrgqmZQiGlIiO93oi3Geg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- mixitup -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
-    integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/store.js"></script>
-  <!-- <script src="js/store2.js"></script> -->
-</body>
-
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=620791c9435222418517f64a95f6a559"></script>
+    <!-- 부트 스트랩 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- isotope -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/isotope-packery/2.0.1/packery-mode.pkgd.min.js"
+      integrity="sha512-76zYP8p3l0eyuqOmksU8GGbeVhNhvw1FTIT90+qZpdynbBJrqOU1Y9tM721oGcM3KLrgqmZQiGlIiO93oi3Geg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- mixitup -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+      integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/common.js"></script>
+    <script src="js/store.js"></script>
+  </body>
 </html>

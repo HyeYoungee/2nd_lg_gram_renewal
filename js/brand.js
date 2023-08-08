@@ -272,6 +272,7 @@ $(window).on('scroll', function () {
 
 
 
+AOS.init();
 
 // sec_8
 let sec8 = $('.sec_8');
