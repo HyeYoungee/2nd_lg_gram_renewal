@@ -900,6 +900,7 @@ footer {
 .footer_sns_wrap {
   padding: 21px 0;
   border-bottom: 1.5px solid var(--white_00);
+  margin: 0 30px;
 }
 
 .footer_sns_wrap ul {
@@ -948,9 +949,8 @@ footer {
 .footer_sns_wrap ul li:hover:nth-child(4) {
   background: url("../imgs/footer/sns_icon_naver_b.svg");
 }
-
-.footer_sns_wrap ul li:hover:last-child {
-  background: url("./imgs/footer/sns_icon_company_b.svg");
+.footer_sns_wrap ul li:hover:nth-child(5) {
+  background: url("../imgs/footer/sns_icon_company_b.svg");
 }
 
 .footer_sns_wrap .footer_langs {
@@ -958,7 +958,6 @@ footer {
   width: 138px;
   border: 1px solid var(--white_00);
   text-transform: uppercase;
-  margin-right: 33px;
 }
 
 .footer_sns_wrap .footer_langs span {
@@ -1027,11 +1026,36 @@ footer {
   .select-wrap select {
     font-size: var(--bd_size_03);
   }
+  .footer_sns_wrap ul li:first-child,
+  .footer_sns_wrap ul li:hover:first-child,
+  .footer_sns_wrap ul li:nth-child(2),
+  .footer_sns_wrap ul li:hover:nth-child(2),
+  .footer_sns_wrap ul li:nth-child(3),
+  .footer_sns_wrap ul li:hover:nth-child(3),
+  .footer_sns_wrap ul li:nth-child(4),
+  .footer_sns_wrap ul li:hover:nth-child(4),
+  .footer_sns_wrap ul li:last-child,
+  .footer_sns_wrap ul li:hover:last-child {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 30px;
+  }
+  .footer_sns_wrap {
+    padding: 18px 0;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 479px) {
   .select-wrap select {
     font-size: var(--bd_size_05);
+  }
+  .footer_info_link_wrap ul li a {
+    font-size: 1.3rem;
+  }
+  .footer_sns_wrap ul li {
+    margin-right: 15px;
   }
 }
 /* 이현정 footer 끝 */
