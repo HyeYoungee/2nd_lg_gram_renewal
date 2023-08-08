@@ -9,7 +9,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 99999;
-  font-size: var(--bd_size_05);
+  font-size: calc(var(--tt_size_02)*.4) ;
 }
 .main_header {
   display: flex;
