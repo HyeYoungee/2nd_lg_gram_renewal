@@ -91,8 +91,7 @@ body {
 .plus_open,
 .division_bg,
 .division_effect,
-.multiple_bg,
-.multiple_effect{
+.multiple_bg{
   width: 100vw;
   position: absolute;
   top: 0;
@@ -254,6 +253,7 @@ body {
 }
 .plus_tt{
   position: absolute;
+  color:#0C1B32;
   top:40%;
   left: 50%;
   transform: translateX(-50%);
@@ -261,6 +261,7 @@ body {
 }
 .plus_tt h2{
   visibility: hidden;
+  z-index: 10;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
 }
 .plus_tt h2.active{
@@ -268,6 +269,7 @@ body {
 }
 .sec_5, .sec_6{
   z-index: 100;
+
 }
 
 
@@ -301,12 +303,14 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 48px; /* 100% */
-  margin-top: -300px;
+  /* margin-top: -600px; */
   line-height: 1.5;
   position: relative;
+}
+.division_tt h2{
   visibility: hidden;
 }
-.division_tt.active{
+.division_tt h2.active{
   visibility: visible;
 }
 .division_tt img{
@@ -315,6 +319,7 @@ body {
   transform:translateX(-50%);
   bottom: -250px;
 }
+
 
 
 /* section 6 */
@@ -351,12 +356,12 @@ body {
   content: attr(data-text);
   display: block;
   position: absolute;
-  /* z-index: -1; */
   top: 0;
   left: 0;
   width: 0;
   overflow: hidden;
-  /* color: #3498db; */
+  background: #1a3257;
+  color:var(--point_gr_02);
   background: var(--point_gr_02);
   background-clip: text;
   -webkit-background-clip: text;
@@ -374,8 +379,8 @@ body {
 .multiple_tt h2.animate:before {
   width: 100%;
 }
-
 .vivid{
+  margin-bottom: 10px;
   visibility: hidden;
 }
 .vivid.active{
@@ -385,17 +390,18 @@ body {
 
 /* section 7 */
 .twenty{
-  margin-top: 100vh;
+  margin-top: 100px;
   width: 100vw;
   height: 100vh;
 }
+.twentytwenty-wrapper{
+  width: 65%;
+}
 .twenty img{
-  width: 80%;
   min-height: 500px;
   object-fit: cover;
   margin: 0 auto;
 }
-
 .twentytwenty-handle:hover .twentytwenty-right-arrow{
   border-left: 6px solid var(--blue_01);
 }
@@ -403,13 +409,14 @@ body {
   border-right: 6px solid var(--blue_01);
 }
 .twenty h2{
-  color: #C0F0FF;
-  font-size: 64px;
+  color: #52bada;
+  font-size: 56px;
   margin-top: 48px;
   visibility: hidden;
+  z-index: 10;
 }
-.twenty h2:active{
-  visibility: visible
+.twenty h2.active{
+  visibility: visible;
 }
 .sec_7{
   background: #000;
