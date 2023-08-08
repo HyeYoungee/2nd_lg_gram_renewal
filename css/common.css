@@ -303,7 +303,7 @@ a {
   width: 64px;
   height: 64px;
   position: fixed;
-  bottom: 288px;
+  bottom: 289px;
   right: 125px;
   line-height: 64px;
   text-align: center;
@@ -313,6 +313,8 @@ a {
   text-transform: uppercase;
   border-radius: 50%;
   letter-spacing: 0.05em;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 #lg_logo_btn svg:hover {
@@ -337,13 +339,18 @@ a {
   border-radius: 50%;
   letter-spacing: 0.05em;
   font-weight: 700;
+  z-index: 1000;
+  cursor: pointer;
 }
+
+
 
 #gotop_btn:hover {
   background-color: var(--gray_03);
 }
 
-#gotop_btn.active {
+#gotop_btn.active,
+#lg_logo_btn.active {
   opacity: 1;
   visibility: hidden;
 }
@@ -393,6 +400,374 @@ input {
 .search_input:focus {
   border: 3px solid rgba(69, 147, 252, 0.4);
 }
+
+/* 최성희 main_header시작 */
+body {
+  padding-top: 72px;
+}
+nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  font-size: var(--bd_size_05);
+}
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gmarket Sans TTF";
+  color: var(--gray_03);
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1272px;
+  height: 72px;
+}
+/* main_header_gnb시작 */
+.main_header_menu {
+  display: flex;
+  padding-left: 0;
+  margin-top: -5px;
+}
+.main_header_menu > li {
+  padding: 12px 20px;
+  margin: 12px 11px;
+}
+.main_header_menu > li:hover {
+  background-color: #eaf2fe;
+  color: var(--blue_02);
+  cursor: pointer;
+  border-radius: var(--border_lg);
+}
+
+/* main_header_lnb시작 */
+.main_header_menu > li ul {
+  display: flex;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  top: 100%; /* 하위 메뉴를 상위 메뉴 아래에 표시 */
+  left: 0; /* 왼쪽 정렬 */
+  border-top: solid 1px #58606a30;
+  justify-content: center;
+}
+.main_header_menu.active li ul {
+  display: flex;
+}
+.main_header_menu > li ul li {
+  white-space: nowrap;
+  float: none;
+  padding: 27px 50px;
+}
+.main_header_menu > li ul li a {
+  color: var(--gray_03);
+  font-weight: 300;
+}
+.main_header_menu > li ul li a:hover {
+  font-weight: 500;
+}
+
+/* main_header_icon시작 */
+.main_header_icons {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.main_header_icons a svg {
+  width: 30px;
+  height: 30px;
+}
+.main_header_icons li {
+  padding: 20px 10px;
+}
+.main_header_toggleBtn {
+  position: absolute;
+  right: 24px;
+  display: none;
+}
+/* 초기에 border 없고 스크롤 내릴 때 border 추가 */
+nav.main_header_scroll_border {
+  border-bottom: none;
+}
+nav.main_header_scroll_border.with_border {
+  border-bottom: solid 1px #58606a30;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+  nav {
+    font-size: var(--bd_size_04);
+  }
+  .main_header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80px;
+  }
+  .main_header_logo {
+    padding: 24px;
+  }
+  .main_header_menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+  }
+  .main_header_menu > li {
+    margin: 0;
+    padding: 25px 32px;
+  }
+  .main_header_menu > li ul {
+    display: none;
+    position: static;
+    background-color: transparent;
+    margin-top: 28px;
+  }
+  .main_header_menu > li ul li {
+    float: none;
+    margin: 15px 0;
+    padding: 10px 0;
+    gap: 0;
+  }
+  .main_header_menu > li ul:after {
+    display: none;
+  }
+  .main_header_menu > li:hover {
+    cursor: pointer;
+    border-radius: 0;
+    width: 100%;
+  }
+  .main_header_toggleBtn {
+    display: block;
+    top: 24px;
+  }
+  .main_header_menu.active {
+    display: flex;
+  }
+  .main_header_menu.active li ul {
+    display: block;
+  }
+
+  /* main_header_icons 시작 */
+  .main_header_icons {
+    background-color: #fff;
+    width: 100%;
+  }
+  .main_header_icons li {
+    padding: 0 30px;
+    margin: 30px 0;
+  }
+  .main_header_toggleBtn {
+    position: absolute;
+    right: 24px;
+    display: block;
+  }
+  .main_header_toggleBtn a img {
+    transition-duration: 0.3s;
+  }
+  .main_header_search {
+    border-right: solid 1px #58606a30;
+    border-left: solid 1px #58606a30;
+  }
+  /* main_header_icons 종료 */
+}
+/* 최성희 main_header 끝 */
+
+/* 이현정 footer 시작 */
+footer {
+  background: var(--gray-04, #333d4b);
+  padding-bottom: 50px;
+}
+
+.footer_sns_wrap {
+  padding: 21px 0;
+  border-bottom: 1.5px solid var(--white_00);
+  margin: 0 30px;
+}
+
+.footer_sns_wrap ul {
+  margin-bottom: 0;
+}
+
+.footer_sns_wrap ul li {
+  list-style: none;
+  width: 40.27px;
+  height: 40.27px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer_sns_wrap ul li:first-child {
+  background: url("../imgs/footer/sns_icon_youtube.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(3) {
+  background: url(" ../imgs/footer/sns_icon_insta.svg");
+}
+
+.footer_sns_wrap ul li:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver.svg");
+}
+
+.footer_sns_wrap ul li:last-child {
+  background: url("../imgs/footer/sns_icon_company.svg");
+}
+
+.footer_sns_wrap ul li:hover:first-child {
+  background: url("../imgs/footer/sns_icon_youtube_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(2) {
+  background: url("../imgs/footer/sns_icon_facebook_b.svg");
+}
+
+.footer_sns_wrap ul li:hover:nth-child(3) {
+  background: url("../imgs/footer/sns_icon_insta_b.svg");
+}
+.footer_sns_wrap ul li:hover:nth-child(4) {
+  background: url("../imgs/footer/sns_icon_naver_b.svg");
+}
+.footer_sns_wrap ul li:hover:nth-child(5) {
+  background: url("../imgs/footer/sns_icon_company_b.svg");
+}
+
+.footer_sns_wrap .footer_langs {
+  color: var(--white_00, #fdfdfd);
+  width: 138px;
+  border: 1px solid var(--white_00);
+  text-transform: uppercase;
+}
+
+.footer_sns_wrap .footer_langs span {
+  line-height: 38px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+}
+
+.footer_sns_wrap .footer_langs span:hover:first-child,
+.footer_sns_wrap .footer_langs span:hover:last-child {
+  color: var(--blue_01);
+}
+
+.footer_sns_wrap .footer_langs span:last-child {
+  margin-right: 0;
+}
+.footer_info_link_wrap ul {
+  list-style: none;
+  padding: 33px;
+}
+.footer_info_link_wrap ul li {
+  cursor: pointer;
+  padding-top: 10px;
+  flex: 1/1;
+}
+
+.footer_info_link_wrap ul li a {
+  color: var(--white-bg, #fdfdfd);
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer_info_link_wrap ul li:hover a {
+  text-decoration: underline;
+}
+
+.footer_info_text_wrap {
+  color: var(--white-bg, #fdfdfd);
+  padding: 0 33px;
+}
+
+.footer_info_text_wrap p {
+  padding-bottom: 24px;
+  font-size: max(1.2rem, min(2.5vw, 1.6rem));
+  line-height: 1.4;
+}
+
+.footer_info_text_wrap p:first-child {
+  padding-bottom: 6px;
+}
+@media (max-width: 1272px) {
+  .select-wrap select option {
+    font-size: var(--bd_size_05);
+  }
+  .footer_info_link_wrap ul {
+    flex-wrap: wrap;
+  }
+  .footer_info_link_wrap ul li {
+    flex: 1 0 50%;
+  }
+  #gotop_btn{
+    right:154px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 154px;
+  }
+}
+
+@media (max-width: 767px) {
+  .select-wrap select {
+    font-size: var(--bd_size_03);
+  }
+  .footer_sns_wrap ul li:first-child,
+  .footer_sns_wrap ul li:hover:first-child,
+  .footer_sns_wrap ul li:nth-child(2),
+  .footer_sns_wrap ul li:hover:nth-child(2),
+  .footer_sns_wrap ul li:nth-child(3),
+  .footer_sns_wrap ul li:hover:nth-child(3),
+  .footer_sns_wrap ul li:nth-child(4),
+  .footer_sns_wrap ul li:hover:nth-child(4),
+  .footer_sns_wrap ul li:last-child,
+  .footer_sns_wrap ul li:hover:last-child {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 30px;
+  }
+  .footer_sns_wrap {
+    padding: 18px 0;
+    justify-content: center;
+  }
+  #gotop_btn{
+    right:32px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 32px;
+  }
+}
+
+@media (max-width: 479px) {
+  .select-wrap select {
+    font-size: var(--bd_size_05);
+  }
+  .footer_info_link_wrap ul li a {
+    font-size: 1.3rem;
+  }
+  .footer_sns_wrap ul li {
+    margin-right: 15px;
+  }
+  #gotop_btn{
+    right:32px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 32px;
+  }
+}
+
+/* 이현정 footer 끝 */
 
 @media (min-width: 1272px) {
   .container,
