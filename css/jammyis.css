@@ -15,6 +15,7 @@ main{
   width: 100%;
   height: 100vh;
   text-align: center;
+  background: url('../imgs/jammy_is/jammy_is_banner_BG.png') center / 60% no-repeat;
 }
 .jammy_is_sec01 .top_BG img{
   object-fit: cover;
@@ -62,7 +63,7 @@ main{
   /* height: 100vh; */
 }
 .jammy_is_sec02 .d-flex{
-  gap: 24px;
+  gap: var(--base_unit_d);
 }
 .jammy_is_sec02 .total_box > p{
   text-align: center;
@@ -75,13 +76,9 @@ main{
   width: 624px;
   background: url('../imgs/jammy_is/jammy_is_text_BG.png') no-repeat;
   border-radius: var(--border_lg);
-  font-family: "Noto Sans", sans-serif;
   color:var(--black_00);
   box-sizing: border-box;
   padding: calc(var(--base_unit_d)*2);
-}
-.jammy_is_sec02 .d-flex:nth-child(2) .text_box{
-  text-align: right;
 }
 .jammy_is_sec02 .text_box::after{
   position: absolute;
@@ -93,6 +90,27 @@ main{
   bottom: -5px;
   right: -5px;
 }
+.jammy_is_sec02 .d-flex:nth-child(2) .text_box{
+  text-align: right;
+}
+.jammy_is_sec02 .text_box > div{
+  position: relative;
+}
+.jammy_is_sec02 .text_box img{
+  position: absolute;
+}
+.jammy_is_sec02 .text_box .box_01 img{
+  top: -4px;
+  right: 7px;
+}
+.jammy_is_sec02 .text_box .box_02 img{
+  bottom: 10px;
+  left: 102px;
+}
+.jammy_is_sec02 .text_box .box_03 img{
+  top: -2px;
+  right: 100px;
+}
 .jammy_is_sec02 .text_box h3{
   font-size: 3rem;
   line-height: 1.6;
@@ -101,14 +119,18 @@ main{
   font-size: 2rem;
   font-size: 1.8rem;
   line-height: 1.6;
-  font-weight: normal;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* jammy_is_sec03 */
+.jammy_is_sec03{
+  padding-top: calc(var(--base_unit_d) * 10);
+}
 .jammy_is_sec03 .text_box{
   margin: 0 auto;
   width: 278px;
   font-size: 7.2rem;
+  line-height: 1.2;
   display: grid;
   grid-template: repeat(6, auto) / repeat(4,1fr);
 }
@@ -152,11 +174,30 @@ main{
   text-align: center;
   font-size: 3.6rem;
   line-height: 1.5;
+  padding: calc(var(--base_unit_d) * 10) 0;
 }
-.jammy_is_sec04 .jam_box > div{
+.jammy_is_sec04 .left{
+  padding-top: calc(var(--base_unit_d) * 7);
+  margin-left: 100px;
+}
+.jammy_is_sec04 .right{
+  margin-top: -50px;
+  margin-right: 100px;
+  padding-bottom: calc(var(--base_unit_d) * 7);
+}
+.jammy_is_sec04 .point_list img{
+  border-radius: var(--border_lg);
+}
+.jammy_is_sec04 .point_list{
+  margin-bottom: var(--base_unit_d);
+}
+.jammy_is_sec04 .point_list li{
+  gap: var(--base_unit_d);
+}
+.jammy_is_sec04 .jam_box .jam_fill{
   position: relative;
 }
-.jammy_is_sec04 .jam_box > div:after{
+.jammy_is_sec04 .jam_box .jam_fill:after{
   position: absolute;
   content: '';
   width: 80%;
@@ -173,7 +214,8 @@ main{
 .jammy_is_sec04 .jam_box p{
   font-weight: lighter;
 }
-.jammy_is_sec04 > p:last-of-type{
+.jammy_is_sec04 .container > p:last-of-type{
   font-size: 4.8rem;
   line-height: 1.6;
+  padding-top: calc(var(--base_unit_d) * 10);
 }
