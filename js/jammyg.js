@@ -16,7 +16,7 @@ $(function(){
 
 /* 하트 버튼 svg 변경 효과 */
 let jammyG_03 = $('.jammyG_sec03'),
-    likeBtn = jammyG_03.find('button'),
+    likeBtn = jammyG_03.find('.collabo_goods_list button'),
     goodsList = jammyG_03.find('.collabo_goods_list .img_box');
 
     // console.log(goodsList)

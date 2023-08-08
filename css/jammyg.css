@@ -99,7 +99,6 @@ main a{
 .jammyG_sec02 .talk_01{
   grid-row: 1 / span 2;
 }
-/* .jammyG_sec02 div[class^="talk"] > div */
 .jammyG_sec02 .talk_01 .img_box{
   border: 5px solid transparent;
   background-image: var(--point_gr_02);
@@ -158,7 +157,7 @@ main a{
   align-items: center;
 }
 .jammyG_sec03 .collabo_goods_list p{
-  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-size: max(1.2rem, min(2.5vw, 1.6rem));
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
@@ -204,9 +203,183 @@ main a{
 @media (max-width: 1320px) {
   main {padding: 0 24px;}
 }
+
+/* 반응형 768px */
 @media (max-width: 768px) {
-
+  /* Layout, All */
+	main > section{
+	  padding-top: calc(var(--base_unit_tm) * 5);
+	}
+	main h3, main h4{
+		padding: 0 0 var(--base_unit_tm) var(--base_unit_tm);
+	}
+	main h3{
+	  font-size: 2.4rem;
+	}
+	main h4{
+	  font-size: 2rem;
+	}
+  /* Banner */
+	.banner{
+	  padding: calc(var(--base_unit_tm)*3) 0;
+	}
+	.banner .logo{
+		width: 303px;
+	  height: 80px;
+	}
+  .banner .title_box p{
+    top: 75px; 
+    right: calc(50% - 85px);
+  }
+  /* jammyG_sec01 */
+  .jammyG_sec01{
+    display: block;
+  }
+  .jammyG_sec01 .sec01_box:last-of-type{
+    padding-top: calc(var(--base_unit_tm) * 5);
+  }
+  .jammyG_sec01 img{
+    height: 280px;
+  }
+  /* jammyG_sec02 */
+  .jammyG_sec02 .talk_box{
+    grid-template: repeat(2, auto) / repeat(6,1fr);
+  }
+  .jammyG_sec02 .talk_01{
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+  }
+  .jammyG_sec02 .talk_01 a:last-of-type{
+    width: 50%;
+    padding-left: 2.4rem;
+  }
+  .jammyG_sec02 .talk_02{
+    grid-column: 1/span 2;
+    grid-row: 2;
+  }
+  .jammyG_sec02 .talk_03{
+    grid-column: 3/span 2;
+    grid-row: 2;
+  }
+  .jammyG_sec02 .talk_04{
+    grid-column: 5/span 2;
+    grid-row: 2;
+  }
+  .jammyG_sec02 .talk_01 .img_box{
+    height: 280px;
+  }
+  .jammyG_sec02 .talk_02 .img_box,
+  .jammyG_sec02 .talk_03 .img_box,
+  .jammyG_sec02 .talk_04 .img_box{
+    height: 180px;
+  }
+  /* jammyG_sec03 */
+  .jammyG_sec03 .collabo_goods_list li{
+    width: 45%;
+  }
+  .jammyG_sec03 .collabo_goods_list .img_box{
+    height: 200px;
+  }
+  /* jammyG_sec04 */
+  .jammyG_sec04{
+    padding-bottom: calc(var(--base_unit_tm) * 5);
+  }
+  .jammyG_sec04 .custom_box{
+    gap: var(--base_unit_tm);
+  }
+  .jammyG_sec04 .img_box a{
+    height: 200px;
+  }
+  .jammyG_sec04 .img_box a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-@media (max-width: 480px) {
 
+/* 반응형 480px */
+@media (max-width: 480px) {
+  /* Layout, All */
+	main > section{
+	  padding-top: calc(var(--base_unit_tm) * 4);
+	}
+  /* Banner */
+	.banner .logo{
+		width: 263px;
+	  height: 70px;
+	}
+  .banner .title_box p{
+    top: 65px; 
+    right: calc(50% - 75px);
+  }
+  /* jammyG_sec01 */
+  .jammyG_sec01 .sec01_box:last-of-type{
+    padding-top: calc(var(--base_unit_tm) * 4);
+  }
+  .jammyG_sec01 img{
+    height: 220px;
+  }
+  /* jammyG_sec02 */
+  .jammyG_sec02 .talk_box{
+    display: block;
+  }
+  .jammyG_sec02 .talk_01{
+    display: flex;
+    flex-direction: column;
+  }
+  .jammyG_sec02 .talk_01 a,
+  .jammyG_sec02 .talk_01 a:last-of-type {
+    width: 100%;
+    padding-left: 0;
+  }
+  .jammyG_sec02 .talk_box .img_box{
+    height: 220px;
+  }
+  .jammyG_sec02 .talk_box .talk_tt{
+    padding: 2rem 2rem 0;
+  }
+  .jammyG_sec02 .talk_box .talk_pd{
+    padding: 0 2rem 2rem 0;
+  }
+  /* jammyG_sec03 */
+  .jammyG_sec03 .collabo_goods_list li{
+    width: 42.5%;
+  }
+  .jammyG_sec03 .collabo_goods_list .img_box{
+    height: 200px;
+  }
+  .jammyG_sec03 .text_box{
+    font-size: 1.3rem;
+  }
+  /* jammyG_sec04 */
+  .jammyG_sec04{
+    padding-bottom: calc(var(--base_unit_tm) * 5);
+  }
+  .jammyG_sec04 .custom_box{
+    display: block;
+  }
+  .jammyG_sec04 .custom_box > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .jammyG_sec04 .custom_box > div:first-child,
+  .jammyG_sec04 .custom_box > div:last-child{
+    flex-direction:row-reverse;
+  }
+  .jammyG_sec04 .custom_box div h4{
+    padding-top: 20px;
+  }
+  .jammyG_sec04 .img_box{
+    width: 55%;
+    height: 160px;
+  }
+  .jammyG_sec04 .img_box a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
