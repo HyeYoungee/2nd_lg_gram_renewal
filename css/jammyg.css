@@ -18,8 +18,8 @@ main h4{
   font-size: var(--bd_size_01);
 }
 main .img_box{
-  overflow: hidden;
   border-radius: var(--border_lg);
+  overflow: hidden;
   box-sizing: border-box;
 }
 main img{
@@ -34,6 +34,8 @@ main img:hover{
 }
 main a{
   color: var(--dark);
+  display: block;
+  pointer-events: none;
 }
 
 /* Banner */
@@ -139,6 +141,7 @@ main a{
   background: #fff;
   border-radius: var(--border_lg);
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.05);
+  display: none;
 }
 .jammyG_sec03 .collabo_goods_list .img_box{
   border-radius: var(--border_lg) var(--border_lg) 0 0;
@@ -164,19 +167,28 @@ main a{
 .jammyG_sec03 .collabo_goods_list button{
   position: absolute;
   padding: 10px;
-  bottom: 1;
+  bottom: 0;
   right: 0;
 }
-.jammyG_sec03 .collabo_goods_list button i{
-  display: inline-block;
-  width: 20px;
-  height: 18px;
-  background-size: cover;
-  background: url(../imgs/jammyG/Vector.svg) no-repeat;
+.jammyG_sec03 .img_box button::after{
+  content: '';
+  background: url(../imgs/jammyG/jammyG_like_active.svg) no-repeat;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  left: 10px;
+  display: none;
+}
+.jammyG_sec03 .img_box.active button::after{
+  display: block;
 }
 .jammyG_sec03 .more_btn{
   display: block;
   margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: var(--base_unit_d);
 }
 
 /* jammyG_sec04 */
@@ -189,6 +201,12 @@ main a{
 }
 
 /* 반응형 */
-@media (max-width: 1320px){
-  main{padding: 0 24px;}
+@media (max-width: 1320px) {
+  main {padding: 0 24px;}
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
 }
