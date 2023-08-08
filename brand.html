@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>brand - yurim</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <!-- <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/twentytwenty.css"> -->
 <link rel="stylesheet" href="./css/lib/twentytwenty.css">
@@ -172,17 +174,25 @@
         </div>
       </div>
     </section>
-    <div class="twenty center">
+    <section class="twenty center">
+      <div id='container1' class='twentytwenty-container'>
+        <img src = "imgs/brand/bg/15inch.png"alt = "Before"/>
+        <img src = "imgs/brand/bg/16inch.png"alt = "After"/>
+      </div>
+      <h2 class="animate__animated animate__delay-0.5s animate__slow">16:10 화면비로 생산성 UP</h2>
+    </section>
+    
+    <!-- <div class="twenty center">
       <div class = "20twenty-container twentytwenty-container">
         <img src = "imgs/brand/bg/15inch.png"alt = "Before"/>
         <img src = "imgs/brand/bg/16inch.png"alt = "After"/>
       </div>
       <h2 class="animate__animated animate__delay-0.5s animate__slow">16:10 화면비로 생산성 UP</h2>
-    </div>
+    </div> -->
     <section class="sec_7 center">
       <div class="dolby_wrap">
         <img src="imgs/brand/dolby/dolby_1.png" alt="">
-        <div class="dolby_tt">
+        <div class="dolby_tt gr_01_t container">
           <h2>생생한 입체 사운드로</h2>
           <h2>더욱 몰입감 있게</h2>
         </div>
@@ -204,8 +214,8 @@
     </section>
 
 
-    <section class="sec_9 container tt_01">
-      <h2>용도에 맞게 필요에 맞게 당신을 위한 그램 라인업</h2>
+    <section class="sec_9 container tt_01 container">
+      <h2>용도에 맞게 필요에 맞게<br>당신을 위한 그램 라인업</h2>
       <div class="row d-sm-flex container ">
         <div class="col-md-6 col-sm-12">
           <div class="img_wrap">

@@ -67,31 +67,40 @@ $(window).on('scroll', function () {
     weightTT = $('.weight li'),
     weightUpCount = weightTT.length,
     currentIdx = 0;
+    let nextIdx = 0;
 
   let weightStop;
   let isActive = false;
-
+  weightTT.fadeOut();
   function weightUp() {
+   //let nextIdx = (currentIdx + 1) % weightUpCount;
+    weightTT.eq(currentIdx).fadeIn();
+    setInterval(()=>{
+       nextIdx = (currentIdx + 1)%weightUpCount;
+      weightTT.eq(currentIdx).fadeOut(1000);
+      weightTT.eq(nextIdx).fadeIn(1000);
+      currentIdx = nextIdx;
+      
+    }, 4000);
+    // let nextIdx = (currentIdx + 1) % weightUpCount;
 
-    let nextIdx = (currentIdx + 1) % weightUpCount;
+    // weightTT.eq(currentIdx).css({ transformOrigin: '50% 0' });
+    // weightTT.eq(currentIdx).addClass('fold');
 
-    weightTT.eq(currentIdx).css({ transformOrigin: '50% 0' });
-    weightTT.eq(currentIdx).addClass('fold');
+    // // weightTT.eq(currentIdx).stop().animate({ transform: 'scaleY(0)' }, 1000, "linear");
 
-    // weightTT.eq(currentIdx).stop().animate({ transform: 'scaleY(0)' }, 1000, "linear");
+    // weightTT.eq(nextIdx).css({ transformOrigin: '50% 100%' });
+    // weightTT.eq(nextIdx).addClass('spread');
 
-    weightTT.eq(nextIdx).css({ transformOrigin: '50% 100%' });
-    weightTT.eq(nextIdx).addClass('spread');
-
-    setTimeout(() => {
-      weightTT.eq(currentIdx).removeClass('fold');
-      weightTT.eq(nextIdx).removeClass('spread');
-    })
+    // setTimeout(() => {
+    //   weightTT.eq(currentIdx).removeClass('fold');
+    //   weightTT.eq(nextIdx).removeClass('spread');
+    // })
 
     // weightTT.eq(nextIdx).stop().animate({ transform: 'scaleY(1)' }, 1000,"linear");
-    currentIdx = nextIdx;
+    //currentIdx = nextIdx;
     if (currentIdx == 2) {
-      clearInterval(weightStop);
+      clearInterval(weightUp);
 
     };
   }
@@ -116,59 +125,31 @@ $(window).on('scroll', function () {
       count = 1;
       let batterySwitch = false;
 
-
-
-      // function batteryAnimation() {
-      //   let sct = $(window).scrollTop(),
-      //   count = Math.floor(((sct) / divisionOSP) * 3)
-      //   const battery = $('.division_tt img')
-      //   // count++;
-      //   battery.attr({ "src": `imgs/brand/brand_division/battery/battery_${count}.png` })
-      // }
-      
-    //console.log(plusOSP);
     console.log( $('.division_tt img').innerHeight());
     if (sct > plusOSP) {
       plusIcon.addClass('acitve');
       $('.plus_bg').fadeOut(1000);
-      
     }
     if (sct > divisionOSP) {
       divisionIcon.addClass('acitve');
       $('.division_bg').fadeOut(1000);
-      if(!batterySwitch){
-        let i = 1;
-        let battery = setInterval(() => {
-          $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${i}.png`});
-          i++;
-          if(i == 25){
-            clearInterval(battery);
-          }
-        }, 100);
-        batterySwitch = true;
-      };
-     //batteryAnimation();
-      // count = Math.floor(((sct) / divisionOSP) * 8)
-      // count = Math.floor(((sct) / $('.division_tt img').innerHeight()/ 6))
-      // if (count > 1 && count <=23) { 
-      //   $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${count}.png`}) 
-      // }
-      // if (count = 23) { 
-      // $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_24.png`}) 
-      // }
-    //   let i = 1;
-    //   function batteryAnimation(){
-    //     setInterval((i)=>{
-    //       if(i != 24){
-       
-    //         $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${i}.png`}) 
-    //         i++;
-    //       }
-    //     },100)
-    //   }
-    //   batteryAnimation();
-      
-    // }
+
+      if(sct > divisionOSP + 50) {
+        if(!batterySwitch){
+          let i = 1;
+          let battery = setInterval(() => {
+            $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${i}.png`});
+            i++;
+            if(i == 25){
+              clearInterval(battery);
+            }
+          }, 100);
+          batterySwitch = true;
+        };
+  
+      }
+
+    
 
     if (sct > multipleOSP) {
       multipleIcon.addClass('acitve');
@@ -302,23 +283,24 @@ $(window).on('scroll', function () {
   let sct = $(window).scrollTop();
 
   console.log(sec8OST)
-  if (!switch1) {
-    if (sct > sec8OST) {
+  if (sct > sec8OST) {
+    if (!switch1){
+  
       sec8.find('.sec_8_tt1').fadeIn();
-
-      if (sct > sec8OST + 30) {
-        sec8.find('.sec_8_tt1').fadeOut();
-        sec8.find('.sec_8_tt2').fadeIn();
-
-        // if (sct > sec8OST + 0) {
-        //   sec8.find('.sec_8_tt1').fadeout();
-        // }
-      }
-      //sec8.find('.sec_8_tt1').addClass('active');
+    }  switch1 = true;
+    if (sct > sec8OST + 10) {
+      sec8.find('.sec_8_tt1').fadeOut();
+      // sec8.find('.sec_8_tt2').fadeIn();
     }
+    if (sct > sec8OST + 20) {
+      // sec8.find('.sec_8_tt1').fadeOut();
+      sec8.find('.sec_8_tt2').fadeIn();
+    }
+    //sec8.find('.sec_8_tt1').addClass('active');
+   
 
   }
-  switch1 = false;
+
   })
 });
 

@@ -306,10 +306,6 @@ const csSwiper = new Swiper('.mySwiper', {
     }
   },
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true,
@@ -319,22 +315,15 @@ const csSwiper = new Swiper('.mySwiper', {
     draggable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     pauseOnMouseEnter: true,
   },
-  // navigation: {
-  //   // enabled:true,
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  //   // nextEl: '.control_prev',
-  //   // prevEl: '.control_next',
-  // },
-});
-
-$('.control_prev').on('click', function () {
-  csSwiper.slidePrev();
-});
-$('.control_next').on('click',function () {
-  csSwiper.slideNext();
+  navigation: {
+    // enabled:true,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    // nextEl: '.control_prev',
+    // prevEl: '.control_next',
+  },
 });
 /* 김유림 main_sec_06_service 끝 */
