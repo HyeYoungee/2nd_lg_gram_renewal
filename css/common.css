@@ -430,6 +430,7 @@ nav {
   display: flex;
   padding-left: 0;
   margin-top: -5px;
+  margin-bottom: 0;
 }
 .main_header_menu > li {
   padding: 12px 20px;
@@ -474,6 +475,7 @@ nav {
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 .main_header_icons a svg {
   width: 30px;

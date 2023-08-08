@@ -2,14 +2,6 @@
 body{
   padding-top: 72px;
 }
-nav{
-  position: fixed;
-  background-color: rgba(213, 228, 235, 0.436);
-  width: 100%;
-  height: 72px;
-  top: 0;right: 0;left: 0;
-  z-index: 9999;
-}
 /* story_section01~09공통 */
 section{
   width: 100%;
