@@ -473,30 +473,24 @@
   .sm_img {
     display: flex;
     flex-direction: row;
+   justify-content: center;
   }
   .big_img {
     display: flex;
     justify-content: center;
   }
   .color_item .big_img img {
-    width: 80%;
+    width: 60%;
   }
   .color_item .sm_img img {
-    width: 50%;
+    width: 40%;
   }
   .color_fixed .color_fixed_text h2,
   .color_fixed .color_fixed_text div span {
     font-size: 3.6rem;
     line-height: 150%;
   }
-  .card {
-    width: 432px;
-    height: 740px;
-  }
-  .card_img_wrap img {
-    width: 380px;
-    height: 320px;
-  }
+
 
   .product_cost,
   .product_title {

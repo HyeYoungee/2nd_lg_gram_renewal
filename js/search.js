@@ -101,8 +101,9 @@ $(function () {
               <p class='product_weight'>무게(g) 약 ${item.product_weight.toLocaleString()}</p>
               <p class='review'>${starSVG}<span>${item.rating}</span></p>
                <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
+               <button class="add_btn">구매하기</button>
             </div>
-            <button class="add_btn">구매하기</button>
+          
           </div>
         </li>`;
       });

@@ -303,7 +303,7 @@ a {
   width: 64px;
   height: 64px;
   position: fixed;
-  bottom: 288px;
+  bottom: 289px;
   right: 125px;
   line-height: 64px;
   text-align: center;
@@ -314,6 +314,7 @@ a {
   border-radius: 50%;
   letter-spacing: 0.05em;
   z-index: 1000;
+  cursor: pointer;
 }
 
 #lg_logo_btn svg:hover {
@@ -339,6 +340,7 @@ a {
   letter-spacing: 0.05em;
   font-weight: 700;
   z-index: 1000;
+  cursor: pointer;
 }
 
 #gotop_btn:hover {
@@ -526,6 +528,14 @@ footer {
   .footer_info_link_wrap ul li {
     flex: 1 0 50%;
   }
+  #gotop_btn{
+    right:154px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 154px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -551,6 +561,14 @@ footer {
     padding: 18px 0;
     justify-content: center;
   }
+  #gotop_btn{
+    right:32px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 32px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -563,7 +581,16 @@ footer {
   .footer_sns_wrap ul li {
     margin-right: 15px;
   }
+  #gotop_btn{
+    right:32px;
+  
+  }
+  #lg_logo_btn svg{
+    position: fixed;
+    right: 32px;
+  }
 }
+
 /* 이현정 footer 끝 */
 
 @media (min-width: 1272px) {

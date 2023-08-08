@@ -24,7 +24,7 @@
 
 .search_bar input::placeholder {
   color: var(--gray-01, #b0b8c1);
-  font-size: var(--bd_size_02);
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -46,12 +46,6 @@
   margin: 30px 0 60px 0;
   position: relative;
 }
-
-/* .item {
-  width: 189px;
-  height: 48px;
-  margin: 0 2px 0 2px;
-} */
 
 .filter_type h2,
 .filter_price h2,
@@ -182,8 +176,9 @@ label {
   border-radius: 12px 12px 0px 0px;
 }
 .result_length {
-  margin-top: 70px;
+  margin: 70px 0 30px 42px;
 }
+
 .card_text {
   text-align: center;
   padding: 36px 34px 36px 34px;
@@ -255,6 +250,10 @@ label {
   }
 }
 
+footer{
+  margin-top: 100px;
+}
+
 @media (max-width: 768px) {
   .search_bar {
     width: 70%;
@@ -281,20 +280,12 @@ label {
   .input_wrap span {
     width: 50%;
   }
-  .card {
-    width: 432px;
-    height: 740px;
-  }
-  .card_img_wrap img {
-    width: 380px;
-    height: 320px;
-  }
-
   .product_cost,
   .product_title {
     font-size: 2.4rem;
   }
-  .result_length {
-    margin-left: 42px;
+  .search_bar input::placeholder{
+    font-size: 1.4rem;
   }
+ 
 }
