@@ -422,16 +422,6 @@ input {
     margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
   }
 }
-@media (min-width: 768px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 100%;
-  }
-}
 
 /* 태블릿 (해상도 480px ~ 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
