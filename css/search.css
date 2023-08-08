@@ -38,6 +38,7 @@
 }
 
 .filter_section {
+  width: 100%;
   max-width: 1054px;
   border-radius: var(--border_md);
   background: var(--white-bg, #fdfdfd);
@@ -46,11 +47,11 @@
   position: relative;
 }
 
-.item {
+/* .item {
   width: 189px;
   height: 48px;
   margin: 0 2px 0 2px;
-}
+} */
 
 .filter_type h2,
 .filter_price h2,
@@ -64,23 +65,25 @@
   flex-wrap: wrap;
 }
 
+.input_wrap span {
+  width: 20%;
+}
+
 label {
-  height: 48px;
-  border: 2px solid var(--gray-03, #58606a);
+  box-sizing: border-box;
+  border: 2px solid var(--gray_01, #58606a);
   border-radius: var(--border_lg);
   background-color: var(--white_00);
   display: block;
   position: relative;
   text-align: center;
   line-height: 48px;
-  font-size: var(--bd_size_02);
+  font-size: 2rem;
+  font-family: Gmarket Sans TTF;
+  padding-top: 5px;
   margin-right: 5px;
   margin-bottom: 13px;
   cursor: pointer;
-}
-
-.input_wrap span {
-  width: 25%;
 }
 
 .input_wrap span.checked label {
@@ -140,12 +143,11 @@ label {
 /* card ui css */
 
 .cards-container {
-  background: var(--white_00);
+  background-color: var(--white_bg);
 }
 .card {
   width: 400px;
-
-  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4);
+  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.8);
   border-radius: var(--border_lg);
   background: #fff;
   margin: 0 12px 38px 12px;
@@ -221,13 +223,25 @@ label {
 
 @media (max-width: 1270px) {
   label {
-    margin: 7px 5px;
+    /* margin: 7px 5px; */
   }
   .search_bar {
     width: 90%;
   }
   .filter_section {
     width: 90%;
+  }
+  .card {
+    width: 348px;
+    height: 740px;
+  }
+  .card_img_wrap img {
+    width: 340px;
+    height: 320px;
+  }
+  .card_text {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
   }
 }
 
@@ -237,6 +251,19 @@ label {
   }
   .input_wrap span {
     width: 33%;
+  }
+  .card {
+    width: 348px;
+    height: 740px;
+    margin: 30px 5px;
+  }
+  .card_img_wrap img {
+    width: 340px;
+    height: 320px;
+  }
+  .card_text {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
   }
 }
 
@@ -256,5 +283,8 @@ label {
   .product_cost,
   .product_title {
     font-size: 2.4rem;
+  }
+  .result_length {
+    margin-left: 42px;
   }
 }

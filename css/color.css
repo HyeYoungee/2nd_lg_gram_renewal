@@ -311,26 +311,6 @@
 }
 
 .btn_set li:nth-child(4) {
-  /* background: var(
-    --point-color,
-    linear-gradient(
-      46deg,
-      #ffe0f2 0%,
-      #f9e0f7 6.77%,
-      #f1e0fa 20.31%,
-      #e9e1fd 30.21%,
-      #e0e2ff 45.31%,
-      #d7e5ff 56.25%,
-      #cfe8ff 73.11%,
-      #c8eaff 83.69%,
-      #c0f0ff 88.9%,
-      #b8f5ff 95.39%,
-      #b2faff 100%
-    )
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   background-color: pink;
   margin-right: 0;
 }
