@@ -214,8 +214,6 @@ $("#gramcolor").niceSelect();
 var swiper = new Swiper(".slider", {
   slidesPerView: 1,
   centeredSlides: true,
-  // allowSlideNext: false,
-  // allowSlidePrev: false,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -240,37 +238,18 @@ var swiper = new Swiper(".slider", {
   },
 });
 
-// let slide = $('.swiper-slide.swiper-slide-active img');
-// console.log(slide);
-
-// slide.on('mouseenter',function(e){
-//   console.log('stop autoplay');
-//   swiper.stopAutoplay();
-// });
-// slide.on('mouseleave',function(e){
-//   console.log('start autoplay');
-//   swiper.startAutoplay();
-// });
-
 //autoplayStart autoplayStop
-let slide = $(".swiper-slide.swiper-slide-active img");
+let slide = $(".swiper-slide img");
 console.log(slide);
 
-slide.mouseenter(function (e) {
+slide.on('mouseenter',function (e) {
   console.log("stop autoplay");
-  swiper.stopAutoplay();
+  swiper.autoplay.stop();
 });
-slide.mouseleave(function (e) {
+slide.on('mouseleave',function (e) {
   console.log("start autoplay");
-  swiper.startAutoplay();
+  swiper.autoplay.start();
 });
-
-// slide.sliderMove(function(){
-//   swiper.autoplay.stop();
-// });
-// slide.sliderMove(function(){
-//   swiper.autoplay.play();
-// });
 /* 천혜영 main_sec_02_slide 끝 */
 
 /* 천혜영 main_sec_05_all 시작 */

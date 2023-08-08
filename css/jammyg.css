@@ -27,6 +27,7 @@ main img{
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  vertical-align: top;
 }
 main img:hover{
   transform: scale(1.05);
@@ -138,21 +139,26 @@ main a{
   background: #fff;
   border-radius: var(--border_lg);
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.05);
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 .jammyG_sec03 .collabo_goods_list .img_box{
   border-radius: var(--border_lg) var(--border_lg) 0 0;
   width: 100%;
   height: 70%;
   position: relative;
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.jammyG_sec03 .collabo_goods_list .text_box{
+  width: 100%;
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .jammyG_sec03 .collabo_goods_list p{
   font-size: max(1.4rem, min(2.5vw, 1.6rem));
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
-  /* align-items: center; */
   padding: 24px 0;
 }
 .jammyG_sec03 .collabo_goods_list button{
@@ -168,8 +174,10 @@ main a{
   background-size: cover;
   background: url(../imgs/jammyG/Vector.svg) no-repeat;
 }
-
-
+.jammyG_sec03 .more_btn{
+  display: block;
+  margin: 0 auto;
+}
 
 /* jammyG_sec04 */
 .jammyG_sec04{

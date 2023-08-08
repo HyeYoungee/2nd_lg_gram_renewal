@@ -313,9 +313,8 @@ a#scroll_btn:after {
 /* 이현정 main_sec1_video 끝 */
 
 /* 천혜영 main_sec_02_slide 시작 */
-.main_sec2 p,
-.main_sec5 .container > p {
-  font-size: var(--bd_size_03);
+.main_sec2 .swiper-slide p,
+.main_sec5 .container > p {  
   padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
 }
 .main_sec2 {
@@ -325,6 +324,9 @@ h2 {
   font-family: "Gmarket Sans TTF";
   font-weight: bold;
   font-size: max(3.2rem, min(5vw, 4.8rem));
+}
+.main_sec2 .swiper-slide p{
+  font-size: 2.2rem;
 }
 .main_sec2 .swiper-slide img {
   max-width: 900px;
@@ -368,7 +370,7 @@ h2 {
 .main_sec2 .swiper-horizontal .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  color: #505050;
+  /* color: #505050; */
   /* background: var(--blue_02); */
 }
 /* 천혜영 main_sec_02_slide 끝 */
@@ -504,6 +506,9 @@ h2 {
 .main_sec5 {
   text-align: center;
 }
+.main_sec5 .container > p {
+  font-size: var(--bd_size_03);
+}
 .main_sec5 .card_box {
   display: grid;
   gap: 24px;
@@ -579,17 +584,24 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .main_sec2 p,
+  .main_sec2, .main_sec3_brand, 
+  .select-container, .main_sec5, .main_sec6_service{
+    padding: calc(var(--base_unit_tm) * 5) 0;
+  }
+  .main_sec2 .swiper-slide p,
   .main_sec5 .container > p {
     padding: var(--base_unit_tm) 0 calc(var(--base_unit_tm) * 1.5) 0;
+  }
+  .main_sec2 .swiper-slide p{
+    font-size: 1.8rem;
+  }
+  .main_sec2 .content {
+    top: 20px;
   }
   .main_sec5 .card_box {
     gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-  }
-  .main_sec5 div[class^="card"] {
-    /* height: 240px; */
+    grid-template-rows: 240px 240px 240px;
   }
   .main_sec5 .card_01 {
     grid-column: 1;
@@ -621,8 +633,23 @@ h2 {
   .main_sec2 {
     margin: 0 24px;
   }
+  .main_sec2 .content {
+    top: 50px;
+  }
+  .main_sec2 .content h2{
+    font-size: 2.8rem;
+  }
+  .main_sec2 .swiper-slide p{
+    font-size: 1.6rem;
+  }
   .main_sec5 .card_box {
     display: block;
+  }
+  .main_sec5 .card_box > div{
+    height: 240px;
+  }
+  .main_sec5 .card_box > div+div{
+    margin-top: 20px;
   }
 }
 /* 천혜영 main_sec_05_all 끝 */
