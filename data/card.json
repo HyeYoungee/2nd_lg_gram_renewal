@@ -252,7 +252,7 @@
     "price": "price_150"
   },
   {
-    "image": "https://velog.velcdn.com/images/hyunny123/post/df49ec3a-11c1-4bf3-9bc4-a7f3533ea367/image.png",
+    "image": "https://velog.velcdn.com/images/hyunny123/post/8ed90b9a-18f1-47c3-9132-8bf7db3cfa1b/image.png",
     "product_num": "17Z90R-EA5CK",
     "product_title": "LG 그램 40.6cm",
     "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
@@ -260,7 +260,7 @@
     "rating": "5.00 (5)",
     "cost": 2349000,
     "type": "type_gram",
-    "color": "color_black",
+    "color": "color_white",
     "price": "price_250"
   },
   {
@@ -312,6 +312,18 @@
     "price": "price_350"
   },
   {
+    "image": "https://velog.velcdn.com/images/hyunny123/post/8ed90b9a-18f1-47c3-9132-8bf7db3cfa1b/image.png",
+    "product_num": "17Z90R-EA5CK",
+    "product_title": "LG 그램 40.6cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1199,
+    "rating": "5.00 (5)",
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_snow",
+    "price": "price_250"
+  },
+  {
     "image": "https://velog.velcdn.com/images/hyunny123/post/2be78f61-49e5-4ebf-a12b-b88f5b88d990/image.png",
     "product_num": "17ZD90RU-GX56K",
     "product_title": "LG 그램 43.1cm",
@@ -348,6 +360,18 @@
     "price": "price_250"
   },
   {
+    "image": "https://velog.velcdn.com/images/hyunny123/post/8ed90b9a-18f1-47c3-9132-8bf7db3cfa1b/image.png",
+    "product_num": "17Z90R-EA5CK",
+    "product_title": "LG 그램 40.6cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1199,
+    "rating": "5.00 (6)",
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_white",
+    "price": "price_250"
+  },
+  {
     "image": "https://velog.velcdn.com/images/hyunny123/post/80326f9f-ad69-4303-9a99-09e6d97f6643/image.png",
     "product_num": "17Z90R-EA5CK",
     "product_title": "LG 그램 43.1cm",
@@ -357,6 +381,30 @@
     "cost": 2200000,
     "type": "type_gram",
     "color": "color_green",
+    "price": "price_250"
+  },
+  {
+    "image": "https://velog.velcdn.com/images/hyunny123/post/8ed90b9a-18f1-47c3-9132-8bf7db3cfa1b/image.png",
+    "product_num": "17Z90R-EA5CK",
+    "product_title": "LG 그램 35.5cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1199,
+    "rating": "5.00 (5)",
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_snow",
+    "price": "price_250"
+  },
+  {
+    "image": "https://velog.velcdn.com/images/hyunny123/post/8ed90b9a-18f1-47c3-9132-8bf7db3cfa1b/image.png",
+    "product_num": "17Z90R-EA5CK",
+    "product_title": "LG 그램 30.6cm",
+    "product_desc1": "인텔® Evo™ 플랫폼 13세대 인텔® 코어™ i5-1340P 프로세서",
+    "product_weight": 1199,
+    "rating": "5.00 (15)",
+    "cost": 2349000,
+    "type": "type_gram",
+    "color": "color_snow",
     "price": "price_250"
   },
   {

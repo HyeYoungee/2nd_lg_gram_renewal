@@ -261,27 +261,28 @@
 
 /* 4번째 섹션 */
 
-.color_items_wrap {
-  height: 85vh;
-}
-
 .color_items {
   width: 100%;
-  position: relative;
 }
 
 .color_item {
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   display: none;
+}
+
+.big_img,
+.sm_img {
+  flex: 1;
 }
 
 .big_img img,
 .sm_img img {
   width: 100%;
   height: auto;
+}
+
+.btn_set_wrap {
+  margin-top: 18px;
 }
 
 .btn_set li {
@@ -371,7 +372,6 @@
 }
 
 .card_img_wrap {
-  /* width: 408px; */
   height: 312px;
   border-radius: 12px 12px 0px 0px;
 }
@@ -379,19 +379,17 @@
 .card_img_wrap img {
   width: 290px;
   height: 290px;
-  /* height: 312px; */
   border-radius: 12px 12px 0px 0px;
   margin: 12px 0 12px 0;
 }
 
 .card_text {
   text-align: center;
-  /* padding: 36px 31px 25px 31px; */
 }
 
 .card_text p {
   font-weight: 400;
-  font-size: var(--body_text_unit);
+  font-size: 1.6rem;
 }
 
 .product_num {
@@ -410,7 +408,7 @@
 .product_desc1,
 .product_weight {
   color: var(--gray-03, #58606a);
-  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-size: 1.6rem;
   line-height: 1.4;
   padding: 0 0 0 0;
 }
@@ -440,16 +438,10 @@
 }
 
 @media (max-width: 1270px) {
-  .color_items {
-    height: 850px;
-  }
   .color_fixed_img {
     height: 100vh;
     background-position: 50% 50%;
     background-size: cover;
-  }
-  .color_items_wrap {
-    height: 80vh;
   }
 }
 
@@ -458,9 +450,7 @@
   .color_text h2 {
     font-size: 4.8rem;
   }
-  .color_items {
-    height: 540px;
-  }
+
   .color_fixed_img {
     height: 100vh;
     background-position: 50% 50%;
@@ -480,9 +470,6 @@
   .big_img img {
     width: 100%;
   }
-  .color_items_wrap {
-    height: 60vh;
-  }
 }
 
 @media (max-width: 480px) {
@@ -494,9 +481,9 @@
     font-size: 4.8rem;
     margin-left: 0;
   }
-  .color_items {
+  /* .color_items {
     height: 680px;
-  }
+  } */
   .color_item {
     display: flex;
     flex-direction: column;
@@ -532,10 +519,6 @@
   .card_img_wrap img {
     width: 380px;
     height: 320px;
-  }
-
-  .color_items_wrap {
-    height: 90vh;
   }
 
   .product_cost,

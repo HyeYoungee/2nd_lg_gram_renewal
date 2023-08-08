@@ -42,6 +42,13 @@ $(window).resize(function () {
 $("#gramtype").niceSelect();
 $("#gramcolor").niceSelect();
 
+$(".goPage").on("click", function () {
+  const typeSelect = $("#gramtype").val();
+  const colorSelect = $("#gramcolor").val();
+  console.log(typeSelect, colorSelect);
+  window.location.href = `http://127.0.0.1:5506/search.html?type=${typeSelect}&color=${colorSelect}`;
+});
+
 // }
 // let videoSection = document.querySelector(".main_sec01_video"),
 //   videoWrapper = videoSection.querySelector(".main_video"),
