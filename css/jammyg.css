@@ -1,12 +1,6 @@
-header{
-  width: 100%;
-  height: 72px;
-  text-align: center;
-  font-size: 28px;
-}
 /* Layout, All */
 .container{
-  width: 1272px;
+  max-width: 1272px;
   margin: 0 auto;
 }
 main > section{
@@ -15,13 +9,30 @@ main > section{
 main h3, main h4{
   font-family: 'Gmarket Sans TTF';
   font-weight: bold;
-  padding-left: var(--base_unit_d);
+  padding: 0 0 var(--base_unit_d) var(--base_unit_d);
 }
 main h3{
-  font-size: var(--sub_cont);
+  font-size: max(2.4rem, min(3.5vw, 3.2rem));
 }
 main h4{
-  font-size: var(--body_lg);
+  font-size: var(--bd_size_01);
+}
+main .img_box{
+  overflow: hidden;
+  border-radius: var(--border_lg);
+  box-sizing: border-box;
+}
+main img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+main img:hover{
+  transform: scale(1.05);
+}
+main a{
+  color: var(--dark);
 }
 
 /* Banner */
@@ -42,12 +53,134 @@ main h4{
 }
 .banner .title_box p{
   position: absolute;
-  top: 110px; left: calc(50% - 90px);
+  top: 110px; 
+  right: calc(50% - 130px);
   font-family: 'Gmarket Sans TTF';
   font-weight: bold;
-  font-size: var(--cont_tt);
+  font-size: var(--tt_size_03);
 }
 
-.custom{
+/* jammyG_sec01 */
+.jammyG_sec01{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 24px;
+}
+.jammyG_sec01 img{
+  height: 360px;
+}
+.jammyG_sec01 .sec01_box{
+  position: relative;
+}
+.jammyG_sec01 .sec01_box p{
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  text-align: right;
+  margin: 0 20px 20px 0;
+  line-height: 1.4;
+  font-family: 'Gmarket Sans TTF';
+  font-size: var(--bd_size_04);
+  color: var(--white_00);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.30);
+}
+
+/* jammyG_sec02 */
+.jammyG_sec02 .talk_box{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+.jammyG_sec02 .talk_01{
+  grid-row: 1 / span 2;
+}
+/* .jammyG_sec02 div[class^="talk"] > div */
+.jammyG_sec02 .talk_01 .img_box{
+  border: 5px solid transparent;
+  background-image: var(--point_gr_02);
+  background-origin: border-box;
+  height: 360px;
+}
+.jammyG_sec02 .talk_02 .img_box,
+.jammyG_sec02 .talk_03 .img_box,
+.jammyG_sec02 .talk_04 .img_box{
+  border: 5px solid transparent;
+  border-radius: var(--border_lg);
+  background-image: var(--point_gr_01);
+  background-origin: border-box;
+  height: 216px;
+}
+.jammyG_sec02 .talk_tt{
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--gray_04);
+  line-height: 1.4;
+  padding: 24px 5px 10px;
+}
+.jammyG_sec02 .talk_pd{
+  color: var(--gray_03);
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* jammyG_sec03 */
+.jammyG_sec03 .collabo_goods_list{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.jammyG_sec03 .collabo_goods_list li{
+  width: 22%;
+  padding: 10px 10px 0;
+  background: #fff;
+  border-radius: var(--border_lg);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.05);
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+.jammyG_sec03 .collabo_goods_list .img_box{
+  border-radius: var(--border_lg) var(--border_lg) 0 0;
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+.jammyG_sec03 .collabo_goods_list p{
+  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+  /* align-items: center; */
+  padding: 24px 0;
+}
+.jammyG_sec03 .collabo_goods_list button{
+  position: absolute;
+  padding: 10px;
+  bottom: 1;
+  right: 0;
+}
+.jammyG_sec03 .collabo_goods_list button i{
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  background-size: cover;
+  background: url(../imgs/jammyG/Vector.svg) no-repeat;
+}
+
+
+
+/* jammyG_sec04 */
+.jammyG_sec04{
   padding-bottom: calc(var(--base_unit_d) * 7);
+}
+.jammyG_sec04 .custom_box{
+  display: flex;
+  gap: 24px;
+}
+
+/* 반응형 */
+@media (max-width: 1320px){
+  main{padding: 0 24px;}
 }
