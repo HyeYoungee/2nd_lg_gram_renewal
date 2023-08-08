@@ -267,8 +267,7 @@
 }
 
 .color_item {
-  width: 60%;
-  margin: 0 auto;
+  width: 100%;
   display: none;
 }
 
@@ -444,9 +443,6 @@
     background-position: 50% 50%;
     background-size: cover;
   }
-  .color_item {
-    width: 80%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -465,9 +461,7 @@
     font-size: 3.6rem;
     line-height: 150%;
   }
-  .color_item {
-    width: 100%;
-  }
+
   .big_img {
     flex-basis: 50%;
   }
