@@ -78,11 +78,6 @@ label {
   margin-bottom: 13px;
   cursor: pointer;
 }
-/* 버튼에 액티브 */
-/* label.focus {
-  background: var(--blue_01);
-  color: var(--white_00);
-} */
 
 .input_wrap span {
   width: 25%;
@@ -131,9 +126,6 @@ label {
   background: var(--blue_02, #4593fc);
 }
 
-.reset_btn.active {
-}
-
 /* card count */
 .length_wrap {
   font-size: 20px;
@@ -154,7 +146,6 @@ label {
   width: 400px;
 
   box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4);
-  /* border: 1px solid #000; */
   border-radius: var(--border_lg);
   background: #fff;
   margin: 0 12px 38px 12px;
@@ -176,7 +167,6 @@ label {
 
 .card_img_wrap img {
   width: 345px;
-  /* height: 312px; */
   border-radius: 12px 12px 0px 0px;
 }
 .result_length {
@@ -245,9 +235,6 @@ label {
   .search_bar {
     width: 70%;
   }
-  /* .result_length {
-    padding-left: 20px;
-  } */
   .input_wrap span {
     width: 33%;
   }
@@ -256,5 +243,18 @@ label {
 @media (max-width: 480px) {
   .input_wrap span {
     width: 50%;
+  }
+  .card {
+    width: 432px;
+    height: 740px;
+  }
+  .card_img_wrap img {
+    width: 380px;
+    height: 320px;
+  }
+
+  .product_cost,
+  .product_title {
+    font-size: 2.4rem;
   }
 }
