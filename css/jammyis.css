@@ -1,3 +1,7 @@
+:root {
+  --animate-delay: 0.5s;
+}
+
 /* Layout, All */
 main{
   background: var(--black_00);
