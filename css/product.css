@@ -1,12 +1,11 @@
 .cs_desc{padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
 }
-section img{width: 100%;}
+.product_section02 img{width: 100%;}
 
 /* 추천제품 섹션 */
 
-.color_rec h2 {
+.product_section01 div h2 {
   text-align: center;
-  margin-bottom: 100px;
   line-height: 150%;
 }
 
@@ -67,8 +66,8 @@ section img{width: 100%;}
   padding: 24px 0 36px 0;
 }
 
-.product_desc1,
-.product_weight {
+.product_desc1,.product_desc2,.product_desc3
+{
   color: var(--gray-03, #58606a);
   font-size: 1.6rem;
   line-height: 1.4;

@@ -27,7 +27,7 @@ section img:hover{animation: shake 0.5s ease-in-out;}
   font-weight: bold;
 }
 .story_section01 span, .story_section02 span, .story_section05 span{
-  background: var(--point_gr_01,linear-gradient);
+  background: var(--point_gr_01);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@ section img:hover{animation: shake 0.5s ease-in-out;}
 }
 .story_section03 h2 span,.story_section04 h2 span{
   display: block;
-  margin-top: var(--base_unit_d)*2/3;
+  margin-top: calc(var(--base_unit_d)*2/3);
 }
 .story_section06_influencer h2, .story_section07_creator h2 {
   padding-bottom:calc(var(--base_unit_d)*2);
@@ -138,14 +138,62 @@ padding: 0 var(--tt_size_01);
   height:calc(var(--tt_size_01)*4);
   }
 /* Who Am I? 시작 */
-.section06_container {padding-bottom:calc(var(--base_unit_d)*2);
-.box { width: calc(var(--tt_size_01)*5); position: relative; display: inline-block;
-.title { width: 100%; position: relative; display: flex;align-items: center; height: 50px;
-    .block { width: 0%;  height: inherit; background: var(--point_gr_01,linear-gradient); border-radius:8px; position: absolute; animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;display: flex;}
-    .titlecont { font-family: "Gmarket Sans TTF";color: var(--dark); font-size: calc(var(--tt_size_01)*.8);-webkit-animation: mainFadeIn 2s forwards; z-index: 9;
-      -o-animation: mainFadeIn 2s forwards; animation: mainFadeIn 2s forwards;animation-delay: 1.6s; opacity: 0; display: flex;align-items: baseline; position: relative;}}
-  .role { width: 100%;position: relative;display: flex;align-items: center;height:calc(var(--tt_size_01)*.6) ;margin-top: -25px;
-      .block { width: 0%;height: inherit;background: var(--point_gr_01,linear-gradient); border-radius:8px; position: absolute; animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards; animation-delay: 2s;display: flex; } } } }
+.section06_container {
+  padding-bottom: calc(var(--base_unit_d) * 2);
+}
+.box {
+  width: calc(var(--tt_size_01) * 5);
+  position: relative;
+  display: inline-block;
+}
+.title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.title .block {
+  width: 0%;
+  height: inherit;
+  background: var(--point_gr_01);
+  border-radius: 8px;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  display: flex;
+}
+.title .titlecont {
+  font-family: "Gmarket Sans TTF";
+  color: var(--dark);
+  font-size: calc(var(--tt_size_01) * 0.8);
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  z-index: 9;
+}
+.role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(var(--tt_size_01) * 0.6);
+  margin-top: -25px;
+}
+.role .block {
+  width: 0%;
+  height: inherit;
+  background: var(--point_gr_01);
+  border-radius: 8px;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
 @keyframes mainBlock { 0% { width: 0%;  left: 0; } 50% { width: 100%; left: 0; } 100% { width: 0; left: 100%; } }
 @keyframes secBlock { 0% { width: 0%; left: 0; } 50% { width: 100%; left: 0; } 100% { width: 100%;left: 0; } }
 @keyframes mainFadeIn { 0% { opacity: 0; } 100% { opacity: 1; }}
