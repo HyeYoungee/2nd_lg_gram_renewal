@@ -622,7 +622,9 @@ h2.select_t {
 }
 .main_sec5 .container > p {
   font-size: var(--bd_size_03);
+  font-family: "Gmarket Sans TTF";
 }
+
 .main_sec5 .card_box {
   display: grid;
   gap: 24px;
