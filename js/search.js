@@ -88,7 +88,7 @@ $(function () {
     let listHTML = "";
 
     if (data.length > 0) {
-      $.each(data, function (i, item) {
+      $.each(filteredData, function (i, item) {
         listHTML += `<li class='card'>
           <div>
             <div class='card_img_wrap d-flex justify-content-center '>
@@ -99,7 +99,7 @@ $(function () {
               <h3 class='product_title'>${item.product_title}</h3>
               <p class='product_desc1'>${item.product_desc1}</p>
               <p class='product_weight'>무게(g) 약 ${item.product_weight.toLocaleString()}</p>
-              <p class='review'>${starSVG}<span>${item.rating}</span></p>
+              <p class='review'>&starf;<span>${item.rating}</span></p>
                <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
                <button class="add_btn">구매하기</button>
             </div>

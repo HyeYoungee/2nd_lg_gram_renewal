@@ -1,4 +1,70 @@
+/* 이현정 - 팝업 시작 */
+.popup{
+  position: fixed;
+  top: 12%;
+  left: 5%;
+  background-color: #fbfbfb;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  padding: 40px 40px;
+  border-radius: 10px;
+  z-index: 3000;
+  margin: 0;
+  letter-spacing: 0.02em;
+  border: 3px solid var(--blue_01);
+  
+}
 
+.popup .tt_01{
+  text-align: center;
+  line-height: 160%;
+  margin-bottom:10px;
+}
+
+.popup .content_tt{
+  font-size: var(--bd_size_05)*0.7;
+  line-height: 150%;   
+
+}
+
+.popup .content_stt{
+  font-size: var(--bd_size_05)*0.5;
+  line-height: 150%;
+  font-weight: 600;      
+}
+
+.pp_top,
+.pp_date,
+.pp_team {
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #6b7684;
+  text-transform: uppercase;
+}
+
+.pp_date p em,.pp_team p em{
+  background: var(--point_gr_02);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pp_close input{
+  font-size:2rem;
+}
+
+#ppCloseBtn{
+  position: absolute;
+  top:20px;
+  right:20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#ppCloseBtn:hover{
+  color:var(--blue_01);
+  
+}
+/* 이현정 - 팝업 끝 */
 
 /* 이현정 main_sec1_video 시작 */
 @import "nice-select";
@@ -63,9 +129,9 @@ html {
 
 a#scroll_btn {
   position: absolute;
-  height: 5em;
-  width: 3em;
-  border: 0.3em solid #fff;
+  height: 4.5em;
+  width: 2.5em;
+  border: 0.2em solid #fff;
   left: 50%;
   bottom: 3em;
   transform: translateX(-50%);
@@ -75,9 +141,11 @@ a#scroll_btn {
 
 a#scroll_sm_btn {
   position: absolute;
-  width: 46.86px;
-  height: 38.28px;
+  width: 36.86px;
+  height: 28.28px;
   background: url("../imgs/main/scrolldown.svg") no-repeat;
+  background-position: center center;
+  background-size: cover;
   left: 50%;
   bottom: 3em;
   transform: translateX(-50%);
