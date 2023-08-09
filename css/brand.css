@@ -16,16 +16,12 @@ main{
 .mask {
   text-align: center;
   overflow: hidden;
-  /* height: 100%;  */
   width: 100%;
   height: 100vh;
 }
 .sec_1{
   position: relative;
 }
-/* .mask ,.sec_1_after{
-  position: absolute;
-}  */
 .mask h2 {
   padding: 300px 0 400px;
   font-size: 120px;
@@ -35,7 +31,6 @@ main{
   background-color: white;
   transition: 1s;
   transform-origin: 50% 40%;
-  /* height: 102vh; */
 }
 .mask h2.active {
   transform: scale(5.5);
@@ -76,7 +71,6 @@ main{
 }
 .sec_2 h3.active {
   transform: scale(1.2);
-  /* transform-origin: 50% 60%; */
 }
 .sec_2 h3 {
   font-size: 32px;
@@ -191,8 +185,6 @@ main{
   line-height: 140%;
   transition: transform 0.5s;
   transform-origin: 50% 0;
-  /* opacity: 1; */
-  /* position: absolute; */
   top: 0;
 }
 .minus_after ul li.fold{
@@ -226,17 +218,8 @@ main{
   right:0;
   bottom: 0;
   text-align: center;
-  visibility: hidden;
-  /* transform: scale(0); */
 }
-.weight li:active{
 
-  visibility: visible;
-  /* transform: scale(0); */
-}
- /* .weight li:first-child{
-  transform: scale(1);
-} */
 .effect_wrapper h2{
   position: relative;
   top:100px;
@@ -282,7 +265,6 @@ main{
   font-size: max(2.5rem, min(5vw, 6rem)); 
   font-weight: 700;
   line-height: 1.5;
-  /* margin-left: 400px; */
   padding-bottom: 200px;
   
 }
@@ -290,12 +272,9 @@ main{
   position: absolute;
   color:#0C1B32;
   top:40%;
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .plus_tt h2{
-  /* visibility: hidden; */
   z-index: 10;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
 }
@@ -315,10 +294,6 @@ main{
 .division_effect{
   height: 100vh;
   background: #0C1B32;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
   position: relative;
 }
 .division_wrap{
@@ -358,9 +333,7 @@ main{
 
 
 /* section 6 */
-/* .sec_6{
-  margin-top: 150vh;
-} */
+
 .multiple_effect{
   height: 100vh;
   background: url(../imgs/brand/bg/multiple_bg.jpg) no-repeat center/cover;
@@ -426,7 +399,7 @@ main{
 .twenty{
   margin-top: 100px;
  width: 100%;
-  height: 100vh;
+  height: 120vh;
   padding-top: 150px;
   text-align: center;
 }
@@ -494,32 +467,22 @@ main{
 .sec_8{
   height: 100vh;
   color: #000;
-  font-size: 84px;
+  font-size:48px;
   font-weight: 700;
   line-height: 150%;
   text-align: center;
 }
-.sec_8_tt1,
-.sec_8_tt2{
-  position: absolute;
-}
-/* .sec_8_tt2{
-  visibility: hidden;
-}  */
- .sec_8_tt2.visible{
-  visibility: visible;
-}
 .last_tt{
   width: 100%;
   height: 100%;
-  /* margin: 0 auto; */
   position: relative;
 };
 
 
-
-
 /* section 9 */
+.sec_9{
+  height: 130vh;
+}
 .sec_9 h2{
   line-height: 1.3;
   text-align: left;
@@ -527,8 +490,8 @@ main{
   margin-bottom: 60px;
 }
 .lineup_tt{
-  font-size: 48px;
-  margin-bottom: 60px;
+  font-size: 36px;
+  margin-bottom: 48px;
 }
 .sec_9 .row div {
   box-sizing: border-box;
@@ -577,7 +540,14 @@ footer{
     padding: 0 16px;
     box-sizing: border-box;
   }
-  
+  .sec_1_after {
+    text-align: center;
+    margin-top: 550px;
+    visibility: hidden;
+    font-weight: bold;
+    line-height: 128px;
+    height: 100vh;
+}
   .mask h2 {
     transform-origin: 50% 40%;
   }
@@ -596,7 +566,6 @@ footer{
 }
 .plus_effect img {
   width: 80%;
-  /* object-fit: cover; */
 }
 .twenty h2 {
   font-size: 48px;
@@ -668,7 +637,6 @@ footer{
 }
 .effect_wrapper img {
   width: 180%;
-  /* object-fit: cover; */
   left: -100px;
 }
 .effect_wrapper img {
@@ -680,7 +648,6 @@ footer{
 }
 .plus_effect img {
   width: 100%;
-  /* object-fit: cover; */
 }
 .division_tt {
   color: #FFF;
@@ -688,7 +655,6 @@ footer{
   font-size: 32px;
   font-weight: 700;
   line-height: 48px;
-  /* margin-top: -600px; */
   line-height: 1.5;
   position: relative;
   top: -50px;
@@ -707,7 +673,6 @@ footer{
 }
 .dolby_wrap img {
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
 }
 
