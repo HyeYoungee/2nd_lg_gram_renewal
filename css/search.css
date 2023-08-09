@@ -227,10 +227,9 @@ color:#f8d849;
   margin-bottom: 25px;
 }
 
+
 @media (max-width: 1270px) {
-  label {
-    /* margin: 7px 5px; */
-  }
+ 
   .search_bar {
     width: 90%;
   }
