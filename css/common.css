@@ -229,6 +229,7 @@ button {
   border: none;
   background: none;
   text-align: center;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -241,6 +242,7 @@ a {
   font-size: 24px;
   font-weight: bold;
   line-height: 150%;
+  cursor: pointer;
 }
 .search_btn:hover {
   border: 3px solid var(--blue_02, #3182f6);
@@ -260,6 +262,7 @@ a {
   font-family: Gmarket Sans TTF;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
 .add_btn:hover {
   font-weight: bold;
@@ -272,6 +275,7 @@ a {
   font-size: 24px;
   font-weight: 400;
   line-height: 150%;
+  cursor: pointer;
 }
 .filter_btn:hover {
   color: var(--border_color, #1a1450);
@@ -287,6 +291,7 @@ a {
   font-size: 24px;
   font-weight: 700;
   line-height: 150%;
+  cursor: pointer;
 }
 .more_btn i {
   margin-left: 5px;
@@ -297,7 +302,14 @@ a {
 .more_btn:hover {
   color: var(--dark, #1e2226);
 }
+
+
+
 /* logo btn */
+
+#lg_logo_btn{
+  display: block;
+}
 
 #lg_logo_btn svg {
   width: 64px;
@@ -315,7 +327,14 @@ a {
   letter-spacing: 0.05em;
   z-index: 1000;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  
 }
+
+/* #lg_logo_btn_wrap.light{
+  background-color: var(--gray_03);
+} */
 
 #lg_logo_btn svg:hover {
   background-color: var(--gray_03);
@@ -332,8 +351,8 @@ a {
   text-align: center;
   background-color: var(--gray_02);
   color: #fdfdfd;
-  /* opacity: 0; */
-  /* visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.5s;
   text-transform: uppercase;
   border-radius: 50%;
@@ -350,10 +369,23 @@ a {
 }
 
 #gotop_btn.active,
-#lg_logo_btn.active {
+#lg_logo_btn.active svg {
   opacity: 1;
-  visibility: hidden;
+  visibility: visible;
 }
+
+#gotop_btn.light{
+  /* border:5px solid var(--blue_01);
+  box-sizing: border-box; */
+  
+}
+
+
+#lg_logo_btn.light svg{
+  background-color: var(--gray_02)
+}
+
+
 
 .menu_li {
   color: #58606a;

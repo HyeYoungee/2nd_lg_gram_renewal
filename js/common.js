@@ -1,4 +1,3 @@
-
 /* 최성희 main_header 시작 */
 /*전체화면에 공통으로 일어날 일*/
 //gnb 를 클릭하면 lnb 토글
@@ -67,21 +66,35 @@ $(".main_header_icons").click(function (e) {
   e.preventDefault();
 });
 /* 최성희 main_header 끝 */
+
+
 /* 이현정 topbtn 시작 */
 
 let goTop = $("#gotop_btn");
 let logoBtn = $("#lg_logo_btn");
 
-$(window).on("scroll",function () {
+$(window).on("scroll",function (e) {
+  e.preventDefault();
   let scrollPosition = $(this).scrollTop();
   let footerOST = $("footer").offset().top;
+  // console.log(footerOST - 500, scrollPosition);
 
-  if (scrollPosition > 700 && scrollPosition <= footerOST - 500) {
-    goTop.removeClass("active");
-    logoBtn.removeClass("active");
-  } else {
+  if (scrollPosition > 700 ) {
     goTop.addClass("active");
     logoBtn.addClass("active");
+  }else{
+    goTop.removeClass("active");
+    logoBtn.removeClass("active");
+  }
+  if(scrollPosition >= footerOST - 500) {
+    //클래스명 라이트 추가
+    goTop.addClass("light");
+    logoBtn.addClass("light");
+  }else{
+   //클래스명 라이트 제거
+  goTop.removeClass("light");
+  logoBtn.removeClass("light");
+
   }
 });
 

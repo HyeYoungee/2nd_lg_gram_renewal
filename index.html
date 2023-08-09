@@ -1,307 +1,385 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lg gram renewal website</title>
-
-  <!-- reset -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- normalize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
-  <!-- font-awesome -->
-  <!-- <link
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+    />
+    <!-- font-awesome -->
+    <!-- <link
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
     /> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.css"
-    integrity="sha512-1mKT2l92H6btoIkk6fIotzeArJ3G59u/xMsDyBb/XROahx4zpXeXucqzVYssrrK0AHSNjSfe4QVE/loSr85jfA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="./css/lib/nice-select.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/default.css" />
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="imgs/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="imgs/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="imgs/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="imgs/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="imgs/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="imgs/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="imgs/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="imgs/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
-  <link rel="manifest" href="imgs/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.css"
+      integrity="sha512-1mKT2l92H6btoIkk6fIotzeArJ3G59u/xMsDyBb/XROahx4zpXeXucqzVYssrrK0AHSNjSfe4QVE/loSr85jfA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- nice select -->
+    <link rel="stylesheet" href="./css/lib/nice-select.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/default.css" />
+  </head>
 
-<body>
-  <!-- 최성희 header 시작 -->
-  <nav class="main_header_scroll_border">
-    <div class="main_header">
-      <!-- main_header_로고시작 -->
-      <h1 class="main_header_logo">
-        <a href="index.html"><img src="/imgs/index/header_logo_letsgram.svg" alt="그램로고" /></a>
-      </h1>
-      <!-- main_header_로고종료 -->
-      <!-- main_header_메뉴시작 -->
-      <ul class="main_header_menu">
-        <li>
-          그램
-          <ul>
-            <li><a href="brand.html">브랜드 소개</a></li>
-            <li><a href="story.html">그램 스토리</a></li>
-          </ul>
-        </li>
-        <li>
-          제품
-          <ul>
-            <li><a href="search.html">그램 찾기</a></li>
-            <li><a href="color.html">컬러그램</a></li>
-            <li><a href="product.html">연관제품</a></li>
-          </ul>
-        </li>
-        <li>
-          고객서비스
-          <ul>
-            <li><a href="notice.html">공지사항</a></li>
-            <li><a href="service.html">고객지원</a></li>
-            <li><a href="store.html">매장 찾기</a></li>
-          </ul>
-        </li>
-        <li>
-          Jammy
-          <ul>
-            <li><a href="jammyis.html">Jammy is</a></li>
-            <li><a href="jammyg.html">재밌그램</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- main_header_메뉴종료 -->
-      <!-- main_header_아이콘시작 -->
-      <ul class="main_header_icons">
-        <li>
-          <a href="">
-            <div>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16.0013 14.6667C17.0561 14.6667 18.0873 14.3539 18.9643 13.7678C19.8414 13.1818 20.525 12.3489 20.9287 11.3743C21.3323 10.3998 21.4379 9.32742 21.2322 8.29285C21.0264 7.25829 20.5184 6.30798 19.7725 5.5621C19.0267 4.81622 18.0763 4.30827 17.0418 4.10248C16.0072 3.89669 14.9349 4.00231 13.9603 4.40598C12.9858 4.80965 12.1528 5.49323 11.5668 6.37029C10.9808 7.24736 10.668 8.2785 10.668 9.33334C10.668 10.7478 11.2299 12.1044 12.2301 13.1046C13.2303 14.1048 14.5868 14.6667 16.0013 14.6667Z"
-                  fill="#58606A" />
-                <path
-                  d="M24.0013 28.0007C24.3549 28.0007 24.6941 27.8602 24.9441 27.6101C25.1942 27.3601 25.3346 27.0209 25.3346 26.6673C25.3346 24.192 24.3513 21.818 22.601 20.0677C20.8506 18.3173 18.4767 17.334 16.0013 17.334C13.5259 17.334 11.152 18.3173 9.40164 20.0677C7.6513 21.818 6.66797 24.192 6.66797 26.6673C6.66797 27.0209 6.80844 27.3601 7.05849 27.6101C7.30854 27.8602 7.64768 28.0007 8.0013 28.0007H24.0013Z"
-                  fill="#58606A" />
-              </svg>
-            </div>
-          </a>
-        </li>
-        <li class="main_header_search">
-          <a href="">
-            <div>
-              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M28.4141 25.72L23.8808 21.2C25.3434 19.3366 26.1371 17.0355 26.1341 14.6667C26.1341 12.557 25.5085 10.4947 24.3365 8.74059C23.1644 6.98646 21.4985 5.61929 19.5494 4.81196C17.6003 4.00462 15.4556 3.79339 13.3865 4.20496C11.3174 4.61654 9.41674 5.63244 7.92498 7.1242C6.43322 8.61596 5.41732 10.5166 5.00574 12.5857C4.59417 14.6548 4.8054 16.7995 5.61274 18.7486C6.42007 20.6977 7.78725 22.3636 9.54137 23.5357C11.2955 24.7077 13.3578 25.3333 15.4675 25.3333C17.8363 25.3363 20.1374 24.5426 22.0008 23.08L26.5208 27.6133C26.6447 27.7383 26.7922 27.8375 26.9547 27.9052C27.1172 27.9729 27.2914 28.0077 27.4675 28.0077C27.6435 28.0077 27.8177 27.9729 27.9802 27.9052C28.1427 27.8375 28.2902 27.7383 28.4141 27.6133C28.5391 27.4894 28.6383 27.3419 28.706 27.1794C28.7737 27.017 28.8085 26.8427 28.8085 26.6667C28.8085 26.4907 28.7737 26.3164 28.706 26.1539C28.6383 25.9914 28.5391 25.844 28.4141 25.72ZM7.46745 14.6667C7.46745 13.0844 7.93664 11.5377 8.8157 10.2221C9.69475 8.90652 10.9442 7.88114 12.406 7.27563C13.8678 6.67013 15.4763 6.51171 17.0282 6.82039C18.58 7.12907 20.0055 7.891 21.1243 9.00982C22.2431 10.1286 23.0051 11.5541 23.3137 13.1059C23.6224 14.6578 23.464 16.2663 22.8585 17.7281C22.253 19.1899 21.2276 20.4394 19.912 21.3184C18.5964 22.1975 17.0497 22.6667 15.4675 22.6667C13.3457 22.6667 11.3109 21.8238 9.8106 20.3235C8.31031 18.8232 7.46745 16.7884 7.46745 14.6667Z"
-                  fill="#58606A" />
-              </svg>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div>
-              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M28.7056 9.33412C28.4752 8.93494 28.1453 8.60229 27.7481 8.36861C27.3508 8.13493 26.8998 8.0082 26.439 8.00078H9.37229L8.59896 4.98745C8.52082 4.69657 8.34651 4.44071 8.10439 4.26154C7.86228 4.08238 7.56664 3.99047 7.26563 4.00078H4.59896C4.24534 4.00078 3.9062 4.14126 3.65615 4.39131C3.4061 4.64135 3.26563 4.98049 3.26562 5.33412C3.26563 5.68774 3.4061 6.02688 3.65615 6.27692C3.9062 6.52697 4.24534 6.66745 4.59896 6.66745H6.25229L9.93229 20.3474C10.0104 20.6383 10.1847 20.8942 10.4269 21.0734C10.669 21.2525 10.9646 21.3444 11.2656 21.3341H23.2656C23.5118 21.3334 23.7531 21.2645 23.9625 21.135C24.172 21.0056 24.3415 20.8207 24.4523 20.6008L28.8256 11.8541C29.0152 11.4568 29.1034 11.0187 29.0825 10.579C29.0615 10.1393 28.9321 9.71162 28.7056 9.33412Z"
-                  fill="#58606A" />
-                <path
-                  d="M10.5996 28C11.7042 28 12.5996 27.1046 12.5996 26C12.5996 24.8954 11.7042 24 10.5996 24C9.49504 24 8.59961 24.8954 8.59961 26C8.59961 27.1046 9.49504 28 10.5996 28Z"
-                  fill="#58606A" />
-                <path
-                  d="M23.9316 28C25.0362 28 25.9316 27.1046 25.9316 26C25.9316 24.8954 25.0362 24 23.9316 24C22.8271 24 21.9316 24.8954 21.9316 26C21.9316 27.1046 22.8271 28 23.9316 28Z"
-                  fill="#58606A" />
-              </svg>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <!-- main_header_아이콘종료 -->
-    </div>
-    <a href="" class="main_header_toggleBtn">
-      <img src="./imgs/index/main_header_menu.svg" alt="" />
-    </a>
-  </nav>
-  <!-- main_header_종료 -->
-  <!-- 최성희 header 끝 -->
-
-  <!-- 이현정 main_sec1_video 시작 -->
-  <section class="main_sec01_video">
-    <h2>메인 동영상</h2>
-    <div class="main_video">
-      <div class="video_slider">
-        <div>
-          <video src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4" autoplay
-            muted loop id="video1"></video>
+  <body>
+    <!-- 팝업 시작-->
+    <dialog class="popup">
+      <h3 class="tt_01 gr_02_t">LG gram</h3>
+      <h3 class="content_stt">본 사이트는 구직용 팀프로젝트 포트폴리오 웹사이트입니다.</h3>
+      <h3 class="content_tt">LG gram renewal portfolio</h3>
+      <div class="pp_top content_stt">
+        <p>※ LG 전자와 무관함을 알려드립니다.</p>
+       <p>※ 이 사이트에 사용된 이미지의 저작권은 LG전자에 있으므로 무단으로 사용할 수 없습니다.</p>
+      </div>
+      <div class="pp_date gray_04_t content_stt">
+        <p><em>제작기간 : </em> 2023. 07. 10 ~ 2023. 08. 09</p>
+        <p><em>스택 : </em> html5, css3, jQuery </p>
+        <p><em>특징 : </em> jQuery 라이브러리, bootstrap grid 사용</p>
+        <p><em>구현페이지 :</em> LG gram 리뉴얼 사이트</p>
+        <p><em>코드 : </em><a href="" target="_blank" class="github">깃허브</a></p>
+      </div>
+      <div class="pp_team gray_04_t content_stt">
+        <p><em>업무분장</em></p>
+        <p><em>기획 : </em>공통</p>
+        <p><em>디자인, 구현파트:</em></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <p><em>메인페이지</em></p>
+            <p>최*희 : 헤더</p>
+            <p>이*정 : 메인비디오, 셀렉트, 푸터</p>
+            <p>천*영 : 추천, 그램컨텐츠</p>
+            <p>김*림 : 브랜드, 서비스</p>
+          </div>
+          <div>
+            <p><em>개별페이지</em></p>
+            <p>최*희 : 그램스토리, 연관제품</p>
+            <p>이*정 : 그램찾기, 컬러그램</p>
+            <p>천*영 : Jammyis, 재밌그램</p>
+            <p>김*림 : 브랜드소개, 공지사항, 고객지원, 매장찾기 </p>
+          </div>
         </div>
-        <div>
-          <video src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634515/gram_dance_ljnqcm.mp4" muted loop
-            autoplay id="video2"></video>
+        
+        
+      </div>
+      <div class="pp_close black_t content_tt">
+        <label for="daycheck">오늘 하루 표시하지 않기</label>
+        <input type="checkbox" id="daycheck">
+        <button type="button" id="ppCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </dialog>
+    <!-- 팝업 끝 -->
+
+    <!-- 최성희 header 시작 -->
+    <nav class="main_header_scroll_border">
+      <div class="main_header">
+        <!-- main_header_로고시작 -->
+        <h1 class="main_header_logo">
+          <a href="index.html"
+            ><img src="/imgs/index/header_logo_letsgram.svg" alt="그램로고"
+          /></a>
+        </h1>
+        <!-- main_header_로고종료 -->
+        <!-- main_header_메뉴시작 -->
+        <ul class="main_header_menu">
+          <li>
+            그램
+            <ul>
+              <li><a href="brand.html">브랜드 소개</a></li>
+              <li><a href="story.html">그램 스토리</a></li>
+            </ul>
+          </li>
+          <li>
+            제품
+            <ul>
+              <li><a href="search.html">그램 찾기</a></li>
+              <li><a href="color.html">컬러그램</a></li>
+              <li><a href="product.html">연관제품</a></li>
+            </ul>
+          </li>
+          <li>
+            고객서비스
+            <ul>
+              <li><a href="notice.html">공지사항</a></li>
+              <li><a href="service.html">고객지원</a></li>
+              <li><a href="store.html">매장 찾기</a></li>
+            </ul>
+          </li>
+          <li>
+            Jammy
+            <ul>
+              <li><a href="jammyis.html">Jammy is</a></li>
+              <li><a href="jammyg.html">재밌그램</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- main_header_메뉴종료 -->
+        <!-- main_header_아이콘시작 -->
+        <ul class="main_header_icons">
+          <li>
+            <a href=""
+              ><div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0013 14.6667C17.0561 14.6667 18.0873 14.3539 18.9643 13.7678C19.8414 13.1818 20.525 12.3489 20.9287 11.3743C21.3323 10.3998 21.4379 9.32742 21.2322 8.29285C21.0264 7.25829 20.5184 6.30798 19.7725 5.5621C19.0267 4.81622 18.0763 4.30827 17.0418 4.10248C16.0072 3.89669 14.9349 4.00231 13.9603 4.40598C12.9858 4.80965 12.1528 5.49323 11.5668 6.37029C10.9808 7.24736 10.668 8.2785 10.668 9.33334C10.668 10.7478 11.2299 12.1044 12.2301 13.1046C13.2303 14.1048 14.5868 14.6667 16.0013 14.6667Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M24.0013 28.0007C24.3549 28.0007 24.6941 27.8602 24.9441 27.6101C25.1942 27.3601 25.3346 27.0209 25.3346 26.6673C25.3346 24.192 24.3513 21.818 22.601 20.0677C20.8506 18.3173 18.4767 17.334 16.0013 17.334C13.5259 17.334 11.152 18.3173 9.40164 20.0677C7.6513 21.818 6.66797 24.192 6.66797 26.6673C6.66797 27.0209 6.80844 27.3601 7.05849 27.6101C7.30854 27.8602 7.64768 28.0007 8.0013 28.0007H24.0013Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+          <li class="main_header_search">
+            <a href=""
+              ><div>
+                <svg
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.4141 25.72L23.8808 21.2C25.3434 19.3366 26.1371 17.0355 26.1341 14.6667C26.1341 12.557 25.5085 10.4947 24.3365 8.74059C23.1644 6.98646 21.4985 5.61929 19.5494 4.81196C17.6003 4.00462 15.4556 3.79339 13.3865 4.20496C11.3174 4.61654 9.41674 5.63244 7.92498 7.1242C6.43322 8.61596 5.41732 10.5166 5.00574 12.5857C4.59417 14.6548 4.8054 16.7995 5.61274 18.7486C6.42007 20.6977 7.78725 22.3636 9.54137 23.5357C11.2955 24.7077 13.3578 25.3333 15.4675 25.3333C17.8363 25.3363 20.1374 24.5426 22.0008 23.08L26.5208 27.6133C26.6447 27.7383 26.7922 27.8375 26.9547 27.9052C27.1172 27.9729 27.2914 28.0077 27.4675 28.0077C27.6435 28.0077 27.8177 27.9729 27.9802 27.9052C28.1427 27.8375 28.2902 27.7383 28.4141 27.6133C28.5391 27.4894 28.6383 27.3419 28.706 27.1794C28.7737 27.017 28.8085 26.8427 28.8085 26.6667C28.8085 26.4907 28.7737 26.3164 28.706 26.1539C28.6383 25.9914 28.5391 25.844 28.4141 25.72ZM7.46745 14.6667C7.46745 13.0844 7.93664 11.5377 8.8157 10.2221C9.69475 8.90652 10.9442 7.88114 12.406 7.27563C13.8678 6.67013 15.4763 6.51171 17.0282 6.82039C18.58 7.12907 20.0055 7.891 21.1243 9.00982C22.2431 10.1286 23.0051 11.5541 23.3137 13.1059C23.6224 14.6578 23.464 16.2663 22.8585 17.7281C22.253 19.1899 21.2276 20.4394 19.912 21.3184C18.5964 22.1975 17.0497 22.6667 15.4675 22.6667C13.3457 22.6667 11.3109 21.8238 9.8106 20.3235C8.31031 18.8232 7.46745 16.7884 7.46745 14.6667Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><div>
+                <svg
+                  width="33"
+                  height="32"
+                  viewBox="0 0 33 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.7056 9.33412C28.4752 8.93494 28.1453 8.60229 27.7481 8.36861C27.3508 8.13493 26.8998 8.0082 26.439 8.00078H9.37229L8.59896 4.98745C8.52082 4.69657 8.34651 4.44071 8.10439 4.26154C7.86228 4.08238 7.56664 3.99047 7.26563 4.00078H4.59896C4.24534 4.00078 3.9062 4.14126 3.65615 4.39131C3.4061 4.64135 3.26563 4.98049 3.26562 5.33412C3.26563 5.68774 3.4061 6.02688 3.65615 6.27692C3.9062 6.52697 4.24534 6.66745 4.59896 6.66745H6.25229L9.93229 20.3474C10.0104 20.6383 10.1847 20.8942 10.4269 21.0734C10.669 21.2525 10.9646 21.3444 11.2656 21.3341H23.2656C23.5118 21.3334 23.7531 21.2645 23.9625 21.135C24.172 21.0056 24.3415 20.8207 24.4523 20.6008L28.8256 11.8541C29.0152 11.4568 29.1034 11.0187 29.0825 10.579C29.0615 10.1393 28.9321 9.71162 28.7056 9.33412Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M10.5996 28C11.7042 28 12.5996 27.1046 12.5996 26C12.5996 24.8954 11.7042 24 10.5996 24C9.49504 24 8.59961 24.8954 8.59961 26C8.59961 27.1046 9.49504 28 10.5996 28Z"
+                    fill="#58606A"
+                  />
+                  <path
+                    d="M23.9316 28C25.0362 28 25.9316 27.1046 25.9316 26C25.9316 24.8954 25.0362 24 23.9316 24C22.8271 24 21.9316 24.8954 21.9316 26C21.9316 27.1046 22.8271 28 23.9316 28Z"
+                    fill="#58606A"
+                  />
+                </svg></div
+            ></a>
+          </li>
+        </ul>
+        <!-- main_header_아이콘종료 -->
+      </div>
+      <a href="" class="main_header_toggleBtn">
+        <img src="./imgs/index/main_header_menu.svg" alt="" />
+      </a>
+    </nav>
+    <!-- main_header_종료 -->
+    <!-- 최성희 header 끝 -->
+
+    <!-- 이현정 main_sec1_video 시작 -->
+    <section class="main_sec01_video">
+      <h2>메인 동영상</h2>
+      <div class="main_video">
+        <div class="video_slider">
+          <div>
+            <video
+              src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+              autoplay
+              muted
+              loop
+              id="video1"
+            ></video>
+          </div>
+          <!-- <div>
+            <video
+              src="https://res.cloudinary.com/damxzwed4/video/upload/v1690634515/gram_dance_ljnqcm.mp4"
+              muted
+              loop
+              autoplay
+              id="video2"
+            ></video>
+          </div> -->
         </div>
       </div>
-    </div>
-    <div class="video_pager"></div>
-    <a href="" id="scroll_sm_btn"></a>
-    <a href="" id="scroll_btn"></a>
-  </section>
-  <!-- 이현정 main_sec1_video 끝 -->
+      <!-- <div class="video_pager"></div> -->
+      <a href="" id="scroll_sm_btn"></a>
+      <a href="" id="scroll_btn"></a>
+    </section>
+    <!-- 이현정 main_sec1_video 끝 -->
 
-  <!-- 천혜영 main_sec_02_slide 시작 -->
-  <section class="main_sec2 body_lg big_pd">
-    <div class="swiper slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="content">
-            <h2>스타일도 <span class="blue_02_t">그램</span>답게 가볍게</h2>
-            <p>
-              빛나는 오로라 화이트 컬러, 심플한 히든터치패드 거기에 더해 OLED
-              디스플레이까지 새로운 디자인과 강력한 퍼포먼스로 더 완벽해진
-              그램을 경험할 수 있어요
-            </p>
+    <!-- 천혜영 main_sec_02_slide 시작 -->
+    <section class="main_sec2 body_lg big_pd">
+      <div class="swiper slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="content">
+              <h2>스타일도 <span class="blue_02_t">그램</span>답게 가볍게</h2>
+              <p>
+                빛나는 오로라 화이트 컬러, 심플한 히든터치패드 거기에 더해 OLED
+                디스플레이까지 새로운 디자인과 강력한 퍼포먼스로 더 완벽해진
+                그램을 경험할 수 있어요
+              </p>
+            </div>
+            <img src="imgs/main_sec2/main_sec2_01.png" alt="" />
           </div>
-          <img src="imgs/main_sec2/main_sec2_01.png" alt="" />
+
+          <div class="swiper-slide">
+            <div class="content">
+              <h2>
+                강력한 퍼포먼스도 <span class="blue_02_t">그램</span>답게 가볍게
+              </h2>
+              <p>
+                가벼운 건 기본, 다이나믹 디스플레이가 내 작업에 맞게 주사율을
+                알아서 조절하고 돌비 애트모스가 풍부한 사운드까지 들려주니까
+                언제나 최고의 성능으로 몰입감 있는 경험을 누릴 수 있죠
+              </p>
+            </div>
+            <img src="imgs/main_sec2/main_sec2_02.png" alt="" />
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content">
+              <h2>
+                창작 작업도 <span class="blue_02_t">그램</span>답게 가볍게
+              </h2>
+              <p>
+                360도 터치 디스플레이와 부드러운 스타일러스 펜으로 내가 원하는
+                방향으로 보고 내가 쓰고 싶은 대로 작업해요 그램 360 하나로 내
+                작업 환경이 다채로워지죠
+              </p>
+            </div>
+            <img src="imgs/main_sec2/main_sec2_03.png" alt="" />
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content">
+              <h2>
+                대화면 확장도 <span class="blue_02_t">그램</span>답게 가볍게
+              </h2>
+              <p>
+                가지고 있는 그램에 그램 +view를 더하기만 하면 화면은 더 커지고
+                내 작업은 자유로워지죠 670g으로 가벼우니깐 어디든 들고 다니며
+                사용해요
+              </p>
+            </div>
+            <img src="imgs/main_sec2/main_sec2_04.png" alt="" />
+          </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="content">
-            <h2>
-              강력한 퍼포먼스도 <span class="blue_02_t">그램</span>답게 가볍게
-            </h2>
-            <p>
-              가벼운 건 기본, 다이나믹 디스플레이가 내 작업에 맞게 주사율을
-              알아서 조절하고 돌비 애트모스가 풍부한 사운드까지 들려주니까
-              언제나 최고의 성능으로 몰입감 있는 경험을 누릴 수 있죠
-            </p>
-          </div>
-          <img src="imgs/main_sec2/main_sec2_02.png" alt="" />
-        </div>
-
-        <div class="swiper-slide">
-          <div class="content">
-            <h2>
-              창작 작업도 <span class="blue_02_t">그램</span>답게 가볍게
-            </h2>
-            <p>
-              360도 터치 디스플레이와 부드러운 스타일러스 펜으로 내가 원하는
-              방향으로 보고 내가 쓰고 싶은 대로 작업해요 그램 360 하나로 내
-              작업 환경이 다채로워지죠
-            </p>
-          </div>
-          <img src="imgs/main_sec2/main_sec2_03.png" alt="" />
-        </div>
-
-        <div class="swiper-slide">
-          <div class="content">
-            <h2>
-              대화면 확장도 <span class="blue_02_t">그램</span>답게 가볍게
-            </h2>
-            <p>
-              가지고 있는 그램에 그램 +view를 더하기만 하면 화면은 더 커지고
-              내 작업은 자유로워지죠 670g으로 가벼우니깐 어디든 들고 다니며
-              사용해요
-            </p>
-          </div>
-          <img src="imgs/main_sec2/main_sec2_04.png" alt="" />
+        <div class="pager_box">
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="pager_box">
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-  <!-- 천혜영 main_sec_02_slide 끝 -->
+    </section>
+    <!-- 천혜영 main_sec_02_slide 끝 -->
 
-  <!-- 김유림 main_sec_03_brand 시작 -->
-  <section class="main_sec3_brand big_pd gray_bg">
-    <div class="container">
-      <h2 class="dark_t">브랜드 소개</h2>
-      <p class="cs_desc">
-        990g, 한 손으로 드는 대화면, 초경량 노트북의 기준을 제시하다
-      </p>
+    <!-- 김유림 main_sec_03_brand 시작 -->
+    <section class="main_sec3_brand big_pd gray_bg">
       <div class="container">
-        <div class="row brand_wrapper">
-          <div class="col-sm-6 col-md-3">
-            <div class="brand_cont">
-              <h3>the<br>lightest</h3>
-              <img src="imgs/main/brand/minus.png" alt="브랜드소개_minus">
+        <h2 class="dark_t">브랜드 소개</h2>
+        <p class="cs_desc">초경량 노트북의 기준을 제시하다</p>
+        <div class="container">
+          <div class="row brand_wrapper">
+            <div class="col-sm-6 col-md-3">
+              <div class="brand_cont">
+                <h3>the<br />lightest</h3>
+                <img src="imgs/main/brand/minus.png" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="brand_cont">
-              <h3>more<br>efficient</h3>
-              <img src="imgs/main/brand/plus.png" alt="브랜드소개_plus">
+            <div class="col-sm-6 col-md-3">
+              <div class="brand_cont">
+                <h3>more<br />efficient</h3>
+                <img src="imgs/main/brand/plus.png" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="brand_cont">
-              <h3>share<br>with gram</h3>
-              <img src="imgs/main/brand/division.png" alt="브랜드소개_division">
+            <div class="col-sm-6 col-md-3">
+              <div class="brand_cont">
+                <h3>share<br />with gram</h3>
+                <img src="imgs/main/brand/division.png" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="brand_cont">
-              <h3>multiple<br>experiences</h3>
-              <img src="imgs/main/brand/multiple.png" alt="브랜드소개_multiple">
+            <div class="col-sm-6 col-md-3">
+              <div class="brand_cont">
+                <h3>multiple<br />experiences</h3>
+                <img src="imgs/main/brand/multiple.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- 김유림 main_sec_03_brand 끝 -->
+    </section>
+    <!-- 김유림 main_sec_03_brand 끝 -->
 
-  <!-- 이현정 main_sec_04_selec 시작 -->
-  <section class="select-container big_pd">
-    <div class="select-wrap container">
-      <div class="d-flex justify-content-center align-items-center">
-        <h2 class="select">나는</h2>
-        <select name="gramtype" id="gramtype">
-          <option value="type_style">그램style</option>
-          <option value="type_360">그램360</option>
-          <option value="type_gram">그램</option>
-        </select>
-        <h2 class="">을 갖고 싶어요</h2>
+    <!-- 이현정 main_sec_04_selec 시작 -->
+    <section class="select-container big_pd">
+      <div class="select-wrap container">
+        <div class="d-flex justify-content-center align-items-center">
+          <h2 class="select_t select">나는</h2>
+          <select name="gramtype" id="gramtype">
+            <option value="type_style">그램style</option>
+            <option value="type_360">그램360</option>
+            <option value="type_gram">그램</option>
+          </select>
+          <h2 class="select_t">을 갖고 싶어요</h2>
+        </div>
+        <div
+          class="select-option d-flex justify-content-center align-items-center"
+        >
+          <select name="gramcolor" id="gramcolor">
+            <option value="color_white">오로라 화이트</option>
+            <option value="color_snow">스노우 화이트</option>
+            <option value="color_black">옵디시안 블랙</option>
+            <option value="color_green">토파즈 그린</option>
+          </select>
+          <h2 class="select_t">색의 그램을 좋아합니다.</h2>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button class="goPage product_btn blue_01 border_lg white_t">
+            제품 보러가기
+          </button>
+        </div>
       </div>
-      <div class="select-option d-flex justify-content-center align-items-center">
-        <select name="gramcolor" id="gramcolor">
-          <option value="color_white">오로라 화이트</option>
-          <option value="color_snow">스노우 화이트</option>
-          <option value="color_black">옵디시안 블랙</option>
-          <option value="color_green">토파즈 그린</option>
-        </select>
-        <h2 class="">색의 그램을 좋아합니다.</h2>
-      </div>
-      <div class="d-flex justify-content-center align-items-center">
-        <button class="goPage product_btn blue_01 border_lg white_t">
-          제품 보러가기
-        </button>
-      </div>
-    </div>
-    <ul class="select_slider">
+      <ul class="select_slider">
       <li>
         <img src="https://velog.velcdn.com/images/hyunny123/post/1f347d05-7f61-486a-a992-b3fe2f411c3f/image.png"
           alt="제품이미지 오로라화이트1" />

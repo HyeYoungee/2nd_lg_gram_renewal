@@ -135,14 +135,16 @@ label {
 }
 
 /* card ui css */
-
+.card_sec{
+  display: none;
+}
 .card-container {
   background-color: var(--white_bg);
   margin-bottom: 100px;
 }
 .card {
   width: 400px;
-  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.8);
+  box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 1);
   border-radius: var(--border_lg);
   background: #fff;
   margin: 0 12px 38px 12px;
@@ -209,13 +211,14 @@ label {
 
 .review {
   padding: 24px 0 38px 0;
-  color: var(--gray-03, #58606a);
+color:#f8d849;
   line-height: 1.4;
 }
 
 .review span {
   display: inline-block;
   transform: translateY(-1.5px);
+  color: var(--gray-03, #58606a);
   margin-left: 5px;
 }
 
@@ -226,10 +229,9 @@ label {
   margin-bottom: 25px;
 }
 
+
 @media (max-width: 1270px) {
-  label {
-    /* margin: 7px 5px; */
-  }
+ 
   .search_bar {
     width: 90%;
   }
