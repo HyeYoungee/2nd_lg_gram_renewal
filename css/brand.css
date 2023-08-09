@@ -1,13 +1,12 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Gmarket Sans TTF";
-  text-align: center;
 }
 
 /* section 1 */
 main{
   margin-top: 72px;
+  font-family: "Gmarket Sans";
 }
 .sec_1 {
   overflow: hidden;
@@ -43,6 +42,7 @@ main{
   opacity: 0;
 }
 .sec_1_after {
+  text-align: center;;
   margin-top: -650px;
   visibility: hidden;
   font-weight: bold;
@@ -85,6 +85,22 @@ main{
 }
 
 /* section 3 */
+
+
+@keyframes fadeInOutUp {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#weightText.fade-in-out {
+  animation: fadeInOutUp 4s ease-in-out forwards;
+}
+
 .sec_3,
 .sec_4,
 .sec_5,
@@ -143,9 +159,6 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.sec_3{
-  overflow: hidden;
 }
 .minus_effect {
   background: #fff;
@@ -266,7 +279,7 @@ main{
 .plus_tt {
   color: #fff;
   text-align: center;
-  font-size: max(2.5rem, min(5vw, 4rem)); 
+  font-size: max(2.5rem, min(5vw, 6rem)); 
   font-weight: 700;
   line-height: 1.5;
   /* margin-left: 400px; */
@@ -276,14 +289,13 @@ main{
 .plus_tt{
   position: absolute;
   color:#0C1B32;
-  color:#ebf3ff;
   top:40%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .plus_tt h2{
-  visibility: hidden;
+  /* visibility: hidden; */
   z-index: 10;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
 }
@@ -340,9 +352,6 @@ main{
 .division_tt img{
   position: relative;
   top:100px;
-  /* position: absolute; */
-  /* left:52%;
-  transform:translateX(-50%); */
   bottom: -250px;
 }
 
@@ -377,7 +386,7 @@ main{
   margin: 20px;
   position: relative;
   line-height: 1.5;
-  color: #324561;
+  color: #475974;
 }
 .multiple_tt h2:before {
   content: attr(data-text);
@@ -419,6 +428,7 @@ main{
  width: 100%;
   height: 100vh;
   padding-top: 150px;
+  text-align: center;
 }
 .twentytwenty-container{
   width: 65%;
@@ -487,6 +497,7 @@ main{
   font-size: 84px;
   font-weight: 700;
   line-height: 150%;
+  text-align: center;
 }
 .sec_8_tt1,
 .sec_8_tt2{

@@ -28,6 +28,10 @@ body * {
   padding: 0;
 }
 
+main{
+  margin-bottom: max(10rem, min(3vw, 16rem));
+}
+
 .title {
   text-align: center;
   line-height: 1;
@@ -39,6 +43,7 @@ body * {
 
 .tt_01 {
   font-size: 48px;
+  line-height: 150%;
 }
 
 .cs_desc {
@@ -80,7 +85,6 @@ body * {
   font-weight: bold;
   text-align-last: left;
   line-height: 1.5;
-  /* font-family: "Gmarket Sans"; */
 }
 .info .desc{
   width: 80%;
@@ -133,7 +137,7 @@ body * {
 }
 
 .big_pd {
-  padding: 72px 0;
+  padding: 100px 0 72px;
 }
 
 aside {
@@ -155,7 +159,7 @@ aside {
 .search_tt {
   font-size: max(3.2rem, min(3vw, 3.6rem));
   font-weight: bold;
-  font-family: "Gmarket Sans";
+  font-family: "Gmarket Sans TTF";
   margin: 32px 0 20px;
 }
 
@@ -221,6 +225,11 @@ aside {
 
 .fav_wrap .result_num {
   font-weight: bold;
+}
+.store_list li,
+.store_name svg,
+select{
+  cursor: pointer;
 }
 
 .store_list li {
@@ -324,7 +333,7 @@ aside {
   border-radius: 4px;
   line-height: 1.5;
   vertical-align: bottom;
-  font-family: "Gmarket Sans";
+  font-family: "Gmarket Sans TTF";
   z-index: 11;
 }
 
@@ -396,8 +405,8 @@ aside {
     margin-bottom: 60px;
   }
 
-  .big_pd {
-    padding: 40px 0;
+  .big_pd{
+    padding: 100px 0 48px;
   }
 
   aside {
@@ -462,6 +471,7 @@ aside {
   aside {
     position: relative;
     left: 0;
+    top: 0;
     height: 90%;
     overflow-y: scroll;
     z-index: 10;
@@ -469,8 +479,8 @@ aside {
     box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.15);
   }
 
-  .big_pd {
-    padding: 32px 0;
+  .big_pd{
+    padding: 72px 0 48px;
   }
 
   .store_promotion .container {

@@ -8,14 +8,14 @@ let maskTT = $('.sec_1 .mask h2'),
   let lastSwitch = false;
 
 
-//hide()
 $('.sec_2 h2, .sec_2 h3').fadeOut();
 
+//스 크롤 이벤트 시작 
 $(window).on('scroll', function () {
   let sct = $(window).scrollTop();
   console.log(sct)
   if (sct > 10) {
-    //스크롤 발생시, 텍스트 마스크 실행
+    // 스크롤 발생시, 텍스트 마스크 실행
     maskTT.addClass('active');
     if (sct > 40) {
       setTimeout(() => {
@@ -23,24 +23,22 @@ $(window).on('scroll', function () {
         $('.sec_1_after h2').addClass('animate__fadeInLeft');
         $('.sec_1_after h3').addClass('animate__fadeInRight');
       }, 500, 'easeInOutBack');
-      // 마스크 실행 후, 텍스트 좌우로 페이드인 
+    // 마스크 실행 후, 텍스트 좌우로 페이드인 
     };
     if (sct > sec2OST - 400) {
       sec2.find('h2, h3').fadeIn(1000, function () {
         // sec2.find('h3').addClass('active');
         sec2.find('h3').css({ transition: '0.5s', transform: 'scale(1.5)' });
       });
-      // sec2 텍스트 페이드인
+    // sec2 텍스트 페이드인
     };
   };
 
 
 /* section 3 - minus effect, 페이드인, 노트북 애니메이션 */
 let minusIcon = $('.minus'),
-  minusImg = $('.minus_effect img');
-
-
-    count = 0,                   //이미지 index count 
+    minusImg = $('.minus_effect img');
+    count = 0,    //이미지 index count 
     minusOST = $('.sec_3').offset().top,
     kgGram = $('.kg_gram');
 
@@ -73,10 +71,31 @@ let minusIcon = $('.minus'),
 
 
   //현정님 참고
+  const texts = [
+    "Weight",
+    "KG",
+    "980g",
+  ];
+  let weightIndex = 0;
+
+    function weightText() {
+      const weightText = $("#weightText");
+      weightText.text(texts[weightIndex]);
+
+      weightText.addClass("fade-in-out");
+
+      setTimeout(() => weightText.removeClass("fade-in-out"), 1000);
+
+      weightIndex = (weightIndex + 1) % texts.length;
+    }
+
+    setInterval(weightText, 2000);
+
 
   //현정님 참고
   let weightStop;
   let isActive = false;
+  /* keep
   weightTT.fadeOut();
   function weightUp() {
     //let nextIdx = (currentIdx + 1) % weightUpCount;
@@ -110,7 +129,10 @@ let minusIcon = $('.minus'),
 
     };
   }
+  */
 
+
+  /* keep
   if (sct > minuseffectOST) {
     if (!isActive) {
       weightStop = setInterval(() => {
@@ -120,7 +142,7 @@ let minusIcon = $('.minus'),
       isActive = true;
     }
   }
-
+  */
     let plusIcon = $('.plus'),
       plusOSP = $('.sec_4').offset().top,
       divisionIcon = $('.division'),
@@ -129,10 +151,9 @@ let minusIcon = $('.minus'),
       multipleOSP = $('.sec_6').offset().top,
       twentyOST = $('.twenty').offset().top;
       let battery ;
-    count = 1;
+      count = 1;
 
 
-    console.log($('.division_tt img').innerHeight());
     if (sct > plusOSP) {
       plusIcon.addClass('acitve');
       $('.plus_bg').fadeOut(1000);
@@ -142,8 +163,7 @@ let minusIcon = $('.minus'),
       divisionIcon.addClass('acitve');
       $('.division_bg').fadeOut(1000);
     }
-    if (sct > divisionOSP + 50) {
-      console.log(batterySwitch,'왜안나와');
+    if (sct > divisionOSP + 30) {
       if (batterySwitch == false) {
         let i = 1;
           battery = setInterval(() => {
@@ -152,15 +172,10 @@ let minusIcon = $('.minus'),
           console.log(i,'아이')
           if (i == 25 || i > 25) {
             clearInterval(battery);
-            
-            console.log(i+'실행 배터리 멏뭋')
-
           } 
         }, 100);
       batterySwitch = true;
-        
       };
-      console.log(batterySwitch) ;
     } 
   
 
@@ -189,18 +204,15 @@ let minusIcon = $('.minus'),
 
 
 
-  // $('.plus_tt').hide();
 
-  
   let plusOpenOST = $('.plus_open').offset().top;
   let   pluscount = Math.floor(((sct) / plusOpenOST) * 20);
-    console.log('sct :', sct);
     if (pluscount > 1 && pluscount < 64) {
       $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${pluscount}.png` });
-      if (pluscount > 20) {
-        // $('.plus_tt h2').addClass('active');
-        $('.plus_tt h2').addClass('active animate__fadeIn');
-      }
+      // if (pluscount > 20) {
+      //   // $('.plus_tt h2').addClass('active');
+      //   $('.plus_tt h2').addClass('active animate__fadeIn');
+      // }
 
     }
 
@@ -209,19 +221,7 @@ let minusIcon = $('.minus'),
   let plusImg = $('.plus_open img');
 
 
-  // $(window).scroll(function () {
-  //   let sct = $(window).scrollTop();
-  //   let plusOSP = $('.sec_4').offset().top;
-  //   if (sct > plusOSP - 300) {
-  //     $('.plus_bg').fadeOut(1000);
 
-  //   }
-  // })
-
-
-
-  /* twentytwenty / gram 해상도 비교  */
- 
 
 
   // let divisionIcon = $('.division'),
@@ -341,6 +341,7 @@ let minusIcon = $('.minus'),
           $('.last_tt div').eq(fadeIndex).fadeOut(700, function () {
             fadeIndex = (fadeIndex + 1) % $('.last_tt div').length;
             $('.last_tt div').eq(fadeIndex).fadeIn(700).addClass('visible');
+            $('.last_tt div').eq(fadeIndex).addClass('visible');
           });
         }
         // setInterval(fadeText, 1500);
@@ -356,6 +357,7 @@ let minusIcon = $('.minus'),
 
 AOS.init();
 
+/* twentytwenty / gram 해상도 비교  */ 
 $(".twentytwenty-container").twentytwenty({
   default_offset_pct: 0.4,
   move_slider_on_hover: true,
