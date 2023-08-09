@@ -1,4 +1,3 @@
-
 /* 최성희 main_header 시작 */
 /*전체화면에 공통으로 일어날 일*/
 //gnb 를 클릭하면 lnb 토글
@@ -41,7 +40,7 @@ $(window).on("scroll", function () {
 //햄버거 버튼을 클릭하면 gnb 보이거나 숨김
 $(".main_header_toggleBtn").click(function (e) {
   e.preventDefault();
-  if ($(window).width() < 768) {
+  if ($(window).width() <= 768) {
     $(".main_header_icons").toggle();
     $(".main_header_menu, .main_header_menu>li>ul").toggleClass("active");
     let $toggleBtn = $(this).find("img");
@@ -54,34 +53,48 @@ $(".main_header_toggleBtn").click(function (e) {
 });
 //아이콘들이 화면이 작을때는 안보이고 클때는 보임
 $(window).resize(function () {
-  if ($(window).width() < 768) {
+  if ($(window).width() <= 768) {
     $(".main_header_icons").hide();
   } else {
     $(".main_header_icons").show();
   }
 });
-if ($(window).width() < 768) {
+if ($(window).width() <= 768) {
   $(".main_header_icons").hide();
 } //기본도 숨기기
 $(".main_header_icons").click(function (e) {
   e.preventDefault();
 });
 /* 최성희 main_header 끝 */
+
+
 /* 이현정 topbtn 시작 */
 
 let goTop = $("#gotop_btn");
 let logoBtn = $("#lg_logo_btn");
 
-$(window).on("scroll",function () {
+$(window).on("scroll",function (e) {
+  e.preventDefault();
   let scrollPosition = $(this).scrollTop();
   let footerOST = $("footer").offset().top;
+  // console.log(footerOST - 500, scrollPosition);
 
-  if (scrollPosition > 700 && scrollPosition <= footerOST - 500) {
-    goTop.removeClass("active");
-    logoBtn.removeClass("active");
-  } else {
+  if (scrollPosition > 700 ) {
     goTop.addClass("active");
     logoBtn.addClass("active");
+  }else{
+    goTop.removeClass("active");
+    logoBtn.removeClass("active");
+  }
+  if(scrollPosition >= footerOST - 500) {
+    //클래스명 라이트 추가
+    goTop.addClass("light");
+    logoBtn.addClass("light");
+  }else{
+   //클래스명 라이트 제거
+  goTop.removeClass("light");
+  logoBtn.removeClass("light");
+
   }
 });
 

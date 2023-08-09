@@ -1,18 +1,65 @@
+/* 이현정 팝업 시작 */
+
+let popup = $(".popup");
+let pCloseBtn = popup.find("#ppCloseBtn");
+let dayCheck = popup.find("#daycheck");
+
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+
+popup.find(".github").on("click",function(){
+  window.open("https://github.com/hazel305/lg_gram_renewal_website")
+})
+
+function cookieCheck(name) {
+  let cookieArr = document.cookie.split(";");
+  let visited = false;
+  for (let cookie of cookieArr) {
+
+    if (cookie.search(name) > -1) {
+      visited = true;
+      
+      break;
+    }
+  }
+  console.log(visited);
+  if (!visited) {
+    popup.attr("open", "");
+  }else{
+    popup.removeAttr("open");
+  }
+}
+cookieCheck("team");
+
+pCloseBtn.on("click", function () {
+  popup.removeAttr("open");
+  if (dayCheck.prop("checked")) {
+    setCookie("team", "coala", 1);
+  } else {
+    setCookie("team", "coala", -1);
+  }
+});
+
+
+/* 이현정 팝업 끝 */
 
 
 /* 이현정 main_sec1_video 시작 */
 $(function () {
-  $(".video_slider").bxSlider({
-    controls: false,
-    onSlideLoad: function () {
-      $(".video-slider").find("div:eq(0)").find("video").get(0).play();
-    },
-    onSlideAfter: function ($slideElement) {
-      $(".video-slider div").find("video").get(0).pause();
-      $(".video-slider div").find("video").get(0).currentTime = 0;
-      $slideElement.find("video").get(0).play();
-    },
-  });
+  // $(".video_slider").bxSlider({
+  //   controls: false,
+  //   onSlideLoad: function () {
+  //     $(".video-slider").find("div:eq(0)").find("video").get(0).play();
+  //   },
+  //   onSlideAfter: function ($slideElement) {
+  //     $(".video-slider div").find("video").get(0).pause();
+  //     $(".video-slider div").find("video").get(0).currentTime = 0;
+  //     $slideElement.find("video").get(0).play();
+  //   },
+  // });
 
   $(".select_slider").bxSlider({
     minSlides: 3,
@@ -24,23 +71,29 @@ $(function () {
   });
 });
 
-$(window).resize(function () {
+$(window).on("resize",function () {
   let windowWid = $(window).width();
   let scrollLgBtn = $("#scroll_btn");
   let scrollSmBtn = $("#scroll_sm_btn");
-  let videoChange = $(".video-slider div video");
+  let videoChange = $(".video_slider div video");
   if (windowWid < 768) {
+    console.log("작동!");
     videoChange.attr(
-      "src",
-      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+      "src", 
+      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634463/newjeans_gram_mb_fea6sh.mp4"
     );
     scrollLgBtn.css("display", "none");
     scrollSmBtn.css("display", "block");
   } else {
+    videoChange.attr(
+      "src", 
+      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+    );
     scrollLgBtn.css("display", "block");
     scrollSmBtn.css("display", "none");
   }
 });
+
 /* 이현정 main_sec1_video 끝 */
 
 $("#gramtype").niceSelect();
@@ -203,3 +256,48 @@ sec5_cardBox.mouseout(function () {
   $(this).removeClass("active");
 });
 /* 천혜영 main_sec_05_all 끝 */
+
+
+
+/* 김유림 main_sec_06_service 시작 */
+const csSwiper = new Swiper('.mySwiper', {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    720: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    800: {
+      slidesPerView: 4,
+      spaceBetween: 24
+    }
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+  },
+  navigation: {
+    // enabled:true,
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    // nextEl: '.control_prev',
+    // prevEl: '.control_next',
+  },
+});
+
+
+/* 김유림 main_sec_06_service 끝 */
