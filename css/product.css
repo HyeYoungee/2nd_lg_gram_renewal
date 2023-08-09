@@ -1,6 +1,20 @@
 .cs_desc{padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
 }
-.product_section02 img{width: 100%;}
+.product_section02>a>img{width: 100%;}
+.product_section02 a{position: relative;}
+.product_section02 a div{
+  text-decoration: none;
+  color: var(--dark);
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  top:20% ;right: 0;bottom: 0;left: 75px;
+  justify-content: center;
+  align-items: center;
+}
+.product_section02 a div span{
+  display: block;
+}
 
 /* 추천제품 섹션 */
 
@@ -154,7 +168,7 @@
   .sm_img {
     display: flex;
     flex-direction: row;
-   justify-content: center;
+    justify-content: center;
   }
   .big_img {
     display: flex;
