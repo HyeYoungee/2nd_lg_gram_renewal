@@ -4,12 +4,12 @@ let starSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" vi
 </svg>`;
 let elements = [];
 $.getJSON("/data/product_card.json", function (data) {
-  console.log(data);
+  // console.log(data);
   $.each(data, function (i, item) {
     cardHTML = `<li class='card'>
     <div>
       <div class='card_img_wrap d-flex justify-content-center'>
-     <img src='${item.image}'/>
+      <img src='${item.image}'/>
       </div>
       <div class='card_text'>
         <p class='product_num'>${item.product_num}</p>
@@ -17,7 +17,7 @@ $.getJSON("/data/product_card.json", function (data) {
         <p class='product_desc1'>${item.product_desc1}</p>
         <p class='product_desc2'>${item.product_desc2}</p>
         <p class='product_desc3'>${item.product_desc3}</p>
-        <p class='review'>${starSVG}<span>${item.rating}</span></p>
+        <p class='review'>&starf; <span>${item.rating}</span></p>
         <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
         <button class="add_btn">구매하기</button>
       </div>
