@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/search.css" />
   </head>
   <body>
-    <section>
+    <section class="search_container">
       <div class="container d-flex flex-column align-items-center">
         <h1 class="tt_01">그램 찾기</h1>
         <div
@@ -37,109 +37,213 @@
         <h2 class="filter_text">
           필터를 선택하여 조건에 맞는 제품을 찾아보세요.
         </h2>
-        <form class="filter_container" id="searchForm">
-          <div class="filter_item">
-            <div class="filter_title"><h2>유형</h2></div>
-            <div class="filter_cont">
-              <div
-                class="form_wrap d-flex justify-content-start"
-                id="type_wrap"
-              >
-                <button id="gram_style" class="item type_style filter_btn">
-                  그램 Style
-                </button>
-                <button id="gram_style" class="item type_360 filter_btn">그램 360</button>
-                <button id="gram_style" class="item type_gram filter_btn">그램</button>
+        <div class="filter_section">
+          <div class="filter_options">
+            <div class="filter_type">
+              <h2>유형</h2>
+              <div class="input_wrap type_wrap d-flex">
+                <span>
+                  <input
+                    type="radio"
+                    value="type_gram"
+                    id="type_gram"
+                    name="type"
+                  />
+                  <label for="type_gram">그램</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="type_360"
+                    id="type_360"
+                    name="type"
+                  />
+                  <label for="type_360">그램360</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="type_style"
+                    id="type_style"
+                    name="type"
+                  />
+                  <label for="type_style">그램style</label>
+                </span>
               </div>
             </div>
-          </div>
-          <div class="filter_item">
-            <div class="filter_title"><h2>컬러</h2></div>
-            <div class="filter_cont">
-              <div
-                class="form_wrap d-flex justify-content-start"
-                id="color_wrap"
-              >
-                <button id="gram_style" class="item color_white filter_btn">
-                  오로라 화이트
-                </button>
-                <button id="gram_style" class="item color_snow filter_btn">
-                  스노우 화이트
-                </button>
-                <button id="gram_style" class="item color_black filter_btn">
-                  옵시디안 블랙
-                </button>
-                <!-- <label for="gram_color">옵시디안 블랙</label> -->
-                <button id="gram_color" class="item color_green filter_btn">
-                  토파즈 그린
-                </button>
+            <div class="filter_color">
+              <h2>컬러</h2>
+              <div class="input_wrap color_wrap d-flex">
+                <span>
+                  <input
+                    type="radio"
+                    value="color_white"
+                    id="color_white"
+                    name="color"
+                  />
+                  <label for="color_white">오로라 화이트</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="color_snow"
+                    id="color_snow"
+                    name="color"
+                  />
+                  <label for="color_snow">스노우 화이트</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="color_black"
+                    id="color_black"
+                    name="color"
+                  />
+                  <label for="color_black">옵시디안 블랙</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="color_green"
+                    id="color_green"
+                    name="color"
+                  />
+                  <label for="color_green">토파즈 그린</label>
+                </span>
               </div>
             </div>
-          </div>
-          <div class="filter_item">
-            <div class="filter_title"><h2>가격</h2></div>
-            <div class="filter_cont">
-              <div
-                class="form_wrap d-flex justify-content-start"
-                id="price_wrap"
-              >
-                <button id="gram_cost" class="item price_150 filter_btn">
-                  최대 150만원
-                </button>
-                <button id="gram_cost" class="item price_200 filter_btn">
-                  최대 200만원
-                </button>
-                <button id="gram_cost" class="item price_250 filter_btn">
-                  최대 250만원
-                </button>
-                <button id="gram_cost" class="item price_300 filter_btn">
-                  최대 300만원
-                </button>
-                <button id="gram_cost" class="item price_350 filter_btn">
-                  최대 350만원
-                </button>
+            <div class="filter_price">
+              <h2>가격</h2>
+              <div class="input_wrap price_wrap d-flex">
+                <span>
+                  <input
+                    type="radio"
+                    value="price_150"
+                    id="price_150"
+                    name="price"
+                  />
+                  <label for="price_150">최대150만원</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="price_200"
+                    id="price_200"
+                    name="price"
+                  />
+                  <label for="price_200">최대200만원</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="price_250"
+                    id="price_250"
+                    name="price"
+                  />
+                  <label for="price_250">최대250만원</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="price_300"
+                    id="price_300"
+                    name="price"
+                  />
+                  <label for="price_300">최대300만원</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    value="price_350"
+                    id="price_350"
+                    name="price"
+                  />
+                  <label for="price_350">최대350만원</label>
+                </span>
               </div>
             </div>
+            <div class="reset_btn_wrap d-flex justify-content-center">
+              <button class="resetBtn reset_btn">전체보기</button>
+            </div>
           </div>
-          <div class="search_btn_wrap d-flex justify-content-center">
-            <button class="search_btn">검색</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
-    <section class="cards-container">
-      <div class="container">
-        <h2 class="result_length"></h2>
-        <ul class="card_list row row-cols-3 ">
-          <!-- <li class="card">
-          <div>
-            <div class="card_img_wrap">
-           
-            </div>
-            <div class="card_text">
-              <p class="product_num"></p>
-              <h3 class="product_title"></h3>
-              <p class="product_desc1"></p>
-              <p class="product_weight"></p>
-              <p class="review">별<span></span></p>
-              <h3 class="product_cost"></h3>
-            </div>
-            <button>구매하기</button>
-          </div>
-        </li> -->
-          <!-- <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li> -->
-        </ul>
-        <button class="more_btn loadmoreBtn">
-          더보기<i class="fa-solid fa-chevron-down"></i>
-        </button>
-      </div>
-    </section>
-    
 
+    <section class="card_container">
+      <div class="container">
+        <div class="legnth-wrap">
+          <div class="result_length">총 <span>0</span>개</div>
+        </div>
+
+        <ul class="card_list row row-cols-3 row-col-sm-2">
+          <!-- 카드 -->
+        </ul>
+        <!-- <button class="loadmorBtn">더보기</button> -->
+      </div>
+    </section>
+
+    <!-- 이현정 footer 시작 -->
+    <footer>
+      <div class="container">
+        <div
+          class="footer_sns_wrap d-flex align-items-center justify-content-lg-end justify-content-md-between justify-content-sm-between"
+        >
+          <ul class="d-flex align-items-center">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+          <div class="footer_langs border_lg d-flex justify-content-center">
+            <span class="body_md">kor</span><span>/</span><span>Eng</span>
+          </div>
+        </div>
+        <div class="footer_info_wrap">
+          <div class="footer_info_link_wrap">
+            <ul class="d-flex justify-content-between">
+              <li class=""><a href="">사이트맵</a></li>
+              <li class="">
+                <a href="">개인정보처리방침</a>
+              </li>
+              <li class="">
+                <a href="">이벤트 개인정보처리방침</a>
+              </li>
+              <li class="">
+                <a href="">영상정보처리기기운영관리방침</a>
+              </li>
+              <li class=""><a href="">이용약관</a></li>
+              <li class=""><a href="">임직원 등록</a></li>
+              <li class="">
+                <a href="">이메일 무단 수집 거부</a>
+              </li>
+              <li class="">
+                <a href="">정도 경영 사이버 신문고</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_info_text_wrap">
+            <p>
+              대표번호 : 02-3777-1114 LGE.COM 구매/서비스 문의
+              (가전/소모품/렌탈) : 1544-7777
+            </p>
+            <p>
+              전화상담 시간은 평일 09:00 ~ 18:00 (주말, 공휴일 휴무) 입니다.
+              (통화요금 : 발신자부담)제품 및 서비스 문의는 긴급 문의 건에 한해
+              24시간 운영합니다.
+            </p>
+            <p>
+              대표이사 : 조주완, 배두용사업자등록번호 : 107-86-14075 사업자
+              정보확인 통신판매업신고번호 : 제1997-00084호주소 : 서울시 영등포구
+              여의대로 128 LG트윈타워
+            </p>
+            <p>Copyright &copy; 2022 LG Electronics. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- 이현정 footer 끝 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
