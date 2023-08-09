@@ -140,7 +140,7 @@ body {
   background-color: var(--gray_01, #b0b8c1);
 }
 .gray_02 {
-  background-color: var(---gray_02, #8b95a1);
+  background-color: var(--gray_02, #8b95a1);
 }
 .gray_03 {
   background-color: var(--gray_03, #58606a);
@@ -701,7 +701,6 @@ footer {
 .footer_info_link_wrap ul li {
   cursor: pointer;
   padding-top: 10px;
-  flex: 1/1;
 }
 
 .footer_info_link_wrap ul li a {
