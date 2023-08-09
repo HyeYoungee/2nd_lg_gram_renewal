@@ -6,7 +6,7 @@ body{
 section{
   width: 100%;
   height: 100vh ;
-  font-family: "Gmarket Sans";
+  font-family: "Gmarket Sans TTF";
 }
 /* 이미지 흔들기 시작*/
 section img{transition: transform 0.3s ease-in}
