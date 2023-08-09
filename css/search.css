@@ -135,7 +135,9 @@ label {
 }
 
 /* card ui css */
-
+.card_sec{
+  display: none;
+}
 .card-container {
   background-color: var(--white_bg);
   margin-bottom: 100px;

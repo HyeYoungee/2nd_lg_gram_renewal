@@ -261,7 +261,9 @@
 }
 
 /* 4번째 섹션 */
-
+.color_img_sec{
+  display: none;
+}
 .color_items {
   width: 100%;
 }

@@ -229,6 +229,7 @@ button {
   border: none;
   background: none;
   text-align: center;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -241,6 +242,7 @@ a {
   font-size: 24px;
   font-weight: bold;
   line-height: 150%;
+  cursor: pointer;
 }
 .search_btn:hover {
   border: 3px solid var(--blue_02, #3182f6);
@@ -260,6 +262,7 @@ a {
   font-family: Gmarket Sans TTF;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
 .add_btn:hover {
   font-weight: bold;
@@ -272,6 +275,7 @@ a {
   font-size: 24px;
   font-weight: 400;
   line-height: 150%;
+  cursor: pointer;
 }
 .filter_btn:hover {
   color: var(--border_color, #1a1450);
@@ -287,6 +291,7 @@ a {
   font-size: 24px;
   font-weight: 700;
   line-height: 150%;
+  cursor: pointer;
 }
 .more_btn i {
   margin-left: 5px;
