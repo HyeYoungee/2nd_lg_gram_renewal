@@ -334,6 +334,7 @@
   .faq h3 {
     text-align: center;
     font-size: 24px;
+    line-height: 1.5;
   }
 
   .service_list {
@@ -407,6 +408,9 @@
 
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width:479px) {
+  .container{
+    box-sizing: border-box;
+  }
 
 
   .body_lg,
@@ -414,11 +418,13 @@
     font-size: var(--body_text_unit);
     /*16px*/
   }
-
+  /* .support .container{
+    margin: 0;
+    padding: 0;
+  } */
   .tt_01 {
     font-size: 32px;
   }
-
   .cs_desc {
     font-size: 16px;
   }
@@ -432,7 +438,9 @@
     width: 90%;
     height: 400px;
   }
-
+  .search_input{
+    width: 90%;
+  }
   .swiper-slide {
     font-size: 16px;
   }

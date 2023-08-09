@@ -6,6 +6,9 @@ body {
 }
 
 /* section 1 */
+main{
+  margin-top: 72px;
+}
 .sec_1 {
   overflow: hidden;
   height: 100vh;
@@ -13,28 +16,34 @@ body {
 }
 .mask {
   text-align: center;
-  /* overflow: hidden; */
-  width:100vw;
+  overflow: hidden;
+  /* height: 100%;  */
+  width: 100%;
   height: 100vh;
 }
+.sec_1{
+  position: relative;
+}
+/* .mask ,.sec_1_after{
+  position: absolute;
+}  */
 .mask h2 {
   padding: 300px 0 400px;
-  /* font-size: max(7.5rem, min(5vw, 12.5rem)); */
   font-size: 120px;
   font-weight: bold;
   mix-blend-mode: lighten;
   color: black;
   background-color: white;
   transition: 1s;
-  transform-origin: 50% 35%;
-  height: 102vh;
+  transform-origin: 50% 40%;
+  /* height: 102vh; */
 }
 .mask h2.active {
   transform: scale(5.5);
   opacity: 0;
 }
 .sec_1_after {
-  margin-top: -500px;
+  margin-top: -650px;
   visibility: hidden;
   font-weight: bold;
   line-height: 128px;
@@ -92,7 +101,7 @@ body {
 .division_bg,
 .division_effect,
 .multiple_bg{
-  width: 100vw;
+ width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -116,7 +125,12 @@ body {
   transition: 1s;
   transform-origin: 50% 50%;
 }
-
+.effect_wrapper,
+.plus_effect,
+.division_wrap,
+.multiple_effect{
+  width: 100%;
+}
 .minus.acitve,
 .plus.acitve,
 .division.acitve,
@@ -130,10 +144,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.sec_3{
+  overflow: hidden;
+}
 .minus_effect {
   background: #fff;
-  width: 100vw;
+ width: 100%;
   height: 250vh;
   position: relative;
 }
@@ -150,7 +166,6 @@ body {
   height: 70%;
   width: 70%;
   left: 40%;
-  /* object-fit: cover;  원래 비율 유지하며 반응형, 태블릿시에 추가로 바꾸기 나중에  */
 }
 .minus_after ul{
   position: relative;
@@ -231,7 +246,7 @@ body {
 
 .plus_open{
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 400vh;
 }
 .plus_effect {
@@ -254,11 +269,14 @@ body {
   font-size: max(2.5rem, min(5vw, 4rem)); 
   font-weight: 700;
   line-height: 1.5;
-  /* margin-left: 300px; */
+  /* margin-left: 400px; */
+  padding-bottom: 200px;
+  
 }
 .plus_tt{
   position: absolute;
   color:#0C1B32;
+  color:#ebf3ff;
   top:40%;
   left: 50%;
   transform: translateX(-50%);
@@ -311,7 +329,7 @@ body {
   /* margin-top: -600px; */
   line-height: 1.5;
   position: relative;
-  top:-100px;
+  top:-50px;
 }
 .division_tt h2{
   visibility: hidden;
@@ -320,9 +338,11 @@ body {
   visibility: visible;
 }
 .division_tt img{
-  position: absolute;
-  left:52%;
-  transform:translateX(-50%);
+  position: relative;
+  top:100px;
+  /* position: absolute; */
+  /* left:52%;
+  transform:translateX(-50%); */
   bottom: -250px;
 }
 
@@ -396,20 +416,17 @@ body {
 /* section 7 */
 .twenty{
   margin-top: 100px;
-  width: 100vw;
+ width: 100%;
   height: 100vh;
+  padding-top: 150px;
 }
 .twentytwenty-container{
-  height: 65%;
-  height: 100%;
-}
-.twentytwenty-wrapper{
   width: 65%;
-  height: 60%;
+  height: 100%;
+  margin: 0 auto;
 }
 .twenty img{
   min-height: 500px;
-  object-fit: cover;
   margin: 0 auto;
 }
 .twentytwenty-handle:hover .twentytwenty-right-arrow{
@@ -430,7 +447,7 @@ body {
 }
 .sec_7{
   background: #000;
-  width: 100vw;
+ width: 100%;
   height: 350vh;
   position: relative;
   display: flex;
@@ -441,7 +458,7 @@ body {
   left:0;
   width: 100%;
   height : 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .dolby_wrap img{
   width: 100%;
@@ -471,12 +488,22 @@ body {
   font-weight: 700;
   line-height: 150%;
 }
-.sec_8 div{
-  display: none;
+.sec_8_tt1,
+.sec_8_tt2{
+  position: absolute;
 }
-.sec_8 div.active{
+/* .sec_8_tt2{
+  visibility: hidden;
+}  */
+ .sec_8_tt2.visible{
   visibility: visible;
 }
+.last_tt{
+  width: 100%;
+  height: 100%;
+  /* margin: 0 auto; */
+  position: relative;
+};
 
 
 
@@ -485,6 +512,10 @@ body {
 .sec_9 h2{
   line-height: 1.3;
   text-align: left;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+.lineup_tt{
   font-size: 48px;
   margin-bottom: 60px;
 }
@@ -535,6 +566,7 @@ footer{
     padding: 0 16px;
     box-sizing: border-box;
   }
+  
   .mask h2 {
     transform-origin: 50% 40%;
   }
@@ -547,24 +579,54 @@ footer{
 .effect_wrapper h2 {
   font-size: 52px;
 }
+.effect_wrapper img {
+  width: 180%;
+  left: -100px;
+}
 .plus_effect img {
-  /* width: 80%; */
-  object-fit: cover;
+  width: 80%;
+  /* object-fit: cover; */
 }
 .twenty h2 {
   font-size: 48px;
+}
+.twentytwenty-container{
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.twenty img{
+  min-height: 400px;
+  margin: 0 auto;
 }
 .dolby_wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.sec_9 .lineup_card{
+  height: 400px;
+}
+.sec_9 .row div .logo {
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+.lineup{
+  margin-bottom: 20px;
+}
+.lineup_tt {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+.sec_9 .lineup_card .img_wrap{
+  box-sizing: border-box;
+}
   .sec_9 h2{
     font-size: 40px;
     margin-bottom: 48px;
   }
-  .img_wrap img{
-  transform: scale(1.5);
+  .img_wrap .lineup{
+  transform: scale(1);
   }
   footer{
     margin-top: 140px;
@@ -594,6 +656,11 @@ footer{
     font-size: 16px;
 }
 .effect_wrapper img {
+  width: 180%;
+  /* object-fit: cover; */
+  left: -100px;
+}
+.effect_wrapper img {
   object-fit: cover;
 }
 .effect_wrapper h2 {
@@ -613,7 +680,7 @@ footer{
   /* margin-top: -600px; */
   line-height: 1.5;
   position: relative;
-  top: -100px;
+  top: -50px;
 }
 .multiple_effect svg{
   width: 100%;
@@ -627,9 +694,57 @@ footer{
   line-height: 1.5;
   color: #324561;
 }
+.dolby_wrap img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.dolby_tt{
+  position: absolute;
+  font-size: 36px;
+  text-align: right;
+  bottom: 240px;
+  z-index: 100;
+}
+.twentytwenty-container{
+  width: 80%;
+}
+.twenty img{
+  min-height: 500px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.twenty h2 {
+  color: #52bada;
+  font-size: 32px;
+  margin-top: 48px;
+  visibility: hidden;
+  z-index: 10;
+}
+.sec_8{
+  font-size: 48px;
+}
   .sec_9 h2{
-    font-size: 32px;
+    font-size: 24px;
   }
+  .sec_9 .lineup_card{
+    margin: 0 auto;
+    width: 90%;
+    height: 250px;
+  }
+  .sec_9 .row div .logo {
+    margin-bottom: 50px;
+  }
+  .img_wrap .lineup{
+    transform: scale(1.5);
+    margin-bottom: 20px;
+  }
+  .sec_9 .lineup_card .img_wrap{
+    padding:24px;
+    box-sizing: border-box;
+  }
+  
   footer{
     margin-top: 110px;
   }

@@ -1,9 +1,11 @@
 /* section 1,2 - mask 효과, 페이드인 */
 let maskTT = $('.sec_1 .mask h2'),
-    sec1 = $('.sec_1_after'),
-    sec2 = $('.sec_2'),
-    sec2OST = $('.sec_2').offset().top,
-    maskActive = true;
+  sec1 = $('.sec_1_after'),
+  sec2 = $('.sec_2'),
+  sec2OST = $('.sec_2').offset().top,
+  maskActive = true;
+  let batterySwitch = false;
+  let lastSwitch = false;
 
 
 //hide()
@@ -11,43 +13,43 @@ $('.sec_2 h2, .sec_2 h3').fadeOut();
 
 $(window).on('scroll', function () {
   let sct = $(window).scrollTop();
+  console.log(sct)
   if (sct > 10) {
     //스크롤 발생시, 텍스트 마스크 실행
     maskTT.addClass('active');
-    if (sct > 40){
+    if (sct > 40) {
       setTimeout(() => {
         sec1.addClass('active');
         $('.sec_1_after h2').addClass('animate__fadeInLeft');
         $('.sec_1_after h3').addClass('animate__fadeInRight');
-      }, 500, 'easeInOutBack');   
-    // 마스크 실행 후, 텍스트 좌우로 페이드인 
+      }, 500, 'easeInOutBack');
+      // 마스크 실행 후, 텍스트 좌우로 페이드인 
     };
     if (sct > sec2OST - 400) {
       sec2.find('h2, h3').fadeIn(1000, function () {
         // sec2.find('h3').addClass('active');
-        sec2.find('h3').css({ transition: '0.5s', transform: 'scale(1.5)'});
+        sec2.find('h3').css({ transition: '0.5s', transform: 'scale(1.5)' });
       });
       // sec2 텍스트 페이드인
     };
   };
-});
+
 
 /* section 3 - minus effect, 페이드인, 노트북 애니메이션 */
 let minusIcon = $('.minus'),
-    minusImg = $('.minus_effect img');
+  minusImg = $('.minus_effect img');
 
-$(window).on('scroll', function () {
-  let sct = $(window).scrollTop(), //스크롤 양 확인
-      count = 0,                   //이미지 index count 
-      minusOST = $('.sec_3').offset().top,
-      kgGram = $('.kg_gram');
+
+    count = 0,                   //이미지 index count 
+    minusOST = $('.sec_3').offset().top,
+    kgGram = $('.kg_gram');
 
   if (sct > minusOST) {
     minusIcon.addClass('acitve');
     $('.minus_bg').fadeOut(1000);
-  }; 
+  };
   // minus_bg 페이드 아웃
-  if (sct > minusOST+100) {
+  if (sct > minusOST + 100) {
     setTimeout(() => {
       kgGram.addClass('active animate__fadeIn');
     }, 1000, 'easeInOutBack');
@@ -67,20 +69,24 @@ $(window).on('scroll', function () {
     weightTT = $('.weight li'),
     weightUpCount = weightTT.length,
     currentIdx = 0;
-    let nextIdx = 0;
+  let nextIdx = 0;
 
+
+  //현정님 참고
+
+  //현정님 참고
   let weightStop;
   let isActive = false;
   weightTT.fadeOut();
   function weightUp() {
-   //let nextIdx = (currentIdx + 1) % weightUpCount;
+    //let nextIdx = (currentIdx + 1) % weightUpCount;
     weightTT.eq(currentIdx).fadeIn();
-    setInterval(()=>{
-       nextIdx = (currentIdx + 1)%weightUpCount;
+    setInterval(() => {
+      nextIdx = (currentIdx + 1) % weightUpCount;
       weightTT.eq(currentIdx).fadeOut(1000);
       weightTT.eq(nextIdx).fadeIn(1000);
       currentIdx = nextIdx;
-      
+
     }, 4000);
     // let nextIdx = (currentIdx + 1) % weightUpCount;
 
@@ -113,7 +119,7 @@ $(window).on('scroll', function () {
       }, 3000);
       isActive = true;
     }
-
+  }
 
     let plusIcon = $('.plus'),
       plusOSP = $('.sec_4').offset().top,
@@ -122,186 +128,237 @@ $(window).on('scroll', function () {
       multipleIcon = $('.multiple'),
       multipleOSP = $('.sec_6').offset().top,
       twentyOST = $('.twenty').offset().top;
-      count = 1;
-      let batterySwitch = false;
+      let battery ;
+    count = 1;
 
-    console.log( $('.division_tt img').innerHeight());
+
+    console.log($('.division_tt img').innerHeight());
     if (sct > plusOSP) {
       plusIcon.addClass('acitve');
       $('.plus_bg').fadeOut(1000);
     }
+
     if (sct > divisionOSP) {
       divisionIcon.addClass('acitve');
       $('.division_bg').fadeOut(1000);
+    }
+    if (sct > divisionOSP + 50) {
+      console.log(batterySwitch,'왜안나와');
+      if (batterySwitch == false) {
+        let i = 1;
+          battery = setInterval(() => {
+          $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${i}.png` });
+          i++;
+          console.log(i,'아이')
+          if (i == 25 || i > 25) {
+            clearInterval(battery);
+            
+            console.log(i+'실행 배터리 멏뭋')
 
-      if(sct > divisionOSP + 50) {
-        if(!batterySwitch){
-          let i = 1;
-          let battery = setInterval(() => {
-            $('.division_tt img').attr({ "src": `imgs/brand/brand_division/battery/battery_${i}.png`});
-            i++;
-            if(i == 25){
-              clearInterval(battery);
-            }
-          }, 100);
-          batterySwitch = true;
-        };
+          } 
+        }, 100);
+      batterySwitch = true;
+        
+      };
+      console.log(batterySwitch) ;
+    } 
   
+
+
+
+      if (sct > multipleOSP) {
+        multipleIcon.addClass('acitve');
+        $('.multiple_bg').fadeOut(1000);
+      }
+      if (sct > multipleOSP + 30) {
+        $('.vivid').addClass('active animate__fadeInUp');
+      }
+      if (sct > multipleOSP + 80) {
+        $('.multiple_tt').find('h2').eq(0).addClass('animate');
+        setTimeout(() => {
+          $('.multiple_tt').find('h2').eq(1).addClass('animate');
+        }, 1000)
+      }
+      if (sct > twentyOST) {
+        $('.twenty h2').addClass('active animate__fadeIn');
       }
 
+  
+
+
+
+
+
+  // $('.plus_tt').hide();
+
+  
+  let plusOpenOST = $('.plus_open').offset().top;
+  let   pluscount = Math.floor(((sct) / plusOpenOST) * 20);
+    console.log('sct :', sct);
+    if (pluscount > 1 && pluscount < 64) {
+      $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${pluscount}.png` });
+      if (pluscount > 20) {
+        // $('.plus_tt h2').addClass('active');
+        $('.plus_tt h2').addClass('active animate__fadeIn');
+      }
+
+    }
+
+
+
+  let plusImg = $('.plus_open img');
+
+
+  // $(window).scroll(function () {
+  //   let sct = $(window).scrollTop();
+  //   let plusOSP = $('.sec_4').offset().top;
+  //   if (sct > plusOSP - 300) {
+  //     $('.plus_bg').fadeOut(1000);
+
+  //   }
+  // })
+
+
+
+  /* twentytwenty / gram 해상도 비교  */
+ 
+
+
+  // let divisionIcon = $('.division'),
+  //   multipleIcon = $('.multiple');
+  //minusImg = $('.minus_effect img');
+
+    //let count = 0;                   //이미지 index count 
+    let divisionOST = $('.sec_5').offset().top;
+    let multiplenOST = $('.sec_6').offset().top;
+
+    if (sct > divisionOST - 400) {
+      // divisionIcon.addClass('acitve');
+      // $('.division_bg').fadeOut(1000);
+      if (sct > divisionOST) {
+        let divisionTT = $('.division_tt');
+        divisionTT.find('.d_time').addClass('active animate__fadeIn');
+        setTimeout(() => {
+          divisionTT.find('.d_day').addClass('active animate__fadeIn');
+          setTimeout(() => {
+            divisionTT.find('.d_long').addClass('active animate__fadeIn');
+          }, 1000)
+        }, 1000)
+
+
+        // divisionTT.find('.d_time').addClass('active animate__fadeIn');
+        // setTimeout(() => {
+        //   $('.division_tt').addClass('active');
+        //   $('.division_tt').addClass('animate__fadeIn');
+        // }, 800, 'easeInOutBack');
+        let count = 0;
+
+        plusOpenOST = $('.plus_open').offset().top,
+          count = Math.floor(((sct) / plusOpenOST) * 20);
+        console.log('sct :', sct);
+        if (count > 1 && count < 64) {
+          $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
+
+        }
+      }
+
+
+
+      let dolbyAniOST = $('.dolby_wrap img').offset().top;
+      //console.log('돌비OST', dolbyAniOST);
+      count = Math.floor(((sct) / dolbyAniOST) * 50)
+      if (count > 1) {
+        //console.log('돌비카운트', count);
+
+        $('.dolby_wrap img').attr({ "src": `imgs/brand/dolby/dolby_${count}.png` })
+      }
+    }
+
+
+
+
+
+
+  // sec_8
+  let sec8 = $('.sec_8');
+  let switch1 = false;
+
+
+
+    let sec8OST = sec8.offset().top;
+
+
+    if (sct > sec8OST + 50) {
+      if (!switch1) {
+
+        // sec8.find('.sec_8_tt1').fadeOut();
+      } switch1 = true;
+      if (sct > sec8OST + 60) {
+        // sec8.find('.sec_8_tt').fadeOut();
+        // sec8.find('.sec_8_tt2').fadeIn();
+        console.log('8 작동')
+        sec8.find('.sec_8_tt2').addClass('active');
+      }
+      // if (sct > sec8OST + 20) {
+      //   // sec8.find('.sec_8_tt1').fadeOut();
+      //   sec8.find('.sec_8_tt2').fadeIn();
+      // }
+      //sec8.find('.sec_8_tt1').addClass('active');
+
+
+    }
+
+    /*
+    if (sct > sec8OST) {
+      if (!switch1){
     
-
-    if (sct > multipleOSP) {
-      multipleIcon.addClass('acitve');
-      $('.multiple_bg').fadeOut(1000);
-    };
-    if (sct > multipleOSP + 30) {
-      $('.vivid').addClass('active animate__fadeInUp');
-    }
-    if (sct > multipleOSP + 80) {
-      $('.multiple_tt').find('h2').eq(0).addClass('animate');
-      setTimeout(() => {
-        $('.multiple_tt').find('h2').eq(1).addClass('animate');
-      }, 1000)
-    }
-    if (sct > twentyOST) {
-      $('.twenty h2').addClass('active animate__fadeIn');
-    }
- }
-};
-
-
-
-
-
-// $('.plus_tt').hide();
-$(window).on('scroll', function () {
-  let sct = $(window).scrollTop(),
-    plusOpenOST = $('.plus_open').offset().top,
-    count = Math.floor(((sct) / plusOpenOST) * 20);
-  console.log('sct :', sct);
-  if (count > 1 && count < 64) {
-    $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
-    if (count > 20) {
-      // $('.plus_tt h2').addClass('active');
-      $('.plus_tt h2').addClass('active animate__fadeIn');
-    }
-
-  }
-})
-
-
-let plusImg = $('.plus_open img');
-
-
-// $(window).scroll(function () {
-//   let sct = $(window).scrollTop();
-//   let plusOSP = $('.sec_4').offset().top;
-//   if (sct > plusOSP - 300) {
-//     $('.plus_bg').fadeOut(1000);
-
-//   }
-// })
-
-
-
-/* twentytwenty / gram 해상도 비교  */
-$(".20twenty-container").twentytwenty({
-  default_offset_pct: 0.4,
-  move_slider_on_hover: true,
-  move_with_handle_only: true,
-  click_to_move: true
-});
-
-
-
-let divisionIcon = $('.division'),
-  multipleIcon = $('.multiple');
-//minusImg = $('.minus_effect img');
-
-$(window).on('scroll', function () {
-  let sct = $(window).scrollTop(); //스크롤 양 확인
-  //let count = 0;                   //이미지 index count 
-  let divisionOST = $('.sec_5').offset().top;
-  let multiplenOST = $('.sec_6').offset().top;
-
-  if (sct > divisionOST - 400) {
-    // divisionIcon.addClass('acitve');
-    // $('.division_bg').fadeOut(1000);
-    if (sct > divisionOST) {
-      let divisionTT = $('.division_tt');
-      divisionTT.find('.d_time').addClass('active animate__fadeIn');
-      setTimeout(()=>{
-        divisionTT.find('.d_day').addClass('active animate__fadeIn');
+        sec8.find('.sec_8_tt1').fadeIn();
         setTimeout(()=>{
-          divisionTT.find('.d_long').addClass('active animate__fadeIn');
-        },1000)
-      },1000)
-      
-  
-      // divisionTT.find('.d_time').addClass('active animate__fadeIn');
-      // setTimeout(() => {
-      //   $('.division_tt').addClass('active');
-      //   $('.division_tt').addClass('animate__fadeIn');
-      // }, 800, 'easeInOutBack');
-      let count = 0;
-
-      plusOpenOST = $('.plus_open').offset().top,
-        count = Math.floor(((sct) / plusOpenOST) * 20);
-      console.log('sct :', sct);
-      if (count > 1 && count < 64) {
-        $('.plus_effect img').attr({ "src": `imgs/brand/brand_plus/plus_${count}.png` });
-
+          sec8.find('.sec_8_tt1').fadeOut();
+        },10)
+      }  switch1 = true;
+      // if (sct > sec8OST + 10) {
+      //   sec8.find('.sec_8_tt1').fadeOut();
+      //   // sec8.find('.sec_8_tt2').fadeIn();
+      // }
+      if (sct > sec8OST + 20) {
+        // sec8.find('.sec_8_tt1').fadeOut();
+        sec8.find('.sec_8_tt2').fadeIn();
       }
+      //sec8.find('.sec_8_tt1').addClass('active');
+     
+  
     }
+    */
+    $('.last_tt .sec_8_tt2').fadeOut();
+    if (sct > sec8OST) {
+      if (!lastSwitch) {
+       
+        let fadeIndex = 0;
 
+        function fadeText() {
+         
+          $('.last_tt div').eq(fadeIndex).fadeOut(700, function () {
+            fadeIndex = (fadeIndex + 1) % $('.last_tt div').length;
+            $('.last_tt div').eq(fadeIndex).fadeIn(700).addClass('visible');
+          });
+        }
+        // setInterval(fadeText, 1500);
+        // clearInterval(fadeText);
+        fadeText();
+        lastSwitch = true;
+      };  
+    };
 
-
-    let dolbyAniOST = $('.dolby_wrap img').offset().top;
-    //console.log('돌비OST', dolbyAniOST);
-    count = Math.floor(((sct) / dolbyAniOST) * 50)
-    if (count > 1) {
-      //console.log('돌비카운트', count);
-
-      $('.dolby_wrap img').attr({ "src": `imgs/brand/dolby/dolby_${count}.png` })
-    }
-  }
-});
-
-
-
+  
+}); //스크롤 
 
 
 AOS.init();
 
-// sec_8
-let sec8 = $('.sec_8');
-let switch1 = false;
-
-$(window).on('scroll', function () {
-
-  let sec8OST = sec8.offset().top;
-  let sct = $(window).scrollTop();
-
-  console.log(sec8OST)
-  if (sct > sec8OST) {
-    if (!switch1){
-  
-      sec8.find('.sec_8_tt1').fadeIn();
-    }  switch1 = true;
-    if (sct > sec8OST + 10) {
-      sec8.find('.sec_8_tt1').fadeOut();
-      // sec8.find('.sec_8_tt2').fadeIn();
-    }
-    if (sct > sec8OST + 20) {
-      // sec8.find('.sec_8_tt1').fadeOut();
-      sec8.find('.sec_8_tt2').fadeIn();
-    }
-    //sec8.find('.sec_8_tt1').addClass('active');
-   
-
-  }
-
-  })
+$(".twentytwenty-container").twentytwenty({
+  default_offset_pct: 0.4,
+  move_slider_on_hover: true,
+  move_with_handle_only: true,
+  click_to_move: false,
 });
-

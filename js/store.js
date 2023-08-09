@@ -100,7 +100,7 @@ $(function () {
 				position: positions[i].latlng, // 마커를 표시할 위치
 				title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
 				image: markerImage // 마커 이미지
-			});
+			}); 
 		}
     // 마커 위에 커스텀오버레이 표시
 		var content = `
@@ -112,19 +112,16 @@ $(function () {
 												</div>
 												<div class="body">
 													<div class="desc">
-														<p class="info_address">주소 : ${mark_address}</p>
+														<p class="info_address">주소 : ${mark_address.slice(0,10)+'...'}</p>
 														<tel class="info_phone">전화 : ${mark_phone}</tel>
-														<p><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></p>
+														<p class="info_link"><a href="https://www.lge.co.kr/bestshop/store-finder" target="_blank" class="link">홈페이지 <i class="fa-solid fa-chevron-right"></i></a></p>
 													</div>
 													<div class="img">
-														<img src="${mark_img}" width="73" height="70">
-													</div>
-												</div>
-											</div>
+														<img src="${mark_img}" width="73" height="70">     
 										</div>`
-
+   
 		var overlay = new kakao.maps.CustomOverlay({
-			content: content,
+			content: content, 
 			map: map,
 			position: marker.getPosition()
 		});

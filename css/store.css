@@ -46,6 +46,9 @@ body * {
   line-height: 1.4;
   margin-bottom: 0;
 }
+.hidden{
+  display: none;
+}
 
 #map {
   background-color: antiquewhite;
@@ -59,7 +62,7 @@ body * {
 }
 
 .info {
-  width: 300px;
+  width: 320px;
   height: 140px;
   background: rgb(252, 252, 252);
   padding: 12px 16px 20px;
@@ -68,16 +71,24 @@ body * {
   border: 2px solid #d3d3d3;
   top: -100px;
   position: relative;
+
 }
 
 .info .title {
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   text-align-last: left;
   line-height: 1.5;
   /* font-family: "Gmarket Sans"; */
 }
-
+.info .desc{
+  width: 80%;
+  /* overflow: hidden; */
+}
+.info p{
+  width: 100%;
+}
 .info .body {
   width: 100%;
   display: flex;
@@ -110,6 +121,15 @@ body * {
 .info .body {
   width: 100%;
   display: flex;
+}
+.info_link{
+  margin-top: 14px;
+}
+.info_link a{
+  font-size: 12px;
+}
+.info_link a i{
+  margin-right: 10px;
 }
 
 .big_pd {

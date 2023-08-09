@@ -2,6 +2,7 @@
 body {
   padding-top: 72px;
 }
+
 nav {
   background-color: #fff;
   position: fixed;
@@ -11,6 +12,7 @@ nav {
   z-index: 99999;
   font-size: var(--bd_size_05);
 }
+
 .main_header {
   display: flex;
   justify-content: space-between;
@@ -22,17 +24,20 @@ nav {
   max-width: 1272px;
   height: 72px;
 }
+
 /* main_header_gnb시작 */
 .main_header_menu {
   display: flex;
   padding-left: 0;
   margin-top: -5px;
 }
-.main_header_menu > li {
+
+.main_header_menu>li {
   padding: 12px 20px;
   margin: 12px 11px;
 }
-.main_header_menu > li:hover {
+
+.main_header_menu>li:hover {
   background-color: #eaf2fe;
   color: var(--blue_02);
   cursor: pointer;
@@ -40,29 +45,35 @@ nav {
 }
 
 /* main_header_lnb시작 */
-.main_header_menu > li ul {
+.main_header_menu>li ul {
   display: flex;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  top: 100%; /* 하위 메뉴를 상위 메뉴 아래에 표시 */
-  left: 0; /* 왼쪽 정렬 */
+  top: 100%;
+  /* 하위 메뉴를 상위 메뉴 아래에 표시 */
+  left: 0;
+  /* 왼쪽 정렬 */
   border-top: solid 1px #58606a30;
   justify-content: center;
 }
+
 .main_header_menu.active li ul {
   display: flex;
 }
-.main_header_menu > li ul li {
+
+.main_header_menu>li ul li {
   white-space: nowrap;
   float: none;
   padding: 27px 50px;
 }
-.main_header_menu > li ul li a {
+
+.main_header_menu>li ul li a {
   color: var(--gray_03);
   font-weight: 300;
 }
-.main_header_menu > li ul li a:hover {
+
+.main_header_menu>li ul li a:hover {
   font-weight: 500;
 }
 
@@ -72,77 +83,95 @@ nav {
   list-style: none;
   padding-left: 0;
 }
+
 .main_header_icons a svg {
   width: 30px;
   height: 30px;
 }
+
 .main_header_icons li {
   padding: 20px 10px;
 }
+
 .main_header_toggleBtn {
   position: absolute;
   right: 24px;
   display: none;
 }
+
 /* 초기에 border 없고 스크롤 내릴 때 border 추가 */
 nav.main_header_scroll_border {
   border-bottom: none;
 }
+
 nav.main_header_scroll_border.with_border {
   border-bottom: solid 1px #58606a30;
 }
+
 @media screen and (max-width: 768px) {
   body {
     padding-top: 80px;
   }
+
   nav {
     font-size: var(--bd_size_04);
   }
+
   .main_header {
     flex-direction: column;
     align-items: flex-start;
     height: 80px;
   }
+
   .main_header_logo {
     padding: 24px;
   }
+
   .main_header_menu {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: #fff;
   }
-  .main_header_menu > li {
+
+  .main_header_menu>li {
     margin: 0;
     padding: 25px 32px;
   }
-  .main_header_menu > li ul {
+
+  .main_header_menu>li ul {
     display: none;
     position: static;
     background-color: transparent;
     margin-top: 28px;
   }
-  .main_header_menu > li ul li {
+
+  .main_header_menu>li ul li {
     float: none;
     margin: 15px 0;
     padding: 10px 0;
     gap: 0;
   }
-  .main_header_menu > li ul:after {
+
+  .main_header_menu>li ul:after {
     display: none;
   }
-  .main_header_menu > li:hover {
+
+  .main_header_menu>li:hover {
     cursor: pointer;
     border-radius: 0;
     width: 100%;
   }
+
   .main_header_toggleBtn {
     display: block;
     top: 24px;
   }
+
   .main_header_menu.active {
     display: flex;
   }
+
   .main_header_menu.active li ul {
     display: block;
   }
@@ -152,24 +181,30 @@ nav.main_header_scroll_border.with_border {
     background-color: #fff;
     width: 100%;
   }
+
   .main_header_icons li {
     padding: 0 30px;
     margin: 30px 0;
   }
+
   .main_header_toggleBtn {
     position: absolute;
     right: 24px;
     display: block;
   }
+
   .main_header_toggleBtn a img {
     transition-duration: 0.3s;
   }
+
   .main_header_search {
     border-right: solid 1px #58606a30;
     border-left: solid 1px #58606a30;
   }
+
   /* main_header_icons 종료 */
 }
+
 /* 최성희 main_header 끝 */
 
 /* 이현정 main_sec1_video 시작 */
@@ -679,10 +714,11 @@ h2 {
   width: 100%;
 }
 
-.keyword span{
-  margin-right: 10px;
+.keyword span {
+  margin-right: 16px;
   color: #1f2936;
 }
+
 .main_sec6_service .title {
   text-align: left;
   line-height: 1.4;
@@ -736,7 +772,8 @@ h2 {
   color: var(--gray_03, #58606a);
   font-size: var(--body_text_unit);
 }
-.main_sec6_service .keyword span{
+
+.main_sec6_service .keyword span {
   color: #1f2936;
 }
 
@@ -767,7 +804,8 @@ h2 {
 .main_sec6_service .swiper {
   width: 100%;
 }
-.main_sec6_service .swiper_slide{
+
+.main_sec6_service .swiper_slide {
   height: 95%;
 }
 
@@ -798,19 +836,16 @@ h2 {
 .swiper-slide p {
   font-size: max(1.4rem, min(3vw, 2rem));
 }
-.page_wrap{
+
+.page_wrap {
   position: relative;
 }
-.swiper-pagination{
+
+.swiper-pagination {
   position: absolute;
   top: -100px;
 }
-/* .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: var(--swiper-pagination-bottom,8px);
-  top: 20px;
-  left: 0;
-  width: 100%;
-} */
+
 .main_sec6_service .swiper-button-next,
 .main_sec6_service .swiper-button-prev {
   position: absolute;
@@ -828,6 +863,7 @@ h2 {
 }
 
 .main_sec6_service .csslider {
+  width: 80%;
   position: relative;
   margin-top: 24px;
 }
@@ -913,10 +949,11 @@ h2 {
   .main_sec6_service .keyword {
     margin-top: 16px;
   }
- 
-  .keyword li:last-child{
+
+  .keyword li:last-child {
     display: none;
   }
+
   .main_sec6_service .keyword ul {
     gap: 6px;
     margin-bottom: 24px;
@@ -932,12 +969,10 @@ h2 {
     margin: 0 auto;
   }
 
-  .main_sec6_service .title {
-    margin-bottom: calc(var(--base_unit_d) * 0.5);
-  }
   .csslider {
     width: 85%;
   }
+
   .main_sec6_service .swiper-slide div {
     border-radius: var(--border_lg);
     background: var(--gray_bg, #f2f2f2);
@@ -1003,17 +1038,57 @@ h2 {
     height: 48px;
     margin: 0 auto;
   }
-  .keyword{
+
+  .csslider {
+    width: 70%;
+  }
+
+  .main_sec6_service .swiper-button-prev {
+    left: -25px;
+    transform: translateY(-15%) scale(0.8);
+  }
+
+  .main_sec6_service .swiper-button-next {
+    right: -25px;
+    transform: translateY(-15%) scale(0.8);
+  }
+
+  .keyword {
     width: 85%;
     justify-content: center;
   }
-  .keyword li:nth-child(3){
+
+  .keyword li:nth-child(3),
+  .keyword li:nth-child(2) {
     display: none;
   }
-  .main_sec6_service .swiper-slide svg  {
-  width:42px;
-  height:42px;
-}
+
+  .main_sec6_service .keyword a {
+    color: var(--gray_03, #58606a);
+    font-size: 14px;
+  }
+
+  .main_sec6_service .faq_btn {
+    font-size: 24px;
+  }
+
+  .main_sec6_service .keyword {
+    margin: 16px auto 0;
+  }
+
+  .main_sec6_service .keyword ul {
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
+  .main_sec6_service .keyword span {
+    display: none;
+  }
+
+  .main_sec6_service .swiper-slide svg {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 /* 김유림 main_sec6_service 끝 */
@@ -1072,6 +1147,7 @@ footer {
 .footer_sns_wrap ul li:hover:nth-child(3) {
   background: url("../imgs/footer/sns_icon_insta_b.svg");
 }
+
 .footer_sns_wrap ul li:hover:nth-child(4) {
   background: url("../imgs/footer/sns_icon_naver_b.svg");
 }
@@ -1103,10 +1179,12 @@ footer {
 .footer_sns_wrap .footer_langs span:last-child {
   margin-right: 0;
 }
+
 .footer_info_link_wrap ul {
   list-style: none;
   padding: 33px;
 }
+
 .footer_info_link_wrap ul li {
   cursor: pointer;
   padding-top: 10px;
@@ -1138,13 +1216,16 @@ footer {
 .footer_info_text_wrap p:first-child {
   padding-bottom: 6px;
 }
+
 @media (max-width: 1272px) {
   .select-wrap select option {
     font-size: var(--bd_size_05);
   }
+
   .footer_info_link_wrap ul {
     flex-wrap: wrap;
   }
+
   .footer_info_link_wrap ul li {
     flex: 1 0 50%;
   }
@@ -1161,4 +1242,5 @@ footer {
     font-size: var(--bd_size_05);
   }
 }
+
 /* 이현정 footer 끝 */
