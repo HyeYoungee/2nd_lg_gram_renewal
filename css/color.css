@@ -19,7 +19,7 @@
 }
 
 #colorText {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 #colorText.tourmaline-green {
@@ -27,7 +27,7 @@
 }
 
 #colorText.snow-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 #colorText.aurora-white {
