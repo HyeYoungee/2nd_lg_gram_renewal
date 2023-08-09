@@ -315,8 +315,8 @@ a {
   width: 64px;
   height: 64px;
   position: fixed;
-  bottom: 289px;
-  right: 125px;
+  bottom: 199px;
+  right: 90px;
   line-height: 64px;
   text-align: center;
   background-color: var(--gray_04);
@@ -332,9 +332,6 @@ a {
   
 }
 
-/* #lg_logo_btn_wrap.light{
-  background-color: var(--gray_03);
-} */
 
 #lg_logo_btn svg:hover {
   background-color: var(--gray_03);
@@ -345,8 +342,8 @@ a {
   width: 64px;
   height: 64px;
   position: fixed;
-  bottom: 210px;
-  right: 125px;
+  bottom: 120px;
+  right: 90px;
   line-height: 64px;
   text-align: center;
   background-color: var(--gray_02);
@@ -372,12 +369,6 @@ a {
 #lg_logo_btn.active svg {
   opacity: 1;
   visibility: visible;
-}
-
-#gotop_btn.light{
-  /* border:5px solid var(--blue_01);
-  box-sizing: border-box; */
-  
 }
 
 
@@ -739,12 +730,14 @@ footer {
     flex: 1 0 50%;
   }
   #gotop_btn{
-    right:154px;
+    right:65px;
+    bottom: 100px;
   
   }
   #lg_logo_btn svg{
     position: fixed;
-    right: 154px;
+    right: 65px;
+    bottom: 175px;
   }
 }
 
@@ -786,7 +779,7 @@ footer {
     font-size: var(--bd_size_05);
   }
   .footer_info_link_wrap ul li a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .footer_sns_wrap ul li {
     margin-right: 15px;

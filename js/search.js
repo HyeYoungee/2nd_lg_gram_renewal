@@ -21,14 +21,12 @@ $(function () {
       selectedType = queryType;
       selectedColor = queryColor;
 
-      console.log(selectedType,selectedColor);
       filteredData = allData.filter((item) => {
         return item.type === selectedType;
       });
       filteredData = filteredData.filter((item) => {
         return item.color === selectedColor;
       });
-      console.log(filteredData);
       
       displayItems();
     } else{
@@ -86,13 +84,11 @@ $(function () {
         filteredData = result;
       }
     }
-    console.log(filteredData);
     displayItems();
   }
   let listHTML = "";
 
   function displayItems() {
-  console.log("실행!",filteredData);
   
     let elements =[];
    listHTML="";
@@ -100,10 +96,7 @@ $(function () {
 
     if (filteredData.length > 0) {
       if(filteredData.length>6){
-        console.log("6개이상");
-        console.log(added);
         let slicedData = filteredData.slice(added, added + addItemCount);
-        console.log(slicedData);
         $.each(slicedData, function (i, item) {
           listHTML += 
           `<li class='card'>
@@ -125,15 +118,7 @@ $(function () {
   
           elements.push(listHTML)
         });
-        console.log(elements);
-        console.log(listHTML);
         $(listHTML).appendTo(container);
-        // container.append(elements);
-        // if(filteredData.length >addItemCount ){
-        //   container.append(elements);
-        // }else{
-        //   container.html(listHTML);
-        // }
   
   
         added += addItemCount;
@@ -145,7 +130,6 @@ $(function () {
           loadmoreBtn.hide();
         }
       }else{//6개이상
-        console.log("6개미만");
         $.each(filteredData, function (i, item) {
           listHTML += `<li class='card'><div>
               <div class='card_img_wrap d-flex justify-content-center '>
@@ -165,7 +149,6 @@ $(function () {
   
           elements.push(listHTML)
         });
-        console.log(elements);
         container.html(listHTML);
         loadmoreBtn.hide();
       }
@@ -175,12 +158,10 @@ $(function () {
     }
 
     lengthContainer.find("span").text(filteredData.length);
-    // container.html(listHTML);
   }
 
   loadmoreBtn.on("click", function (e) {
     e.preventDefault();
-    console.log("Load more button clicked!"); 
     displayItems(); 
   });
 

@@ -211,14 +211,14 @@ label {
 
 .review {
   padding: 24px 0 38px 0;
-color:#f8d849;
+  color:#f8d849;
   line-height: 1.4;
 }
 
 .review span {
   display: inline-block;
   transform: translateY(-1.5px);
-  color: var(--gray-03, #58606a);
+  color: var(--gray_03, #58606a);
   margin-left: 5px;
 }
 
@@ -248,7 +248,7 @@ color:#f8d849;
   }
   .card_text {
     text-align: center;
-    padding: 0px 6px 0px d;
+    padding: 0px 6px 0px 6px;
   }
 }
 

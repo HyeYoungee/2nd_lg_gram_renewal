@@ -77,7 +77,7 @@ $(window).on("scroll",function (e) {
   e.preventDefault();
   let scrollPosition = $(this).scrollTop();
   let footerOST = $("footer").offset().top;
-  // console.log(footerOST - 500, scrollPosition);
+ 
 
   if (scrollPosition > 700 ) {
     goTop.addClass("active");
@@ -87,11 +87,9 @@ $(window).on("scroll",function (e) {
     logoBtn.removeClass("active");
   }
   if(scrollPosition >= footerOST - 500) {
-    //클래스명 라이트 추가
     goTop.addClass("light");
     logoBtn.addClass("light");
   }else{
-   //클래스명 라이트 제거
   goTop.removeClass("light");
   logoBtn.removeClass("light");
 
