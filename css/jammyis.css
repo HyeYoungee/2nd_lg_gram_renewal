@@ -74,7 +74,7 @@ a{
 }
 .jammy_is_sec02 .d-flex{
   gap: var(--base_unit_d);
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .active{
   visibility: visible;
@@ -207,6 +207,7 @@ a{
 }
 .jammy_is_sec04 .point_list{
   margin-bottom: var(--base_unit_d);
+  display: none;
 }
 .jammy_is_sec04 .point_list li{
   gap: var(--base_unit_d);
@@ -235,4 +236,155 @@ a{
   font-size: 4.8rem;
   line-height: 1.6;
   padding-top: calc(var(--base_unit_d) * 10);
+}
+
+/* 반응형 768px */
+@media (max-width: 768px) {
+  /* jammy_is_sec01 */
+  .jammy_is_sec01{
+    background: url('../imgs/jammy_is/jammy_is_banner_BG.png') center / 90% no-repeat;
+  }
+  .jammy_is_sec01 .logo h2{
+    width: 295px;
+    height: 111px;
+    background: url('../imgs/jammy_is/jammy_is_logo_md.svg') no-repeat;
+  }
+  .jammy_is_sec01 .logo span{
+    top: 2px;
+    right: -22px;
+    font-size: 3.6rem;
+  }
+  .jammy_is_sec01 .banner p:first-of-type{
+    font-size: 2rem;
+  }
+  .jammy_is_sec01 .banner p:last-of-type{
+    font-size: 2.8rem;
+  }
+
+  /* jammy_is_sec02 */
+  .jammy_is_sec02{
+    display: '';
+    padding: 0 24px;
+    margin-top: calc(var(--base_unit_tm) * 5);
+  }
+  .jammy_is_sec02 .container .total_box_01,
+  .jammy_is_sec02 .container .total_box_02,
+  .jammy_is_sec02 .container .total_box_03{
+    display: none;
+  }
+  .jammy_is_sec02 .d-flex:nth-child(2){
+    margin: calc(var(--base_unit_d) * 5) 0;
+  }
+  .jammy_is_sec02 .content > p{
+    font-size: 3rem;
+    padding-bottom: var(--base_unit_tm);
+  }
+  .jammy_is_sec02 .text_box{
+    width: 520px;
+    padding: calc(var(--base_unit_tm)*2);
+  }
+  .jammy_is_sec02 .text_box::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--white_00);
+    border-radius: var(--border_lg);
+    bottom: -5px;
+    right: -5px;
+  }
+  .jammy_is_sec02 .text_box .box_01 img{
+    top: -10px;
+    right: 15px;
+  }
+  .jammy_is_sec02 .text_box .box_02 img{
+    bottom: 4px;
+    left: 90px;
+  }
+  .jammy_is_sec02 .text_box .box_03 img{
+    top: -5px;
+    right: 90px;
+  }
+  .jammy_is_sec02 .text_box h3{
+    font-size: 2.4rem;
+  }
+  .jammy_is_sec02 .text_box p{
+    font-size: 1.6rem;
+  }
+
+  /* jammy_is_sec03 */
+  .jammy_is_sec03{
+    margin-top: calc(var(--base_unit_tm) * 10);
+    padding: 0 24px;
+  }
+  .jammy_is_sec03 .text_box{
+    width: 189px;
+    font-size: 4.8rem;
+  }
+  .jammy_is_sec03 .goods_box > div{
+    max-width: 116px;
+    max-height: 116px;
+  }
+  .jammy_is_sec03 .goods_box{
+    display: grid;
+    grid-template: repeat(12, auto) / 1fr 1fr 2fr 1fr 1fr;
+  }
+
+  /* jammy_is_sec04 */
+  .jammy_is_sec04{
+    font-size: 2.4rem;
+    padding: calc(var(--base_unit_tm) * 10) 0;
+  }
+  .jammy_is_sec04 .left{
+    padding-top: calc(var(--base_unit_tm) * 7);
+    margin-left: 80px;
+  }
+  .jammy_is_sec04 .right{
+    margin-right: 80px;
+    padding-bottom: calc(var(--base_unit_tm) * 7);
+  }
+  .jammy_is_sec04 .point_list{
+    margin-bottom: var(--base_unit_tm);
+  }
+  .jammy_is_sec04 .point_list li{
+    gap: var(--base_unit_d);
+  }
+  .jammy_is_sec04 .jam_box .jam_fill{
+    position: relative;
+  }
+  .jammy_is_sec04 .jam_box .jam_fill:after{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 60%;
+    bottom: 9%;
+    border-radius: calc(var(--border_sm)*2.5);
+    background: #000;
+    left: 10%;
+    right: 10%;
+  }
+  .jammy_is_sec04 .jam_box img{
+    display: block;
+  }
+  .jammy_is_sec04 .container > p:last-of-type{
+    font-size: 3.6rem;
+    line-height: 1.6;
+    padding-top: calc(var(--base_unit_tm) * 10);
+  }
+}
+
+/* 반응형 480px */
+@media (max-width: 480px) {
+  /* Layout, All */
+
+  /* Banner */
+
+  /* jammyG_sec01 */
+
+  /* jammyG_sec02 */
+
+  /* jammyG_sec03 */
+
+  /* jammyG_sec04 */
+
 }
