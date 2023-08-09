@@ -766,11 +766,14 @@ footer {
   }
   #gotop_btn{
     right:32px;
+   
   
   }
   #lg_logo_btn svg{
     position: fixed;
     right: 32px;
+    bottom:155px
+   
   }
 }
 
@@ -786,11 +789,17 @@ footer {
   }
   #gotop_btn{
     right:32px;
+    width: 46px;
+    height: 46px;
+    line-height: 48px;
   
   }
   #lg_logo_btn svg{
     position: fixed;
     right: 32px;
+    width: 46px;
+    height: 46px;
+    line-height: 64px;
   }
 }
 

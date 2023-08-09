@@ -289,6 +289,9 @@ padding: 0 var(--tt_size_01);
 .story_section09_office>div>div>div{position: absolute;bottom:var(--tt_size_01);}
 .story_section09_office>div>div>div>img:nth-child(2){height:calc(var(--tt_size_01)*3.5);}
 
+.f-link{
+  text-decoration: none;
+}
 
 @media (max-width: 768px) {
   .story_section06_influencer .influencer_container img:first-child, 
