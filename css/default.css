@@ -446,12 +446,11 @@ h2 {
 
 .cs_sub_tt {
   font-size: calc(var(--body_text_unit) * 2);
-  /* 32px */
   margin-bottom: 40px;
 }
 
 .cs_desc {
-  font-size: max(2rem, min(3vw, 2.4rem));
+  font-size: 24px;
   padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
   margin-bottom: 0;
   font-family: "Gmarket Sans TTF";
@@ -1026,7 +1025,9 @@ h2 {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 432px;
+    /* max-width: 432px; */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .main_sec6_service .title {
@@ -1038,7 +1039,10 @@ h2 {
     height: 48px;
     margin: 0 auto;
   }
-
+.cs_desc{
+ font-size: 20px;
+ line-height: 1.3;
+}
   .csslider {
     width: 70%;
   }
