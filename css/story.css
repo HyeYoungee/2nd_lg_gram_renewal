@@ -5,7 +5,7 @@ body{
 /* story_section01~09공통 */
 section{
   width: 100%;
-  height: 100vh ;
+  height: 110vh ;
   font-family: "Gmarket Sans TTF";
 }
 /* 이미지 흔들기 시작*/
@@ -71,6 +71,9 @@ section img:hover{animation: shake 0.5s ease-in-out;}
 .story_section02>*{
   margin-bottom: calc(var(--base_unit_d)*2);
 }
+.story_section02 p span{
+margin-top: var(--base_unit_d);
+}
 /* story_section03 */
 .story_section03{
   height : 100vh; 
@@ -112,6 +115,9 @@ section img:hover{animation: shake 0.5s ease-in-out;}
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.story_section05 div>*{
+  margin-bottom: var(--base_unit_d);
 }
 /* story_section06_influencer */
 .story_section06_influencer{
@@ -235,7 +241,7 @@ padding: 0 var(--tt_size_01);
   bottom:40px;
 }
 .story_section07_creator div>div>p span{
-  display: block;text-align: center;
+  display: block;text-align: center; padding-top:var(--border_sm);
 }
 /* story_section08_student */
 .story_section08_student{
@@ -250,8 +256,8 @@ padding: 0 var(--tt_size_01);
 .story_section08_student>div>div>p:nth-child(2){
   font-size: var(--bd_size_01);}
 .story_section08_student div div p{
-  font-size: var(--body_text_unit);}
-.story_section08_student span{display: block;}
+  font-size: var(--body_text_unit);padding-bottom: var(--border_lg);}
+.story_section08_student span{display: block; padding:var(--border_sm) 0;}
 .story_section08_student>div>img{
   height:calc(var(--tt_size_01)*10);
   padding-left:var(--tt_size_01);
@@ -272,7 +278,7 @@ padding: 0 var(--tt_size_01);
   -webkit-text-fill-color: transparent;
 }
 .story_section09_office{background-color: var(--white_00);}
-.story_section09_office span{display: block;}
+.story_section09_office span{display: block;padding-top: var(--border_sm);}
 .story_section09_office div p{font-size: var(--body_text_unit);text-align: right;position: relative;width:200px;}
 .story_section09_office div p::before{
   content: "";
