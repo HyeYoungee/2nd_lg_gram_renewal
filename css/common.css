@@ -303,11 +303,9 @@ a {
   color: var(--dark, #1e2226);
 }
 
-
-
 /* logo btn */
 
-#lg_logo_btn{
+#lg_logo_btn {
   display: block;
 }
 
@@ -329,9 +327,7 @@ a {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  
 }
-
 
 #lg_logo_btn svg:hover {
   background-color: var(--gray_03);
@@ -359,8 +355,6 @@ a {
   cursor: pointer;
 }
 
-
-
 #gotop_btn:hover {
   background-color: var(--gray_03);
 }
@@ -371,12 +365,9 @@ a {
   visibility: visible;
 }
 
-
-#lg_logo_btn.light svg{
-  background-color: var(--gray_02)
+#lg_logo_btn.light svg {
+  background-color: var(--gray_02);
 }
-
-
 
 .menu_li {
   color: #58606a;
@@ -488,7 +479,7 @@ nav {
 .main_header_menu > li ul li a {
   color: var(--gray_03);
   font-weight: 300;
-  text-decoration:none;
+  text-decoration: none;
 }
 .main_header_menu > li ul li a:hover {
   font-weight: 500;
@@ -729,12 +720,11 @@ footer {
   .footer_info_link_wrap ul li {
     flex: 1 0 50%;
   }
-  #gotop_btn{
-    right:65px;
+  #gotop_btn {
+    right: 65px;
     bottom: 100px;
-  
   }
-  #lg_logo_btn svg{
+  #lg_logo_btn svg {
     position: fixed;
     right: 65px;
     bottom: 175px;
@@ -764,16 +754,14 @@ footer {
     padding: 18px 0;
     justify-content: center;
   }
-  #gotop_btn{
-    right:32px;
-   
-  
+  #gotop_btn {
+    right: 32px;
+    bottom: 85px;
   }
-  #lg_logo_btn svg{
+  #lg_logo_btn svg {
     position: fixed;
     right: 32px;
-    bottom:155px
-   
+    bottom: 155px;
   }
 }
 
@@ -787,14 +775,13 @@ footer {
   .footer_sns_wrap ul li {
     margin-right: 15px;
   }
-  #gotop_btn{
-    right:32px;
+  #gotop_btn {
+    right: 32px;
     width: 46px;
     height: 46px;
     line-height: 48px;
-  
   }
-  #lg_logo_btn svg{
+  #lg_logo_btn svg {
     position: fixed;
     right: 32px;
     width: 46px;

@@ -26,7 +26,7 @@ $(function () {
     index = (index + 1) % colors.length;
   }
 
-  setInterval(changeColorText, 4000);
+  setInterval(changeColorText, 3000);
 });
 
 //두번째 섹션 라이브러리 사용
