@@ -9,7 +9,7 @@ $(function () {
   let filteredData = [];
   let result;
 
-  $.getJSON("/data/card.json", makeList);
+  $.getJSON("./data/card.json", makeList);
 
   function makeList(data) {
     allData = data;
