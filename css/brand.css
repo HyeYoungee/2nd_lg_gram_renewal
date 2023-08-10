@@ -1,12 +1,12 @@
 body {
   padding: 0;
   margin: 0;
+  padding-top: 72px;
 }
 
 /* section 1 */
 main{
-  margin-top: 72px;
-  font-family: "Gmarket Sans";
+  font-family: "Gmarket Sans TTF";
 }
 .sec_1 {
   overflow: hidden;
@@ -31,6 +31,7 @@ main{
   background-color: white;
   transition: 1s;
   transform-origin: 50% 40%;
+  height: 100vh;
 }
 .mask h2.active {
   transform: scale(5.5);
@@ -509,7 +510,7 @@ main{
 }
 
 .sec_9 .row div .lineup {
-  height: 40%;
+  height: 60%;
 }
 
 .img_wrap {
@@ -549,7 +550,7 @@ footer{
     height: 100vh;
 }
   .mask h2 {
-    transform-origin: 50% 40%;
+    transform-origin: 50% 30%;
   }
   .sec_2 h2 {
     font-size: 32px;
@@ -626,7 +627,7 @@ footer{
   }
   .mask h2 {
     font-size: 80px;
-    transform-origin: 50% 45%;
+    transform-origin: 50% 30%;
   }
   .sec_2 h2 {
     font-size: 22px;
