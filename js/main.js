@@ -10,25 +10,23 @@ function setCookie(name, value, day) {
   document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
 }
 
-popup.find(".github").on("click",function(){
-  window.open("https://github.com/hazel305/lg_gram_renewal_website")
-})
+popup.find(".github").on("click", function () {
+  window.open("https://github.com/hazel305/lg_gram_renewal_website");
+});
 
 function cookieCheck(name) {
   let cookieArr = document.cookie.split(";");
   let visited = false;
   for (let cookie of cookieArr) {
-
     if (cookie.search(name) > -1) {
       visited = true;
-      
+
       break;
     }
   }
-  console.log(visited);
   if (!visited) {
     popup.attr("open", "");
-  }else{
+  } else {
     popup.removeAttr("open");
   }
 }
@@ -43,13 +41,10 @@ pCloseBtn.on("click", function () {
   }
 });
 
-
 /* 이현정 팝업 끝 */
-
 
 /* 이현정 main_sec_01_video 시작 */
 $(function () {
- 
   $(".select_slider").bxSlider({
     minSlides: 3,
     maxSlides: 8,
@@ -60,21 +55,21 @@ $(function () {
   });
 });
 
-$(window).on("resize",function () {
+$(window).on("resize", function () {
   let windowWid = $(window).width();
   let scrollLgBtn = $("#scroll_btn");
   let scrollSmBtn = $("#scroll_sm_btn");
   let videoChange = $(".video_slider div video");
   if (windowWid < 768) {
     videoChange.attr(
-      "src", 
+      "src",
       "https://res.cloudinary.com/damxzwed4/video/upload/v1690634463/newjeans_gram_mb_fea6sh.mp4"
     );
     scrollLgBtn.css("display", "none");
     scrollSmBtn.css("display", "block");
   } else {
     videoChange.attr(
-      "src", 
+      "src",
       "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
     );
     scrollLgBtn.css("display", "block");
@@ -85,7 +80,6 @@ $(window).on("resize",function () {
 $(window).trigger("resize");
 /* 이현정 main_sec_01_video 끝 */
 
-
 /* 이현정 main_sec_04_select 시작 */
 $("#gramtype").niceSelect();
 $("#gramcolor").niceSelect();
@@ -93,7 +87,6 @@ $("#gramcolor").niceSelect();
 $(".goPage").on("click", function () {
   const typeSelect = $("#gramtype").val();
   const colorSelect = $("#gramcolor").val();
-  console.log(typeSelect, colorSelect);
   window.location.href = `http://127.0.0.1:5505/search.html?type=${typeSelect}&color=${colorSelect}`;
 });
 
@@ -130,17 +123,16 @@ var swiper = new Swiper(".slider", {
 //autoplayStart autoplayStop
 let slide = $(".swiper-slide img");
 
-slide.on('mouseenter',function (e) {
+slide.on("mouseenter", function (e) {
   swiper.autoplay.stop();
 });
-slide.on('mouseleave',function (e) {
+slide.on("mouseleave", function (e) {
   swiper.autoplay.start();
 });
 /* 천혜영 main_sec_02_slide 끝 */
 
 /* 천혜영 main_sec_05_all 시작 */
 let sec5_cardBox = $(".main_sec5 .card_box > div");
-
 
 sec5_cardBox.mouseover(function () {
   $(this).addClass("active");
@@ -150,33 +142,31 @@ sec5_cardBox.mouseout(function () {
 });
 /* 천혜영 main_sec_05_all 끝 */
 
-
-
 /* 김유림 main_sec_06_service 시작 */
-const csSwiper = new Swiper('.mySwiper', {
+const csSwiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 10,
   breakpoints: {
     320: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     720: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 30,
     },
     800: {
       slidesPerView: 4,
-      spaceBetween: 24
-    }
+      spaceBetween: 24,
+    },
   },
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+    el: ".swiper-pagination",
+    type: "bullets",
     clickable: true,
   },
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: ".swiper-scrollbar",
     draggable: true,
   },
   autoplay: {
@@ -184,10 +174,9 @@ const csSwiper = new Swiper('.mySwiper', {
     pauseOnMouseEnter: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
-
 
 /* 김유림 main_sec_06_service 끝 */
