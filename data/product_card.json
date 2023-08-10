@@ -1,0 +1,62 @@
+[
+  {
+    "image": "./imgs/product/product_monitor01.jpg",
+    "product_num": "34WN780",
+    "product_title": "LG 울트라와이드 모니터",
+    "product_desc1": "혁신적인 스탠드",
+    "product_desc2": "선명하고 감동적인 화질",
+    "product_desc3": "리더모드, 플리커프리, 색약자색보정",
+    "rating": "4.38 (18)",
+    "cost": 658000
+  },
+  {
+    "image": "./imgs/product/product_monitor02.jpg",
+    "product_num": "28MQ780",
+    "product_title": "LG 듀얼업 모니터",
+    "product_desc1": "놀라운 화질",
+    "product_desc2": "멀티태스킹에 최적",
+    "product_desc3": "USB C-Type의 편리한 제어와 연결성",
+    "rating": "5.00 (15)",
+    "cost": 979000
+  },
+  {
+    "image": "./imgs/product/product_audio.jpg",
+    "product_num": "RP4BE",
+    "product_title": "LG 엑스붐 360",
+    "product_desc1": "LG만의 설계기술을 적용한 360° 사운드",
+    "product_desc2": "풍부한 중저음의 Glass Fiber Woofer",
+    "product_desc3": "9가지 프리셋 모드",
+    "rating": "5.00 (10)",
+    "cost": 499000
+  },
+  {
+    "image": "./imgs/product/product_tone01.jpg",
+    "product_num": "TONE-TFP5",
+    "product_title": "LG 톤프리",
+    "product_desc1": "고속충전 5분 1시간 사용",
+    "product_desc2": "최대 8시간 유지 강력한 배터리 ",
+    "product_desc3": "IPX4 등급의 생활방수",
+    "rating": "4.67 (9)",
+    "cost": 169000
+  },
+  {
+    "image": "./imgs/product/product_tone02.jpg",
+    "product_num": "TONE-UT90Q",
+    "product_title": "LG 톤프리",
+    "product_desc1": "돌비 애트모스블루투스 이어폰",
+    "product_desc2": "적응형 노이즈 캔슬링",
+    "product_desc3": "멀티포인트&페어링 플러그앤 와이어리스",
+    "rating": "4.87 (226)",
+    "cost": 279000
+  },
+  {
+    "image": "./imgs/product/product_tone03.jpg",
+    "product_num": "TONE-UTF7Q",
+    "product_title": "LG 톤프리",
+    "product_desc1": "스포츠용 블루투스 이어폰",
+    "product_desc2": "액티브 노이즈 캔슬링 메리디안 사운드",
+    "product_desc3": "UVnano안심 실리콘 이어젤",
+    "rating": "4.86 (7)",
+    "cost": 250000
+  }
+]

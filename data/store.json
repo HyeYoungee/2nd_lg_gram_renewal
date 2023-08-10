@@ -11,28 +11,32 @@
                   "lat": 37.5234076,
                   "lng": 127.0394159,
                   "address": "서울특별시 강남구 도산대로 403 LG전자 베스트샵 강남본점",
-                  "phone": "02-3448-5191"
+                  "phone": "02-3448-5191",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%EA%B0%95%EB%82%A8%EB%B3%B8%EC%A0%90%20%EC%99%B8%EA%B4%80-crop[20221214_095145].jpg"
                 },
                 {
                   "storeName": "롯데 강남점",
                   "lat": 37.4969255,
                   "lng": 127.0532731,
                   "address": "서울특별시 강남구 도곡로 401 8층 LG전자 베스트샵 롯데 강남점",
-                  "phone": "02-531-2809"
+                  "phone": "02-531-2809",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210331_101855[20210415_091238].jpg"
                 },
                 {
                   "storeName": "현대본점",
                   "lat": 37.5273339,
                   "lng": 127.0274702,
                   "address": "서울특별시 강남구 압구정로 165 5층 LG전자 베스트샵 현대 본점",
-                  "phone": "02-3449-5441"
+                  "phone": "02-3449-5441",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%ED%98%84%EB%8C%80%20%EB%B3%B8%EC%A0%90%203[20230531_141333].jpg"
                 },
                 {
                   "storeName": "현대 무역점",
                   "lat": 37.5086154,
                   "lng": 127.0597808,
                   "address": "서울특별시 강남구 테헤란로 517 4층 LG전자 베스트샵 현대 무역점",
-                  "phone": "02-3453-0705"
+                  "phone": "02-3453-0705",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_%EB%A7%A4%EC%9E%A5%EC%A0%84%EA%B2%BD%EC%82%AC%EC%A7%84[20210413_174838].jpg"
                 }
              ]
           },
@@ -44,14 +48,16 @@
                   "lat": 37.5733046,
                   "lng": 126.8124876,
                   "address": "서울특별시 강서구 양천로 78(방화동)LG 베스트샵 방화점",
-                  "phone": "02-2661-7777"
+                  "phone": "02-2661-7777",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210330_14[20210414_110128].jpg"
                 },
                 {
                   "storeName": "강서본점",
                   "lat": 37.555184,
                   "lng": 126.855121,
                   "address": "서울특별시 강서구 공항대로 431(등촌동) LG전자 베스트샵 강서본점",
-                  "phone": "02-3664-0065"
+                  "phone": "02-3664-0065",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%EA%B0%95%EC%84%9C%EB%B3%B8%EC%A0%90[20221123_154042].png"
                 }
              ]
           },
@@ -63,21 +69,24 @@
                   "lat": 37.5678368,
                   "lng": 126.8982526,
                   "address": "서울특별시 마포구 월드컵로 158(성산동)LG 베스트샵 월드컵점",
-                  "phone": "02-337-3050"
+                  "phone": "02-337-3050",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%EC%9B%94%EB%93%9C%EC%BB%B5_1[20220829_155909].jpg"
                 },
                 {
                   "storeName": "동교점",
                   "lat": 37.5584006,
                   "lng": 126.9267898,
                   "address": "서울특별시 마포구 신촌로 6(동교동)LG전자 베스트샵 동교점",
-                  "phone": "02-6925-5205"
+                  "phone": "02-6925-5205",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%EB%8F%99%EA%B5%90%EC%A0%90[20220722_112429].jpg"
                 },
                 {
                   "storeName": "염리점",
                   "lat": 37.5461188,
                   "lng": 126.9452243,
                    "address": "서울특별시 마포구 백범로 130(염리동) LG전자 베스트샵 염리점",
-                  "phone": "02-706-4321"
+                  "phone": "02-706-4321",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210411_114729_HDR[20210414_101534].jpg"
                 }
              ]
           },
@@ -89,14 +98,16 @@
                   "lat": 37.5782168,
                   "lng": 126.9104581,
                   "address": "서울특별시 서대문구 응암로 58(북가좌동)LG 베스트샵 북가좌점",
-                  "phone": "02-2038-2996"
+                  "phone": "02-2038-2996",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%EB%B6%81%EA%B0%80%EC%A2%8C1[20220829_152951].jpg"
                 },
                 {
                   "storeName": "현대 신촌점",
                   "lat": 37.556155,
                   "lng": 126.9358631,
                   "address": "서울특별시 서대문구 신촌로 83 9층 LG전자 베스트샵 현대 신촌점",
-                  "phone": "02-3145-3890"
+                  "phone": "02-3145-3890",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_1618299762762[20210415_091714].jpg"
                 }
              ]
           },
@@ -108,28 +119,32 @@
                   "lat": 37.5257221,
                   "lng": 126.9286365,
                   "address": "서울특별시 영등포구 여의대로 108(여의도동) 5층 LG전자 베스트샵 더현대 서울",
-                  "phone": "02-3277-0570"
+                  "phone": "02-3277-0570",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210407_174810[20210414_111511].jpg"
                 },
                 {
                   "storeName": "롯데 영등포점",
                   "lat": 37.5154709,
                   "lng": 126.9066823,
                   "address": "서울특별시 영등포구 경인로 846 9층 LG전자 베 스트샵 롯데 영등포점",
-                  "phone": "02-2164-5414"
+                  "phone": "02-2164-5414",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210408_110758_HDR[20210415_091532].jpg"
                 },
                 {
                   "storeName": "문래점",
                   "lat": 37.5182614,
                   "lng": 126.8944513,
                   "address": "서울특별시 영등포구 당산로 37(문래동3가)LG전자 베스트샵 문래점",
-                  "phone": "02-2637-5511"
+                  "phone": "02-2637-5511",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210330_160935_HDR[20210413_173352].jpg"
                 },
                 {
                   "storeName": "서울양평점",
                   "lat": 37.5293265,
                   "lng": 126.8921195,
                   "address": "서울특별시 영등포구 선유로 173(양평동3가) LG전자 베스트샵 서울양평점",
-                  "phone": "02-2135-1475"
+                  "phone": "02-2135-1475",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210407_113132_HDR[20210413_174746].jpg"
                 }
              ]
           },
@@ -141,21 +156,24 @@
                   "lat": 37.5614805,
                   "lng": 127.0147994,
                   "address": "서울특별시 중구 다산로 206(신당동)LG 베스트샵 청구점",
-                  "phone": "02-2237-7701"
+                  "phone": "02-2237-7701",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/21[%EC%88%98%EC%A0%95]%EC%B2%AD%EA%B5%AC%EC%A0%84%EB%A9%B4[20220918_111642].jpg"
                 },
                 {
                   "storeName": "롯데 본점",
                   "lat": 37.56471,
                   "lng": 126.981641,
                   "address": "서울특별시 중구 남대문로 81 롯데백화점 본점 8층 LG전자 베스트샵 롯데 본점",
-                  "phone": "02-756-0980"
+                  "phone": "02-756-0980",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210331_122436_HDR[20210414_100806].jpg"
                 },
                 {
                   "storeName": "신세계 본점",
                   "lat": 37.560996,
                   "lng": 126.980998,
                   "address": "서울특별시 중구 소공로 63(충무로1가) 신관 7층 LG전자 베스트샵 신세계 본점",
-                  "phone": "02-310-1481"
+                  "phone": "02-310-1481",
+                  "image": "https://www.lge.co.kr/kr/upload/admin/storePhoto/%E2%98%85%EC%88%98%EC%A0%95_20210402_185711_HDR[20210414_092052].jpg"
                 }
              ]
           }

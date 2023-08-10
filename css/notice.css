@@ -13,15 +13,21 @@ body * {
   scrollbar-width: none;
 }
 
-/* title */
+/* title 시작 */
 .title {
-  gap: 36px;
   color: var(--dark, #1e2226);
-  /* padding: calc(var(--base_unit_d) * 3) 0; */
-  padding: max(6rem, min(3vw, 7.2rem)) 0;
+}
+.tt_01{
+  font-size: 48px;
+  line-height: 150%;
 }
 .cs_desc{
-  font-size: max(1.6rem, min(3vw, 2.4rem)); 
+  font-size: 24px;
+  margin-top: max(2rem, min(3vw, 3.6rem));
+  margin-bottom: 0;
+}
+.big_pd {
+  padding: 100px 0 72px;
 }
 .search_bar {
   padding: 0 10px max(1.6rem, min(3vw, 2.4rem));
@@ -50,8 +56,8 @@ body * {
   width: 80%;
   box-sizing: border-box;
 }
-
-/* main */
+/* title 끝 */
+/* main 시작 */
 main{
   margin-bottom: max(10rem, min(3vw, 16rem));
 }
@@ -71,7 +77,7 @@ main{
   font-size: max(1.6rem, min(3vw, 1.7rem));
   vertical-align: baseline;
   font-weight: 400;
-  width: 65%;
+  width:70%;
 }
 .accordion-button span {
   margin-right: max(2rem, min(3vw, 4rem));
@@ -131,7 +137,7 @@ main{
   background-color: rgba(69, 147, 252, 0.1);
 }
 .page_wrap {
-  margin-top: calc(var(--base_unit_d) * 3);
+  margin-top: calc(var(--base_unit_d) * 2);
 }
 .more_link {
   display: inline-block;
@@ -161,16 +167,26 @@ main{
     gap: 20px;
     padding: calc(var(--base_unit_tm) * 3) 0;
   }
+  
+  .tt_01{
+    font-size: 40px;
+  }
   .cs_desc{
-    width:45%;
+    font-size: 18px;
+    width:70%;
     text-align: center;
-    line-height: 1.4;
+  }
+  .big_pd{
+    padding: 100px 0 48px;
+  }
+  .page_wrap {
+    margin-top: calc(var(--base_unit_d) * 2);
   }
   .notice_tt{
     width: 65%;
     line-height: 1.4;
   }
-  
+
   .search_bar form {
     gap: 8px;
   }
@@ -178,8 +194,10 @@ main{
     font-size: 14px;
     border-radius: 8px;
   }
+  }
 
-}
+
+
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width: 479px) {
   .container,
@@ -192,6 +210,18 @@ main{
   }
   .title {
     padding: calc(var(--base_unit_tm) * 3) 0 calc(var(--base_unit_tm) * 2);
+  }
+
+  .tt_01{
+    font-size: 32px;
+  }
+  .cs_desc{
+    font-size: 16px;
+    width:55%;
+    line-height: 1.4;
+  }
+  .big_pd{
+    padding: 100px 0 48px;
   }
   .search_bar {
     padding: 0 10px var(--base_unit_tm);
@@ -209,12 +239,14 @@ main{
     font-size: 14px;
     border-radius: 4px;
   }
-  .notice_tt{
-    width: 50%;
+  .accordion-button .notice_tt {
+    width: 56%;
     line-height: 1.4;
   }
   .accordion-button {
     padding: 12px 8px;
   }
-
+  .page_wrap {
+    margin-top: calc(var(--base_unit_d) * 1.5);
+}
 }

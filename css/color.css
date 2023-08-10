@@ -5,7 +5,7 @@
 }
 
 .color_intro h2,
-.color_intro span {
+.color_text h2 {
   color: var(--white-bg, #fdfdfd);
   font-family: Gmarket Sans TTF;
   font-size: max(4.6rem, min(5vw, 6.8rem));
@@ -13,12 +13,21 @@
   line-height: 150%;
 }
 
+.color_text {
+  display: flex;
+  justify-content: center;
+}
+
+#colorText {
+  margin-left: 15px;
+}
+
 #colorText.tourmaline-green {
   color: #9ef8ee;
 }
 
 #colorText.snow-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 #colorText.aurora-white {
@@ -65,7 +74,11 @@
   height: 100vh;
 }
 
-.color_desc img {
+.img_desc {
+  background: url("https://velog.velcdn.com/images/hyunny123/post/4277b7b8-35aa-47c1-abcd-8972489127a9/image.png")
+    no-repeat;
+  background-position: center center;
+  background-size: contain;
   width: 100%;
   height: 100%;
 }
@@ -73,7 +86,7 @@
 .text_desc {
   position: absolute;
   top: 40%;
-  right: -15%;
+  left: 50%;
 }
 
 @media (max-width: 1800px) {
@@ -82,6 +95,23 @@
     top: 40%;
     right: 0;
   }
+}
+
+@media (max-width: 1270px) {
+  .text_desc {
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+}
+@media (max-width: 678px) {
+  .text_desc {
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+}
+@media (max-width: 480px) {
 }
 .text_desc h2 {
   color: var(--dark-bg, #000);
@@ -139,80 +169,11 @@
       #b2faff 100%
     )
   );
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* 세번째 섹션 */
-/* .color_fixed {
-  position: relative;
-}
-.color_fixed_img {
-  background: url("https://velog.velcdn.com/images/hyunny123/post/105b5f66-40e1-4c03-8008-0d3560b429d3/image.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center left;
-  width: 100%;
-  height: 100vh;
-  background-attachment: scroll;
-}
-
-.color_fixed_text {
-  position: absolute;
-  top: 30%;
-  right: 150px;
-}
-
-.color_fixed_text h2,
-.color_fixed_text > div > span:first-child {
-  color: var(--dark-bg, #000);
-  text-align: center;
-  font-family: Gmarket Sans TTF;
-  font-size: max(4.6rem, min(5vw, 6.8rem));
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
-}
-
-.color_fixed_text > div > span:last-child {
-  background: var(
-    --point-color,
-    linear-gradient(
-      46deg,
-      #ffe0f2 0%,
-      #f9e0f7 6.77%,
-      #f1e0fa 20.31%,
-      #e9e1fd 30.21%,
-      #e0e2ff 45.31%,
-      #d7e5ff 56.25%,
-      #cfe8ff 73.11%,
-      #c8eaff 83.69%,
-      #c0f0ff 88.9%,
-      #b8f5ff 95.39%,
-      #b2faff 100%
-    )
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: Gmarket Sans TTF;
-  font-size: max(4.6rem, min(5vw, 6.8rem));
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
-}
-
-.color_pick_bar {
-  width: 100vw;
-  height: 288px;
-  background: var(--dark);
-}
-
-.color_pick_bar h2 {
-  color: var(--white_00);
-  text-align: center;
-} */
 
 /* 4번째 섹션 */
 .color_pick_bar {
@@ -224,6 +185,7 @@
 .color_pick_bar h2 {
   color: var(--white_00);
   text-align: center;
+  line-height: 150%;
 }
 
 /* 세번째 섹션 */
@@ -299,34 +261,31 @@
 }
 
 /* 4번째 섹션 */
-
-.color_items_wrap {
-  height: 100vh;
+.color_img_sec{
+  display: none;
 }
-
 .color_items {
   width: 100%;
-  position: relative;
 }
 
 .color_item {
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   display: none;
 }
 
-.color_item .big_img img,
-.color_item .sm_img img {
+.big_img,
+.sm_img {
+  flex: 1;
+}
+
+.big_img img,
+.sm_img img {
   width: 100%;
   height: auto;
 }
 
 .btn_set_wrap {
-}
-
-.btn_set {
+  margin-top: 18px;
 }
 
 .btn_set li {
@@ -339,14 +298,14 @@
   border: 5px solid transparent;
   transition: border-color 0.3s ease;
   box-sizing: content-box;
+  cursor: pointer;
 }
-
 .btn_set li:first-child {
   background-color: #4c5652;
 }
 
 .btn_set li:nth-child(2) {
-  background-color: #fff;
+  background-color: #ddd;
 }
 
 .btn_set li:nth-child(3) {
@@ -355,6 +314,7 @@
 
 .btn_set li:nth-child(4) {
   background-color: pink;
+  margin-right: 0;
 }
 
 .btn_set li.active {
@@ -374,7 +334,6 @@
   width: 300px;
   height: 768px;
   box-shadow: 0px 5px 18px -7px rgba(228, 228, 228, 0.4);
-  /* border: 1px solid #000; */
   border-radius: var(--border_lg);
   background: #fff;
   margin: 0 12px 38px 12px;
@@ -395,7 +354,6 @@
 }
 
 .card_img_wrap {
-  /* width: 408px; */
   height: 312px;
   border-radius: 12px 12px 0px 0px;
 }
@@ -403,19 +361,17 @@
 .card_img_wrap img {
   width: 290px;
   height: 290px;
-  /* height: 312px; */
   border-radius: 12px 12px 0px 0px;
   margin: 12px 0 12px 0;
 }
 
 .card_text {
   text-align: center;
-  /* padding: 36px 31px 25px 31px; */
 }
 
 .card_text p {
   font-weight: 400;
-  font-size: var(--body_text_unit);
+  font-size: 1.6rem;
 }
 
 .product_num {
@@ -434,7 +390,7 @@
 .product_desc1,
 .product_weight {
   color: var(--gray-03, #58606a);
-  font-size: max(1.4rem, min(2.5vw, 1.6rem));
+  font-size: 1.6rem;
   line-height: 1.4;
   padding: 0 0 0 0;
 }
@@ -461,4 +417,85 @@
 .card .add_btn {
   width: 192px;
   height: 60px;
+}
+
+.add_btn {
+  cursor: pointer;
+}
+@media (max-width: 1270px) {
+  .color_fixed_img {
+    height: 100vh;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .color_intro h2,
+  .color_text h2 {
+    font-size: 3.6rem;
+  }
+
+  .color_fixed_img {
+    height: 100vh;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .color_fixed .color_fixed_text h2,
+  .color_fixed .color_fixed_text div span {
+    font-size: 3.6rem;
+    line-height: 150%;
+  }
+
+  .big_img {
+    flex-basis: 50%;
+  }
+  .sm_img {
+    flex-basis: 50%;
+  }
+  .big_img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .color_text {
+    flex-direction: column;
+    align-items: center;
+  }
+  #colorText {
+    font-size: 4.8rem;
+    margin-left: 0;
+  }
+
+  .color_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .sm_img {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+  }
+  .big_img {
+    display: flex;
+    justify-content: center;
+  }
+  .color_item .big_img img {
+    width: 60%;
+  }
+  .color_item .sm_img img {
+    width: 40%;
+  }
+  .color_fixed .color_fixed_text h2,
+  .color_fixed .color_fixed_text div span {
+    font-size: 3.6rem;
+    line-height: 150%;
+  }
+
+
+  .product_cost,
+  .product_title {
+    font-size: 2.4rem;
+  }
 }

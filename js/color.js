@@ -29,13 +29,13 @@ $(function () {
   setInterval(changeColorText, 4000);
 });
 
-//두번째 섹션
+//두번째 섹션 라이브러리 사용
 
 AOS.init({
   duration: 1200,
 });
 
-//세번째 섹션
+//백그라운드 이미지와 텍스트
 
 $(window).on("scroll", function () {
   let sct = $(window).scrollTop();
@@ -78,7 +78,6 @@ let starSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" vi
 </svg>`;
 let elements = [];
 $.getJSON("/data/recommend.json", function (data) {
-  console.log(data);
   $.each(data, function (i, item) {
     cardHTML = `<li class='card'>
     <div>
@@ -92,8 +91,8 @@ $.getJSON("/data/recommend.json", function (data) {
         <p class='product_weight'>무게(g) 약 ${item.product_weight.toLocaleString()}</p>
         <p class='review'>${starSVG}<span>${item.rating}</span></p>
         <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
+        <button class="add_btn">구매하기</button>
       </div>
-      <button class="add_btn">구매하기</button>
     </div>
   </li>`;
     elements.push(cardHTML);
