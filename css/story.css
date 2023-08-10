@@ -292,7 +292,10 @@ padding: 0 var(--tt_size_01);
 .f-link{
   text-decoration: none;
 }
-
+#gotop_btn{
+  font-weight: 700;
+  font-size: var(--body_text_unit);
+}
 @media (max-width: 768px) {
   .story_section06_influencer .influencer_container img:first-child, 
   .story_section06_influencer .influencer_container img:nth-child(3),  

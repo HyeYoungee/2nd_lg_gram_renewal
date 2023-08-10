@@ -114,6 +114,13 @@
 .product_section02>a>img:nth-child(3){
   display: none;
 }
+.f-link{
+  text-decoration: none;
+}
+#gotop_btn{
+  font-weight: 700;
+  font-size: var(--body_text_unit);
+}
 @media (max-width: 1270px) {
   .product_section01 .card_list .card {
     width: 45%;}
