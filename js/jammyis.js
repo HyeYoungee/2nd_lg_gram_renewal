@@ -1,15 +1,4 @@
-let scrollTop = $(window).scrollTop();
-let sec02_content = $('.jammy_is_sec02 > div > div');
+let off = $(window).scrollTop();
+console.log(off);
 
-console.log(sec02_content)
-
-sec02_content.each(function(){
-  
-
-  $(window).scroll(function(){
-
-  
-  
-  });
-  
-})
+AOS.init();
