@@ -150,6 +150,8 @@ a{
   margin-top: calc(var(--base_unit_d) * 10);
 }
 .jammy_is_sec03 .text_box{
+  position: sticky;
+  top:25%;
   margin: 0 auto;
   width: 278px;
   font-size: 7.2rem;
@@ -197,6 +199,7 @@ a{
   text-align: center;
   font-size: 3.6rem;
   line-height: 1.5;
+  margin-top: calc(var(--base_unit_d) * 10);
   padding: calc(var(--base_unit_d) * 10) 0;
 }
 .jammy_is_sec04 .left{
@@ -337,6 +340,7 @@ a{
 
   /* jammy_is_sec04 */
   .jammy_is_sec04{
+    margin-top: 0;
     font-size: 2.4rem;
     padding: calc(var(--base_unit_tm) * 10) 0;
   }
