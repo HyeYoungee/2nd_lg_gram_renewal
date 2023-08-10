@@ -301,6 +301,9 @@ a{
     width: 520px;
     padding: calc(var(--base_unit_tm)*2);
   }
+  .jammy_is_sec02 div[class^="total"] > img{
+    width: 70%;
+  }
   .jammy_is_sec02 .text_box .box_01 img{
     top: -10px;
     right: 15px;
