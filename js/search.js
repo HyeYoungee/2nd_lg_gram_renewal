@@ -27,14 +27,12 @@ $(function () {
       filteredData = filteredData.filter((item) => {
         return item.color === selectedColor;
       });
-      
+
       displayItems();
-    } else{
+    } else {
       filteredData = allData;
       displayItems();
     }
-
-
   }
   $(".filter_options input[type='radio']").on("change", function () {
     if ($(this).is(":checked")) {
@@ -53,7 +51,6 @@ $(function () {
     let selectedType = $(".filter_options input[name='type']:checked").val();
     let selectedColor = $(".filter_options input[name='color']:checked").val();
     let selectedPrice = $(".filter_options input[name='price']:checked").val();
-
 
     filteredData = [];
     if (!selectedType && !selectedColor && !selectedPrice) {
@@ -89,17 +86,14 @@ $(function () {
   let listHTML = "";
 
   function displayItems() {
-  
-    let elements =[];
-   listHTML="";
- 
+    let elements = [];
+    listHTML = "";
 
     if (filteredData.length > 0) {
-      if(filteredData.length>6){
+      if (filteredData.length > 6) {
         let slicedData = filteredData.slice(added, added + addItemCount);
         $.each(slicedData, function (i, item) {
-          listHTML += 
-          `<li class='card'>
+          listHTML += `<li class='card'>
               <div>
                 <div class='card_img_wrap d-flex justify-content-center '>
                   <img src="${item.image}" alt="${item.product_title}" />
@@ -109,27 +103,26 @@ $(function () {
                   <h3 class='product_title'>${item.product_title}</h3>
                   <p class='product_desc1'>${item.product_desc1}</p>
                   <p class='product_weight'>무게(g) 약 ${item.product_weight.toLocaleString()}</p>
-                  <p class='review'>${starSVG}<span>${item.rating}</span></p>
+                  <p class='review'>&starf;<span>${item.rating}</span></p>
                   <h3 class='product_cost'>₩ ${item.cost.toLocaleString()}</h3>
                   <button class="add_btn">구매하기</button>
                 </div>
             </div>
           </li>`;
-  
-          elements.push(listHTML)
+
+          elements.push(listHTML);
         });
         $(listHTML).appendTo(container);
-  
-  
+
         added += addItemCount;
-  
-        if(filteredData.length > 6 && added < filteredData.length){
+
+        if (filteredData.length > 6 && added < filteredData.length) {
           loadmoreBtn.show();
-        
-        }else{
+        } else {
           loadmoreBtn.hide();
         }
-      }else{//6개이상
+      } else {
+        //6개이상
         $.each(filteredData, function (i, item) {
           listHTML += `<li class='card'><div>
               <div class='card_img_wrap d-flex justify-content-center '>
@@ -146,13 +139,12 @@ $(function () {
               </div>
             </div>
           </li>`;
-  
-          elements.push(listHTML)
+
+          elements.push(listHTML);
         });
         container.html(listHTML);
         loadmoreBtn.hide();
       }
-
     } else {
       listHTML = `<p class="no_item">검색결과가 없습니다.</p>`;
     }
@@ -162,7 +154,7 @@ $(function () {
 
   loadmoreBtn.on("click", function (e) {
     e.preventDefault();
-    displayItems(); 
+    displayItems();
   });
 
   let starSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox='0 0 16 16" fill="none'>

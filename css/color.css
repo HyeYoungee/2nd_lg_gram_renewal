@@ -261,7 +261,7 @@
 }
 
 /* 4번째 섹션 */
-.color_img_sec{
+.color_img_sec {
   display: none;
 }
 .color_items {
@@ -397,7 +397,7 @@
 
 .review {
   padding: 24px 0 36px 0;
-  color: var(--gray-03, #58606a);
+  color: #f8d849;
   line-height: 1.4;
 }
 
@@ -405,6 +405,7 @@
   display: inline-block;
   transform: translateY(-1.5px);
   margin-left: 5px;
+  color: var(--gray-03, #58606a);
 }
 
 .product_cost {
@@ -475,7 +476,7 @@
   .sm_img {
     display: flex;
     flex-direction: row;
-   justify-content: center;
+    justify-content: center;
   }
   .big_img {
     display: flex;
@@ -492,7 +493,6 @@
     font-size: 3.6rem;
     line-height: 150%;
   }
-
 
   .product_cost,
   .product_title {
