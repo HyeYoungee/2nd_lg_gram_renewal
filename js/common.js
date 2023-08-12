@@ -44,10 +44,10 @@ $(".main_header_toggleBtn").click(function (e) {
     $(".main_header_icons").toggle();
     $(".main_header_menu, .main_header_menu>li>ul").toggleClass("active");
     let $toggleBtn = $(this).find("img");
-    if ($toggleBtn.attr("src") === "./imgs/index/main_header_menu.svg") {
-      $toggleBtn.attr("src", "./imgs/index/main_header_close.svg");
+    if ($toggleBtn.attr("src") === "imgs/index/main_header_menu.svg") {
+      $toggleBtn.attr("src", "imgs/index/main_header_close.svg");
     } else {
-      $toggleBtn.attr("src", "./imgs/index/main_header_menu.svg");
+      $toggleBtn.attr("src", "imgs/index/main_header_menu.svg");
     }
   }
 });
