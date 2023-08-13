@@ -1100,6 +1100,9 @@ h2.select_t {
 
 /* 모바일 (해상도 ~ 479px) */
 @media (max-width: 479px) {
+  .popup {
+    display: none;
+  }
   .container,
   .container-lg,
   .container-md,
