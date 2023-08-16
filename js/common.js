@@ -54,6 +54,14 @@ $(".main_header_toggleBtn").click(function (e) { //토글 버튼을 클릭할 �
     }
   }
 });
+// 화면 크기가 조정될 때에 초기 상태로 설정
+$(window).resize(function () {
+  if ($(window).width() > 480) { //화면 너비가 768px 초과일 경우에만 동작
+    $(".main_header_icons").show(); // 아이콘들 보이게 설정
+    $(".main_header_menu, .main_header_menu>li>ul").removeClass("active"); // 메뉴 활성 클래스 제거
+    $toggleBtn.attr("src", "imgs/index/main_header_menu.svg"); // 토글 버튼 이미지 초기화
+  }
+});
 // 아이콘들이 화면이 작을 때는 안보이고 클 때는 보임
 $(window).resize(function () {
   if ($(window).width() <= 768) {
@@ -65,7 +73,7 @@ $(window).resize(function () {
 $(".main_header_icons").click(function (e) {
   e.preventDefault();
 });
-
+/* 최성희 main_header 끝 */
 
 /* 이현정 topbtn 시작 */
 
