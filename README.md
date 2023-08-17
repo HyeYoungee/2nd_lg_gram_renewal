@@ -93,7 +93,7 @@
 | <div style="color:#4593fc">이현정</div> | 메인페이지(section1, section4, 푸터), 서브페이지(그램찾기, 컬러그램)                  | <div style="color:#4593fc">100 %</div> |
 | <div style="color:#4593fc">김유림</div> | 메인페이지(section3, section6), 서브페이지(브랜드 소개, 공지사항, 고객지원, 매장찾기) | <div style="color:#4593fc">100 %</div> |
 | <div style="color:#4593fc">천혜영</div> | 메인페이지(section2, section5), 서브페이지(재미is, 재밌그램)                          | <div style="color:#4593fc">100 %</div> |
-| <div style="color:#4593fc">최성희</div> | 메인페이지(헤더), 서브페이지(그램스토리, 연관제품)                                    | <div style="color:#4593fc">50 %</div>  |
+| <div style="color:#4593fc">최성희</div> | 메인페이지(헤더), 서브페이지(그램스토리, 연관제품)                                    | <div style="color:#4593fc">100 %</div>  |
 
   <br>
 
