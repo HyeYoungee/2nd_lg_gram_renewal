@@ -63,14 +63,14 @@ $(window).on("resize", function () {
   if (windowWid < 768) {
     videoChange.attr(
       "src",
-      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634463/newjeans_gram_mb_fea6sh.mp4"
+      "https://res.cloudinary.com/doq5gztmf/video/upload/v1695731623/newjeans_gram_mb_k4c9fm.mp4"
     );
     scrollLgBtn.css("display", "none");
     scrollSmBtn.css("display", "block");
   } else {
     videoChange.attr(
       "src",
-      "https://res.cloudinary.com/damxzwed4/video/upload/v1690634452/gram_global_dtaxus.mp4"
+      "https://res.cloudinary.com/doq5gztmf/video/upload/v1695731107/gram_dance_cdbuiv.mp4"
     );
     scrollLgBtn.css("display", "block");
     scrollSmBtn.css("display", "none");
