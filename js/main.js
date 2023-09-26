@@ -76,7 +76,6 @@ $(window).on("resize", function () {
     scrollSmBtn.css("display", "none");
   }
 });
-
 $(window).trigger("resize");
 /* 이현정 main_sec_01_video 끝 */
 
