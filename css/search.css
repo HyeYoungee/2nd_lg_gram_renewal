@@ -35,7 +35,7 @@
 
 .filter_text {
   font-size: max(2rem, min(3vw, 3.2rem));
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: 600;
   margin-bottom:15px;
   line-height: 1.5;
@@ -57,7 +57,7 @@
   font-size: var(--bd_size_02);
   font-weight: 700;
   margin: 33px 0 18px 22px;
-  font-family: "Gmarket Sans TTF"; 
+  font-family: 'GmarketSans'; 
 }
 .input_wrap {
   margin: 0 28px;
@@ -78,7 +78,7 @@ label {
   text-align: center;
   line-height: 48px;
   font-size: 2rem;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   padding-top: 5px;
   margin-right: 5px;
   margin-bottom: 13px;

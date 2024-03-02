@@ -6,7 +6,7 @@ body {
 section {
   width: 100%;
   height: 110vh;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
 }
 /* 이미지 흔들기 시작*/
 section img {
@@ -200,7 +200,7 @@ section img:hover {
   display: flex;
 }
 .title .titlecont {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   color: var(--dark);
   font-size: calc(var(--tt_size_01) * 0.8);
   -webkit-animation: mainFadeIn 2s forwards;

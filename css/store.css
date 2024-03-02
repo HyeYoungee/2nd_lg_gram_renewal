@@ -155,7 +155,7 @@ aside {
 .search_tt {
   font-size: max(3.2rem, min(3vw, 3.6rem));
   font-weight: bold;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   margin: 32px 0 20px;
 }
 
@@ -328,7 +328,7 @@ select{
   border-radius: 4px;
   line-height: 1.5;
   vertical-align: bottom;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   z-index: 11;
 }
 

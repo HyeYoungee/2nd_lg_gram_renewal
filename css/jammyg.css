@@ -7,7 +7,7 @@ main > section{
   padding-top: calc(var(--base_unit_d) * 5);
 }
 main h3, main h4{
-  font-family: 'Gmarket Sans TTF';
+  font-family: 'GmarketSans';
   font-weight: bold;
   padding: 0 0 var(--base_unit_d) var(--base_unit_d);
 }
@@ -58,7 +58,7 @@ main a{
   position: absolute;
   top: 110px; 
   right: calc(50% - 130px);
-  font-family: 'Gmarket Sans TTF';
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: var(--tt_size_03);
 }
@@ -83,7 +83,7 @@ main a{
   text-align: right;
   margin: 0 20px 20px 0;
   line-height: 1.4;
-  font-family: 'Gmarket Sans TTF';
+  font-family: 'GmarketSans';
   font-size: var(--bd_size_04);
   color: var(--white_00);
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.30);

@@ -1,13 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap");
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
 :root {
   /* Color */
@@ -92,17 +86,17 @@ body {
 /* Typography */
 
 .tt_01 {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: var(--tt_size_01);
 }
 .tt_02 {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: var(--tt_size_02);
 }
 .tt_03 {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: var(--tt_size_03);
 }
@@ -259,7 +253,7 @@ a {
   background: var(--dark, #1e2226);
   color: #fff;
   text-align: center;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -372,7 +366,7 @@ a {
 .menu_li {
   color: #58606a;
   text-align: center;
-  font-family: Gmarket Sans;
+  font-family: 'GmarketSans';
   font-size: 20px;
   font-weight: 400;
   line-height: 150%; /* 30px */
@@ -432,7 +426,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   color: var(--gray_03);
   background-color: #fff;
   margin: 0 auto;
@@ -806,13 +800,13 @@ footer {
   .cs_title {
     font-size: calc(var(--body_text_unit) * 3); /* 48px */
     margin-bottom: calc(var(--base_unit_d) * 1.5); /* 36px */
-    font-family: "Gmarket Sans TTF";
+    font-family: 'GmarketSans';
     font-weight: 700;
   }
   .cs_sub_tt {
     font-size: 40px; /* 40px */
     margin-bottom: calc(var(--base_unit_d) * 2); /* 48px */
-    font-family: "Gmarket Sans TTF";
+    font-family: 'GmarketSans';
     font-weight: 700;
   }
   .cs_desc {

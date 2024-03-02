@@ -37,7 +37,7 @@
 }
 
 .tt_01 {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-size: 48px;
   font-weight: bold;
   color: var(--dark, #1E2226);
@@ -47,7 +47,7 @@
 
 
 .cs_sub_tt {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-size: 40px;
   font-weight: bold;
   color: var(--dark, #1E2226);
@@ -111,7 +111,7 @@
 
 .faq h3 {
   color: #FFF;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-size: max(3.6rem, min(5vw, 6.4rem));
   font-weight: 500;
   line-height: 1.3;

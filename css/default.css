@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   color: var(--gray_03);
   background-color: #fff;
   margin: 0 auto;
@@ -389,7 +389,7 @@ a#scroll_btn:after {
 }
 
 h2 {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: max(3.2rem, min(5vw, 4.8rem));
 }
@@ -482,11 +482,11 @@ h2 {
   font-size: 24px;
   padding: calc(var(--base_unit_d) * 1.5) 0 calc(var(--base_unit_d) * 2) 0;
   margin-bottom: 0;
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
 }
 
 .brand_wrapper div {
-  font-family: "Gmarket Sans";
+  font-family: 'GmarketSans';
   font-size: 40px;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -568,7 +568,7 @@ h2 {
 }
 
 h2.select_t {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-weight: bold;
   font-size: 4.8rem;
   line-height: 150%;
@@ -621,7 +621,7 @@ h2.select_t {
 }
 .main_sec5 .container > p {
   font-size: var(--bd_size_03);
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
 }
 
 .main_sec5 .card_box {
@@ -678,7 +678,7 @@ h2.select_t {
 }
 
 .main_sec5 .text_box p {
-  font-family: "Gmarket Sans TTF";
+  font-family: 'GmarketSans';
   font-size: var(--bd_size_01);
   align-items: center;
   display: flex;
@@ -1012,7 +1012,7 @@ h2.select_t {
   .main_sec6_service .cs_title,
   .main_sec6_service .cs_desc {
     text-align-last: center;
-    font-family: "Gmarket Sans TTF";
+    font-family: 'GmarketSans';
   }
 
   .main_sec6_service .search_input {

@@ -7,7 +7,7 @@
 .color_intro h2,
 .color_text h2 {
   color: var(--white-bg, #fdfdfd);
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: max(4.6rem, min(5vw, 6.8rem));
   font-weight: 700;
   line-height: 150%;
@@ -116,7 +116,7 @@
 .text_desc h2 {
   color: var(--dark-bg, #000);
   text-align: center;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: max(4.6rem, min(5vw, 6.8rem));
   font-weight: 700;
   line-height: 150%;
@@ -124,7 +124,7 @@
 
 .text_desc div {
   text-align: center;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;
@@ -220,7 +220,7 @@
 .color_fixed_text > div > span:first-child {
   color: var(--dark-bg, #000);
   text-align: center;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;
@@ -232,7 +232,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Gmarket Sans TTF;
+  font-family: 'GmarketSans';
   font-size: max(4.6rem, min(5vw, 6.8rem));
   font-style: normal;
   font-weight: 700;

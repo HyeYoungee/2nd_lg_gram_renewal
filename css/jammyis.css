@@ -6,7 +6,7 @@
 main{
   background: var(--black_00);
   color: var(--white_00);
-  font-family: 'Gmarket Sans TTF';
+  font-family: 'GmarketSans';
   font-weight: bold;
 }
 .container{
