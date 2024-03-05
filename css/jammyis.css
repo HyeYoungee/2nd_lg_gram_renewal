@@ -12,6 +12,7 @@ main{
 .container{
   max-width: 1272px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 a{
   display: block;
@@ -30,7 +31,6 @@ a{
 }
 .jammy_is_sec01 .banner{
   height: 80%;
-  /* height: 100vh; */
 }
 .jammy_is_sec01 .banner .logo{
   position: relative;
@@ -128,7 +128,7 @@ a{
 }
 .jammy_is_sec02 .text_box .box_02 img{
   bottom: 10px;
-  left: 102px;
+  right: 382px;
 }
 .jammy_is_sec02 .text_box .box_03 img{
   top: -2px;
@@ -167,8 +167,8 @@ a{
 .jammy_is_sec03 .text_box .text_06{ grid-column:3/span 2; grid-row:6; }
 
 .jammy_is_sec03 .goods_box > div{
-  max-width: 200px;
-  max-height: 200px;
+  width: 15vw;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -249,6 +249,19 @@ a{
   padding-top: calc(var(--base_unit_d) * 10);
 }
 
+@media (max-width: 1300px) {
+  .jammy_is_sec02 div[class^="total"]{
+    flex-direction: column;
+    gap: calc(var(--base_unit_d)*2) ;
+  }
+  .jammy_is_sec02 .total_box_02 .content{
+    order: 1;
+  }
+  .jammy_is_sec02 .total_box_02 > img{
+    order: 2;
+  }
+}
+
 /* 반응형 768px */
 @media (max-width: 768px) {
   /* jammy_is_sec01 */
@@ -281,17 +294,8 @@ a{
   .container{
     max-width: 720px;
   }
-  .jammy_is_sec02 div[class^="total"]{
-    flex-direction: column;
-  }
   .jammy_is_sec02 .total_box_02{
     margin: calc(var(--base_unit_d) * 5) 0;
-  }
-  .jammy_is_sec02 .total_box_02 .content{
-    order: 1;
-  }
-  .jammy_is_sec02 .total_box_02 > img{
-    order: 2;
   }
   .jammy_is_sec02 .content > p{
     font-size: 3rem;
@@ -305,12 +309,12 @@ a{
     width: 70%;
   }
   .jammy_is_sec02 .text_box .box_01 img{
-    top: -10px;
-    right: 15px;
+    top: -8px;
+    left: 380px;
   }
   .jammy_is_sec02 .text_box .box_02 img{
     bottom: 4px;
-    left: 90px;
+    right: 308px;
   }
   .jammy_is_sec02 .text_box .box_03 img{
     top: -5px;
@@ -333,8 +337,7 @@ a{
     font-size: 4.8rem;
   }
   .jammy_is_sec03 .goods_box > div{
-    max-width: 116px;
-    max-height: 116px;
+    width: calc(max(9rem, min(15.5vw, 11.6rem)));
   }
   .jammy_is_sec03 .goods_box{
     display: grid;
@@ -369,6 +372,13 @@ a{
   }
 }
 
+@media (max-width: 550px){
+  .jammy_is_sec02 .text_box {
+    width: calc(100vw - 40px);
+    margin: 0 auto;
+  } 
+}
+
 /* 반응형 480px */
 @media (max-width: 480px) {
   .jammy_is_sec01{
@@ -401,23 +411,22 @@ a{
     font-size: 2.4rem;
   }
   .jammy_is_sec02 .text_box{
-    width: 416px;
-    padding: calc(var(--base_unit_tm)*2);
+    padding: calc(max(3rem, min(7.6vw, 4rem)));
   }
   .jammy_is_sec02 div[class^="total"] > img{
-    width: 90%;
+    width: 100%;
   }
   .jammy_is_sec02 .text_box .box_01 img{
-    top: -12px;
-    right: -20px;
+    top: -10px;
+    left: 318px;
   }
   .jammy_is_sec02 .text_box .box_02 img{
     bottom: 0px;
-    left: 35px;
+    right: 255px;
   }
   .jammy_is_sec02 .text_box .box_03 img{
     top: -8px;
-    right: 40px;
+    left: 255px;
   }
   .jammy_is_sec02 .text_box h3{
     font-size: 2rem;
@@ -436,8 +445,7 @@ a{
     font-size: 3.6rem;
   }
   .jammy_is_sec03 .goods_box > div{
-    width: 93px;
-    height: 93px;
+    width: calc(max(7.6rem, min(20vw, 9.3rem)));
   }
 
   /* jammy_is_sec04 */
@@ -466,5 +474,11 @@ a{
   .jammy_is_sec04 .container > p:last-of-type{
     font-size: 2.8rem;
   }
+}
 
+@media (max-width: 440px) {
+  .jammy_is_sec02 .text_box .box_01 img{
+    top: 15px;
+    left: 288px;
+  }
 }

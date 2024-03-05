@@ -2,6 +2,7 @@
 .container{
   max-width: 1272px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 main > section{
   padding-top: calc(var(--base_unit_d) * 5);
