@@ -118,6 +118,7 @@ main a{
 .jammyG_sec02 .talk_tt{
   font-weight: bold;
   font-size: 1.8rem;
+  font-size: max(1.6rem, min(2.5vw, 1.8rem));
   color: var(--gray_04);
   line-height: 1.4;
   padding: 24px 5px 10px;
@@ -136,7 +137,8 @@ main a{
   flex-wrap: wrap;
 }
 .jammyG_sec03 .collabo_goods_list li{
-  width: 22%;
+  width: calc(25% - 18px);
+  box-sizing: border-box;
   padding: 10px 10px 0;
   background: #fff;
   border-radius: var(--border_lg);
@@ -146,19 +148,19 @@ main a{
 .jammyG_sec03 .collabo_goods_list .img_box{
   border-radius: var(--border_lg) var(--border_lg) 0 0;
   width: 100%;
-  height: 70%;
+  height: 65%;
   position: relative;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.05);
 }
 .jammyG_sec03 .collabo_goods_list .text_box{
   width: 100%;
-  height: 115px;
+  height: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .jammyG_sec03 .collabo_goods_list p{
-  font-size: max(1.2rem, min(2.5vw, 1.6rem));
+  font-size: max(1.4rem, min(1.5vw, 1.6rem));
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
@@ -189,6 +191,7 @@ main a{
   margin: 0 auto;
   padding: 10px 20px;
   margin-top: var(--base_unit_d);
+  font-size: max(1.8rem, min(2.7vw, 2.4rem));
 }
 
 /* jammyG_sec04 */
@@ -202,7 +205,9 @@ main a{
 
 /* 반응형 */
 @media (max-width: 1320px) {
-  main {padding: 0 24px;}
+  .container{
+    padding: 0 24px;
+  }
 }
 
 /* 반응형 768px */
@@ -278,10 +283,10 @@ main a{
   }
   /* jammyG_sec03 */
   .jammyG_sec03 .collabo_goods_list li{
-    width: 45%;
+    width: calc(50% - 12px);
   }
-  .jammyG_sec03 .collabo_goods_list .img_box{
-    height: 200px;
+  .jammyG_sec03 .collabo_goods_list p{
+    font-size: max(1.2rem, min(2.7vw, 1.6rem));
   }
   /* jammyG_sec04 */
   .jammyG_sec04{
@@ -306,6 +311,13 @@ main a{
 	main > section{
 	  padding-top: calc(var(--base_unit_tm) * 4);
 	}
+  main h4{
+		padding-left: 0;
+    margin: 0 auto;
+	}
+  .container{
+    padding: 0 20px;
+  }
   /* Banner */
 	.banner .logo{
 		width: 263px;
@@ -345,15 +357,23 @@ main a{
     padding: 0 2rem 2rem 0;
   }
   /* jammyG_sec03 */
+  .jammyG_sec03 .collabo_goods_list{
+    gap: 20px;
+  }
   .jammyG_sec03 .collabo_goods_list li{
-    width: 42.5%;
+    width: calc(50% - 10px);
   }
   .jammyG_sec03 .collabo_goods_list .img_box{
-    height: 200px;
+    height: 70%;
   }
-  .jammyG_sec03 .text_box{
+  .jammyG_sec03 .collabo_goods_list .text_box{
+    height: 30%;
     font-size: 1.3rem;
   }
+  .jammyG_sec03 .collabo_goods_list .text_box a{
+    height: none;
+  }
+
   /* jammyG_sec04 */
   .jammyG_sec04{
     padding-bottom: calc(var(--base_unit_tm) * 5);
